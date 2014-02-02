@@ -1,6 +1,8 @@
-# Bootstrap for Vanilla
+![](screenshot.png)
 
-A fresh and solid start for your Vanilla-powered community forums.
+[![GitHub version](https://badge.fury.io/gh/kasperisager%2Fvanilla-bootstrap.png)](http://badge.fury.io/gh/kasperisager%2Fvanilla-bootstrap) [![Dependency Status](https://gemnasium.com/kasperisager/vanilla-bootstrap.png)](https://gemnasium.com/kasperisager/vanilla-bootstrap)
+
+Bootstrap for Vanilla has been rewritten from scratch on top of [Bootstrap 3.1](http://getbootstrap.com) in this second installation of the most popular theme for Vanilla Forums. Kickstart your Vanilla-powered community forums with a fresh and solid theme that is ready to be customized to your heart's desires.
 
 ## Getting started
 
@@ -12,6 +14,16 @@ To get started using Bootstrap for Vanilla, either:
 ```sh
 $ git clone kasperisager/vanilla-bootstrap bootstrap
 ```
+
+## Development
+
+Bootstrap for Vanilla was scaffolded using [Ninja](https://github.com/kasperisager/vanilla-ninja). For instructions on how to install the development dependencies and front-end components, please refer to the [Ninja documentation](https://github.com/kasperisager/vanilla-ninja#getting-started). Once you've got everything set up, use the following tasks to re-compile the theme assets:
+
+#### Build - `gulp`
+Runs the default Gulp task which will compile all theme assets. LESS stylesheets will be compiled to [`design/style.css`](design/style.css) and Javascripts will be concatenated and output to [`js/custom.js`](js/custom.js).
+
+#### Watch - `gulp watch`
+Starts an instance of [tiny-lr](https://github.com/mklabs/tiny-lr) (a tiny LiveReload server) that watches the compiled assets for changes and pushes these to your Vanilla installation automatically whenever they change.
 
 ## [Issue tracking](https://github.com/kasperisager/vanilla-bootstrap/issues)
 
