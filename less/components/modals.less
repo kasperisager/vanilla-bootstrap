@@ -1,0 +1,48 @@
+//
+// # Modals
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (reference) "@{bootstrap}/modals";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.Overlay {
+  display: block;
+  background-color: fade(@modal-backdrop-bg, (@modal-backdrop-opacity * 100));
+  &:extend(.modal);
+
+  > .Popup {
+    &:extend(.modal-dialog);
+
+    h1 {
+      margin: -@modal-inner-padding;
+      margin-bottom: @modal-inner-padding;
+      font-size: @font-size-h4;
+      &:extend(.modal-header);
+      &:extend(.modal-title);
+    }
+
+    .Border {
+      &:extend(.modal-content);
+    }
+
+    .Content {
+      &:extend(.modal-body);
+
+      .Buttons {
+        margin: -@modal-inner-padding;
+        margin-top: (@modal-inner-padding + 15px);
+      }
+    }
+
+    .Buttons {
+      &:extend(.modal-footer);
+    }
+  }
+}

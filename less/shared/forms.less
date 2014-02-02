@@ -1,0 +1,57 @@
+//
+// # Forms
+//
+// No styleguide reference.
+
+@import (once) "@{bootstrap}/forms";
+
+.InputBox,
+.TextBox,
+select {
+  &:extend(.form-control);
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  .form-control-focus();
+
+  // Placeholder
+  .placeholder();
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    &:extend(.form-control[disabled]);
+  }
+}
+
+.TextBox {
+  min-height: 100px;
+  &:extend(textarea.form-control);
+}
+
+form {
+  label {
+    display: block;
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+form ul:not(.List) li,
+form .P {
+  &:extend(.form-group);
+}
+
+.RadioLabel,
+.CheckBoxLabel {
+  font-weight: normal;
+  cursor: pointer;
+  &:extend(.radio);
+}
+.RadioLabel input[type="radio"],
+.CheckBoxLabel input[type="checkbox"] {
+    &:extend(.radio input[type="radio"]);
+}

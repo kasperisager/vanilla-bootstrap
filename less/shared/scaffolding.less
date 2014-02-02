@@ -1,0 +1,45 @@
+//
+// # Scaffolding
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+// Reset
+@import (once) "@{bootstrap}/normalize";
+@import (once) "@{bootstrap}/print";
+
+@import (once) "@{bootstrap}/scaffolding";
+
+@import (once) "@{bootstrap}/component-animations";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+html,
+body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -101px;
+
+  > .push {
+    height: 101px;
+  }
+}
+
+body > .footer {
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #f7f7f7;
+  border-top: @gray-lighter solid 1px;
+  &:extend(.text-muted);
+
+  p {
+    margin-bottom: 0;
+  }
+}

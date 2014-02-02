@@ -1,0 +1,101 @@
+// # Glyphicons
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (once) "@{bootstrap}/glyphicons";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.Sprite,
+.Sprite16,
+.SpFlyoutHandle {
+  &:extend(.glyphicon);
+}
+
+.SpNotifications {
+  &:extend(.glyphicon-globe all);
+}
+
+.SpInbox {
+  &:extend(.glyphicon-inbox all);
+}
+
+.SpBookmarks {
+  &:extend(.glyphicon-bookmark all);
+}
+
+.SpDropdownHandle {
+  &:extend(.glyphicon-chevron-down all);
+}
+
+.SpOptions,
+.SpFlyoutHandle {
+  &:extend(.glyphicon-cog all);
+}
+
+.SpActivity {
+  &:extend(.glyphicon-time all);
+}
+
+.SpDiscussion,
+.SpDiscussions,
+.SpComment,
+.SpComments {
+  &:extend(.glyphicon-comment all);
+}
+
+.SpAllCategories {
+  &:extend(.glyphicon-tags all);
+}
+
+.SpEditProfile,
+.SpMyDiscussions {
+  &:extend(.glyphicon-user all);
+}
+
+.SpMyDrafts {
+  &:extend(.glyphicon-file all);
+}
+
+.SpMod {
+  &:extend(.glyphicon-flag all);
+}
+
+.SpDashboard {
+  &:extend(.glyphicon-dashboard all);
+}
+
+.SpDelete {
+  &:extend(.glyphicon-ban-circle all);
+}
+
+// Bookmark Icons
+
+a.Bookmark {
+  .hide-text();
+
+  & {
+    .glyphicon();
+    .glyphicon-star-empty()
+  }
+
+  &:before {
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @text-color;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+a.Bookmarked {
+  .glyphicon-star();
+}

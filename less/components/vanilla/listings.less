@@ -1,0 +1,134 @@
+//
+// # Listings
+//
+// No styleguide reference.
+
+.DataList {
+  margin: 20px 0;
+  &:extend(.list-group);
+
+  &:empty {
+    display: none;
+  }
+
+  .Item {
+    &:extend(.list-group-item);
+
+    &:hover,
+    &:focus {
+      &:extend(a.list-group-item:hover);
+    }
+
+    &:first-child {
+      &:extend(.list-group-item:first-child);
+    }
+    &:last-child {
+      &:extend(.list-group-item:last-child);
+    }
+  }
+}
+
+.DataTable {
+  &:extend(.table all);
+  &:extend(.table-hover all);
+
+  > tbody > tr > td {
+    vertical-align: middle;
+  }
+}
+
+.MessageList {
+  position: relative;
+  &:extend(.list-group);
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 79px;
+    z-index: -1;
+    width: 2px;
+    background-color: #f3f3f3;
+    content: " ";
+  }
+
+  &.Discussion {
+    margin-bottom: 0;
+
+    &:before {
+      display: none;
+    }
+
+    .Item {
+      margin-bottom: 0;
+    }
+  }
+
+  .Item {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 64px;
+    box-shadow: 0 0 0 2px #fff;
+    &:extend(.list-group-item);
+    &:extend(.panel);
+    &:extend(.panel-default);
+
+    &:hover,
+    &:focus {
+      background-color: @list-group-bg;
+    }
+
+    .Options {
+      padding: 10px 15px;
+      margin-bottom: -10px;
+    }
+  }
+
+  .Item-Header {
+    &:extend(.panel-heading);
+    &:extend(.panel-default > .panel-heading);
+
+    .PhotoWrap {
+      position: absolute;
+      top: -1px;
+      left: -65px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      .AuthorWrap {
+        float: left;
+      }
+
+      .Meta {
+        float: right;
+      }
+    }
+  }
+
+  .Item-Body {
+    &:extend(.panel-body);
+  }
+}
+
+// Pagination
+
+.PagerWrap,
+.PageControls,
+.BeforeCommentHeading {
+  &:extend(.clearfix all);
+
+  .Pager {
+    float: right;
+    margin: 0;
+  }
+}
+
+.CommentHeading {
+  display: none;
+}
+
+.Foot.Closed {
+  margin-bottom: 20px;
+  margin-left: 64px;
+}

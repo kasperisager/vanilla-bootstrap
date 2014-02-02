@@ -1,0 +1,43 @@
+// # MeBox
+//
+// No styleguide reference.
+
+.MeBox {
+  &:extend(.clearfix all);
+
+  .PhotoWrap,
+  .WhoIs,
+  .Username,
+  .MeMenu {
+    float: left;
+  }
+
+  .PhotoWrap {
+    img {
+      margin: ((32px - @line-height-computed) / -2) 0;
+      vertical-align: top;
+    }
+  }
+
+  .Username,
+  .FlyoutButton {
+    &:extend(.nav > li > a);
+    &:extend(.navbar-nav > li > a);
+  }
+
+  .MeMenu {
+    &:extend(.clearfix all);
+  }
+
+  .ToggleFlyout {
+    float: left;
+
+    em {
+      display: none;
+    }
+
+    .Arrow {
+      display: none;
+    }
+  }
+}

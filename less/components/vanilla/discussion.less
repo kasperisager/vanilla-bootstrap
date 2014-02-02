@@ -1,0 +1,121 @@
+//
+// # Discussion
+//
+// No styleguide reference.
+
+.Item {
+  .Title {
+    &,
+    a {
+      font-size: @font-size-base + 1px;
+      font-weight: 500;
+      line-height: @line-height-computed;
+      color: @text-color;
+    }
+  }
+
+  .Username {
+    font-weight: 500;
+    color: @text-color;
+  }
+
+  .Meta {
+    font-size: @font-size-small;
+    line-height: @line-height-computed;
+    &:extend(.text-muted);
+
+    &,
+    a {
+      &:extend(.text-muted);
+    }
+  }
+
+  .AuthorInfo {
+    &:extend(.text-muted);
+  }
+
+  .Options {
+    float: right;
+  }
+}
+
+.Item-Header {
+  &:extend(.clearfix all);
+
+  .PhotoWrap {
+    float: left;
+
+    img {
+
+    }
+  }
+}
+
+.PageTitle {
+  .Options {
+    float: right;
+  }
+}
+
+// Discussion Forms
+// -----------------------------------------------------------------------------
+
+.MessageForm {
+  position: relative;
+  margin: 0;
+  margin-left: 64px;
+  border-radius: @list-group-border-radius;
+  &:extend(.panel);
+  &:extend(.panel-default);
+
+  // Reset nested forms
+  .Item & {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+
+    .Form-Body {
+      padding: 0;
+    }
+  }
+
+  .PhotoWrap {
+    position: absolute;
+    top: -1px;
+    left: -65px;
+  }
+
+  .Form-Header {
+    .Username {
+      display: none;
+    }
+  }
+
+  .Form-Body {
+    &:extend(.panel-body);
+  }
+
+  .H {
+    display: none;
+  }
+
+  .Buttons {
+    margin: 15px -15px -15px;
+    text-align: right;
+    &:extend(.panel-footer);
+
+    .Back {
+      display: none;
+      float: left;
+      line-height: @input-height-base;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      .Back {
+        display: block;
+      }
+    }
+  }
+}

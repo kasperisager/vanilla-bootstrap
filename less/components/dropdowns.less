@@ -1,0 +1,61 @@
+//
+// # Dropdowns
+//
+// No styleguide reference.
+
+@import (reference) "@{bootstrap}/dropdowns";
+
+.MenuItems {
+  &:extend(.dropdown-menu);
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li > a {
+    &:extend(.dropdown-menu > li > a);
+
+    &:hover,
+    &:focus {
+      &:extend(.dropdown-menu > li > a:hover);
+    }
+  }
+
+  li > hr {
+    border: 0;
+    &:extend(.dropdown-menu .divider);
+  }
+
+  .Open > & {
+    &:extend(.open > .dropdown-menu);
+  }
+}
+
+.ToggleFlyout {
+  position: relative;
+}
+
+.OptionsMenu {
+  .OptionsTitle {
+    display: none;
+  }
+
+  .SpFlyoutHandle {
+    cursor: pointer;
+    &:extend(.text-muted);
+
+    &:hover,
+    &:focus {
+      color: @link-color;
+    }
+  }
+
+  &.Open .SpFlyoutHandle {
+    color: @link-color;
+  }
+
+  .MenuItems {
+    &:extend(.dropdown-menu-right);
+  }
+}

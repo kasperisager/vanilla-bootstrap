@@ -1,0 +1,13 @@
+{
+  "name": "vanilla-bootstrap",
+  "version": "2.0.0",
+  "authors": [
+    "kasperisager <kasperisager@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kasperisager/vanilla-bootstrap",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.1.x"
+  }
+}

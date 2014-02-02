@@ -1,0 +1,60 @@
+//
+// # Buttons
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (reference) "@{bootstrap}/buttons";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.Button {
+  &:extend(.btn);
+  &:extend(.btn-default);
+
+  &:focus {
+    .tab-focus();
+  }
+
+  &:hover,
+  &:focus {
+    &:extend(.btn:hover);
+    &:extend(.btn-default:hover);
+  }
+
+  &:active {
+    &:extend(.btn:active);
+    &:extend(.btn-default:active);
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &:extend(.btn.disabled);
+    &:extend(.btn-default.disabled);
+  }
+}
+
+.Button.Primary {
+  &:extend(.btn-primary all);
+}
+
+.NavButton {
+  &:extend(.btn);
+  &:extend(.btn-link);
+}
+
+.BigButton {
+  &:extend(.btn-lg);
+
+  .panel & {
+    &:extend(.btn-block);
+  }
+}
+
+.Buttons {
+  padding-top: @padding-large-vertical;
+}

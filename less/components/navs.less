@@ -1,0 +1,57 @@
+//
+// # Navs
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (once) "@{bootstrap}/navs";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.FilterMenu {
+  &:extend(.nav);
+  &:extend(.nav-pills);
+  &:extend(.nav-stacked);
+
+  .panel & {
+    padding: @padding-large-vertical 0;
+  }
+
+  .content & {
+    display: none;
+  }
+
+  li {
+    &:extend(.nav-stacked > li);
+
+    + li {
+      &:extend(.nav-stacked > li + li);
+    }
+  }
+
+  li > a {
+    &:extend(.nav > li > a);
+    &:extend(.nav-pills > li > a);
+
+    &:hover,
+    &:focus {
+      &:extend(.nav > li > a:hover);
+    }
+  }
+
+  .Active > a {
+    &,
+    &:hover,
+    &:focus {
+      &:extend(.nav-pills > li.active > a);
+    }
+
+    .Count {
+      &:extend(.nav-pills > .active > a > .badge);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "vanilla-bootstrap",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kasperisager/vanilla-bootstrap.git"
+  },
+  "author": "Kasper Isager <kasperisager@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kasperisager/vanilla-bootstrap/issues"
+  },
+  "homepage": "https://github.com/kasperisager/vanilla-bootstrap",
+  "private": true,
+  "dependencies": {
+    "gulp": "3.5.x",
+    "gulp-less": "1.2.x",
+    "gulp-livereload": "0.3.x",
+    "tiny-lr": "0.0.x",
+    "gulp-concat": "2.1.x",
+    "gulp-uglify": "0.2.x",
+    "gulp-util": "~2.2.13"
+  }
+}
