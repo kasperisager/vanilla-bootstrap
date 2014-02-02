@@ -1,22 +1,18 @@
 //
-// # Utilities
+// # Close
 //
 // No styleguide reference.
 
 // Library
 // -----------------------------------------------------------------------------
 
-@import (once) "@{bootstrap}/utilities";
-@import (once) "@{bootstrap}/responsive-utilities";
+@import (reference) "@{bootstrap}/close";
 
 
 // Extensions
 // -----------------------------------------------------------------------------
 
-.Aside {
-  &:extend(.pull-right);
-}
-
-.Hidden {
-  display: none;
+a.Close,
+a.Delete {
+  &:extend(.close all);
 }

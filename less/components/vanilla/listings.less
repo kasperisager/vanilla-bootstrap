@@ -5,6 +5,7 @@
 
 .DataList {
   margin: 20px 0;
+  list-style: none;
   &:extend(.list-group);
 
   &:empty {
@@ -29,7 +30,6 @@
 }
 
 .DataTable {
-  &:extend(.table all);
   &:extend(.table-hover all);
 
   > tbody > tr > td {
@@ -116,12 +116,21 @@
 .PagerWrap,
 .PageControls,
 .BeforeCommentHeading {
+  margin: 20px 0;
   &:extend(.clearfix all);
+
+  &:empty {
+    display: none;
+  }
 
   .Pager {
     float: right;
     margin: 0;
   }
+}
+
+.BeforeCommentHeading {
+  display: block;
 }
 
 .CommentHeading {

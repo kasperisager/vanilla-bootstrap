@@ -38,9 +38,9 @@
               {discussions_link}
               {activity_link}
             </ul>
-            <!-- <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
               {module name="MeModule"}
-            </ul> -->
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </nav>

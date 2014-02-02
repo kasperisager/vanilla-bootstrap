@@ -4,6 +4,8 @@
 // No styleguide reference.
 
 .Item {
+  &:extend(.clearfix all);
+
   .Title {
     &,
     a {
@@ -30,6 +32,11 @@
     }
   }
 
+  .Author .PhotoWrap {
+    float: left;
+    padding-right: @padding-base-horizontal;
+  }
+
   .AuthorInfo {
     &:extend(.text-muted);
   }
@@ -48,6 +55,21 @@
     img {
 
     }
+  }
+}
+
+.Item.Category {
+  .CategoryName {
+    margin: 0;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+  }
+}
+
+.Item.Activity,
+.Item.ActivityComment {
+  &:hover {
+    background-color: @list-group-bg;
   }
 }
 
