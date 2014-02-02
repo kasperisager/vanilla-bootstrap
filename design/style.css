@@ -252,7 +252,9 @@ th {
     background-color: #fff !important;
   }
   .btn > .caret,
-  .dropup > .btn > .caret {
+  .dropup > .btn > .caret,
+  .btn > .SpDropdownHandle,
+  .dropup > .btn > .SpDropdownHandle {
     border-top-color: #000 !important;
   }
   .label,
@@ -2522,8 +2524,7 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-chevron-up:before {
   content: "\e113";
 }
-.glyphicon-chevron-down:before,
-.SpDropdownHandle:before {
+.glyphicon-chevron-down:before {
   content: "\e114";
 }
 .glyphicon-retweet:before {
@@ -2813,6 +2814,16 @@ a.Bookmark:focus {
 a.Bookmarked:before {
   content: "\e006";
 }
+.SpDropdownHandle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
 .MenuItems,
 .FlyoutMenu,
 .token-input-dropdown {
@@ -2874,6 +2885,12 @@ a.Bookmarked:before {
 .MeBox .FlyoutMenu {
   left: auto;
   right: 0;
+}
+.dropup .SpDropdownHandle,
+.navbar-fixed-bottom .dropdown .SpDropdownHandle {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
 }
 .MenuItems ul {
   padding: 0;
@@ -2947,6 +2964,16 @@ a.Bookmarked:before {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+}
+.btn .SpDropdownHandle {
+  margin-left: 0;
+}
+.btn-lg .SpDropdownHandle {
+  border-width: 5px 5px 0;
+  border-bottom-width: 0;
+}
+.dropup .btn-lg .SpDropdownHandle {
+  border-width: 0 5px 5px;
 }
 .nav,
 .FilterMenu {
@@ -4003,6 +4030,11 @@ buttona.Delete {
   margin: -20px;
   margin-top: 35px;
 }
+.Overlay > .Popup a.Close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
 .ProfilePhoto {
   width: 32px;
   height: 32px;
@@ -4494,4 +4526,7 @@ td.visible-print {
 }
 .Hidden {
   display: none;
+}
+.SpDropdownHandle {
+  position: static;
 }

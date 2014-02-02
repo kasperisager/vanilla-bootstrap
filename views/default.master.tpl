@@ -39,7 +39,12 @@
               {activity_link}
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              {module name="MeModule" CssClass="hidden-xs"}
+              {if $User.SignedIn}
+                {module name="MeModule" CssClass="hidden-xs"}
+              {else}
+                <li>{link path="register" text="Register" target="current"}</li>
+                <li>{link path="signin" text="Sign In" target="current"}</li>
+              {/if}
             </ul>
           </div><!--/.nav-collapse -->
         </div>
