@@ -14,7 +14,7 @@ gulp.task('less', function () {
     .pipe(livereload(server));
 });
 
-gulp.task('default', ['less']);
+gulp.task('default', ['less', 'scripts']);
 gulp.task('watch', function () {
   server.listen(35729, function (err) {
     if (err) return gutil.log(err);
