@@ -19,6 +19,6 @@
     "tiny-lr": "0.0.x",
     "gulp-concat": "2.1.x",
     "gulp-uglify": "0.2.x",
-    "gulp-util": "~2.2.13"
+    "gulp-util": "2.2.x"
   }
 }
