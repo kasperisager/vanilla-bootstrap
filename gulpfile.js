@@ -7,7 +7,7 @@ var gulp = require('gulp')
   , livereload = require('gulp-livereload');
 
 gulp.task('less', function () {
-  gulp.src('less/style.less')
+  gulp.src('less/core/style.less')
     .pipe(less({ paths: 'bower_components'})
       .on('error', gutil.log))
     .pipe(gulp.dest('design'))

@@ -1,7 +1,17 @@
 /*!
- * Vanilla Bootstrap
+ * Bootstrap for Vanilla
  *
- * Written by Kasper Kronborg
+ * Based on Bootstrap v3.1.0 - Copyright 2011-2014 Twitter, Inc.
+ *
+ * Both Bootstrap and Bootstrap for Vanilla are licensed under the terms of the
+ * MIT License (http://opensource.org/licenses/MIT)
+ *
+ * Massive kudos to @fat and @mdo for their work on Bootstrap - without them,
+ * there never would have been a Bootstrap for Vanilla!
+ *
+ * @author    Kasper Isager <kasperisager@gmail.com>
+ * @license   http://opensource.org/licenses/MIT MIT
+ * @copyright 2014 © Kasper Kronborg Isager
  */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
@@ -1621,7 +1631,8 @@ output {
 .form-control,
 .InputBox,
 .TextBox,
-select {
+select,
+.token-input-list {
   display: block;
   width: 100%;
   height: 34px;
@@ -1638,7 +1649,8 @@ select {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.form-control:focus {
+.form-control:focus,
+.token-input-focused {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -1981,6 +1993,17 @@ form ol {
 .CheckBoxLabel {
   font-weight: normal;
   cursor: pointer;
+}
+.token-input-list {
+  list-style: none;
+}
+.token-input-input-token {
+  display: inline-block;
+  margin-bottom: 0 !important;
+}
+.token-input-input-token input {
+  background-color: transparent;
+  border: 0;
 }
 .Button,
 .NavButton {
@@ -2791,7 +2814,8 @@ a.Bookmarked:before {
   content: "\e006";
 }
 .MenuItems,
-.FlyoutMenu {
+.FlyoutMenu,
+.token-input-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -2811,15 +2835,15 @@ a.Bookmarked:before {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
-.MenuItems li > hr,
-.FlyoutMenu li > hr {
+.MenuItems li > hr {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
 .MenuItems li > a,
-.FlyoutMenu li > a {
+.token-input-dropdown li,
+.token-input-dropdown > p {
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -2829,29 +2853,61 @@ a.Bookmarked:before {
   white-space: nowrap;
 }
 .MenuItems li > a:hover,
-.FlyoutMenu li > a:hover,
 .MenuItems li > a:focus,
-.FlyoutMenu li > a:focus {
+.token-input-dropdown li:hover {
   text-decoration: none;
   color: #262626;
   background-color: #f5f5f5;
 }
-.Open > .MenuItems,
-.Open > .FlyoutMenu {
+.token-input-dropdown .token-input-selected-dropdown-item,
+.token-input-dropdown .token-input-selected-dropdown-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #428bca;
+}
+.Open > .MenuItems {
   display: block;
 }
-.OptionsMenu .MenuItems {
+.OptionsMenu .MenuItems,
+.MeBox .MenuItems,
+.MeBox .FlyoutMenu {
   left: auto;
   right: 0;
 }
-.MenuItems ul,
+.MenuItems ul {
+  padding: 0;
+  list-style: none;
+}
+.MenuItems li > hr {
+  border: 0;
+}
+.FlyoutMenu {
+  min-width: 280px;
+}
 .FlyoutMenu ul {
   padding: 0;
   list-style: none;
 }
-.MenuItems li > hr,
-.FlyoutMenu li > hr {
+.FlyoutMenu .Item {
+  padding: 6px 12px;
+  border-bottom: #e5e5e5 solid 1px;
+}
+.FlyoutMenu .Item.Title {
+  padding: 0 12px 6px;
+}
+.FlyoutMenu .Item.Title a {
+  float: right;
+}
+.FlyoutMenu .Item.Center {
+  border-bottom-width: 0;
+}
+.FlyoutMenu .Item.Empty {
+  margin-bottom: 0;
+  background-color: transparent;
   border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .ToggleFlyout {
   position: relative;
@@ -2868,6 +2924,24 @@ a.Bookmarked:before {
 }
 .OptionsMenu.Open .SpFlyoutHandle {
   color: #428bca;
+}
+.token-input-dropdown {
+  padding-right: 12px;
+  padding-left: 12px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.token-input-dropdown ul {
+  padding: 0;
+  margin: 0 -12px;
+  list-style: none;
+}
+.token-input-dropdown li {
+  cursor: pointer;
+}
+.token-input-dropdown > p {
+  margin: 0 -12px;
 }
 .ButtonGroup {
   position: relative;
@@ -2895,7 +2969,11 @@ a.Bookmarked:before {
 .nav > li > a:hover,
 .nav > li > a:focus,
 .FilterMenu li > a:hover,
-.FilterMenu li > a:focus {
+.FilterMenu li > a:focus,
+.MeBox .Username:hover,
+.MeBox .FlyoutButton:hover,
+.MeBox .Username:focus,
+.MeBox .FlyoutButton:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
@@ -3348,7 +3426,9 @@ a.Bookmarked:before {
     margin-right: -15px;
   }
 }
-.navbar-nav > li > .dropdown-menu {
+.navbar-nav > li > .dropdown-menu,
+.MeBox .MenuItems,
+.MeBox .FlyoutMenu {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -3398,17 +3478,26 @@ a.Bookmarked:before {
 .navbar-default .navbar-text {
   color: #777777;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a,
+.navbar-default .MeBox .Username,
+.navbar-default .MeBox .FlyoutButton {
   color: #777777;
 }
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .MeBox .Username:hover,
+.navbar-default .MeBox .FlyoutButton:hover,
+.navbar-default .MeBox .Username:focus,
+.navbar-default .MeBox .FlyoutButton:focus {
   color: #333333;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .MeBox .Open .FlyoutButton,
+.navbar-default .MeBox .Open .FlyoutButton:hover,
+.navbar-default .MeBox .Open .FlyoutButton:focus {
   color: #555555;
   background-color: #e7e7e7;
 }
@@ -3481,17 +3570,26 @@ a.Bookmarked:before {
 .navbar-inverse .navbar-text {
   color: #999999;
 }
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .MeBox .Username,
+.navbar-inverse .MeBox .FlyoutButton {
   color: #999999;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .MeBox .Username:hover,
+.navbar-inverse .MeBox .FlyoutButton:hover,
+.navbar-inverse .MeBox .Username:focus,
+.navbar-inverse .MeBox .FlyoutButton:focus {
   color: #ffffff;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .MeBox .Open .FlyoutButton,
+.navbar-inverse .MeBox .Open .FlyoutButton:hover,
+.navbar-inverse .MeBox .Open .FlyoutButton:focus {
   color: #ffffff;
   background-color: #080808;
 }
@@ -4005,6 +4103,13 @@ buttona.Delete {
 .DataTable > tbody > tr > td {
   vertical-align: middle;
 }
+.PopList .ItemContent {
+  overflow: hidden;
+}
+.PopList .ProfilePhoto {
+  width: 32px;
+  height: 32px;
+}
 .MessageList {
   position: relative;
 }
@@ -4081,17 +4186,17 @@ buttona.Delete {
   margin-bottom: 20px;
   margin-left: 64px;
 }
-.MeBox .PhotoWrap,
+.MeBox > .PhotoWrap,
 .MeBox .WhoIs,
 .MeBox .Username,
 .MeBox .MeMenu {
   float: left;
 }
-.MeBox .PhotoWrap {
+.MeBox > .PhotoWrap {
   margin-top: 9px;
   margin-bottom: 9px;
 }
-.MeBox .PhotoWrap img {
+.MeBox > .PhotoWrap img {
   width: 32px;
   height: 32px;
   vertical-align: top;
@@ -4104,6 +4209,25 @@ buttona.Delete {
 }
 .MeBox .ToggleFlyout .Arrow {
   display: none;
+}
+.Section-Profile .ProfileOptions {
+  float: right;
+}
+.Section-Profile dl.About dt,
+.Section-Profile dl.About dd {
+  display: inline-block;
+}
+.Section-Profile dl.About dt {
+  margin-left: 5px;
+}
+.Section-Profile dl.About dt:first-child {
+  margin-left: 0;
+}
+.Section-Profile dl.About dd {
+  margin-right: 5px;
+}
+.Section-Profile dl.About dd:last-child {
+  margin-right: 0;
 }
 .clearfix:before,
 .clearfix:after,
@@ -4369,8 +4493,5 @@ td.visible-print {
   }
 }
 .Hidden {
-  display: none;
-}
-.Trace {
   display: none;
 }

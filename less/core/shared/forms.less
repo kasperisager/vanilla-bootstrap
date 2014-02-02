@@ -3,7 +3,14 @@
 //
 // No styleguide reference.
 
+// Library
+// -----------------------------------------------------------------------------
+
 @import (once) "@{bootstrap}/forms";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
 
 .InputBox,
 .TextBox,
@@ -54,5 +61,26 @@ form .P {
 }
 .RadioLabel input[type="radio"],
 .CheckBoxLabel input[type="checkbox"] {
-    &:extend(.radio input[type="radio"]);
+  &:extend(.radio input[type="radio"]);
+}
+
+// Typeahead
+
+.token-input-list {
+  list-style: none;
+  &:extend(.form-control);
+}
+
+.token-input-focused {
+  &:extend(.form-control:focus);
+}
+
+.token-input-input-token {
+  display: inline-block;
+  margin-bottom: 0 !important;
+
+  input {
+    background-color: transparent;
+    border: 0;
+  }
 }

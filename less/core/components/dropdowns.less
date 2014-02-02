@@ -1,0 +1,142 @@
+//
+// # Dropdowns
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (reference) "@{bootstrap}/dropdowns";
+
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.MenuItems {
+  &:extend(.dropdown-menu);
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li > a {
+    &:extend(.dropdown-menu > li > a);
+
+    &:hover,
+    &:focus {
+      &:extend(.dropdown-menu > li > a:hover);
+    }
+  }
+
+  li > hr {
+    border: 0;
+    &:extend(.dropdown-menu .divider);
+  }
+
+  .Open > & {
+    &:extend(.open > .dropdown-menu);
+  }
+}
+
+.FlyoutMenu {
+  min-width: 280px;
+  &:extend(.dropdown-menu);
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .Item {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    border-bottom: @dropdown-divider-bg solid 1px;
+
+    &.Title {
+      padding: 0 @padding-base-horizontal @padding-base-vertical;
+
+      a {
+        float: right;
+      }
+    }
+
+    &.Center {
+      border-bottom-width: 0;
+    }
+
+    &.Empty {
+      margin-bottom: 0;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+.ToggleFlyout {
+  position: relative;
+}
+
+.OptionsMenu {
+  .OptionsTitle {
+    display: none;
+  }
+
+  .SpFlyoutHandle {
+    cursor: pointer;
+    &:extend(.text-muted);
+
+    &:hover,
+    &:focus {
+      color: @link-color;
+    }
+  }
+
+  &.Open .SpFlyoutHandle {
+    color: @link-color;
+  }
+
+  .MenuItems {
+    &:extend(.dropdown-menu-right);
+  }
+}
+
+// Typeahead
+
+.token-input-dropdown {
+  padding-right: @padding-base-horizontal;
+  padding-left: @padding-base-horizontal;
+  .box-sizing(content-box);
+  &:extend(.dropdown-menu);
+
+  ul {
+    padding: 0;
+    margin: 0 -@padding-base-horizontal;
+    list-style: none;
+  }
+
+  li {
+    cursor: pointer;
+
+    &:hover {
+      &:extend(.dropdown-menu > li > a:hover);
+    }
+  }
+
+  > p {
+    margin: 0 -@padding-base-horizontal;
+  }
+
+  li,
+  > p {
+    &:extend(.dropdown-menu > li > a);
+  }
+
+  .token-input-selected-dropdown-item {
+    &,
+    &:hover {
+      &:extend(.dropdown-menu > .active > a);
+    }
+  }
+}

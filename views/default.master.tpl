@@ -14,7 +14,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="{$BodyID}" class="{$BodyClass}">
 
     <div class="page-wrap">
 
@@ -39,7 +39,7 @@
               {activity_link}
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              {module name="MeModule"}
+              {module name="MeModule" CssClass="hidden-xs"}
             </ul>
           </div><!--/.nav-collapse -->
         </div>
