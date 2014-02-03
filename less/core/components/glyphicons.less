@@ -84,12 +84,20 @@ a.Bookmark {
   &:before {
     font-size: @font-size-base;
     line-height: @line-height-base;
-    color: @text-color;
+    color: @brand-warning;
   }
 
   &:hover,
   &:focus {
     text-decoration: none;
+
+    &:before {
+      color: @link-hover-color;
+    }
+  }
+
+  .OptionsMenu + & {
+    margin-left: 5px;
   }
 }
 

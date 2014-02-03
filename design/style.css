@@ -2805,11 +2805,18 @@ a.Bookmark:before {
 a.Bookmark:before {
   font-size: 14px;
   line-height: 1.428571429;
-  color: #333333;
+  color: #f0ad4e;
 }
 a.Bookmark:hover,
 a.Bookmark:focus {
   text-decoration: none;
+}
+a.Bookmark:hover:before,
+a.Bookmark:focus:before {
+  color: #2a6496;
+}
+.OptionsMenu + a.Bookmark {
+  margin-left: 5px;
 }
 a.Bookmarked:before {
   content: "\e006";
