@@ -7,5 +7,5 @@ $ThemeInfo['bootstrap'] = array(
   'Author'      => 'Kasper K. Isager',
   'AuthorEmail' => 'kasperisager@gmail.com',
   'AuthorUrl'   => 'https://github.com/kasperisager',
-  'RequiredApplications' => array('Vanilla' => '2.1.x')
+  'RequiredApplications' => array('Vanilla' => '2.2.x')
 );
