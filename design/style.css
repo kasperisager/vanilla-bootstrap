@@ -4082,6 +4082,10 @@ buttona.Delete {
 .Item .Options {
   float: right;
 }
+tr.Item:before,
+tr.Item:after {
+  display: none;
+}
 .Item-Header .PhotoWrap {
   float: left;
 }
