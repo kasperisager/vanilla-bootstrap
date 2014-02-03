@@ -4062,6 +4062,12 @@ buttona.Delete {
   font-size: 12px;
   line-height: 20px;
 }
+.Item .Meta .MItem {
+  padding-right: 10px;
+}
+.Item .Meta .MItem:last-child {
+  padding-right: 0;
+}
 .Item .Author .PhotoWrap {
   float: left;
   padding-right: 12px;
