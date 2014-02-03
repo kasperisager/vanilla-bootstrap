@@ -4261,6 +4261,9 @@ buttona.Delete {
 .Section-Profile dl.About dd:last-child {
   margin-right: 0;
 }
+.ButtonBarMarkupHint {
+  padding-top: 6px;
+}
 .clearfix:before,
 .clearfix:after,
 .container:before,
