@@ -34,5 +34,3 @@ If you come across any bugs or if you have a feature request, please file an iss
 ---
 
 Copyright 2014 © [Kasper Kronborg Isager](http://kasperisager.github.io). Licensed under the terms of the [MIT License](LICENSE.md)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kasperisager/vanilla-bootstrap/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
