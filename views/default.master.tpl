@@ -78,6 +78,7 @@
           <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&repo=vanilla-bootstrap&type=watch&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20" style="vertical-align:top;"></iframe>
         </p>
+        {asset name="Foot"}
       </div>
     </footer>
 
