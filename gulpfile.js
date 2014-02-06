@@ -3,7 +3,6 @@ var gulp = require('gulp')
   , less = require('gulp-less')
   , concat = require('gulp-concat')
   , uglify = require('gulp-uglify')
-  , server = require('tiny-lr')()
   , livereload = require('gulp-livereload');
 
 gulp.task('less', function () {
@@ -11,17 +10,13 @@ gulp.task('less', function () {
     .pipe(less({ paths: 'bower_components'})
       .on('error', gutil.log))
     .pipe(gulp.dest('design'))
-    .pipe(livereload(server));
+    .pipe(livereload());
 });
 
 gulp.task('default', ['less', 'scripts']);
 gulp.task('watch', function () {
-  server.listen(35729, function (err) {
-    if (err) return gutil.log(err);
-
-    gulp.watch('less/**/*', function () {
-      gulp.run('less');
-    });
+  gulp.watch('less/**/*', function () {
+    gulp.run('less');
   });
 });
 

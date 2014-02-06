@@ -16,7 +16,6 @@
     "gulp": "3.5.x",
     "gulp-less": "1.2.x",
     "gulp-livereload": "1.0.x",
-    "tiny-lr": "0.0.x",
     "gulp-concat": "2.1.x",
     "gulp-uglify": "0.2.x",
     "gulp-util": "2.2.x"
