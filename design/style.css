@@ -259,7 +259,8 @@ th {
   }
   .label,
   .Tag,
-  .Note.Closed {
+  .Note.Closed,
+  .HasNew {
     border: 1px solid #000;
   }
   .table,
@@ -3743,7 +3744,8 @@ a.Bookmarked:before {
   display: none;
 }
 .Tag,
-.Note.Closed {
+.Note.Closed,
+.HasNew {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
@@ -3760,6 +3762,9 @@ a.Bookmarked:before {
 }
 .Tag-Announcement {
   background-color: #5bc0de;
+}
+.HasNew {
+  background-color: #f0ad4e;
 }
 .Tag-Closed,
 .Note.Closed {
