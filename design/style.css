@@ -560,8 +560,11 @@ cite {
 body > .footer,
 .OptionsMenu .SpFlyoutHandle,
 .Item .Meta,
+.Conversation .Item .MItem,
 .Item .Meta,
+.Conversation .Item .MItem,
 .Item .Meta a,
+.Conversation .Item .MItem a,
 .Item .AuthorInfo {
   color: #999999;
 }
@@ -3861,7 +3864,8 @@ a.Bookmarked:before {
 }
 .Empty,
 .MessageForm .Form-Body,
-.MessageList .Item-Body {
+.MessageList .Item-Body,
+.MessageList.Conversation .Message {
   padding: 15px;
 }
 .panel > table,
@@ -3915,7 +3919,8 @@ a.Bookmarked:before {
 .panel > table > tbody:first-child > tr:first-child td {
   border-top: 0;
 }
-.MessageList .Item-Header {
+.MessageList .Item-Header,
+.MessageList.Conversation .Meta {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
@@ -3933,7 +3938,8 @@ a.Bookmarked:before {
 .MessageList .Item {
   border-color: #dddddd;
 }
-.MessageList .Item-Header {
+.MessageList .Item-Header,
+.MessageList.Conversation .Meta {
   color: #333333;
   background-color: #f5f5f5;
   border-color: #dddddd;
@@ -4066,11 +4072,17 @@ buttona.Delete {
   line-height: 20px;
   color: #333333;
 }
-.Item .Username {
+.Item .Username,
+.Conversation .Item .Name {
   font-weight: 500;
   color: #333333;
 }
-.Item .Meta {
+.Conversation .Item .Meta {
+  font-size: 14px;
+  text-align: right;
+}
+.Item .Meta,
+.Conversation .Item .MItem {
   font-size: 12px;
   line-height: 20px;
 }
@@ -4079,6 +4091,9 @@ buttona.Delete {
 }
 .Item .Meta .MItem:last-child {
   padding-right: 0;
+}
+.Conversation .Item .Author {
+  float: left;
 }
 .Item .Author .PhotoWrap {
   float: left;
@@ -4154,6 +4169,28 @@ tr.Item:after {
 .DataList:empty {
   display: none;
 }
+.DataList.Condensed .Item h1,
+.DataList.Condensed .Item h2,
+.DataList.Condensed .Item h3,
+.DataList.Condensed .Item h4,
+.DataList.Condensed .Item h5,
+.DataList.Condensed .Item h6 {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.428571429;
+}
+.DataList.Condensed .Item .Photo img {
+  width: 40px;
+  height: 40px;
+}
+.DataList.Condensed .Item .Excerpt {
+  float: left;
+}
+.DataList.Condensed .Item .Meta {
+  float: right;
+}
 .DataTable > tbody > tr > td {
   vertical-align: middle;
 }
@@ -4201,16 +4238,19 @@ tr.Item:after {
   padding: 10px 15px;
   margin-bottom: -10px;
 }
-.MessageList .Item-Header .PhotoWrap {
+.MessageList .Item-Header .PhotoWrap,
+.MessageList.Conversation .Meta .PhotoWrap {
   position: absolute;
   top: -1px;
   left: -65px;
 }
 @media (min-width: 768px) {
-  .MessageList .Item-Header .AuthorWrap {
+  .MessageList .Item-Header .AuthorWrap,
+  .MessageList.Conversation .Meta .AuthorWrap {
     float: left;
   }
-  .MessageList .Item-Header .Meta {
+  .MessageList .Item-Header .Meta,
+  .MessageList.Conversation .Meta .Meta {
     float: right;
   }
 }
@@ -4226,7 +4266,10 @@ tr.Item:after {
 }
 .PagerWrap .Pager,
 .PageControls .Pager,
-.BeforeCommentHeading .Pager {
+.BeforeCommentHeading .Pager,
+.PagerWrap .PagerWrap,
+.PageControls .PagerWrap,
+.BeforeCommentHeading .PagerWrap {
   float: right;
   margin: 0;
 }
@@ -4318,6 +4361,8 @@ tr.Item:after {
 .modal-footer:after,
 .Item:before,
 .Item:after,
+.Conversation .Item .Meta:before,
+.Conversation .Item .Meta:after,
 .Item-Header:before,
 .Item-Header:after,
 .PagerWrap:before,
@@ -4339,7 +4384,9 @@ tr.Item:after {
 .MessageForm .Form-Body:before,
 .MessageForm .Form-Body:after,
 .MessageList .Item-Body:before,
-.MessageList .Item-Body:after {
+.MessageList .Item-Body:after,
+.MessageList.Conversation .Message:before,
+.MessageList.Conversation .Message:after {
   content: " ";
   display: table;
 }
@@ -4359,6 +4406,7 @@ tr.Item:after {
 .panel-body:after,
 .modal-footer:after,
 .Item:after,
+.Conversation .Item .Meta:after,
 .Item-Header:after,
 .PagerWrap:after,
 .PageControls:after,
@@ -4369,7 +4417,8 @@ tr.Item:after {
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
-.MessageList .Item-Body:after {
+.MessageList .Item-Body:after,
+.MessageList.Conversation .Message:after {
   clear: both;
 }
 .center-block {

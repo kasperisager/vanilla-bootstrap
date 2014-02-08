@@ -27,6 +27,28 @@
       &:extend(.list-group-item:last-child);
     }
   }
+
+  &.Condensed .Item {
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      font-family: @font-family-base;
+      font-size: @font-size-base;
+      font-weight: 500;
+      line-height: @line-height-base;
+    }
+
+    .Photo img {
+      .square((@line-height-computed * 2));
+    }
+
+    .Excerpt {
+      float: left;
+    }
+
+    .Meta {
+      float: right;
+    }
+  }
 }
 
 .DataTable {
@@ -96,7 +118,8 @@
     }
   }
 
-  .Item-Header {
+  .Item-Header,
+  &.Conversation .Meta {
     &:extend(.panel-heading);
     &:extend(.panel-default > .panel-heading);
 
@@ -117,7 +140,8 @@
     }
   }
 
-  .Item-Body {
+  .Item-Body,
+  &.Conversation .Message {
     &:extend(.panel-body);
   }
 }
@@ -134,7 +158,8 @@
     display: none;
   }
 
-  .Pager {
+  .Pager,
+  .PagerWrap {
     float: right;
     margin: 0;
   }

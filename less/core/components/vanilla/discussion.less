@@ -16,12 +16,20 @@
     }
   }
 
-  .Username {
+  .Username,
+  .Conversation & .Name {
     font-weight: 500;
     color: @text-color;
   }
 
-  .Meta {
+  .Conversation & .Meta {
+    font-size: @font-size-base;
+    text-align: right;
+    &:extend(.clearfix all);
+  }
+
+  .Meta,
+  .Conversation & .MItem {
     font-size: @font-size-small;
     line-height: @line-height-computed;
     &:extend(.text-muted);
@@ -30,7 +38,9 @@
     a {
       &:extend(.text-muted);
     }
+  }
 
+  .Meta {
     .MItem {
       padding-right: @padding-small-horizontal;
 
@@ -38,6 +48,10 @@
         padding-right: 0;
       }
     }
+  }
+
+  .Conversation & .Author {
+    float: left;
   }
 
   .Author .PhotoWrap {
