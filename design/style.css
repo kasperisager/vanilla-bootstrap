@@ -260,7 +260,8 @@ th {
   .label,
   .Tag,
   .Note.Closed,
-  .HasNew {
+  .HasNew,
+  .token-input-token {
     border: 1px solid #000;
   }
   .table,
@@ -2000,17 +2001,6 @@ form ol {
   font-weight: normal;
   cursor: pointer;
 }
-.token-input-list {
-  list-style: none;
-}
-.token-input-input-token {
-  display: inline-block;
-  margin-bottom: 0 !important;
-}
-.token-input-input-token input {
-  background-color: transparent;
-  border: 0;
-}
 .Button,
 .NavButton {
   display: inline-block;
@@ -3748,7 +3738,8 @@ a.Bookmarked:before {
 }
 .Tag,
 .Note.Closed,
-.HasNew {
+.HasNew,
+.token-input-token {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
@@ -3763,6 +3754,12 @@ a.Bookmarked:before {
 .Tag {
   background-color: #999999;
 }
+.token-input-token {
+  background-color: #428bca;
+}
+.token-input-token.token-input-highlighted-token {
+  background-color: #3071a9;
+}
 .Tag-Announcement {
   background-color: #5bc0de;
 }
@@ -3770,7 +3767,8 @@ a.Bookmarked:before {
   background-color: #f0ad4e;
 }
 .Tag-Closed,
-.Note.Closed {
+.Note.Closed,
+.token-input-token.token-input-selected-token {
   background-color: #d9534f;
 }
 .Note.Closed {
@@ -3945,7 +3943,8 @@ a.Bookmarked:before {
   border-color: #dddddd;
 }
 a.Close,
-a.Delete {
+a.Delete,
+.token-input-delete-token {
   float: right;
   font-size: 21px;
   font-weight: bold;
@@ -3958,7 +3957,9 @@ a.Delete {
 a.Close:hover,
 a.Close:focus,
 a.Delete:hover,
-a.Delete:focus {
+a.Delete:focus,
+.token-input-delete-token:hover,
+.token-input-delete-token:focus {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
@@ -3966,7 +3967,8 @@ a.Delete:focus {
   filter: alpha(opacity=50);
 }
 buttona.Close,
-buttona.Delete {
+buttona.Delete,
+button.token-input-delete-token {
   padding: 0;
   cursor: pointer;
   background: transparent;
@@ -4008,7 +4010,8 @@ buttona.Delete {
   min-height: 16.428571429px;
 }
 .modal-header a.Close,
-.modal-header a.Delete {
+.modal-header a.Delete,
+.modal-header .token-input-delete-token {
   margin-top: -2px;
 }
 .Overlay > .Popup h1 {
@@ -4306,6 +4309,48 @@ tr.Item:after {
 }
 .MeBox .ToggleFlyout .Arrow {
   display: none;
+}
+.token-input-token,
+.token-input-input-token {
+  margin-right: 4px;
+  margin-bottom: 4px !important;
+}
+.token-input-token {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  cursor: pointer;
+}
+.token-input-token,
+.token-input-token p,
+.token-input-token .token-input-delete-token {
+  display: inline-block;
+  vertical-align: top;
+}
+.token-input-token p {
+  margin: 0;
+}
+.token-input-input-token {
+  display: inline-block;
+}
+.token-input-input-token input {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.token-input-list {
+  height: auto;
+  min-height: 34px;
+  padding-bottom: 2px;
+  list-style: none;
+  cursor: text;
+}
+.token-input-delete-token {
+  float: none;
+  margin-left: 6px;
+  font-size: 16px;
 }
 .Section-Profile .ProfileOptions {
   float: right;
