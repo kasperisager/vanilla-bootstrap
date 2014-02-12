@@ -2236,7 +2236,8 @@ fieldset[disabled] .Button.Primary.active {
 }
 .glyphicon-cog:before,
 .SpOptions:before,
-.SpFlyoutHandle:before {
+.SpFlyoutHandle:before,
+.SpPreferences:before {
   content: "\e019";
 }
 .glyphicon-trash:before {
@@ -2281,7 +2282,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-list-alt:before {
   content: "\e032";
 }
-.glyphicon-lock:before {
+.glyphicon-lock:before,
+.SpPassword:before {
   content: "\e033";
 }
 .glyphicon-flag:before,
@@ -2365,7 +2367,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-facetime-video:before {
   content: "\e059";
 }
-.glyphicon-picture:before {
+.glyphicon-picture:before,
+.SpPicture:before {
   content: "\e060";
 }
 .glyphicon-map-marker:before {
@@ -2377,7 +2380,9 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-tint:before {
   content: "\e064";
 }
-.glyphicon-edit:before {
+.glyphicon-edit:before,
+.SpEdit:before,
+.SpApplicants:before {
   content: "\e065";
 }
 .glyphicon-share:before {
@@ -2475,7 +2480,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-resize-full:before {
   content: "\e096";
 }
-.glyphicon-resize-small:before {
+.glyphicon-resize-small:before,
+.SpThumbnail:before {
   content: "\e097";
 }
 .glyphicon-exclamation-sign:before {
@@ -2487,7 +2493,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-leaf:before {
   content: "\e103";
 }
-.glyphicon-fire:before {
+.glyphicon-fire:before,
+.SpSpam:before {
   content: "\e104";
 }
 .glyphicon-eye-open:before {
@@ -2661,13 +2668,15 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-collapse-up:before {
   content: "\e160";
 }
-.glyphicon-log-in:before {
+.glyphicon-log-in:before,
+.SpSignIn:before {
   content: "\e161";
 }
 .glyphicon-flash:before {
   content: "\e162";
 }
-.glyphicon-log-out:before {
+.glyphicon-log-out:before,
+.SpSignOut:before {
   content: "\e163";
 }
 .glyphicon-new-window:before {
