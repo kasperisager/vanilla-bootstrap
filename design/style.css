@@ -2129,6 +2129,9 @@ fieldset[disabled] .Button.Primary.active {
   padding-left: 0;
   padding-right: 0;
 }
+.panel .BigButton + .BigButton {
+  margin-top: 5px;
+}
 .Button:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;

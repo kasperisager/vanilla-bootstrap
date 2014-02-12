@@ -51,6 +51,10 @@
 
   .panel & {
     &:extend(.btn-block);
+
+    + .BigButton {
+      &:extend(.btn-block + .btn-block);
+    }
   }
 }
 
