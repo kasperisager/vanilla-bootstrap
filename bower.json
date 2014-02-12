@@ -8,6 +8,6 @@
   "homepage": "https://github.com/kasperisager/vanilla-bootstrap",
   "private": true,
   "dependencies": {
-    "bootstrap": "3.1.x"
+    "bootstrap": "3.1.0"
   }
 }
