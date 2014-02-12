@@ -1,0 +1,18 @@
+//
+// # Boxes
+//
+// No styleguide reference.
+
+.Box {
+  // Space out consecutive boxes
+  & + & {
+    margin-bottom: @line-height-computed;
+  }
+}
+
+.GuestBox {
+  .PopupWindow {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}

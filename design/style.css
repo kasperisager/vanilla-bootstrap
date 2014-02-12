@@ -4088,6 +4088,13 @@ button.token-input-delete-token {
 .ProfilePhotoMedium {
   border-radius: 3px;
 }
+.Box + .Box {
+  margin-bottom: 20px;
+}
+.GuestBox .PopupWindow {
+  display: inline-block;
+  margin-bottom: 5px;
+}
 .Item .Title,
 .Item .Title a {
   font-size: 15px;
@@ -4411,12 +4418,6 @@ tr.Item:after {
 }
 .ButtonBarMarkupHint {
   padding-top: 6px;
-}
-.GuestBox #FacebookAuth + .P,
-.GuestBox #GoogleAuth + .P,
-.GuestBox #OpenIDAuth + .P,
-.GuestBox #TwitterAuth + .P {
-  margin-top: 6px;
 }
 .clearfix:before,
 .clearfix:after,
