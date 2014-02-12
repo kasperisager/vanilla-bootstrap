@@ -1,0 +1,35 @@
+//
+// # Messages
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (reference) "@{bootstrap}/alerts";
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.DismissMessage {
+  &:extend(.alert);
+  &.AlertMessage {
+    &:extend(.alert-warning);
+  }
+  &.CasualMessage {
+    &:extend(.alert-info);
+  }
+  &.InfoMessage {
+    &:extend(.alert-success);
+  }
+  &.WarningMessage {
+    &:extend(.alert-danger);
+  }
+
+}
+
+// Error messages
+.Messages.Errors {
+  &:extend(.alert);
+  &:extend(.alert-danger);
+}
