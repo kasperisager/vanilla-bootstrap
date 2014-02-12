@@ -1,7 +1,7 @@
 {
   "name": "vanilla-bootstrap",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "gulp": "3.5.x",
     "gulp-less": "1.2.x",
     "gulp-livereload": "1.1.x",
