@@ -3927,6 +3927,7 @@ a.Bookmarked:before {
 }
 a.Close,
 a.Delete,
+.DismissMessage .Dismiss,
 .token-input-delete-token {
   float: right;
   font-size: 21px;
@@ -3941,6 +3942,8 @@ a.Close:hover,
 a.Close:focus,
 a.Delete:hover,
 a.Delete:focus,
+.DismissMessage .Dismiss:hover,
+.DismissMessage .Dismiss:focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
   color: #000000;
@@ -4048,6 +4051,7 @@ button.token-input-delete-token {
 }
 .alert-dismissable a.Close,
 .alert-dismissable a.Delete,
+.DismissMessage .Dismiss,
 .alert-dismissable .token-input-delete-token {
   position: relative;
   top: -2px;
@@ -4074,6 +4078,9 @@ button.token-input-delete-token {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
+}
+.DismissMessage .Dismiss {
+  right: 0;
 }
 .Errors ul,
 .Errors ul li {

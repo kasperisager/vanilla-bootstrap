@@ -13,6 +13,17 @@
 
 .DismissMessage {
   &:extend(.alert);
+
+  .Dismiss {
+    right: 0;
+    &:extend(.close);
+    &:extend(.alert-dismissable .close);
+
+    &:hover,
+    &:focus {
+      &:extend(.close:hover);
+    }
+  }
 }
 
 .AlertMessage {
