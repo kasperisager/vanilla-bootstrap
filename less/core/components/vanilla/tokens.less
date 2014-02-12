@@ -68,3 +68,40 @@
   font-size: (@font-size-base + 2px);
   &:extend(.close all);
 }
+
+.token-input-dropdown {
+  padding-right: @padding-base-horizontal;
+  padding-left: @padding-base-horizontal;
+  .box-sizing(content-box);
+  &:extend(.dropdown-menu);
+
+  ul {
+    padding: 0;
+    margin: 0 -@padding-base-horizontal;
+    list-style: none;
+  }
+
+  li {
+    cursor: pointer;
+
+    &:hover {
+      &:extend(.dropdown-menu > li > a:hover);
+    }
+  }
+
+  > p {
+    margin: 0 -@padding-base-horizontal;
+  }
+
+  li,
+  > p {
+    &:extend(.dropdown-menu > li > a);
+  }
+
+  .token-input-selected-dropdown-item {
+    &,
+    &:hover {
+      &:extend(.dropdown-menu > .active > a);
+    }
+  }
+}

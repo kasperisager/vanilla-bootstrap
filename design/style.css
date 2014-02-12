@@ -2943,24 +2943,6 @@ a.Bookmarked:before {
 .OptionsMenu.Open .SpFlyoutHandle {
   color: #428bca;
 }
-.token-input-dropdown {
-  padding-right: 12px;
-  padding-left: 12px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.token-input-dropdown ul {
-  padding: 0;
-  margin: 0 -12px;
-  list-style: none;
-}
-.token-input-dropdown li {
-  cursor: pointer;
-}
-.token-input-dropdown > p {
-  margin: 0 -12px;
-}
 .ButtonGroup {
   position: relative;
   display: inline-block;
@@ -4351,6 +4333,24 @@ tr.Item:after {
   float: none;
   margin-left: 6px;
   font-size: 16px;
+}
+.token-input-dropdown {
+  padding-right: 12px;
+  padding-left: 12px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.token-input-dropdown ul {
+  padding: 0;
+  margin: 0 -12px;
+  list-style: none;
+}
+.token-input-dropdown li {
+  cursor: pointer;
+}
+.token-input-dropdown > p {
+  margin: 0 -12px;
 }
 .Section-Profile .ProfileOptions {
   float: right;
