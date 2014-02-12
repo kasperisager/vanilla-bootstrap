@@ -1,5 +1,5 @@
 //
-// # Alerts aka Messages
+// # Alerts
 //
 // No styleguide reference.
 
@@ -13,19 +13,22 @@
 
 .DismissMessage {
   &:extend(.alert);
-  &.AlertMessage {
-    &:extend(.alert-warning);
-  }
-  &.CasualMessage {
-    &:extend(.alert-info);
-  }
-  &.InfoMessage {
-    &:extend(.alert-success);
-  }
-  &.WarningMessage {
-    &:extend(.alert-danger);
-  }
+}
 
+.AlertMessage {
+  &:extend(.alert-warning);
+}
+
+.CasualMessage {
+  &:extend(.alert-info);
+}
+
+.InfoMessage {
+  &:extend(.alert-success);
+}
+
+.WarningMessage {
+  &:extend(.alert-danger);
 }
 
 // Error messages

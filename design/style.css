@@ -4051,22 +4051,22 @@ button.token-input-delete-token {
   right: -21px;
   color: inherit;
 }
-.DismissMessage.InfoMessage {
+.InfoMessage {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;
 }
-.DismissMessage.CasualMessage {
+.CasualMessage {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
 }
-.DismissMessage.AlertMessage {
+.AlertMessage {
   background-color: #fcf8e3;
   border-color: #faebcc;
   color: #8a6d3b;
 }
-.DismissMessage.WarningMessage,
+.WarningMessage,
 .Messages.Errors {
   background-color: #f2dede;
   border-color: #ebccd1;
