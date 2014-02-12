@@ -4037,7 +4037,7 @@ button.token-input-delete-token {
   right: 20px;
 }
 .DismissMessage,
-.Messages.Errors {
+.Errors {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -4067,10 +4067,14 @@ button.token-input-delete-token {
   color: #8a6d3b;
 }
 .WarningMessage,
-.Messages.Errors {
+.Errors {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
+}
+.Errors ul,
+.Errors ul li {
+  margin-bottom: 0 !important;
 }
 .ProfilePhoto {
   width: 32px;

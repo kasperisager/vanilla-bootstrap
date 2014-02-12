@@ -32,7 +32,12 @@
 }
 
 // Error messages
-.Messages.Errors {
+.Errors {
   &:extend(.alert);
   &:extend(.alert-danger);
+
+  ul,
+  ul li {
+    margin-bottom: 0 !important; // Hack N' Slash
+  }
 }
