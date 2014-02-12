@@ -4049,6 +4049,9 @@ button.token-input-delete-token {
   border: 1px solid transparent;
   border-radius: 4px;
 }
+.DismissMessage a {
+  font-weight: bold;
+}
 .alert-dismissable a.Close,
 .alert-dismissable a.Delete,
 .DismissMessage .Dismiss,
