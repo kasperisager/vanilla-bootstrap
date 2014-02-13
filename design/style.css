@@ -2946,7 +2946,7 @@ a.Bookmarked:before {
   padding: 0 12px 6px;
 }
 .FlyoutMenu .Item.Title a {
-  float: right;
+  float: right !important;
 }
 .FlyoutMenu .Item.Center {
   border-bottom-width: 0;
@@ -4171,21 +4171,21 @@ button.token-input-delete-token {
   padding-right: 0;
 }
 .Conversation .Item .Author {
-  float: left;
+  float: left !important;
 }
 .Item .Author .PhotoWrap {
-  float: left;
+  float: left !important;
   padding-right: 12px;
 }
 .Item .Options {
-  float: right;
+  float: right !important;
 }
 tr.Item:before,
 tr.Item:after {
   display: none;
 }
 .Item-Header .PhotoWrap {
-  float: left;
+  float: left !important;
 }
 .Item.Category .CategoryName {
   margin: 0;
@@ -4197,7 +4197,7 @@ tr.Item:after {
   background-color: #ffffff;
 }
 .PageTitle .Options {
-  float: right;
+  float: right !important;
 }
 .MessageForm {
   position: relative;
@@ -4232,7 +4232,7 @@ tr.Item:after {
 }
 .MessageForm .Buttons .Back {
   display: none;
-  float: left;
+  float: left !important;
   line-height: 34px;
 }
 @media (min-width: 768px) {
@@ -4264,10 +4264,10 @@ tr.Item:after {
   height: 40px;
 }
 .DataList.Condensed .Item .Excerpt {
-  float: left;
+  float: left !important;
 }
 .DataList.Condensed .Item .Meta {
-  float: right;
+  float: right !important;
 }
 .DataTable > tbody > tr > td {
   vertical-align: middle;
@@ -4348,7 +4348,7 @@ tr.Item:after {
 .PagerWrap .PagerWrap,
 .PageControls .PagerWrap,
 .BeforeCommentHeading .PagerWrap {
-  float: right;
+  float: right !important;
   margin: 0;
 }
 .BeforeCommentHeading {
@@ -4365,7 +4365,7 @@ tr.Item:after {
 .MeBox .WhoIs,
 .MeBox .Username,
 .MeBox .MeMenu {
-  float: left;
+  float: left !important;
 }
 .MeBox > .PhotoWrap {
   margin-top: 9px;
@@ -4377,7 +4377,7 @@ tr.Item:after {
   vertical-align: top;
 }
 .MeBox .ToggleFlyout {
-  float: left;
+  float: left !important;
 }
 .MeBox .ToggleFlyout em {
   display: none;
@@ -4446,7 +4446,7 @@ tr.Item:after {
   margin: 0 -12px;
 }
 .Section-Profile .ProfileOptions {
-  float: right;
+  float: right !important;
 }
 .Section-Profile dl.About dt,
 .Section-Profile dl.About dd {
