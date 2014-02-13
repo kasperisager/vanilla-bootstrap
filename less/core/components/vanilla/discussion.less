@@ -48,6 +48,17 @@
         padding-right: 0;
       }
     }
+
+    .Category a {
+      &:extend(.label);
+      &:extend(.label-default);
+
+      &:hover,
+      &:focus {
+        &:extend(.label[href]:hover);
+        &:extend(.label-default[href]:hover);
+      }
+    }
   }
 
   .Conversation & .Author {

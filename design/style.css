@@ -261,6 +261,7 @@ th {
   .Tag,
   .Note.Closed,
   .HasNew,
+  .Item .Meta .Category a,
   .token-input-token {
     border: 1px solid #000;
   }
@@ -3756,6 +3757,7 @@ a.Bookmarked:before {
 .Tag,
 .Note.Closed,
 .HasNew,
+.Item .Meta .Category a,
 .token-input-token {
   display: inline;
   padding: .2em .6em .3em;
@@ -3768,8 +3770,19 @@ a.Bookmarked:before {
   vertical-align: baseline;
   border-radius: .25em;
 }
-.Tag {
+.Item .Meta .Category a:hover,
+.Item .Meta .Category a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Tag,
+.Item .Meta .Category a {
   background-color: #999999;
+}
+.Item .Meta .Category a:hover,
+.Item .Meta .Category a:focus {
+  background-color: #808080;
 }
 .token-input-token {
   background-color: #428bca;
