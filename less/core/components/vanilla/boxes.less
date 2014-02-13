@@ -6,13 +6,29 @@
 .Box {
   // Space out consecutive boxes
   & + & {
-    margin-bottom: @line-height-computed;
+    margin-top: @line-height-computed;
   }
 }
 
 .GuestBox {
+  &:extend(.Box + .Box);
+
   .PopupWindow {
     display: inline-block;
     margin-bottom: 5px;
+  }
+}
+
+.UserBox {
+  &:extend(.media all);
+
+  + .Box {
+    &:extend(.Box + .Box);
+  }
+
+  .PhotoWrap {
+    .pull-left();
+    &:extend(.media-object);
+    &:extend(.media > .pull-left);
   }
 }

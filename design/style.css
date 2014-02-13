@@ -2140,6 +2140,27 @@ fieldset[disabled] .Button.Primary.active {
 .Buttons {
   padding-top: 10px;
 }
+.UserBox {
+  overflow: hidden;
+  zoom: 1;
+}
+.UserBox,
+.UserBox .UserBox {
+  margin-top: 15px;
+}
+.UserBox:first-child {
+  margin-top: 0;
+}
+.UserBox .PhotoWrap {
+  display: block;
+}
+.UserBox > .pull-left,
+.UserBox .PhotoWrap {
+  margin-right: 10px;
+}
+.UserBox > .pull-right {
+  margin-left: 10px;
+}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('fonts/glyphicons-halflings-regular.eot');
@@ -4110,12 +4131,17 @@ button.token-input-delete-token {
 .ProfilePhotoMedium {
   border-radius: 3px;
 }
-.Box + .Box {
-  margin-bottom: 20px;
+.Box + .Box,
+.GuestBox,
+.UserBox + .Box {
+  margin-top: 20px;
 }
 .GuestBox .PopupWindow {
   display: inline-block;
   margin-bottom: 5px;
+}
+.UserBox .PhotoWrap {
+  float: left !important;
 }
 .Item .Title,
 .Item .Title a {
