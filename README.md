@@ -31,7 +31,7 @@ Bootstrap for Vanilla supports tools such as [Bootstrap Magic](http://pikock.git
 
 ### Bootswatches
 
-While it is possible to use Bootswatches with Bootstrap for Vanilla, they require a bit more integration to properly work. For more information on this, check out issue [#9](https://github.com/kasperisager/vanilla-bootstrap/issues/9).
+While it is possible to use Bootswatches with Bootstrap for Vanilla, they require a bit more integration to properly work. For more information on Bootswathes, check out issue [#9](https://github.com/kasperisager/vanilla-bootstrap/issues/9).
 
 ## [Issue tracking](https://github.com/kasperisager/vanilla-bootstrap/issues)
 
