@@ -11,7 +11,13 @@
 }
 
 .GuestBox {
-  &:extend(.Box + .Box);
+  > :first-child {
+    margin-top: 0;
+  }
+
+  + .Box {
+    &:extend(.Box + .Box);
+  }
 
   .PopupWindow {
     display: inline-block;

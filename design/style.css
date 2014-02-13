@@ -4136,9 +4136,12 @@ button.token-input-delete-token {
   border-radius: 3px;
 }
 .Box + .Box,
-.GuestBox,
+.GuestBox + .Box,
 .UserBox + .Box {
   margin-top: 20px;
+}
+.GuestBox > :first-child {
+  margin-top: 0;
 }
 .GuestBox .PopupWindow {
   display: inline-block;
