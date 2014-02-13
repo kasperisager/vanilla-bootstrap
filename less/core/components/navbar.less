@@ -7,3 +7,14 @@
 // -----------------------------------------------------------------------------
 
 @import (once) "@{bootstrap}/navbar";
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.navbar-default .navbar-nav > li > .Selected {
+  &,
+  &:hover,
+  &:focus {
+    &:extend(.navbar-default .navbar-nav > .active > a);
+  }
+}

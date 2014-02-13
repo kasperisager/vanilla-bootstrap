@@ -3537,6 +3537,9 @@ a.Bookmarked:before {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > .Selected,
+.navbar-default .navbar-nav > li > .Selected:hover,
+.navbar-default .navbar-nav > li > .Selected:focus,
 .navbar-default .MeBox .Open .FlyoutButton,
 .navbar-default .MeBox .Open .FlyoutButton:hover,
 .navbar-default .MeBox .Open .FlyoutButton:focus {
