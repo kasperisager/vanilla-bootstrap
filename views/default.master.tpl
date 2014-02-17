@@ -70,9 +70,9 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="pull-left">Copyright {$smarty.now|date_format:"%Y"} &copy; <a href="{link path="home"}">{logo}</a></p>
-        <p class="pull-right">Built with <i class="glyphicon glyphicon-heart"></i> and <a href="http://getbootstrap.com">Bootstrap</a>
-          <!-- A lot of time was put into this project - a "follow" and a "start" would be most appreciated! Thanks! -->
+        <p class="pull-left">{t c="Copyright"} {$smarty.now|date_format:"%Y"} &copy; <a href="{link path="home"}">{logo}</a></p>
+        <p class="pull-right">[t c="Built with"} <i class="glyphicon glyphicon-heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>
+          <!-- A lot of time was put into this project - a "Follow" and a "Star" would be most appreciated! -->
           <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&type=follow"
   allowtransparency="true" frameborder="0" scrolling="0" width="145" height="20" style="vertical-align:top;margin-left:20px;"></iframe>
           <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&repo=vanilla-bootstrap&type=watch&count=true"

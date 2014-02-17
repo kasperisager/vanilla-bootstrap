@@ -48,14 +48,25 @@
         padding-right: 0;
       }
     }
+
+    .Category a {
+      &:extend(.label);
+      &:extend(.label-default);
+
+      &:hover,
+      &:focus {
+        &:extend(.label[href]:hover);
+        &:extend(.label-default[href]:hover);
+      }
+    }
   }
 
   .Conversation & .Author {
-    float: left;
+    .pull-left();
   }
 
   .Author .PhotoWrap {
-    float: left;
+    .pull-left();
     padding-right: @padding-base-horizontal;
   }
 
@@ -64,7 +75,7 @@
   }
 
   .Options {
-    float: right;
+    .pull-right();
   }
 }
 
@@ -79,11 +90,7 @@ tr.Item {
   &:extend(.clearfix all);
 
   .PhotoWrap {
-    float: left;
-
-    img {
-
-    }
+    .pull-left();
   }
 }
 
@@ -104,7 +111,7 @@ tr.Item {
 
 .PageTitle {
   .Options {
-    float: right;
+    .pull-right();
   }
 }
 
@@ -159,7 +166,7 @@ tr.Item {
 
     .Back {
       display: none;
-      float: left;
+      .pull-left();
       line-height: @input-height-base;
     }
 

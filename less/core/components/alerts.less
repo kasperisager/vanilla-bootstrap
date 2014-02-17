@@ -1,5 +1,5 @@
 //
-// # Alerts aka Messages
+// # Alerts
 //
 // No styleguide reference.
 
@@ -13,23 +13,46 @@
 
 .DismissMessage {
   &:extend(.alert);
-  &.AlertMessage {
-    &:extend(.alert-warning);
-  }
-  &.CasualMessage {
-    &:extend(.alert-info);
-  }
-  &.InfoMessage {
-    &:extend(.alert-success);
-  }
-  &.WarningMessage {
-    &:extend(.alert-danger);
+
+  a {
+    &:extend(.alert .alert-link);
   }
 
+  .Dismiss {
+    right: 0;
+    &:extend(.close);
+    &:extend(.alert-dismissable .close);
+
+    &:hover,
+    &:focus {
+      &:extend(.close:hover);
+    }
+  }
+}
+
+.AlertMessage {
+  &:extend(.alert-warning);
+}
+
+.CasualMessage {
+  &:extend(.alert-info);
+}
+
+.InfoMessage {
+  &:extend(.alert-success);
+}
+
+.WarningMessage {
+  &:extend(.alert-danger);
 }
 
 // Error messages
-.Messages.Errors {
+.Errors {
   &:extend(.alert);
   &:extend(.alert-danger);
+
+  ul,
+  ul li {
+    margin-bottom: 0 !important; // Hack N' Slash
+  }
 }

@@ -261,6 +261,7 @@ th {
   .Tag,
   .Note.Closed,
   .HasNew,
+  .Item .Meta .Category a,
   .token-input-token {
     border: 1px solid #000;
   }
@@ -559,6 +560,7 @@ cite {
 }
 .text-muted,
 body > .footer,
+.Gloss,
 .OptionsMenu .SpFlyoutHandle,
 .Item .Meta,
 .Conversation .Item .MItem,
@@ -2129,6 +2131,9 @@ fieldset[disabled] .Button.Primary.active {
   padding-left: 0;
   padding-right: 0;
 }
+.panel .BigButton + .BigButton {
+  margin-top: 5px;
+}
 .Button:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -2136,6 +2141,27 @@ fieldset[disabled] .Button.Primary.active {
 }
 .Buttons {
   padding-top: 10px;
+}
+.UserBox {
+  overflow: hidden;
+  zoom: 1;
+}
+.UserBox,
+.UserBox .UserBox {
+  margin-top: 15px;
+}
+.UserBox:first-child {
+  margin-top: 0;
+}
+.UserBox .PhotoWrap {
+  display: block;
+}
+.UserBox > .pull-left,
+.UserBox .PhotoWrap {
+  margin-right: 10px;
+}
+.UserBox > .pull-right {
+  margin-left: 10px;
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -2233,7 +2259,8 @@ fieldset[disabled] .Button.Primary.active {
 }
 .glyphicon-cog:before,
 .SpOptions:before,
-.SpFlyoutHandle:before {
+.SpFlyoutHandle:before,
+.SpPreferences:before {
   content: "\e019";
 }
 .glyphicon-trash:before {
@@ -2278,7 +2305,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-list-alt:before {
   content: "\e032";
 }
-.glyphicon-lock:before {
+.glyphicon-lock:before,
+.SpPassword:before {
   content: "\e033";
 }
 .glyphicon-flag:before,
@@ -2362,7 +2390,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-facetime-video:before {
   content: "\e059";
 }
-.glyphicon-picture:before {
+.glyphicon-picture:before,
+.SpPicture:before {
   content: "\e060";
 }
 .glyphicon-map-marker:before {
@@ -2374,7 +2403,9 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-tint:before {
   content: "\e064";
 }
-.glyphicon-edit:before {
+.glyphicon-edit:before,
+.SpEdit:before,
+.SpApplicants:before {
   content: "\e065";
 }
 .glyphicon-share:before {
@@ -2472,7 +2503,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-resize-full:before {
   content: "\e096";
 }
-.glyphicon-resize-small:before {
+.glyphicon-resize-small:before,
+.SpThumbnail:before {
   content: "\e097";
 }
 .glyphicon-exclamation-sign:before {
@@ -2484,7 +2516,8 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-leaf:before {
   content: "\e103";
 }
-.glyphicon-fire:before {
+.glyphicon-fire:before,
+.SpSpam:before {
   content: "\e104";
 }
 .glyphicon-eye-open:before {
@@ -2658,13 +2691,15 @@ fieldset[disabled] .Button.Primary.active {
 .glyphicon-collapse-up:before {
   content: "\e160";
 }
-.glyphicon-log-in:before {
+.glyphicon-log-in:before,
+.SpSignIn:before {
   content: "\e161";
 }
 .glyphicon-flash:before {
   content: "\e162";
 }
-.glyphicon-log-out:before {
+.glyphicon-log-out:before,
+.SpSignOut:before {
   content: "\e163";
 }
 .glyphicon-new-window:before {
@@ -2913,7 +2948,7 @@ a.Bookmarked:before {
   padding: 0 12px 6px;
 }
 .FlyoutMenu .Item.Title a {
-  float: right;
+  float: right !important;
 }
 .FlyoutMenu .Item.Center {
   border-bottom-width: 0;
@@ -3503,6 +3538,9 @@ a.Bookmarked:before {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > .Selected,
+.navbar-default .navbar-nav > li > .Selected:hover,
+.navbar-default .navbar-nav > li > .Selected:focus,
 .navbar-default .MeBox .Open .FlyoutButton,
 .navbar-default .MeBox .Open .FlyoutButton:hover,
 .navbar-default .MeBox .Open .FlyoutButton:focus {
@@ -3719,6 +3757,7 @@ a.Bookmarked:before {
 .Tag,
 .Note.Closed,
 .HasNew,
+.Item .Meta .Category a,
 .token-input-token {
   display: inline;
   padding: .2em .6em .3em;
@@ -3731,8 +3770,19 @@ a.Bookmarked:before {
   vertical-align: baseline;
   border-radius: .25em;
 }
-.Tag {
+.Item .Meta .Category a:hover,
+.Item .Meta .Category a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Tag,
+.Item .Meta .Category a {
   background-color: #999999;
+}
+.Item .Meta .Category a:hover,
+.Item .Meta .Category a:focus {
+  background-color: #808080;
 }
 .token-input-token {
   background-color: #428bca;
@@ -3924,6 +3974,7 @@ a.Bookmarked:before {
 }
 a.Close,
 a.Delete,
+.DismissMessage .Dismiss,
 .token-input-delete-token {
   float: right;
   font-size: 21px;
@@ -3938,6 +3989,8 @@ a.Close:hover,
 a.Close:focus,
 a.Delete:hover,
 a.Delete:focus,
+.DismissMessage .Dismiss:hover,
+.DismissMessage .Dismiss:focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
   color: #000000;
@@ -4037,40 +4090,51 @@ button.token-input-delete-token {
   right: 20px;
 }
 .DismissMessage,
-.Messages.Errors {
+.Errors {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
+.DismissMessage a {
+  font-weight: bold;
+}
 .alert-dismissable a.Close,
 .alert-dismissable a.Delete,
+.DismissMessage .Dismiss,
 .alert-dismissable .token-input-delete-token {
   position: relative;
   top: -2px;
   right: -21px;
   color: inherit;
 }
-.DismissMessage.InfoMessage {
+.InfoMessage {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;
 }
-.DismissMessage.CasualMessage {
+.CasualMessage {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
 }
-.DismissMessage.AlertMessage {
+.AlertMessage {
   background-color: #fcf8e3;
   border-color: #faebcc;
   color: #8a6d3b;
 }
-.DismissMessage.WarningMessage,
-.Messages.Errors {
+.WarningMessage,
+.Errors {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
+}
+.DismissMessage .Dismiss {
+  right: 0;
+}
+.Errors ul,
+.Errors ul li {
+  margin-bottom: 0 !important;
 }
 .ProfilePhoto {
   width: 32px;
@@ -4083,6 +4147,21 @@ button.token-input-delete-token {
 .ProfilePhoto,
 .ProfilePhotoMedium {
   border-radius: 3px;
+}
+.Box + .Box,
+.GuestBox + .Box,
+.UserBox + .Box {
+  margin-top: 20px;
+}
+.GuestBox > :first-child {
+  margin-top: 0;
+}
+.GuestBox .PopupWindow {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.UserBox .PhotoWrap {
+  float: left !important;
 }
 .Item .Title,
 .Item .Title a {
@@ -4112,21 +4191,21 @@ button.token-input-delete-token {
   padding-right: 0;
 }
 .Conversation .Item .Author {
-  float: left;
+  float: left !important;
 }
 .Item .Author .PhotoWrap {
-  float: left;
+  float: left !important;
   padding-right: 12px;
 }
 .Item .Options {
-  float: right;
+  float: right !important;
 }
 tr.Item:before,
 tr.Item:after {
   display: none;
 }
 .Item-Header .PhotoWrap {
-  float: left;
+  float: left !important;
 }
 .Item.Category .CategoryName {
   margin: 0;
@@ -4138,7 +4217,7 @@ tr.Item:after {
   background-color: #ffffff;
 }
 .PageTitle .Options {
-  float: right;
+  float: right !important;
 }
 .MessageForm {
   position: relative;
@@ -4173,7 +4252,7 @@ tr.Item:after {
 }
 .MessageForm .Buttons .Back {
   display: none;
-  float: left;
+  float: left !important;
   line-height: 34px;
 }
 @media (min-width: 768px) {
@@ -4205,10 +4284,10 @@ tr.Item:after {
   height: 40px;
 }
 .DataList.Condensed .Item .Excerpt {
-  float: left;
+  float: left !important;
 }
 .DataList.Condensed .Item .Meta {
-  float: right;
+  float: right !important;
 }
 .DataTable > tbody > tr > td {
   vertical-align: middle;
@@ -4289,7 +4368,7 @@ tr.Item:after {
 .PagerWrap .PagerWrap,
 .PageControls .PagerWrap,
 .BeforeCommentHeading .PagerWrap {
-  float: right;
+  float: right !important;
   margin: 0;
 }
 .BeforeCommentHeading {
@@ -4306,7 +4385,7 @@ tr.Item:after {
 .MeBox .WhoIs,
 .MeBox .Username,
 .MeBox .MeMenu {
-  float: left;
+  float: left !important;
 }
 .MeBox > .PhotoWrap {
   margin-top: 9px;
@@ -4318,7 +4397,7 @@ tr.Item:after {
   vertical-align: top;
 }
 .MeBox .ToggleFlyout {
-  float: left;
+  float: left !important;
 }
 .MeBox .ToggleFlyout em {
   display: none;
@@ -4387,7 +4466,7 @@ tr.Item:after {
   margin: 0 -12px;
 }
 .Section-Profile .ProfileOptions {
-  float: right;
+  float: right !important;
 }
 .Section-Profile dl.About dt,
 .Section-Profile dl.About dd {
@@ -4407,12 +4486,6 @@ tr.Item:after {
 }
 .ButtonBarMarkupHint {
   padding-top: 6px;
-}
-.GuestBox #FacebookAuth + .P,
-.GuestBox #GoogleAuth + .P,
-.GuestBox #OpenIDAuth + .P,
-.GuestBox #TwitterAuth + .P {
-  margin-top: 6px;
 }
 .clearfix:before,
 .clearfix:after,

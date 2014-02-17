@@ -1,0 +1,40 @@
+//
+// # Boxes
+//
+// No styleguide reference.
+
+.Box {
+  // Space out consecutive boxes
+  & + & {
+    margin-top: @line-height-computed;
+  }
+}
+
+.GuestBox {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  + .Box {
+    &:extend(.Box + .Box);
+  }
+
+  .PopupWindow {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+
+.UserBox {
+  &:extend(.media all);
+
+  + .Box {
+    &:extend(.Box + .Box);
+  }
+
+  .PhotoWrap {
+    .pull-left();
+    &:extend(.media-object);
+    &:extend(.media > .pull-left);
+  }
+}
