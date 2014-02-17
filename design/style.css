@@ -2848,6 +2848,9 @@ a.Bookmark:focus:before {
 a.Bookmarked:before {
   content: "\e006";
 }
+.FilterMenu .Sprite {
+  margin-right: 2px;
+}
 .SpDropdownHandle {
   display: inline-block;
   width: 0;
