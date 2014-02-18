@@ -7,5 +7,71 @@ $ThemeInfo['bootstrap'] = array(
   'Author'      => 'Kasper K. Isager',
   'AuthorEmail' => 'kasperisager@gmail.com',
   'AuthorUrl'   => 'https://github.com/kasperisager',
-  'RequiredApplications' => array('Vanilla' => '2.2.x')
+  'RequiredApplications' => array('Vanilla' => '2.2.x'),
+
+  'Options' => array(
+    'Description' => '',
+    'Styles'      => array(
+      'Amelia' => array(
+        'Basename' => '%s_amelia',
+        'Description' => 'Sweet and cheery'
+      ),
+      'Cerulean' => array(
+        'Basename' => '%s_cerulean',
+        'Description' => 'A calm blue sky'
+      ),
+      'Cosmo' => array(
+        'Basename' => '%s_cosmo',
+        'Description' => 'An ode to Metro'
+      ),
+      'Cupid' => array(
+        'Basename' => '%s_cupid',
+        'Description' => 'Pretty in pink'
+      ),
+      'Cyborg' => array(
+        'Basename' => '%s_cyborg',
+        'Description' => 'Jet black and electric blue'
+      ),
+      'Flatly' => array(
+        'Basename' => '%s_flatly',
+        'Description' => 'Flat and modern'
+      ),
+      'Journal' => array(
+        'Basename' => '%s_journal',
+        'Description' => 'Crisp like a new sheet of paper'
+      ),
+      'Lumen' => array(
+        'Basename' => '%s_lumen',
+        'Description' => 'Light and shadow'
+      ),
+      'Readable' => array(
+        'Basename' => '%s_readable',
+        'Description' => 'Optimized for legibility'
+      ),
+      'Simplex' => array(
+        'Basename' => '%s_simplex',
+        'Description' => 'Mini and minimalist'
+      ),
+      'Slate' => array(
+        'Basename' => '%s_slate',
+        'Description' => 'Shades of gunmetal gray'
+      ),
+      'Spacelab' => array(
+        'Basename' => '%s_spacelab',
+        'Description' => 'Silvery and sleek'
+      ),
+      'Superhero' => array(
+        'Basename' => '%s_superhero',
+        'Description' => 'The brave and the blue'
+      ),
+      'United' => array(
+        'Basename' => '%s_united',
+        'Description' => 'Ubuntu orange and unique font'
+      ),
+      'Yeti' => array(
+        'Basename' => '%s_yeti',
+        'Description' => 'A friendly foundation'
+      )
+    )
+  )
 );
