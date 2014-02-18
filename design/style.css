@@ -2094,6 +2094,32 @@ fieldset[disabled] .Button.Primary:active {
   background-color: #428bca;
   border-color: #357ebd;
 }
+.Button.Danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.Button.Danger:hover,
+.Button.Danger:focus,
+.Button.Danger:active {
+  color: #ffffff;
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+.Button.Danger:active {
+  background-image: none;
+}
+.Button.Danger[disabled],
+fieldset[disabled] .Button.Danger,
+.Button.Danger[disabled]:hover,
+fieldset[disabled] .Button.Danger:hover,
+.Button.Danger[disabled]:focus,
+fieldset[disabled] .Button.Danger:focus,
+.Button.Danger[disabled]:active,
+fieldset[disabled] .Button.Danger:active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
 .NavButton {
   color: #428bca;
   font-weight: normal;
