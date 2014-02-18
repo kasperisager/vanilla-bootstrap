@@ -2849,7 +2849,7 @@ a.Bookmarked:before {
   content: "\e006";
 }
 .FilterMenu .Sprite {
-  margin-right: 2px;
+  margin-right: 6px;
 }
 .SpDropdownHandle {
   display: inline-block;
