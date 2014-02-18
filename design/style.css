@@ -2063,39 +2063,18 @@ fieldset[disabled] .Button {
 }
 .Button.Primary:hover,
 .Button.Primary:focus,
-.Button.Primary:active,
-.Button.Primary.active,
-.open .dropdown-toggle.Button.Primary {
+.Button.Primary:active {
   color: #ffffff;
   background-color: #3276b1;
   border-color: #285e8e;
 }
-.Button.Primary:active,
-.Button.Primary.active,
-.open .dropdown-toggle.Button.Primary {
+.Button.Primary:active {
   background-image: none;
 }
-.Button.Primary.disabled,
 .Button.Primary[disabled],
-fieldset[disabled] .Button.Primary,
-.Button.Primary.disabled:hover,
-.Button.Primary[disabled]:hover,
-fieldset[disabled] .Button.Primary:hover,
-.Button.Primary.disabled:focus,
-.Button.Primary[disabled]:focus,
-fieldset[disabled] .Button.Primary:focus,
-.Button.Primary.disabled:active,
-.Button.Primary[disabled]:active,
-fieldset[disabled] .Button.Primary:active,
-.Button.Primary.disabled.active,
-.Button.Primary[disabled].active,
-fieldset[disabled] .Button.Primary.active {
+fieldset[disabled] .Button.Primary {
   background-color: #428bca;
   border-color: #357ebd;
-}
-.Button.Primary .badge {
-  color: #428bca;
-  background-color: #ffffff;
 }
 .NavButton {
   color: #428bca;

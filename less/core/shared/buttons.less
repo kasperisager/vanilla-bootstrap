@@ -38,7 +38,21 @@
 }
 
 .Button.Primary {
-  &:extend(.btn-primary all);
+  &:extend(.btn-primary);
+
+  &:hover,
+  &:focus {
+    &:extend(.btn-primary:hover);
+  }
+
+  &:active {
+    &:extend(.btn-primary:active);
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &:extend(.btn-primary.disabled);
+  }
 }
 
 .NavButton {
