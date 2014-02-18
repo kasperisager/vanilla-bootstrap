@@ -14,7 +14,7 @@ gulp.task('less', function () {
 
 gulp.task('default', ['less', 'scripts']);
 gulp.task('watch', function () {
-  gulp.watch('less/**/*', function () {
+  gulp.watch('less/**/*.less', function () {
     gulp.run('less');
   });
 });
