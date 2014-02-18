@@ -32,8 +32,13 @@
 
   &[disabled],
   fieldset[disabled] & {
-    &:extend(.btn.disabled);
-    &:extend(.btn-default.disabled);
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      &:extend(.btn.disabled);
+      &:extend(.btn-default.disabled);
+    }
   }
 }
 
@@ -51,7 +56,12 @@
 
   &[disabled],
   fieldset[disabled] & {
-    &:extend(.btn-primary.disabled);
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      &:extend(.btn-primary.disabled);
+    }
   }
 }
 

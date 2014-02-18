@@ -2028,7 +2028,13 @@ form ol {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .Button[disabled],
-fieldset[disabled] .Button {
+fieldset[disabled] .Button,
+.Button[disabled]:hover,
+fieldset[disabled] .Button:hover,
+.Button[disabled]:focus,
+fieldset[disabled] .Button:focus,
+.Button[disabled]:active,
+fieldset[disabled] .Button:active {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -2052,7 +2058,13 @@ fieldset[disabled] .Button {
   background-image: none;
 }
 .Button[disabled],
-fieldset[disabled] .Button {
+fieldset[disabled] .Button,
+.Button[disabled]:hover,
+fieldset[disabled] .Button:hover,
+.Button[disabled]:focus,
+fieldset[disabled] .Button:focus,
+.Button[disabled]:active,
+fieldset[disabled] .Button:active {
   background-color: #ffffff;
   border-color: #cccccc;
 }
@@ -2072,7 +2084,13 @@ fieldset[disabled] .Button {
   background-image: none;
 }
 .Button.Primary[disabled],
-fieldset[disabled] .Button.Primary {
+fieldset[disabled] .Button.Primary,
+.Button.Primary[disabled]:hover,
+fieldset[disabled] .Button.Primary:hover,
+.Button.Primary[disabled]:focus,
+fieldset[disabled] .Button.Primary:focus,
+.Button.Primary[disabled]:active,
+fieldset[disabled] .Button.Primary:active {
   background-color: #428bca;
   border-color: #357ebd;
 }
