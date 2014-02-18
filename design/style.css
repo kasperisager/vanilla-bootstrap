@@ -3834,6 +3834,54 @@ a.Bookmarked:before {
   color: #428bca;
   background-color: #ffffff;
 }
+.DismissMessage,
+.Errors {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.DismissMessage a {
+  font-weight: bold;
+}
+.DismissMessage .Dismiss,
+.alert-dismissable a.Close,
+.alert-dismissable a.Delete,
+.InformMessage .Close,
+.alert-dismissable .token-input-delete-token {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+.InfoMessage {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+.CasualMessage {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+.AlertMessage {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+.WarningMessage,
+.Errors {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+.DismissMessage .Dismiss {
+  right: 0;
+}
+.Errors ul,
+.Errors ul li {
+  margin-bottom: 0 !important;
+}
 .PanelInfo,
 .DataList,
 .MessageList {
@@ -3975,9 +4023,9 @@ a.Bookmarked:before {
   background-color: #f5f5f5;
   border-color: #dddddd;
 }
+.DismissMessage .Dismiss,
 a.Close,
 a.Delete,
-.DismissMessage .Dismiss,
 .token-input-delete-token {
   float: right;
   font-size: 21px;
@@ -3988,12 +4036,12 @@ a.Delete,
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
+.DismissMessage .Dismiss:hover,
+.DismissMessage .Dismiss:focus,
 a.Close:hover,
 a.Close:focus,
 a.Delete:hover,
 a.Delete:focus,
-.DismissMessage .Dismiss:hover,
-.DismissMessage .Dismiss:focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
   color: #000000;
@@ -4092,52 +4140,42 @@ button.token-input-delete-token {
   top: 15px;
   right: 20px;
 }
-.DismissMessage,
-.Errors {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
+.InformMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  text-align: left;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  white-space: normal;
 }
-.DismissMessage a {
-  font-weight: bold;
+.InformMessage {
+  padding: 9px 14px;
 }
-.alert-dismissable a.Close,
-.alert-dismissable a.Delete,
-.DismissMessage .Dismiss,
-.alert-dismissable .token-input-delete-token {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
+.InformMessages {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  padding: 20px;
+  width: 100%;
+  max-width: 316px;
 }
-.InfoMessage {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #3c763d;
+.InformMessage {
+  position: static;
+  display: block;
 }
-.CasualMessage {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #31708f;
-}
-.AlertMessage {
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  color: #8a6d3b;
-}
-.WarningMessage,
-.Errors {
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  color: #a94442;
-}
-.DismissMessage .Dismiss {
-  right: 0;
-}
-.Errors ul,
-.Errors ul li {
-  margin-bottom: 0 !important;
+.Dismissable .InformMessage {
+  padding-right: 34px;
 }
 .ProfilePhoto {
   width: 32px;
