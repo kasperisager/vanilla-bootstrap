@@ -26,6 +26,12 @@
     &:last-child {
       &:extend(.list-group-item:last-child);
     }
+
+    .Category .Item-Icon:not(.NoPhoto)+.TitleWrap {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 6px;
+    }
   }
 
   &.Condensed .Item {
@@ -56,6 +62,10 @@
 
   > tbody > tr > td {
     vertical-align: middle;
+  }
+
+  .CategoryName .Item-Icon:not(.NoPhoto)+h3 {
+    &:extend(.DataList .Item .Category .Item-Icon:not(.NoPhoto)+.TitleWrap);
   }
 }
 

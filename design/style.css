@@ -4349,6 +4349,12 @@ tr.Item:after {
 .DataList:empty {
   display: none;
 }
+.DataList .Item .Category .Item-Icon:not(.NoPhoto) + .TitleWrap,
+.DataTable .CategoryName .Item-Icon:not(.NoPhoto) + h3 {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 6px;
+}
 .DataList.Condensed .Item h1,
 .DataList.Condensed .Item h2,
 .DataList.Condensed .Item h3,
