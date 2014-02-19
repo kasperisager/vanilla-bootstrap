@@ -3911,15 +3911,13 @@ a.Bookmarked:before {
   margin-bottom: 0 !important;
 }
 .PanelInfo,
-.DataList,
-.MessageList {
+.DataList {
   margin-bottom: 20px;
   padding-left: 0;
 }
 .PanelInfo a,
 .PanelInfo .Heading,
-.DataList .Item,
-.MessageList .Item {
+.DataList .Item {
   position: relative;
   display: block;
   padding: 10px 15px;
@@ -4418,14 +4416,14 @@ tr.Item:after {
   position: relative;
 }
 .MessageList:before {
-  display: block;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 79px;
   z-index: -1;
+  display: block;
   width: 2px;
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   content: " ";
 }
 .MessageList.Discussion {
@@ -4438,10 +4436,11 @@ tr.Item:after {
   margin-bottom: 0;
 }
 .MessageList .Item {
+  position: relative;
   padding: 0;
   margin-bottom: 20px;
   margin-left: 64px;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 .MessageList .Item:hover,
 .MessageList .Item:focus {

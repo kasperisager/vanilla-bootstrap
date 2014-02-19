@@ -407,7 +407,8 @@ body {
 .PageDescription {
   margin-bottom: 20px;
 }
-.Empty {
+.Empty,
+.NoResults {
   text-align: center;
 }
 h1,
@@ -2176,11 +2177,13 @@ fieldset[disabled] .Button.Danger:active {
 .UserBox:first-child {
   margin-top: 0;
 }
-.UserBox .PhotoWrap {
+.UserBox .PhotoWrap,
+.Item-Icon {
   display: block;
 }
 .UserBox > .pull-left,
-.UserBox .PhotoWrap {
+.UserBox .PhotoWrap,
+.Item-Icon {
   margin-right: 10px;
 }
 .UserBox > .pull-right {
@@ -3872,7 +3875,7 @@ a.Bookmarked:before {
 }
 .DismissMessage .Dismiss,
 .alert-dismissable a.Close,
-.alert-dismissable a.Delete,
+.alert-dismissable a.Delete:not(.Popup),
 .InformMessage .Close,
 .alert-dismissable .token-input-delete-token {
   position: relative;
@@ -3909,15 +3912,13 @@ a.Bookmarked:before {
   margin-bottom: 0 !important;
 }
 .PanelInfo,
-.DataList,
-.MessageList {
+.DataList {
   margin-bottom: 20px;
   padding-left: 0;
 }
 .PanelInfo a,
 .PanelInfo .Heading,
-.DataList .Item,
-.MessageList .Item {
+.DataList .Item {
   position: relative;
   display: block;
   padding: 10px 15px;
@@ -3958,6 +3959,7 @@ a.Bookmarked:before {
   list-style: none;
 }
 .Empty,
+.NoResults,
 .MessageForm,
 .MessageList .Item {
   margin-bottom: 22px;
@@ -3968,6 +3970,7 @@ a.Bookmarked:before {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .Empty,
+.NoResults,
 .MessageForm .Form-Body,
 .MessageList .Item-Body,
 .MessageList.Conversation .Message {
@@ -4049,6 +4052,7 @@ a.Bookmarked:before {
   border-top: 0;
 }
 .Empty,
+.NoResults,
 .MessageForm,
 .MessageList .Item {
   border-color: #dddddd;
@@ -4059,9 +4063,23 @@ a.Bookmarked:before {
   background-color: #f5f5f5;
   border-color: #dddddd;
 }
+.SearchForm {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.SearchForm .Button {
+  display: none !important;
+  visibility: hidden !important;
+}
 .DismissMessage .Dismiss,
 a.Close,
-a.Delete,
+a.Delete:not(.Popup),
 .token-input-delete-token {
   float: right;
   font-size: 24px;
@@ -4076,8 +4094,8 @@ a.Delete,
 .DismissMessage .Dismiss:focus,
 a.Close:hover,
 a.Close:focus,
-a.Delete:hover,
-a.Delete:focus,
+a.Delete:not(.Popup):hover,
+a.Delete:not(.Popup):focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
   color: #000000;
@@ -4087,7 +4105,7 @@ a.Delete:focus,
   filter: alpha(opacity=50);
 }
 buttona.Close,
-buttona.Delete,
+buttona.Delete:not(.Popup),
 button.token-input-delete-token {
   padding: 0;
   cursor: pointer;
@@ -4130,7 +4148,7 @@ button.token-input-delete-token {
   min-height: 16.42857143px;
 }
 .modal-header a.Close,
-.modal-header a.Delete,
+.modal-header a.Delete:not(.Popup),
 .modal-header .token-input-delete-token {
   margin-top: -2px;
 }
@@ -4300,6 +4318,9 @@ tr.Item:after {
 .Item-Header .PhotoWrap {
   float: left !important;
 }
+.Item-Icon {
+  float: left !important;
+}
 .Item.Category .CategoryName {
   margin: 0;
   font-size: 16px;
@@ -4396,14 +4417,14 @@ tr.Item:after {
   position: relative;
 }
 .MessageList:before {
-  display: block;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 79px;
   z-index: -1;
+  display: block;
   width: 2px;
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   content: " ";
 }
 .MessageList.Discussion {
@@ -4416,10 +4437,11 @@ tr.Item:after {
   margin-bottom: 0;
 }
 .MessageList .Item {
+  position: relative;
   padding: 0;
   margin-bottom: 20px;
   margin-left: 64px;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 .MessageList .Item:hover,
 .MessageList .Item:focus {
@@ -4801,6 +4823,8 @@ img.jcrop-preview {
 .MeBox .MeMenu:after,
 .Empty:before,
 .Empty:after,
+.NoResults:before,
+.NoResults:after,
 .FilterMenu:before,
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:before,
@@ -4838,6 +4862,7 @@ img.jcrop-preview {
 .MeBox:after,
 .MeBox .MeMenu:after,
 .Empty:after,
+.NoResults:after,
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
@@ -5086,6 +5111,7 @@ legend {
 }
 .panel,
 .Empty,
+.NoResults,
 .MessageForm,
 .MessageList .Item {
   -webkit-box-shadow: none;
