@@ -404,7 +404,8 @@ body > .footer p {
 .PageDescription {
   margin-bottom: 20px;
 }
-.Empty {
+.Empty,
+.NoResults {
   text-align: center;
 }
 h1,
@@ -3965,6 +3966,7 @@ a.Bookmarked:before {
   list-style: none;
 }
 .Empty,
+.NoResults,
 .MessageForm,
 .MessageList .Item {
   margin-bottom: 20px;
@@ -3975,6 +3977,7 @@ a.Bookmarked:before {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .Empty,
+.NoResults,
 .MessageForm .Form-Body,
 .MessageList .Item-Body,
 .MessageList.Conversation .Message {
@@ -4056,6 +4059,7 @@ a.Bookmarked:before {
   border-top: 0;
 }
 .Empty,
+.NoResults,
 .MessageForm,
 .MessageList .Item {
   border-color: #dddddd;
@@ -4805,6 +4809,8 @@ img.jcrop-preview {
 .MeBox .MeMenu:after,
 .Empty:before,
 .Empty:after,
+.NoResults:before,
+.NoResults:after,
 .FilterMenu:before,
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:before,
@@ -4842,6 +4848,7 @@ img.jcrop-preview {
 .MeBox:after,
 .MeBox .MeMenu:after,
 .Empty:after,
+.NoResults:after,
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
