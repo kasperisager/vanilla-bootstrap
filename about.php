@@ -24,10 +24,6 @@ $ThemeInfo['bootstrap'] = array(
         'Basename' => '%s_cosmo',
         'Description' => 'An ode to Metro'
       ),
-      'Cupid' => array(
-        'Basename' => '%s_cupid',
-        'Description' => 'Pretty in pink'
-      ),
       'Cyborg' => array(
         'Basename' => '%s_cyborg',
         'Description' => 'Jet black and electric blue'
