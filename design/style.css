@@ -2181,11 +2181,13 @@ fieldset[disabled] .Button.Danger:active {
 .UserBox:first-child {
   margin-top: 0;
 }
-.UserBox .PhotoWrap {
+.UserBox .PhotoWrap,
+.Item-Icon {
   display: block;
 }
 .UserBox > .pull-left,
-.UserBox .PhotoWrap {
+.UserBox .PhotoWrap,
+.Item-Icon {
   margin-right: 10px;
 }
 .UserBox > .pull-right {
@@ -4287,6 +4289,9 @@ tr.Item:after {
   display: none;
 }
 .Item-Header .PhotoWrap {
+  float: left !important;
+}
+.Item-Icon {
   float: left !important;
 }
 .Item.Category .CategoryName {
