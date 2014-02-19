@@ -1,0 +1,84 @@
+/*!
+ * Bootstrap for Vanilla
+ *
+ * Built on Bootstrap v3.1.1 - Copyright 2011-2014 Twitter, Inc.
+ *
+ * Both Bootstrap and Bootstrap for Vanilla are licensed under the terms of the
+ * MIT License (http://opensource.org/licenses/MIT)
+ *
+ * @author    Kasper Isager <kasperisager@gmail.com>
+ * @license   http://opensource.org/licenses/MIT MIT
+ * @copyright 2014 © Kasper Kronborg Isager
+ */
+
+//
+// # Library
+//
+// No styleguide reference.
+
+// Paths
+// -----------------------------------------------------------------------------
+@bower      : "../../bower_components";
+@bootstrap  : "@{bower}/bootstrap/less";
+@jcrop      : "@{bower}/jcrop/css";
+
+// Globals
+// -----------------------------------------------------------------------------
+@import "globals/variables";
+@import "globals/mixins";
+
+// Shared
+// -----------------------------------------------------------------------------
+@import "shared/scaffolding";
+@import "shared/type";
+@import "shared/grid";
+@import "shared/tables";
+@import "shared/forms";
+@import "shared/buttons";
+@import "shared/media";
+
+// Components
+// -----------------------------------------------------------------------------
+@import "components/glyphicons";
+@import "components/dropdowns";
+@import "components/button-groups";
+@import "components/navs";
+@import "components/navbar";
+@import "components/pagination";
+@import "components/labels";
+@import "components/badges";
+@import "components/alerts";
+@import "components/list-group";
+@import "components/panels";
+@import "components/close";
+@import "components/modals";
+@import "components/popovers";
+
+// Vanilla Components
+@import "components/vanilla/avatars";
+@import "components/vanilla/boxes";
+@import "components/vanilla/discussion";
+@import "components/vanilla/listings";
+@import "components/vanilla/mebox";
+@import "components/vanilla/tokens";
+
+// Sections
+// -----------------------------------------------------------------------------
+@import "sections/profile";
+
+// Plugins
+// -----------------------------------------------------------------------------
+@import "plugins/button-bar";
+
+// Third-party (non-Vanilla)
+@import "plugins/jquery-jcrop";
+
+// Shared Utilities
+// -----------------------------------------------------------------------------
+// These must be loaded last to ensure proper specificity.
+@import "shared/utilities";
+
+// Customizations
+// -----------------------------------------------------------------------------
+@import "../variables";
+@import "../custom";

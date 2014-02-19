@@ -24,19 +24,20 @@ body {
 
 .page-wrap {
   min-height: 100%;
-  margin-bottom: -101px;
+  margin-bottom: -@page-footer-height;
 
   > .push {
-    height: 101px;
+    height: @page-footer-height;
   }
 }
 
-body > .footer {
+.page-footer {
+  height: @page-footer-height;
   padding: 20px;
   margin-top: 40px;
-  background-color: #f7f7f7;
-  border-top: @gray-lighter solid 1px;
-  &:extend(.text-muted);
+  color: @page-footer-color;
+  background-color: @page-footer-bg;
+  border-top: @page-footer-border solid 1px;
 
   p {
     margin-bottom: 0;

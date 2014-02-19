@@ -32,11 +32,23 @@
   .Conversation & .MItem {
     font-size: @font-size-small;
     line-height: @line-height-computed;
-    &:extend(.text-muted);
 
     &,
     a {
       &:extend(.text-muted);
+
+      // When used in lists, make the meta color a mix of the list group bg and
+      // the global text color.
+      .DataList & {
+        color: mix(@list-group-bg, @text-color);
+      }
+
+      // When used in dropdowns, make the meta color a mix of the dropdown bg
+      // and link color.
+      .MenuItems &,
+      .FlyoutMenu & {
+        color: mix(@dropdown-bg, @dropdown-link-color);
+      }
     }
   }
 
@@ -47,16 +59,16 @@
       &:last-child {
         padding-right: 0;
       }
-    }
 
-    .Category a {
-      &:extend(.label);
-      &:extend(.label-default);
+      &.Category a {
+        &:extend(.label);
+        &:extend(.label-default);
 
-      &:hover,
-      &:focus {
-        &:extend(.label[href]:hover);
-        &:extend(.label-default[href]:hover);
+        &:hover,
+        &:focus {
+          &:extend(.label[href]:hover);
+          &:extend(.label-default[href]:hover);
+        }
       }
     }
   }

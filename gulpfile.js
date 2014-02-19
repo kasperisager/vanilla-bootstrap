@@ -3,20 +3,29 @@ var gulp = require('gulp')
   , less = require('gulp-less')
   , concat = require('gulp-concat')
   , uglify = require('gulp-uglify')
+  , rename = require('gulp-rename')
   , livereload = require('gulp-livereload');
 
-gulp.task('less', function () {
+gulp.task('core', function () {
   gulp.src('less/core/style.less')
     .pipe(less().on('error', gutil.log))
     .pipe(gulp.dest('design'))
     .pipe(livereload());
 });
 
-gulp.task('default', ['less', 'scripts']);
+gulp.task('themes', function () {
+  gulp.src('less/themes/*.less')
+    .pipe(rename(function (path) {
+      path.basename = 'custom_' + path.basename;
+    }))
+    .pipe(less().on('error', gutil.log))
+    .pipe(gulp.dest('design'));
+});
+
+gulp.task('default', ['core', 'themes', 'scripts']);
+
 gulp.task('watch', function () {
-  gulp.watch('less/**/*.less', function () {
-    gulp.run('less');
-  });
+  gulp.watch('less/**/*.less', ['core', 'themes']);
 });
 
 gulp.task('scripts', function () {

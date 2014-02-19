@@ -2,7 +2,7 @@
 
 $ThemeInfo['bootstrap'] = array(
   'Name'        => 'Bootstrap',
-  'Description' => "<strong>NOW INCLUDES ALL 15 BOOTSWATCHES!</strong> Bootstrap for Vanilla has been rewritten from scratch on top of <a href='http://getbootstrap.com'>Bootstrap 3.1</a> in this second installation of the most popular theme for Vanilla Forums. Kickstart your community with a fresh and solid theme that is ready to be customized to your heart's desires.",
+  'Description' => "<strong>NOW INCLUDES THE BOOTSWATCH THEMES!</strong> Bootstrap for Vanilla has been rewritten from scratch on top of <a href='http://getbootstrap.com'>Bootstrap 3.1</a> in this second installation of the most popular theme for Vanilla Forums. Kickstart your community with a fresh and solid theme that is ready to be customized to your heart's desires.",
   'Version'     => '2.0.5',
   'Author'      => 'Kasper K. Isager',
   'AuthorEmail' => 'kasperisager@gmail.com',
@@ -10,11 +10,38 @@ $ThemeInfo['bootstrap'] = array(
   'RequiredApplications' => array('Vanilla' => '2.2.x'),
 
   'Options' => array(
-    'Description' => '',
+    'Description' => <<<html
+<p><strong>Credits:</strong></p>
+
+<hr>
+
+<p><a href="http://getbootstrap.com"><strong>Bootstrap</strong></a></p>
+<p>The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
+<p>By <strong><a href="http://twitter.com/mdo">@mdo</a></strong> and <strong><a href="http://twitter.com/fat">@fat</a></strong></p>
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp" width="53" height="20"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
+</p>
+
+<hr>
+
+<p><a href="http://bootswatch.com"><strong>Bootswatch</strong></a></p>
+<p>Bootswatch is a collection of free themes for Bootstrap. Check it out at <a href="http://bootswatch.com">bootswatch.com</a>.</p>
+<p>By <strong>Thomas Park</strong> - <a href="https://twitter.com/thomashpark">Twitter</a> | <a href="https://github.com/thomaspark">GitHub</a></p>
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=thomaspark&amp;repo=bootswatch&amp;type=fork" width="53" height="20"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=thomaspark&amp;repo=bootswatch&amp;type=watch&amp;count=true" width="110" height="20"></iframe>
+</p>
+html
+    ,
     'Styles'      => array(
       'Default' => array(
-        'Basename' => '%s',
-        'Description' => 'Bootstrap look and feel'
+        'Basename' => '%s_default',
+        'Description' => 'Better, faster and stronger'
+      ),
+      'Bootstrap' => array(
+        'Basename' => '%s_bootstrap',
+        'Description' => 'A visually enhanced experience'
       ),
       'Amelia' => array(
         'Basename' => '%s_amelia',
