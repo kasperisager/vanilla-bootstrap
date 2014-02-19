@@ -54,6 +54,9 @@
         <div class="row">
 
           <main class="col-sm-9 content" role="main">
+            {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
+              <div class="SearchForm">{searchbox}</div>
+            {/if}
             {asset name="Content"}
           </main>
 
