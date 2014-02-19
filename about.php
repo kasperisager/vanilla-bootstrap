@@ -2,7 +2,7 @@
 
 $ThemeInfo['bootstrap'] = array(
   'Name'        => 'Bootstrap',
-  'Description' => "<strong>UPDATED!</strong> Bootstrap for Vanilla has been rewritten from scratch on top of <a href='http://getbootstrap.com'>Bootstrap 3.1</a> in this second installation of the most popular theme for Vanilla Forums. Kickstart your community with a fresh and solid theme that is ready to be customized to your heart's desires.",
+  'Description' => "<strong>NOW INCLUDES ALL 15 BOOTSWATCHES!</strong> Bootstrap for Vanilla has been rewritten from scratch on top of <a href='http://getbootstrap.com'>Bootstrap 3.1</a> in this second installation of the most popular theme for Vanilla Forums. Kickstart your community with a fresh and solid theme that is ready to be customized to your heart's desires.",
   'Version'     => '2.0.5',
   'Author'      => 'Kasper K. Isager',
   'AuthorEmail' => 'kasperisager@gmail.com',
@@ -12,6 +12,10 @@ $ThemeInfo['bootstrap'] = array(
   'Options' => array(
     'Description' => '',
     'Styles'      => array(
+      'Default' => array(
+        'Basename' => '%s',
+        'Description' => 'Bootstrap look and feel'
+      ),
       'Amelia' => array(
         'Basename' => '%s_amelia',
         'Description' => 'Sweet and cheery'
