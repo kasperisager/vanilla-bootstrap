@@ -3871,7 +3871,7 @@ a.Bookmarked:before {
 }
 .DismissMessage .Dismiss,
 .alert-dismissable a.Close,
-.alert-dismissable a.Delete,
+.alert-dismissable a.Delete:not(.Popup),
 .InformMessage .Close,
 .alert-dismissable .token-input-delete-token {
   position: relative;
@@ -4060,7 +4060,7 @@ a.Bookmarked:before {
 }
 .DismissMessage .Dismiss,
 a.Close,
-a.Delete,
+a.Delete:not(.Popup),
 .token-input-delete-token {
   float: right;
   font-size: 21px;
@@ -4075,8 +4075,8 @@ a.Delete,
 .DismissMessage .Dismiss:focus,
 a.Close:hover,
 a.Close:focus,
-a.Delete:hover,
-a.Delete:focus,
+a.Delete:not(.Popup):hover,
+a.Delete:not(.Popup):focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
   color: #000000;
@@ -4086,7 +4086,7 @@ a.Delete:focus,
   filter: alpha(opacity=50);
 }
 buttona.Close,
-buttona.Delete,
+buttona.Delete:not(.Popup),
 button.token-input-delete-token {
   padding: 0;
   cursor: pointer;
@@ -4129,7 +4129,7 @@ button.token-input-delete-token {
   min-height: 16.42857143px;
 }
 .modal-header a.Close,
-.modal-header a.Delete,
+.modal-header a.Delete:not(.Popup),
 .modal-header .token-input-delete-token {
   margin-top: -2px;
 }
