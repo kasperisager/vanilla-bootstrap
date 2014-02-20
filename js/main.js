@@ -19,6 +19,34 @@
       $('.InProgress', e.currentTarget).spin(spinner);
     });
 
+    var $backdrop = $('<div class="modal-backdrop fade in"></div>');
+
+    $(document)
+      .on('popupLoading', function (e) {
+        $('body').addClass('modal-open');
+        $('.Overlay > .Popup').addClass('fade');
+      })
+      .on('popupReveal', function (e) {
+        $('.Overlay > .Popup').addClass('in');
+      })
+      .on('popupClose', function (e) {
+        $('.Overlay > .Popup').removeClass('in');
+
+        setTimeout(function () {
+          $('body').removeClass('modal-open');
+
+          setTimeout(function () {
+            $('.Overlay').remove();
+          }, 150);
+        }, 150);
+      });
   });
+
+  $.popup.close = function (settings, response) {
+    $(document).unbind('keydown.popup');
+    $('#' + settings.popupId).trigger('popupClose');
+
+    return false;
+  };
 
 })(jQuery, window, document);
