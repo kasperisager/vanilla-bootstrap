@@ -34,6 +34,9 @@ gulp.task('scripts', function () {
     // 'bower_components/bootstrap/js/tab.js',
     // 'bower_components/bootstrap/js/affix.js',
 
+    'bower_components/spin.js/spin.js',
+    'bower_components/spin.js/jquery.spin.js',
+
     'js/main.js'
   ])
     .pipe(uglify())

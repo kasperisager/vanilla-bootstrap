@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "3.1.1",
-    "jcrop": "0.9.12"
+    "jcrop": "0.9.12",
+    "spin.js": "1.3.3"
   }
 }
