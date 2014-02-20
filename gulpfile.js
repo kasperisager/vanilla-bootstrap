@@ -13,10 +13,10 @@ gulp.task('less', function () {
 });
 
 gulp.task('default', ['less', 'scripts']);
+
 gulp.task('watch', function () {
-  gulp.watch('less/**/*.less', function () {
-    gulp.run('less');
-  });
+  gulp.watch('less/**/*.less', ['less']);
+  gulp.watch('js/main.js', ['scripts']);
 });
 
 gulp.task('scripts', function () {
@@ -32,9 +32,12 @@ gulp.task('scripts', function () {
     // 'bower_components/bootstrap/js/popover.js',
     // 'bower_components/bootstrap/js/scrollspy.js',
     // 'bower_components/bootstrap/js/tab.js',
-    // 'bower_components/bootstrap/js/affix.js'
+    // 'bower_components/bootstrap/js/affix.js',
+
+    'js/main.js'
   ])
     .pipe(uglify())
     .pipe(concat('custom.js'))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('js'))
+    .pipe(livereload());
 });
