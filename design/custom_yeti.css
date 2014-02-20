@@ -361,7 +361,8 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.fade {
+.fade,
+.Overlay:after {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
@@ -4113,6 +4114,9 @@ button.token-input-delete-token {
   border: 0;
   -webkit-appearance: none;
 }
+.modal-open {
+  overflow: hidden;
+}
 .Overlay {
   display: none;
   overflow: auto;
@@ -4125,6 +4129,20 @@ button.token-input-delete-token {
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+}
+.Overlay > .Popup {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.Overlay > .Popup.in {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 .Overlay > .Popup {
   position: relative;
@@ -4141,6 +4159,23 @@ button.token-input-delete-token {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: none;
+}
+.Overlay:after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.Overlay:after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-open .Overlay:after {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .Overlay > .Popup h1 {
   padding: 15px;
@@ -4178,7 +4213,23 @@ button.token-input-delete-token {
 }
 .Overlay {
   display: block;
-  background-color: rgba(0, 0, 0, 0.5);
+}
+.Overlay:after {
+  display: block;
+  content: " ";
+}
+.Overlay > .Popup {
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1050;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s ease-out, opacity .15s linear;
+  -moz-transition: -moz-transform 0.3s ease-out, opacity .15s linear;
+  -o-transition: -o-transform 0.3s ease-out, opacity .15s linear;
+  transition: transform 0.3s ease-out, opacity .15s linear;
+}
+.Overlay > .Popup.in {
+  opacity: 1;
 }
 .Overlay > .Popup h1 {
   margin: -20px;
