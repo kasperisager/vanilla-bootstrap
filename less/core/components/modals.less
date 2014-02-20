@@ -11,13 +11,39 @@
 // Extensions
 // -----------------------------------------------------------------------------
 
+.modal-open {
+  &:extend(.modal-open);
+}
+
 .Overlay {
   display: block;
-  background-color: fade(@modal-backdrop-bg, (@modal-backdrop-opacity * 100));
   &:extend(.modal);
 
+  &:after {
+    display: block;
+    content: " ";
+    &:extend(.fade);
+    &:extend(.modal-backdrop);
+    &:extend(.modal-backdrop.fade);
+
+    .modal-open & {
+      &:extend(.modal-backdrop.in);
+    }
+  }
+
   > .Popup {
+    top:  0 !important;
+    left: 0 !important;
+    z-index: @zindex-modal;
+    opacity: 0;
+    .transition-transform(~"0.3s ease-out, opacity .15s linear");
     &:extend(.modal-dialog);
+    &:extend(.modal.fade .modal-dialog);
+
+    &.in {
+      opacity: 1;
+      &:extend(.modal.in .modal-dialog);
+    }
 
     h1 {
       margin: -@modal-inner-padding;
