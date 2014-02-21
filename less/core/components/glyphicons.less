@@ -13,7 +13,8 @@
 
 .Sprite,
 .Sprite16,
-.SpFlyoutHandle {
+.SpFlyoutHandle,
+.InformSprite {
   &:extend(.glyphicon);
 }
 
@@ -21,37 +22,54 @@
   &:extend(.glyphicon-globe all);
 }
 
-.SpInbox {
+.SpInbox,
+.InformSprite.Cabinet,
+.InformSprite.MailInbox,
+.InformSprite.Drawer {
   &:extend(.glyphicon-inbox all);
 }
 
-.SpBookmarks {
+.SpBookmarks,
+.InformSprite.BookmarkRibbon {
   &:extend(.glyphicon-bookmark all);
 }
 
 .SpOptions,
 .SpFlyoutHandle,
-.SpPreferences {
+.SpPreferences,
+.InformSprite.Gear,
+.InformSprite.Gears {
   &:extend(.glyphicon-cog all);
 }
 
-.SpActivity {
+.SpActivity,
+.InformSprite.Time,
+.InformSprite.Stopwatch {
   &:extend(.glyphicon-time all);
 }
 
 .SpDiscussion,
 .SpDiscussions,
 .SpComment,
-.SpComments {
+.SpComments,
+.InformSprite.Bubble,
+.InformSprite.ElipsisBubble {
   &:extend(.glyphicon-comment all);
 }
 
-.SpAllCategories {
+.InformSprite.Redflag {
+  &:extend(.glyphicon-tag all);
+}
+
+.SpAllCategories,
+.InformSprite.Flags {
   &:extend(.glyphicon-tags all);
 }
 
 .SpEditProfile,
-.SpMyDiscussions {
+.SpMyDiscussions,
+.InformSprite.SingleUser,
+.InformSprite.Group {
   &:extend(.glyphicon-user all);
 }
 
@@ -59,11 +77,13 @@
   &:extend(.glyphicon-file all);
 }
 
-.SpMod {
+.SpMod,
+.InformSprite.Flag {
   &:extend(.glyphicon-flag all);
 }
 
-.SpDashboard {
+.SpDashboard,
+.InformSprite.Dashboard {
   &:extend(.glyphicon-dashboard all);
 }
 
@@ -88,17 +108,231 @@
   &:extend(.glyphicon-log-out all);
 }
 
-.SpPassword {
+.SpPassword,
+.InformSprite.Padlock {
   &:extend(.glyphicon-lock all);
 }
 
-.SpPicture {
+.SpPicture,
+.InformSprite.WallPicture,
+.InformSprite.Photos,
+.InformSprite.Landscape {
   &:extend(.glyphicon-picture all);
 }
 
 .SpThumbnail {
   &:extend(.glyphicon-resize-small all);
 }
+
+.InformSprite.Refresh,
+.InformSprite.Recycle {
+  &:extend(.glyphicon-refresh all);
+}
+
+.InformSprite.Random {
+  &:extend(.glyphicon-random all);
+}
+
+.InformSprite.Magnify {
+  &:extend(.glyphicon-search all);
+}
+
+.InformSprite.Location,
+.InformSprite.Map {
+  &:extend(.glyphicon-map-marker all);
+}
+
+.InformSprite.Plus {
+  &:extend(.glyphicon-plus-sign all);
+}
+
+.InformSprite.Eye {
+  &:extend(.glyphicon-eye-open all);
+}
+
+.InformSprite.Target {
+  &:extend(.glyphicon-screenshot all);
+}
+
+.InformSprite.Graph,
+.InformSprite.Chart,
+.InformSprite.Stats {
+  &:extend(.glyphicon-stats all);
+}
+
+.InformSprite.Envelope {
+  &:extend(.glyphicon-envelope all);
+}
+
+.InformSprite.Present {
+  &:extend(.glyphicon-gift all);
+}
+
+.InformSprite.Thundercloud,
+.InformSprite.Zap {
+  &:extend(.glyphicon-flash all);
+}
+
+.InformSprite.Star {
+  &:extend(.glyphicon-start all);
+}
+
+.InformSprite.Heart {
+  &:extend(.glyphicon-heart all);
+}
+
+.InformSprite.Briefcase,
+.InformSprite.Toolcase,
+.InformSprite.Suitcase {
+  &:extend(.glyphicon-briefcase all);
+}
+
+.InformSprite.Airplane {
+  &:extend(.glyphicon-plane all);
+}
+
+.InformSprite.FilmRoll,
+.InformSprite.FilmStrip,
+.InformSprite.FilmStrip2 {
+  &:extend(.glyphicon-film all);
+}
+
+.InformSprite.Cutlery {
+  &:extend(.glyphicon-cutlery all);
+}
+
+.InformSprite.Pinetree {
+  &:extend(.glyphicon-tree-conifer all);
+}
+
+.InformSprite.House {
+  &:extend(.glyphicon-home all);
+}
+
+.InformSprite.Cloud {
+  &:extend(.glyphicon-cloud-upload all);
+}
+
+.InformSprite.Download {
+  &:extend(.glyphicon-cloud-download all);
+}
+
+.InformSprite.Contrast {
+  &:extend(.glyphicon-adjust all);
+}
+
+.InformSprite.MusicNote {
+  &:extend(.glyphicon-music all);
+}
+
+.InformSprite.Paperclip {
+  &:extend(.glyphicon-paperclip all);
+}
+
+.InformSprite.Pin {
+  &:extend(.glyphicon-pushpin all);
+}
+
+.InformSprite.Telephone {
+  &:extend(.glyphicon-phone-alt all);
+}
+
+.InformSprite.ShoppingCart {
+  &:extend(.glyphicon-shopping-cart all);
+}
+
+.InformSprite.Calendar {
+  &:extend(.glyphicon-calendar all);
+}
+
+.InformSprite.Camera {
+  &:extend(.glyphicon-camera all);
+}
+
+.InformSprite.Book {
+  &:extend(.glyphicon-book all);
+}
+
+.InformSprite.Check {
+  &:extend(.glyphicon-ok all);
+}
+
+.InformSprite.Headphones {
+  &:extend(.glyphicon-headphones all);
+}
+
+.InformSprite.Bullhorn {
+  &:extend(.glyphicon-bullhorn all);
+}
+
+// .InformSprite.Infinity
+// .InformSprite.Squiggle
+// .InformSprite.Skull
+// .InformSprite.SkullBones
+// .InformSprite.Bird
+// .InformSprite.Bandaid
+// .InformSprite.Saturn
+// .InformSprite.Key
+// .InformSprite.Ipod
+// .InformSprite.Iphone
+// .InformSprite.Coffee
+// .InformSprite.Spraypaint
+// .InformSprite.Gas
+// .InformSprite.Battery
+// .InformSprite.Beaker
+// .InformSprite.Outlet
+// .InformSprite.Network
+// .InformSprite.Signpost
+// .InformSprite.Brightness
+// .InformSprite.Runner
+// .InformSprite.Microphone
+// .InformSprite.Tshirt
+// .InformSprite.Monitor
+// .InformSprite.Tv
+// .InformSprite.Compass
+// .InformSprite.Radar
+// .InformSprite.Baby
+// .InformSprite.Ekg
+// .InformSprite.MedicalBag
+// .InformSprite.Dogpaw
+// .InformSprite.Lightbulb
+// .InformSprite.Trophy
+// .InformSprite.Wineglass
+// .InformSprite.Beerglass
+// .InformSprite.Dumbbells
+// .InformSprite.Buoy
+// .InformSprite.Beaker2
+// .InformSprite.Testtube
+// .InformSprite.Thermometer
+// .InformSprite.Pill
+// .InformSprite.Equalizer
+// .InformSprite.Puzzle
+// .InformSprite.Palette
+// .InformSprite.Umbrella
+// .InformSprite.CoffeeCup
+// .InformSprite.Gameplan
+// .InformSprite.Walk
+// .InformSprite.IndexCards
+// .InformSprite.Piano
+// .InformSprite.Sliders
+// .InformSprite.Widescreen
+// .InformSprite.Badge
+// .InformSprite.Chicken
+// .InformSprite.Bug
+// .InformSprite.Navigation
+// .InformSprite.Balloon
+// .InformSprite.Bowandarrow
+// .InformSprite.Controller
+// .InformSprite.Hanger
+// .InformSprite.Piggybank
+// .InformSprite.Idcard
+// .InformSprite.Food
+// .InformSprite.Moon
+// .InformSprite.Sock
+// .InformSprite.Bone
+// .InformSprite.Golf
+// .InformSprite.Dice
+
 
 // Bookmark Icons
 
