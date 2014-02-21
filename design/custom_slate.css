@@ -5598,3 +5598,7 @@ legend {
 .panel-info .panel-heading {
   border-color: #000;
 }
+.MessageList .Item:hover,
+.MessageList .Item:focus {
+  background-color: #32383e;
+}
