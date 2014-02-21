@@ -2175,7 +2175,8 @@ fieldset[disabled] .Button.Danger:active {
 .Buttons {
   padding-top: 10px;
 }
-.UserBox {
+.UserBox,
+.ItemContent {
   overflow: hidden;
   zoom: 1;
 }
@@ -4369,16 +4370,10 @@ button.token-input-delete-token {
 .Dismissable .InformMessage {
   padding-right: 34px;
 }
-.ProfilePhoto {
-  width: 32px;
-  height: 32px;
-}
-.ProfilePhotoMedium {
-  width: 48px;
-  height: 48px;
-}
 .ProfilePhoto,
 .ProfilePhotoMedium {
+  width: 40px;
+  height: 40px;
   border-radius: 3px;
 }
 .ProfilePhotoLarge {
@@ -4574,6 +4569,10 @@ tr.Item:after {
 .MessageList .Item .Options {
   padding: 10px 15px;
   margin-bottom: -10px;
+}
+.MessageList .Item .Author .ProfilePhoto {
+  width: 48px;
+  height: 48px;
 }
 .MessageList .Item-Header .PhotoWrap,
 .MessageList.Conversation .Meta .PhotoWrap {
