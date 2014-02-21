@@ -4318,6 +4318,11 @@ button.token-input-delete-token {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 }
+@media (min-width: 992px) {
+  [class*="Section-Post"] .Overlay > .Popup {
+    width: 900px;
+  }
+}
 .Overlay {
   display: block;
 }
