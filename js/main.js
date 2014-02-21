@@ -7,7 +7,7 @@
     // if the button is later shown.
     $('.Button.Hidden').removeClass('Hidden').hide();
 
-    // Attach spinners using Spin.js to the .InProgress element in flyouts.
+    // Attach spinners to the .InProgress element in flyouts using Spin.js
     $(document).on('click', '.ToggleFlyout', function (e) {
       var spinner = {
         lines  : 11
@@ -19,29 +19,50 @@
       $('.InProgress', e.currentTarget).spin(spinner);
     });
 
-    var $backdrop = $('<div class="modal-backdrop fade in"></div>');
+    var modal    = $()
+      , backdrop = '.Overlay'
+      , dialog   = '.Overlay > .Popup';
 
     $(document)
+      // Show the modal backdrop, but hide the actual modal dialog while it's
+      // loading.
       .on('popupLoading', function (e) {
         $('body').addClass('modal-open');
-        $('.Overlay > .Popup').addClass('fade');
+        $(dialog).addClass('fade');
       })
+      // Fade in the modal dialog when it's time to reveal it.
       .on('popupReveal', function (e) {
-        $('.Overlay > .Popup').addClass('in');
+        $(dialog).addClass('in');
       })
+      // When it's time to close the modal, first fade out the modal dialog,
+      // then fade out the modal backdrop, and lastly remove the entire modal
+      // from the DOM.
       .on('popupClose', function (e) {
-        $('.Overlay > .Popup').removeClass('in');
-
-        setTimeout(function () {
-          $('body').removeClass('modal-open');
-
-          setTimeout(function () {
-            $('.Overlay').remove();
-          }, 150);
-        }, 150);
+        $(dialog).removeClass('in');
+        setTimeout(function () { $('body').removeClass('modal-open'); }, 150);
+        setTimeout(function () { $(backdrop).remove(); }, 300);
       });
+
+    // When only a confirmation modal is shown, the "popupLoading" and
+    // "popupReveal" events are never triggered. Manually trigger them to make
+    // sure that the modal is actually shown.
+    $(document).on('click', 'a.Delete, a.DeleteComment', function (e) {
+      $('body').trigger('popupLoading');
+      setTimeout(function () { $('body').trigger('popupReveal'); }, 150);
+
+    });
   });
 
+  /**
+   * Override the popup.close method to ensure that the modal isn't immdiately
+   * removed from the DOM upon closing the dialog. This version of the method
+   * instead lets it be up to listeners to actually close the modal, just like
+   * it's the reponsibility of listeners to show the modal.
+   *
+   * @param  {Object} settings
+   * @param  {Object} response
+   * @return {bool}
+   */
   $.popup.close = function (settings, response) {
     $(document).unbind('keydown.popup');
     $('#' + settings.popupId).trigger('popupClose');
