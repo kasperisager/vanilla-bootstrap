@@ -2002,7 +2002,8 @@ form ol {
   cursor: pointer;
 }
 .Button,
-.NavButton {
+.NavButton,
+.PhotoWrapLarge .ChangePicture {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -2022,11 +2023,14 @@ form ol {
   user-select: none;
 }
 .Button:hover,
-.Button:focus {
+.Button:focus,
+.PhotoWrapLarge .ChangePicture:hover,
+.PhotoWrapLarge .ChangePicture:focus {
   color: #333333;
   text-decoration: none;
 }
-.Button:active {
+.Button:active,
+.PhotoWrapLarge .ChangePicture:active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -2099,6 +2103,21 @@ fieldset[disabled] .Button.Primary:active {
   background-color: #428bca;
   border-color: #357ebd;
 }
+.PhotoWrapLarge .ChangePicture {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.PhotoWrapLarge .ChangePicture:hover,
+.PhotoWrapLarge .ChangePicture:focus,
+.PhotoWrapLarge .ChangePicture:active {
+  color: #ffffff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+.PhotoWrapLarge .ChangePicture:active {
+  background-image: none;
+}
 .Button.Danger {
   color: #ffffff;
   background-color: #d9534f;
@@ -2146,7 +2165,8 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.33;
   border-radius: 6px;
 }
-.btn-group-sm > .btn {
+.btn-group-sm > .btn,
+.PhotoWrapLarge .ChangePicture {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -2158,7 +2178,8 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.5;
   border-radius: 3px;
 }
-.panel .BigButton {
+.panel .BigButton,
+.PhotoWrapLarge .ChangePicture {
   display: block;
   width: 100%;
   padding-left: 0;
@@ -3949,6 +3970,10 @@ a.Bookmarked:before {
 .PhotoWrapLarge > img {
   margin-left: auto;
   margin-right: auto;
+}
+.PhotoWrapLarge .ChangePicture {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .DismissMessage,
 .Errors {
