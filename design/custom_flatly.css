@@ -402,8 +402,8 @@ body {
   padding: 20px;
   margin-top: 40px;
   color: #b4bcc2;
-  background-color: #f7f7f7;
-  border-top: #ecf0f1 solid 1px;
+  background-color: #ecf0f1;
+  border-top: transparent solid 1px;
 }
 .page-footer p {
   margin-bottom: 0;
