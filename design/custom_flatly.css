@@ -4593,7 +4593,7 @@ tr.Item:after {
   z-index: -1;
   display: block;
   width: 2px;
-  background-color: #ecf0f1;
+  background-color: #e4eaeb;
   content: " ";
 }
 .MessageList.Discussion {

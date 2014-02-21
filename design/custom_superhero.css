@@ -4590,7 +4590,7 @@ tr.Item:after {
   z-index: -1;
   display: block;
   width: 2px;
-  background-color: #ebebeb;
+  background-color: #424e5b;
   content: " ";
 }
 .MessageList.Discussion {

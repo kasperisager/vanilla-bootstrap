@@ -4604,7 +4604,7 @@ tr.Item:after {
   z-index: -1;
   display: block;
   width: 2px;
-  background-color: #999999;
+  background-color: #383d44;
   content: " ";
 }
 .MessageList.Discussion {
