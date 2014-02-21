@@ -2197,6 +2197,8 @@ fieldset[disabled] .Button.Danger:active {
   padding-top: 10px;
 }
 .UserBox,
+.UserBox .Username,
+.UserBox .Email,
 .ItemContent {
   overflow: hidden;
   zoom: 1;
@@ -4418,6 +4420,13 @@ button.token-input-delete-token {
 }
 .UserBox .PhotoWrap {
   float: left !important;
+}
+.UserBox .Username,
+.UserBox .Email {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .Item .Title,
 .Item .Title a {
