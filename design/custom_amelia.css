@@ -4614,7 +4614,7 @@ tr.Item:after {
 }
 .MessageList .Item:hover,
 .MessageList .Item:focus {
-  background-color: transparent;
+  background-color: #13a0aa;
 }
 .MessageList .Item .Options {
   padding: 10px 15px;
