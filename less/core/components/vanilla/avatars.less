@@ -3,17 +3,12 @@
 //
 // No styleguide reference.
 
-.ProfilePhoto {
-  width: 32px;
-  height: 32px;
-}
-
-.ProfilePhotoMedium {
-  width: 48px;
-  height: 48px;
-}
-
 .ProfilePhoto,
 .ProfilePhotoMedium {
+  .square((@line-height-computed * 2));
   border-radius: @border-radius-small;
+}
+
+.ProfilePhotoLarge {
+  width: 100%;
 }
