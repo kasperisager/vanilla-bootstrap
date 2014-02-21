@@ -321,7 +321,10 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive {
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.PhotoWrapLarge > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -3931,6 +3934,21 @@ a.Bookmarked:before {
   color: #428bca;
   background-color: #ffffff;
 }
+.PhotoWrapLarge {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.PhotoWrapLarge > img {
+  margin-left: auto;
+  margin-right: auto;
+}
 .DismissMessage,
 .Errors {
   padding: 15px;
@@ -4362,6 +4380,9 @@ button.token-input-delete-token {
 .ProfilePhoto,
 .ProfilePhotoMedium {
   border-radius: 3px;
+}
+.ProfilePhotoLarge {
+  width: 100%;
 }
 .Box + .Box,
 .GuestBox + .Box,

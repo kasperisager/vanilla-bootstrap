@@ -1,0 +1,20 @@
+//
+// # Thumbnails
+//
+// No styleguide reference.
+
+// Library
+// -----------------------------------------------------------------------------
+
+@import (reference) "@{bootstrap}/thumbnails";
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.PhotoWrapLarge {
+  &:extend(.thumbnail);
+
+  > img {
+    &:extend(.thumbnail > img);
+  }
+}
