@@ -2193,7 +2193,8 @@ fieldset[disabled] .Button.Danger:active {
 .UserBox,
 .UserBox .Username,
 .UserBox .Email,
-.ItemContent {
+.Item.Activity .ItemContent,
+.Item.ActivityComment .ItemContent {
   overflow: hidden;
   zoom: 1;
 }
