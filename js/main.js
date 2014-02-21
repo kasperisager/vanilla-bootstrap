@@ -37,14 +37,10 @@
         setTimeout(function () { $(backdrop).remove(); }, 300);
       });
 
-    var modalPatch = [];
-    modalPatch.push('li.Activity a.Delete');
-    modalPatch.push('ul.Activities a.DeleteComment');
-
     // When only a confirmation modal is shown, the "popupLoading" and
     // "popupReveal" events are not triggered. Manually trigger them to make
     // sure that the modal is actually shown.
-    $(document).on('click', modalPatch.join(','), function (e) {
+    $(document).on('click', 'a.Delete, a.DeleteComment', function (e) {
       $('body').trigger('popupLoading');
       setTimeout(function () { $('body').trigger('popupReveal'); }, 150);
 
