@@ -3421,6 +3421,7 @@ a.Bookmarked:before {
   margin-bottom: 0;
   border-width: 1px 0 0;
 }
+.navbar-brand,
 .navbar-brand {
   float: left;
   padding: 15px 15px;
@@ -3472,6 +3473,9 @@ a.Bookmarked:before {
 }
 .navbar-nav > li > a,
 .MeBox .Username,
+.MeBox .FlyoutButton,
+.navbar-nav > li > a,
+.MeBox .Username,
 .MeBox .FlyoutButton {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -3507,6 +3511,9 @@ a.Bookmarked:before {
   .navbar-nav > li {
     float: left;
   }
+  .navbar-nav > li > a,
+  .MeBox .Username,
+  .MeBox .FlyoutButton,
   .navbar-nav > li > a,
   .MeBox .Username,
   .MeBox .FlyoutButton {
@@ -3666,7 +3673,16 @@ a.Bookmarked:before {
 .navbar-default .navbar-nav > li > .Selected:focus,
 .navbar-default .MeBox .Open .FlyoutButton,
 .navbar-default .MeBox .Open .FlyoutButton:hover,
-.navbar-default .MeBox .Open .FlyoutButton:focus {
+.navbar-default .MeBox .Open .FlyoutButton:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > li > .Selected,
+.navbar-default .navbar-nav > li > .Selected,
+.navbar-default .navbar-nav > li > .Selected:hover,
+.navbar-default .navbar-nav > li > .Selected:focus,
+.navbar-default .MeBox .Open .FlyoutButton,
+.navbar-default .MeBox .Open .FlyoutButton:hover,
+.navbar-default .MeBox .Open .FlyoutButton:focus,
+.navbar-default .navbar-nav > li > .Selected {
   color: #555555;
   background-color: #e7e7e7;
 }
@@ -3724,10 +3740,12 @@ a.Bookmarked:before {
 .navbar-default .navbar-link:hover {
   color: #333333;
 }
+.navbar-inverse,
 .navbar-inverse {
   background-color: #222222;
   border-color: #080808;
 }
+.navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-brand {
   color: #999999;
 }
@@ -3739,6 +3757,9 @@ a.Bookmarked:before {
 .navbar-inverse .navbar-text {
   color: #999999;
 }
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .MeBox .Username,
+.navbar-inverse .MeBox .FlyoutButton,
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .MeBox .Username,
 .navbar-inverse .MeBox .FlyoutButton {
@@ -3758,7 +3779,13 @@ a.Bookmarked:before {
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .MeBox .Open .FlyoutButton,
 .navbar-inverse .MeBox .Open .FlyoutButton:hover,
-.navbar-inverse .MeBox .Open .FlyoutButton:focus {
+.navbar-inverse .MeBox .Open .FlyoutButton:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > li > .Selected,
+.navbar-inverse .MeBox .Open .FlyoutButton,
+.navbar-inverse .MeBox .Open .FlyoutButton:hover,
+.navbar-inverse .MeBox .Open .FlyoutButton:focus,
+.navbar-inverse .navbar-nav > li > .Selected {
   color: #ffffff;
   background-color: #080808;
 }
@@ -5321,7 +5348,16 @@ img.jcrop-preview {
 .navbar-default .navbar-nav > li > .Selected:focus,
 .navbar-default .MeBox .Open .FlyoutButton,
 .navbar-default .MeBox .Open .FlyoutButton:hover,
-.navbar-default .MeBox .Open .FlyoutButton:focus {
+.navbar-default .MeBox .Open .FlyoutButton:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > li > .Selected,
+.navbar-default .navbar-nav > li > .Selected,
+.navbar-default .navbar-nav > li > .Selected:hover,
+.navbar-default .navbar-nav > li > .Selected:focus,
+.navbar-default .MeBox .Open .FlyoutButton,
+.navbar-default .MeBox .Open .FlyoutButton:hover,
+.navbar-default .MeBox .Open .FlyoutButton:focus,
+.navbar-default .navbar-nav > li > .Selected {
   background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
   background-image: linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
   background-repeat: repeat-x;
@@ -5330,12 +5366,29 @@ img.jcrop-preview {
   box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
 }
 .MeBox .Username,
+.MeBox .FlyoutButton,
+.navbar-brand,
+.navbar-nav > li > a,
+.MeBox .Username,
 .MeBox .FlyoutButton {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
+.navbar-inverse {
+  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
 .navbar-inverse .MeBox .Open .FlyoutButton,
 .navbar-inverse .MeBox .Open .FlyoutButton:hover,
-.navbar-inverse .MeBox .Open .FlyoutButton:focus {
+.navbar-inverse .MeBox .Open .FlyoutButton:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > li > .Selected,
+.navbar-inverse .MeBox .Open .FlyoutButton,
+.navbar-inverse .MeBox .Open .FlyoutButton:hover,
+.navbar-inverse .MeBox .Open .FlyoutButton:focus,
+.navbar-inverse .navbar-nav > li > .Selected {
   background-image: -webkit-linear-gradient(top, #222222 0%, #282828 100%);
   background-image: linear-gradient(to bottom, #222222 0%, #282828 100%);
   background-repeat: repeat-x;
@@ -5343,6 +5396,10 @@ img.jcrop-preview {
   -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
 }
+.navbar-inverse .MeBox .Username,
+.navbar-inverse .MeBox .FlyoutButton,
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .MeBox .Username,
 .navbar-inverse .MeBox .FlyoutButton {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -5410,6 +5467,11 @@ img.jcrop-preview {
   border-color: #dcdcdc;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
 }
 .MessageList {
   border-radius: 0;
