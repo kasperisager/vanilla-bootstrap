@@ -46,7 +46,7 @@
     // When only a confirmation modal is shown, the "popupLoading" and
     // "popupReveal" events are never triggered. Manually trigger them to make
     // sure that the modal is actually shown.
-    $(document).on('click', 'a.Delete, a.DeleteComment', function (e) {
+    $(document).on('click', 'a.Delete, a.DeleteComment, a.PopConfirm', function (e) {
       $('body').trigger('popupLoading');
       setTimeout(function () { $('body').trigger('popupReveal'); }, 150);
 
