@@ -322,7 +322,10 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive {
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.PhotoWrapLarge > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -1994,7 +1997,8 @@ form ol {
   cursor: pointer;
 }
 .Button,
-.NavButton {
+.NavButton,
+.PhotoWrapLarge .ChangePicture {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -2014,11 +2018,14 @@ form ol {
   user-select: none;
 }
 .Button:hover,
-.Button:focus {
+.Button:focus,
+.PhotoWrapLarge .ChangePicture:hover,
+.PhotoWrapLarge .ChangePicture:focus {
   color: #ffffff;
   text-decoration: none;
 }
-.Button:active {
+.Button:active,
+.PhotoWrapLarge .ChangePicture:active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -2091,6 +2098,21 @@ fieldset[disabled] .Button.Primary:active {
   background-color: #2a9fd6;
   border-color: #2a9fd6;
 }
+.PhotoWrapLarge .ChangePicture {
+  color: #ffffff;
+  background-color: #9933cc;
+  border-color: #9933cc;
+}
+.PhotoWrapLarge .ChangePicture:hover,
+.PhotoWrapLarge .ChangePicture:focus,
+.PhotoWrapLarge .ChangePicture:active {
+  color: #ffffff;
+  background-color: #812bab;
+  border-color: #74279b;
+}
+.PhotoWrapLarge .ChangePicture:active {
+  background-image: none;
+}
 .Button.Danger {
   color: #ffffff;
   background-color: #cc0000;
@@ -2138,7 +2160,8 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.33;
   border-radius: 6px;
 }
-.btn-group-sm > .btn {
+.btn-group-sm > .btn,
+.PhotoWrapLarge .ChangePicture {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -2150,7 +2173,8 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.5;
   border-radius: 3px;
 }
-.sidebar .BigButton {
+.sidebar .BigButton,
+.PhotoWrapLarge .ChangePicture {
   display: block;
   width: 100%;
   padding-left: 0;
@@ -2167,7 +2191,10 @@ fieldset[disabled] .Button.Danger:active {
 .Buttons {
   padding-top: 14px;
 }
-.UserBox {
+.UserBox,
+.UserBox .Username,
+.UserBox .Email,
+.ItemContent {
   overflow: hidden;
   zoom: 1;
 }
@@ -2199,6 +2226,7 @@ fieldset[disabled] .Button.Danger:active {
 .Sprite,
 .Sprite16,
 .SpFlyoutHandle,
+.InformSprite,
 .Note.Closed:before {
   position: relative;
   top: 1px;
@@ -2225,7 +2253,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-cloud:before {
   content: "\2601";
 }
-.glyphicon-envelope:before {
+.glyphicon-envelope:before,
+.InformSprite.Envelope:before {
   content: "\2709";
 }
 .glyphicon-pencil:before {
@@ -2234,13 +2263,16 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-glass:before {
   content: "\e001";
 }
-.glyphicon-music:before {
+.glyphicon-music:before,
+.InformSprite.MusicNote:before {
   content: "\e002";
 }
-.glyphicon-search:before {
+.glyphicon-search:before,
+.InformSprite.Magnify:before {
   content: "\e003";
 }
-.glyphicon-heart:before {
+.glyphicon-heart:before,
+.InformSprite.Heart:before {
   content: "\e005";
 }
 .glyphicon-star:before {
@@ -2251,10 +2283,15 @@ fieldset[disabled] .Button.Danger:active {
 }
 .glyphicon-user:before,
 .SpEditProfile:before,
-.SpMyDiscussions:before {
+.SpMyDiscussions:before,
+.InformSprite.SingleUser:before,
+.InformSprite.Group:before {
   content: "\e008";
 }
-.glyphicon-film:before {
+.glyphicon-film:before,
+.InformSprite.FilmRoll:before,
+.InformSprite.FilmStrip:before,
+.InformSprite.FilmStrip2:before {
   content: "\e009";
 }
 .glyphicon-th-large:before {
@@ -2266,7 +2303,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-th-list:before {
   content: "\e012";
 }
-.glyphicon-ok:before {
+.glyphicon-ok:before,
+.InformSprite.Check:before {
   content: "\e013";
 }
 .glyphicon-remove:before {
@@ -2287,13 +2325,16 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-cog:before,
 .SpOptions:before,
 .SpFlyoutHandle:before,
-.SpPreferences:before {
+.SpPreferences:before,
+.InformSprite.Gear:before,
+.InformSprite.Gears:before {
   content: "\e019";
 }
 .glyphicon-trash:before {
   content: "\e020";
 }
-.glyphicon-home:before {
+.glyphicon-home:before,
+.InformSprite.House:before {
   content: "\e021";
 }
 .glyphicon-file:before,
@@ -2301,7 +2342,9 @@ fieldset[disabled] .Button.Danger:active {
   content: "\e022";
 }
 .glyphicon-time:before,
-.SpActivity:before {
+.SpActivity:before,
+.InformSprite.Time:before,
+.InformSprite.Stopwatch:before {
   content: "\e023";
 }
 .glyphicon-road:before {
@@ -2317,7 +2360,10 @@ fieldset[disabled] .Button.Danger:active {
   content: "\e027";
 }
 .glyphicon-inbox:before,
-.SpInbox:before {
+.SpInbox:before,
+.InformSprite.Cabinet:before,
+.InformSprite.MailInbox:before,
+.InformSprite.Drawer:before {
   content: "\e028";
 }
 .glyphicon-play-circle:before {
@@ -2326,21 +2372,26 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-repeat:before {
   content: "\e030";
 }
-.glyphicon-refresh:before {
+.glyphicon-refresh:before,
+.InformSprite.Refresh:before,
+.InformSprite.Recycle:before {
   content: "\e031";
 }
 .glyphicon-list-alt:before {
   content: "\e032";
 }
 .glyphicon-lock:before,
-.SpPassword:before {
+.SpPassword:before,
+.InformSprite.Padlock:before {
   content: "\e033";
 }
 .glyphicon-flag:before,
-.SpMod:before {
+.SpMod:before,
+.InformSprite.Flag:before {
   content: "\e034";
 }
-.glyphicon-headphones:before {
+.glyphicon-headphones:before,
+.InformSprite.Headphones:before {
   content: "\e035";
 }
 .glyphicon-volume-off:before {
@@ -2358,24 +2409,29 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-barcode:before {
   content: "\e040";
 }
-.glyphicon-tag:before {
+.glyphicon-tag:before,
+.InformSprite.Redflag:before {
   content: "\e041";
 }
 .glyphicon-tags:before,
-.SpAllCategories:before {
+.SpAllCategories:before,
+.InformSprite.Flags:before {
   content: "\e042";
 }
-.glyphicon-book:before {
+.glyphicon-book:before,
+.InformSprite.Book:before {
   content: "\e043";
 }
 .glyphicon-bookmark:before,
-.SpBookmarks:before {
+.SpBookmarks:before,
+.InformSprite.BookmarkRibbon:before {
   content: "\e044";
 }
 .glyphicon-print:before {
   content: "\e045";
 }
-.glyphicon-camera:before {
+.glyphicon-camera:before,
+.InformSprite.Camera:before {
   content: "\e046";
 }
 .glyphicon-font:before {
@@ -2418,13 +2474,19 @@ fieldset[disabled] .Button.Danger:active {
   content: "\e059";
 }
 .glyphicon-picture:before,
-.SpPicture:before {
+.SpPicture:before,
+.InformSprite.WallPicture:before,
+.InformSprite.Photos:before,
+.InformSprite.Landscape:before {
   content: "\e060";
 }
-.glyphicon-map-marker:before {
+.glyphicon-map-marker:before,
+.InformSprite.Location:before,
+.InformSprite.Map:before {
   content: "\e062";
 }
-.glyphicon-adjust:before {
+.glyphicon-adjust:before,
+.InformSprite.Contrast:before {
   content: "\e063";
 }
 .glyphicon-tint:before {
@@ -2480,7 +2542,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-chevron-right:before {
   content: "\e080";
 }
-.glyphicon-plus-sign:before {
+.glyphicon-plus-sign:before,
+.InformSprite.Plus:before {
   content: "\e081";
 }
 .glyphicon-minus-sign:before {
@@ -2498,7 +2561,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-info-sign:before {
   content: "\e086";
 }
-.glyphicon-screenshot:before {
+.glyphicon-screenshot:before,
+.InformSprite.Target:before {
   content: "\e087";
 }
 .glyphicon-remove-circle:before {
@@ -2537,7 +2601,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-exclamation-sign:before {
   content: "\e101";
 }
-.glyphicon-gift:before {
+.glyphicon-gift:before,
+.InformSprite.Present:before {
   content: "\e102";
 }
 .glyphicon-leaf:before {
@@ -2547,7 +2612,8 @@ fieldset[disabled] .Button.Danger:active {
 .SpSpam:before {
   content: "\e104";
 }
-.glyphicon-eye-open:before {
+.glyphicon-eye-open:before,
+.InformSprite.Eye:before {
   content: "\e105";
 }
 .glyphicon-eye-close:before {
@@ -2556,20 +2622,25 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-warning-sign:before {
   content: "\e107";
 }
-.glyphicon-plane:before {
+.glyphicon-plane:before,
+.InformSprite.Airplane:before {
   content: "\e108";
 }
-.glyphicon-calendar:before {
+.glyphicon-calendar:before,
+.InformSprite.Calendar:before {
   content: "\e109";
 }
-.glyphicon-random:before {
+.glyphicon-random:before,
+.InformSprite.Random:before {
   content: "\e110";
 }
 .glyphicon-comment:before,
 .SpDiscussion:before,
 .SpDiscussions:before,
 .SpComment:before,
-.SpComments:before {
+.SpComments:before,
+.InformSprite.Bubble:before,
+.InformSprite.ElipsisBubble:before {
   content: "\e111";
 }
 .glyphicon-magnet:before {
@@ -2584,7 +2655,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-retweet:before {
   content: "\e115";
 }
-.glyphicon-shopping-cart:before {
+.glyphicon-shopping-cart:before,
+.InformSprite.ShoppingCart:before {
   content: "\e116";
 }
 .glyphicon-folder-close:before {
@@ -2602,7 +2674,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-hdd:before {
   content: "\e121";
 }
-.glyphicon-bullhorn:before {
+.glyphicon-bullhorn:before,
+.InformSprite.Bullhorn:before {
   content: "\e122";
 }
 .glyphicon-bell:before {
@@ -2654,17 +2727,22 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-filter:before {
   content: "\e138";
 }
-.glyphicon-briefcase:before {
+.glyphicon-briefcase:before,
+.InformSprite.Briefcase:before,
+.InformSprite.Toolcase:before,
+.InformSprite.Suitcase:before {
   content: "\e139";
 }
 .glyphicon-fullscreen:before {
   content: "\e140";
 }
 .glyphicon-dashboard:before,
-.SpDashboard:before {
+.SpDashboard:before,
+.InformSprite.Dashboard:before {
   content: "\e141";
 }
-.glyphicon-paperclip:before {
+.glyphicon-paperclip:before,
+.InformSprite.Paperclip:before {
   content: "\e142";
 }
 .glyphicon-heart-empty:before {
@@ -2676,7 +2754,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-phone:before {
   content: "\e145";
 }
-.glyphicon-pushpin:before {
+.glyphicon-pushpin:before,
+.InformSprite.Pin:before {
   content: "\e146";
 }
 .glyphicon-usd:before {
@@ -2722,7 +2801,9 @@ fieldset[disabled] .Button.Danger:active {
 .SpSignIn:before {
   content: "\e161";
 }
-.glyphicon-flash:before {
+.glyphicon-flash:before,
+.InformSprite.Thundercloud:before,
+.InformSprite.Zap:before {
   content: "\e162";
 }
 .glyphicon-log-out:before,
@@ -2774,7 +2855,8 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-transfer:before {
   content: "\e178";
 }
-.glyphicon-cutlery:before {
+.glyphicon-cutlery:before,
+.InformSprite.Cutlery:before {
   content: "\e179";
 }
 .glyphicon-header:before {
@@ -2786,13 +2868,17 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-earphone:before {
   content: "\e182";
 }
-.glyphicon-phone-alt:before {
+.glyphicon-phone-alt:before,
+.InformSprite.Telephone:before {
   content: "\e183";
 }
 .glyphicon-tower:before {
   content: "\e184";
 }
-.glyphicon-stats:before {
+.glyphicon-stats:before,
+.InformSprite.Graph:before,
+.InformSprite.Chart:before,
+.InformSprite.Stats:before {
   content: "\e185";
 }
 .glyphicon-sd-video:before {
@@ -2825,13 +2911,16 @@ fieldset[disabled] .Button.Danger:active {
 .glyphicon-registration-mark:before {
   content: "\e195";
 }
-.glyphicon-cloud-download:before {
+.glyphicon-cloud-download:before,
+.InformSprite.Download:before {
   content: "\e197";
 }
-.glyphicon-cloud-upload:before {
+.glyphicon-cloud-upload:before,
+.InformSprite.Cloud:before {
   content: "\e198";
 }
-.glyphicon-tree-conifer:before {
+.glyphicon-tree-conifer:before,
+.InformSprite.Pinetree:before {
   content: "\e199";
 }
 .glyphicon-tree-deciduous:before {
@@ -3864,6 +3953,25 @@ a.Bookmarked:before {
   color: #2a9fd6;
   background-color: #ffffff;
 }
+.PhotoWrapLarge {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #060606;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.PhotoWrapLarge > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.PhotoWrapLarge .ChangePicture {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 .DismissMessage,
 .Errors {
   padding: 15px;
@@ -4282,17 +4390,14 @@ button.token-input-delete-token {
 .Dismissable .InformMessage {
   padding-right: 34px;
 }
-.ProfilePhoto {
-  width: 32px;
-  height: 32px;
-}
-.ProfilePhotoMedium {
-  width: 48px;
-  height: 48px;
-}
 .ProfilePhoto,
 .ProfilePhotoMedium {
+  width: 40px;
+  height: 40px;
   border-radius: 3px;
+}
+.ProfilePhotoLarge {
+  width: 100%;
 }
 .Box + .Box,
 .GuestBox + .Box,
@@ -4308,6 +4413,13 @@ button.token-input-delete-token {
 }
 .UserBox .PhotoWrap {
   float: left !important;
+}
+.UserBox .Username,
+.UserBox .Email {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .Item .Title,
 .Item .Title a {
@@ -4501,6 +4613,10 @@ tr.Item:after {
 .MessageList .Item .Options {
   padding: 10px 15px;
   margin-bottom: -10px;
+}
+.MessageList .Item .Author .ProfilePhoto {
+  width: 48px;
+  height: 48px;
 }
 .MessageList .Item-Header .PhotoWrap,
 .MessageList.Conversation .Meta .PhotoWrap {
