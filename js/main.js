@@ -19,27 +19,36 @@
       $('.InProgress', e.currentTarget).spin(spinner);
     });
 
-    var $backdrop = $('<div class="modal-backdrop fade in"></div>');
+    var modal    = $()
+      , backdrop = '.Overlay'
+      , dialog   = '.Overlay > .Popup';
 
     $(document)
       .on('popupLoading', function (e) {
         $('body').addClass('modal-open');
-        $('.Overlay > .Popup').addClass('fade');
+        $(dialog).addClass('fade');
       })
       .on('popupReveal', function (e) {
-        $('.Overlay > .Popup').addClass('in');
+        $(dialog).addClass('in');
       })
       .on('popupClose', function (e) {
-        $('.Overlay > .Popup').removeClass('in');
-
-        setTimeout(function () {
-          $('body').removeClass('modal-open');
-
-          setTimeout(function () {
-            $('.Overlay').remove();
-          }, 150);
-        }, 150);
+        $(dialog).removeClass('in');
+        setTimeout(function () { $('body').removeClass('modal-open'); }, 150);
+        setTimeout(function () { $(backdrop).remove(); }, 300);
       });
+
+    var modalPatch = [];
+    modalPatch.push('li.Activity a.Delete');
+    modalPatch.push('ul.Activities a.DeleteComment');
+
+    // When only a confirmation modal is shown, the "popupLoading" and
+    // "popupReveal" events are not triggered. Manually trigger them to make
+    // sure that the modal is actually shown.
+    $(document).on('click', modalPatch.join(','), function (e) {
+      $('body').trigger('popupLoading');
+      setTimeout(function () { $('body').trigger('popupReveal'); }, 150);
+
+    });
   });
 
   $.popup.close = function (settings, response) {
