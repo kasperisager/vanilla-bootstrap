@@ -45,6 +45,11 @@
       &:extend(.modal.in .modal-dialog);
     }
 
+    // Use a large dialog window for the preview modal in post sections
+    [class*="Section-Post"] & {
+      &:extend(.modal-lg);
+    }
+
     h1 {
       margin: -@modal-inner-padding;
       margin-bottom: @modal-inner-padding;
