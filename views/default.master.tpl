@@ -53,14 +53,14 @@
       <section class="container">
         <div class="row">
 
-          <main class="col-sm-9 content" role="main">
+          <main class="page-content" role="main">
             {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
               <div class="SearchForm">{searchbox}</div>
             {/if}
             {asset name="Content"}
           </main>
 
-          <aside class="col-sm-3 panel" role="complementary">
+          <aside class="page-sidebar" role="complementary">
             {asset name="Panel"}
           </aside>
 
@@ -71,10 +71,10 @@
 
     </div>
 
-    <footer class="footer">
+    <footer class="page-footer">
       <div class="container">
         <p class="pull-left">{t c="Copyright"} {$smarty.now|date_format:"%Y"} &copy; <a href="{link path="home"}">{logo}</a></p>
-        <p class="pull-right">{t c="Built with"} <i class="glyphicon glyphicon-heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>
+        <p class="pull-right hidden-xs">{t c="Built with"} <i class="glyphicon glyphicon-heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>
           <!-- A lot of time was put into this project - a "Follow" and a "Star" would be most appreciated! -->
           <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&type=follow"
   allowtransparency="true" frameborder="0" scrolling="0" width="145" height="20" style="vertical-align:top;margin-left:20px;"></iframe>

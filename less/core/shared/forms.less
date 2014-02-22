@@ -16,8 +16,9 @@
 select {
   &:extend(.form-control);
 
-  // Customize the `:focus` state to imitate native WebKit styles.
-  .form-control-focus();
+  &:focus {
+    &:extend(.form-control:focus);
+  }
 
   // Placeholder
   .placeholder();

@@ -72,17 +72,16 @@
 
 .MessageList {
   position: relative;
-  &:extend(.list-group);
 
   &:before {
-    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 79px;
     z-index: -1;
+    display: block;
     width: 2px;
-    background-color: #f3f3f3;
+    background-color: darken(@panel-footer-bg, 2.75%);
     content: " ";
   }
 
@@ -99,17 +98,17 @@
   }
 
   .Item {
+    position: relative;
     padding: 0;
     margin-bottom: 20px;
     margin-left: 64px;
-    box-shadow: 0 0 0 2px #fff;
-    &:extend(.list-group-item);
+    box-shadow: 0 0 0 2px @body-bg;
     &:extend(.panel);
     &:extend(.panel-default);
 
     &:hover,
     &:focus {
-      background-color: @list-group-bg;
+      background-color: @panel-bg;
     }
 
     .Options {

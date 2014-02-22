@@ -15,6 +15,14 @@ To get started using Bootstrap for Vanilla, either:
 $ git clone kasperisager/vanilla-bootstrap bootstrap
 ```
 
+## Included themes
+
+![Default](design/screenshot_default.png) | ![Bootstrap](design/screenshot_bootstrap.png) | ![Cerulean](design/screenshot_cerulean.png) | ![Cosmo](design/screenshot_cosmo.png)
+---|---|---|---
+![Cyborg](design/screenshot_cyborg.png) | ![Flatly](design/screenshot_flatly.png) | ![Journal](design/screenshot_journal.png) | ![Lumen](design/screenshot_lumen.png)
+![Readable](design/screenshot_readable.png) | ![Simplex](design/screenshot_simplex.png) | ![Slate](design/screenshot_slate.png) | ![Spacelab](design/screenshot_spacelab.png)
+![Superhero](design/screenshot_superhero.png) | ![United](design/screenshot_united.png) | ![Yeti](design/screenshot_yeti.png)
+
 ## Compiling assets
 
 Bootstrap for Vanilla was scaffolded using [Ninja](https://github.com/kasperisager/vanilla-ninja). For instructions on how to install the development dependencies and front-end components, please refer to the [Ninja documentation](https://github.com/kasperisager/vanilla-ninja#getting-started). Once you've got everything set up, use the following tasks to re-compile the theme assets:
@@ -28,10 +36,6 @@ Starts an instance of [tiny-lr](https://github.com/mklabs/tiny-lr) (a tiny LiveR
 ## Customizations
 
 Bootstrap for Vanilla supports tools such as [Bootstrap Magic](http://pikock.github.io/bootstrap-magic/app) out-of-the-box. All custom variables go in [`less/variables.less`](less/variables.less) and will override all those set by both Bootstrap itself as well as any extensions made by Bootstrap for Vanilla. For more in-depth customizations, [`less/custom.less`](less/custom.less) has been made available.
-
-### Bootswatches
-
-While it is possible to use Bootswatches with Bootstrap for Vanilla, they require a bit more integration to properly work. For more information on Bootswathes, check out issue [#9](https://github.com/kasperisager/vanilla-bootstrap/issues/9).
 
 ## [Issue tracking](https://github.com/kasperisager/vanilla-bootstrap/issues)
 
