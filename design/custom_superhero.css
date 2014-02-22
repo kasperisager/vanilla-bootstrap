@@ -2173,14 +2173,14 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.5;
   border-radius: 0;
 }
-.sidebar .BigButton,
+.page-sidebar .BigButton,
 .PhotoWrapLarge .ChangePicture {
   display: block;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
-.sidebar .BigButton + .BigButton {
+.page-sidebar .BigButton + .BigButton {
   margin-top: 5px;
 }
 .Button:focus {
@@ -3318,10 +3318,10 @@ a.Bookmarked:before {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.sidebar .FilterMenu {
+.page-sidebar .FilterMenu {
   padding: 12px 0;
 }
-.content .FilterMenu {
+.page-content .FilterMenu {
   display: none;
 }
 .navbar {
