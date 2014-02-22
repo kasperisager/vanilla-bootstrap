@@ -6,4 +6,23 @@
 // Library
 // -----------------------------------------------------------------------------
 
-@import (once) "@{bootstrap}/grid";
+@import (reference) "@{bootstrap}/grid";
+
+// Extensions
+// -----------------------------------------------------------------------------
+
+.container {
+  &:extend(.container);
+}
+
+.row {
+  &:extend(.row);
+}
+
+.page-content {
+  .make-sm-column(9);
+}
+
+.page-sidebar {
+  .make-sm-column(3);
+}

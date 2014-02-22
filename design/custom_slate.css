@@ -778,12 +778,6 @@ address {
     width: 1170px;
   }
 }
-.container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 .row {
   margin-left: -15px;
   margin-right: -15px;
@@ -1422,6 +1416,30 @@ address {
   }
   .col-lg-offset-0 {
     margin-left: 0%;
+  }
+}
+.page-content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-content {
+    float: left;
+    width: 75%;
+  }
+}
+.page-sidebar {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-sidebar {
+    float: left;
+    width: 25%;
   }
 }
 table {
@@ -5496,6 +5514,10 @@ img.jcrop-preview {
 .Empty:after,
 .NoResults:before,
 .NoResults:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after,
 .FilterMenu:before,
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:before,
@@ -5534,6 +5556,8 @@ img.jcrop-preview {
 .MeBox .MeMenu:after,
 .Empty:after,
 .NoResults:after,
+.container:after,
+.row:after,
 .FilterMenu:after,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
