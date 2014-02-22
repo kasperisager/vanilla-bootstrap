@@ -17,7 +17,7 @@
 
 // Theme
 // -----------------------------------------------------------------------------
-@import (reference) "@{bootstrap}/theme";
+@import "@{bootstrap}/theme";
 
 // Variables
 // -----------------------------------------------------------------------------
@@ -27,47 +27,6 @@
 
 // Adjustments
 // -----------------------------------------------------------------------------
-
-.navbar-default {
-  &:extend(.navbar-default);
-
-  .navbar-nav > .active > a,
-  .navbar-nav > li > .Selected {
-    &:extend(.navbar-default .navbar-nav > .active > a);
-  }
-}
-
-.navbar-inverse {
-  &:extend(.navbar-inverse);
-
-  .navbar-nav > .active > a,
-  .navbar-nav > li > .Selected {
-    &:extend(.navbar-inverse .navbar-nav > .active > a);
-  }
-
-  .navbar-brand {
-    &:extend(.navbar-inverse .navbar-brand);
-  }
-
-  .navbar-nav > li > a {
-    &:extend(.navbar-inverse .navbar-nav > li > a);
-  }
-}
-
-.navbar-brand {
-  &:extend(.navbar-brand);
-}
-
-.navbar-nav > li > a {
-  &:extend(.navbar-nav > li > a);
-}
-
-// Undo rounded corners in static and fixed navbars
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  border-radius: 0;
-}
 
 .MessageList {
   border-radius: 0;

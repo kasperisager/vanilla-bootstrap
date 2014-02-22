@@ -1462,6 +1462,18 @@ table table {
 .DataTable > tbody > tr:hover > th {
   background-color: #282828;
 }
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th,
 table > thead > tr > td.active,
 table > tbody > tr > td.active,
 table > tfoot > tr > td.active,
@@ -1476,12 +1488,28 @@ table > tbody > tr.active > th,
 table > tfoot > tr.active > th {
   background-color: #282828;
 }
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr.active:hover > th,
 .DataTable > tbody > tr > td.active:hover,
 .DataTable > tbody > tr > th.active:hover,
 .DataTable > tbody > tr.active:hover > td,
 .DataTable > tbody > tr.active:hover > th {
   background-color: #1b1b1b;
 }
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th,
 table > thead > tr > td.success,
 table > tbody > tr > td.success,
 table > tfoot > tr > td.success,
@@ -1496,12 +1524,28 @@ table > tbody > tr.success > th,
 table > tfoot > tr.success > th {
   background-color: #77b300;
 }
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr.success:hover > th,
 .DataTable > tbody > tr > td.success:hover,
 .DataTable > tbody > tr > th.success:hover,
 .DataTable > tbody > tr.success:hover > td,
 .DataTable > tbody > tr.success:hover > th {
   background-color: #669a00;
 }
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th,
 table > thead > tr > td.info,
 table > tbody > tr > td.info,
 table > tfoot > tr > td.info,
@@ -1516,12 +1560,28 @@ table > tbody > tr.info > th,
 table > tfoot > tr.info > th {
   background-color: #9933cc;
 }
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr.info:hover > th,
 .DataTable > tbody > tr > td.info:hover,
 .DataTable > tbody > tr > th.info:hover,
 .DataTable > tbody > tr.info:hover > td,
 .DataTable > tbody > tr.info:hover > th {
   background-color: #8a2eb8;
 }
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th,
 table > thead > tr > td.warning,
 table > tbody > tr > td.warning,
 table > tfoot > tr > td.warning,
@@ -1536,12 +1596,28 @@ table > tbody > tr.warning > th,
 table > tfoot > tr.warning > th {
   background-color: #ff8800;
 }
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr.warning:hover > th,
 .DataTable > tbody > tr > td.warning:hover,
 .DataTable > tbody > tr > th.warning:hover,
 .DataTable > tbody > tr.warning:hover > td,
 .DataTable > tbody > tr.warning:hover > th {
   background-color: #e67a00;
 }
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th,
 table > thead > tr > td.danger,
 table > tbody > tr > td.danger,
 table > tfoot > tr > td.danger,
@@ -1556,6 +1632,10 @@ table > tbody > tr.danger > th,
 table > tfoot > tr.danger > th {
   background-color: #cc0000;
 }
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr.danger:hover > th,
 .DataTable > tbody > tr > td.danger:hover,
 .DataTable > tbody > tr > th.danger:hover,
 .DataTable > tbody > tr.danger:hover > td,
@@ -2051,6 +2131,11 @@ fieldset[disabled] .Button:active {
   background-color: #424242;
   border-color: #424242;
 }
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default,
 .Button:hover,
 .Button:focus,
 .Button:active {
@@ -2058,9 +2143,27 @@ fieldset[disabled] .Button:active {
   background-color: #2d2d2d;
   border-color: #232323;
 }
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default,
 .Button:active {
   background-image: none;
 }
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active,
 .Button[disabled],
 fieldset[disabled] .Button,
 .Button[disabled]:hover,
@@ -2072,11 +2175,20 @@ fieldset[disabled] .Button:active {
   background-color: #424242;
   border-color: #424242;
 }
+.btn-default .badge {
+  color: #424242;
+  background-color: #ffffff;
+}
 .Button.Primary {
   color: #ffffff;
   background-color: #2a9fd6;
   border-color: #2a9fd6;
 }
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary,
 .Button.Primary:hover,
 .Button.Primary:focus,
 .Button.Primary:active {
@@ -2084,9 +2196,27 @@ fieldset[disabled] .Button:active {
   background-color: #2386b4;
   border-color: #1f79a3;
 }
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary,
 .Button.Primary:active {
   background-image: none;
 }
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active,
 .Button.Primary[disabled],
 fieldset[disabled] .Button.Primary,
 .Button.Primary[disabled]:hover,
@@ -2098,11 +2228,56 @@ fieldset[disabled] .Button.Primary:active {
   background-color: #2a9fd6;
   border-color: #2a9fd6;
 }
+.btn-primary .badge {
+  color: #2a9fd6;
+  background-color: #ffffff;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #5c8a00;
+  border-color: #4e7600;
+}
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #77b300;
+  border-color: #77b300;
+}
+.btn-success .badge {
+  color: #77b300;
+  background-color: #ffffff;
+}
 .PhotoWrapLarge .ChangePicture {
   color: #ffffff;
   background-color: #9933cc;
   border-color: #9933cc;
 }
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info,
 .PhotoWrapLarge .ChangePicture:hover,
 .PhotoWrapLarge .ChangePicture:focus,
 .PhotoWrapLarge .ChangePicture:active {
@@ -2110,14 +2285,80 @@ fieldset[disabled] .Button.Primary:active {
   background-color: #812bab;
   border-color: #74279b;
 }
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info,
 .PhotoWrapLarge .ChangePicture:active {
   background-image: none;
+}
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #9933cc;
+  border-color: #9933cc;
+}
+.btn-info .badge {
+  color: #9933cc;
+  background-color: #ffffff;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  color: #ffffff;
+  background-color: #d67200;
+  border-color: #c26700;
+}
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #ff8800;
+  border-color: #ff8800;
+}
+.btn-warning .badge {
+  color: #ff8800;
+  background-color: #ffffff;
 }
 .Button.Danger {
   color: #ffffff;
   background-color: #cc0000;
   border-color: #cc0000;
 }
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger,
 .Button.Danger:hover,
 .Button.Danger:focus,
 .Button.Danger:active {
@@ -2125,9 +2366,27 @@ fieldset[disabled] .Button.Primary:active {
   background-color: #a30000;
   border-color: #8f0000;
 }
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger,
 .Button.Danger:active {
   background-image: none;
 }
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active,
 .Button.Danger[disabled],
 fieldset[disabled] .Button.Danger,
 .Button.Danger[disabled]:hover,
@@ -2138,6 +2397,10 @@ fieldset[disabled] .Button.Danger:focus,
 fieldset[disabled] .Button.Danger:active {
   background-color: #cc0000;
   border-color: #cc0000;
+}
+.btn-danger .badge {
+  color: #cc0000;
+  background-color: #ffffff;
 }
 .NavButton {
   color: #2a9fd6;
@@ -3874,6 +4137,36 @@ a.Bookmarked:before {
   border-color: #282828;
   cursor: not-allowed;
 }
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 14px 16px;
+  font-size: 18px;
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
 .PagerNub {
   display: none;
 }
@@ -3903,6 +4196,8 @@ a.Bookmarked:before {
 .Item .Meta .MItem.Category a {
   background-color: #424242;
 }
+.label-default[href]:hover,
+.label-default[href]:focus,
 .Item .Meta .MItem.Category a:hover,
 .Item .Meta .MItem.Category a:focus {
   background-color: #282828;
@@ -3910,19 +4205,37 @@ a.Bookmarked:before {
 .token-input-token {
   background-color: #2a9fd6;
 }
+.label-primary[href]:hover,
+.label-primary[href]:focus,
 .token-input-token.token-input-highlighted-token {
   background-color: #2180ac;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #558000;
 }
 .Tag-Announcement {
   background-color: #9933cc;
 }
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #7a29a3;
+}
 .HasNew {
   background-color: #ff8800;
+}
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+  background-color: #cc6d00;
 }
 .Tag-Closed,
 .Note.Closed,
 .token-input-token.token-input-selected-token {
   background-color: #cc0000;
+}
+.label-danger[href]:hover,
+.label-danger[href]:focus {
+  background-color: #990000;
 }
 .Note.Closed {
   display: inline-block;
@@ -3998,21 +4311,45 @@ a.Bookmarked:before {
   border-color: #809a00;
   color: #ffffff;
 }
+.alert-success hr {
+  border-top-color: #6a8000;
+}
+.alert-success .alert-link {
+  color: #e6e6e6;
+}
 .CasualMessage {
   background-color: #9933cc;
   border-color: #6e2caf;
   color: #ffffff;
+}
+.alert-info hr {
+  border-top-color: #61279b;
+}
+.alert-info .alert-link {
+  color: #e6e6e6;
 }
 .AlertMessage {
   background-color: #ff8800;
   border-color: #f05800;
   color: #ffffff;
 }
+.alert-warning hr {
+  border-top-color: #d64f00;
+}
+.alert-warning .alert-link {
+  color: #e6e6e6;
+}
 .WarningMessage,
 .Errors {
   background-color: #cc0000;
   border-color: #bd001f;
   color: #ffffff;
+}
+.alert-danger hr {
+  border-top-color: #a3001b;
+}
+.alert-danger .alert-link {
+  color: #e6e6e6;
 }
 .DismissMessage .Dismiss {
   right: 0;
@@ -4064,6 +4401,94 @@ a.Bookmarked:before {
   color: #ffffff;
   background-color: #2a9fd6;
   border-color: #2a9fd6;
+}
+.list-group-item-success {
+  color: #ffffff;
+  background-color: #77b300;
+}
+a.list-group-item-success {
+  color: #ffffff;
+}
+a.list-group-item-success .list-group-item-heading {
+  color: inherit;
+}
+a.list-group-item-success:hover,
+a.list-group-item-success:focus {
+  color: #ffffff;
+  background-color: #669a00;
+}
+a.list-group-item-success.active,
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus {
+  color: #fff;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.list-group-item-info {
+  color: #ffffff;
+  background-color: #9933cc;
+}
+a.list-group-item-info {
+  color: #ffffff;
+}
+a.list-group-item-info .list-group-item-heading {
+  color: inherit;
+}
+a.list-group-item-info:hover,
+a.list-group-item-info:focus {
+  color: #ffffff;
+  background-color: #8a2eb8;
+}
+a.list-group-item-info.active,
+a.list-group-item-info.active:hover,
+a.list-group-item-info.active:focus {
+  color: #fff;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.list-group-item-warning {
+  color: #ffffff;
+  background-color: #ff8800;
+}
+a.list-group-item-warning {
+  color: #ffffff;
+}
+a.list-group-item-warning .list-group-item-heading {
+  color: inherit;
+}
+a.list-group-item-warning:hover,
+a.list-group-item-warning:focus {
+  color: #ffffff;
+  background-color: #e67a00;
+}
+a.list-group-item-warning.active,
+a.list-group-item-warning.active:hover,
+a.list-group-item-warning.active:focus {
+  color: #fff;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.list-group-item-danger {
+  color: #ffffff;
+  background-color: #cc0000;
+}
+a.list-group-item-danger {
+  color: #ffffff;
+}
+a.list-group-item-danger .list-group-item-heading {
+  color: inherit;
+}
+a.list-group-item-danger:hover,
+a.list-group-item-danger:focus {
+  color: #ffffff;
+  background-color: #b30000;
+}
+a.list-group-item-danger.active,
+a.list-group-item-danger.active:hover,
+a.list-group-item-danger.active:focus {
+  color: #fff;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 .PanelInfo {
   list-style: none;
@@ -4167,11 +4592,73 @@ a.Bookmarked:before {
 .MessageList .Item {
   border-color: #282828;
 }
+.panel-default > .panel-heading,
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta {
   color: #888888;
   background-color: #3c3c3c;
   border-color: #282828;
+}
+.panel-default > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #282828;
+}
+.panel-default > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #282828;
+}
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #2a9fd6;
+  border-color: #2a9fd6;
+}
+.panel-primary > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #2a9fd6;
+}
+.panel-primary > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #2a9fd6;
+}
+.panel-success > .panel-heading {
+  color: #ffffff;
+  background-color: #77b300;
+  border-color: #809a00;
+}
+.panel-success > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #809a00;
+}
+.panel-success > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #809a00;
+}
+.panel-info > .panel-heading {
+  color: #ffffff;
+  background-color: #9933cc;
+  border-color: #6e2caf;
+}
+.panel-info > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #6e2caf;
+}
+.panel-info > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #6e2caf;
+}
+.panel-warning > .panel-heading {
+  color: #ffffff;
+  background-color: #ff8800;
+  border-color: #f05800;
+}
+.panel-warning > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #f05800;
+}
+.panel-warning > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #f05800;
+}
+.panel-danger > .panel-heading {
+  color: #ffffff;
+  background-color: #cc0000;
+  border-color: #bd001f;
+}
+.panel-danger > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #bd001f;
+}
+.panel-danger > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #bd001f;
 }
 .SearchForm {
   min-height: 20px;
