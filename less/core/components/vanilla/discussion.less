@@ -112,10 +112,6 @@ tr.Item {
   &:extend(.media > .pull-left);
 }
 
-.ItemContent {
-  &:extend(.media-body);
-}
-
 .Item.Category {
   .CategoryName {
     margin: 0;
@@ -128,6 +124,10 @@ tr.Item {
 .Item.ActivityComment {
   &:hover {
     background-color: @list-group-bg;
+  }
+
+  .ItemContent {
+    &:extend(.media-body);
   }
 }
 

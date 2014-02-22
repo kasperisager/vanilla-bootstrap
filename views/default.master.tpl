@@ -53,14 +53,14 @@
       <section class="container">
         <div class="row">
 
-          <main class="col-sm-9 content" role="main">
+          <main class="page-content" role="main">
             {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
               <div class="SearchForm">{searchbox}</div>
             {/if}
             {asset name="Content"}
           </main>
 
-          <aside class="col-sm-3 sidebar" role="complementary">
+          <aside class="page-sidebar" role="complementary">
             {asset name="Panel"}
           </aside>
 
