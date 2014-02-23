@@ -1701,7 +1701,7 @@ a.Bookmark:before {
   content: "\f03e";
 }
 .SpThumbnail:before {
-  content: "\f066";
+  content: "\f125";
 }
 .InformSprite.Refresh:before,
 .InformSprite.Recycle:before {
@@ -1748,9 +1748,11 @@ a.Bookmark:before {
   content: "\f004";
 }
 .InformSprite.Briefcase:before,
-.InformSprite.Toolcase:before,
-.InformSprite.Suitcase:before {
+.InformSprite.Toolcase:before {
   content: "\f0b1";
+}
+.InformSprite.Suitcase:before {
+  content: "\f0f2";
 }
 .InformSprite.Airplane:before {
   content: "\f072";
@@ -1810,6 +1812,66 @@ a.Bookmark:before {
 }
 .InformSprite.Bullhorn:before {
   content: "\f0a1";
+}
+.InformSprite.Bandaid:before,
+.InformSprite.MedicalBag:before {
+  content: "\f0fa";
+}
+.InformSprite.Key:before {
+  content: "\f084";
+}
+.InformSprite.Coffee:before,
+.InformSprite.CoffeeCup:before {
+  content: "\f0f4";
+}
+.InformSprite.Brightness:before {
+  content: "\f185";
+}
+.InformSprite.Microphone:before {
+  content: "\f130";
+}
+.InformSprite.Monitor:before,
+.InformSprite.Tv:before {
+  content: "\f108";
+}
+.InformSprite.Compass:before {
+  content: "\f14e";
+}
+.InformSprite.Beaker:before,
+.InformSprite.Beaker2:before,
+.InformSprite.Testtube:before {
+  content: "\f0c3";
+}
+.InformSprite.Ipod:before,
+.InformSprite.Iphone:before {
+  content: "\f10b";
+}
+.InformSprite.Lightbulb:before {
+  content: "\f0eb";
+}
+.InformSprite.Trophy:before {
+  content: "\f091";
+}
+.InformSprite.Wineglass:before {
+  content: "\f000";
+}
+.InformSprite.Beerglass:before {
+  content: "\f0fc";
+}
+.InformSprite.Puzzle:before {
+  content: "\f12e";
+}
+.InformSprite.Bug:before {
+  content: "\f188";
+}
+.InformSprite.Controller:before {
+  content: "\f11b";
+}
+.InformSprite.Moon:before {
+  content: "\f186";
+}
+.InformSprite.Umbrella:before {
+  content: "\f0e9";
 }
 a.Bookmark {
   font: 0/0 a;
