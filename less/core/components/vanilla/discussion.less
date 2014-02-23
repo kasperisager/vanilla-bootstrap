@@ -37,9 +37,10 @@
     a {
       &:extend(.text-muted);
 
-      // When used in lists, make the meta color a mix of the list group bg and
-      // the global text color.
-      .DataList & {
+      // When used in lists and tables, make the meta color a mix of the list
+      // group bg and the global text color.
+      .DataList &,
+      .DataTable & {
         color: mix(@list-group-bg, @text-color);
       }
 

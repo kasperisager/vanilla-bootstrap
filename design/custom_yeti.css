@@ -3397,7 +3397,11 @@ button.token-input-delete-token {
 .DataList .Item .Meta,
 .DataList .Conversation .Item .MItem,
 .DataList .Item .Meta a,
-.DataList .Conversation .Item .MItem a {
+.DataList .Conversation .Item .MItem a,
+.DataTable .Item .Meta,
+.DataTable .Conversation .Item .MItem,
+.DataTable .Item .Meta a,
+.DataTable .Conversation .Item .MItem a {
   color: #919191;
 }
 .MenuItems .Item .Meta,
