@@ -1577,6 +1577,258 @@ fieldset[disabled] .Button.Danger:active {
 .UserBox > .pull-right {
   margin-left: 10px;
 }
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.Sprite,
+.Sprite16,
+.SpFlyoutHandle,
+.InformSprite,
+a.Bookmark:before {
+  display: inline-block;
+  min-width: 1em;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-align: center;
+}
+.SpNotifications:before {
+  content: "\f0ac";
+}
+.SpInbox:before,
+.InformSprite.Cabinet:before,
+.InformSprite.MailInbox:before,
+.InformSprite.Drawer:before {
+  content: "\f01c";
+}
+.SpBookmarks:before,
+.InformSprite.BookmarkRibbon:before {
+  content: "\f02e";
+}
+.SpOptions:before,
+.SpFlyoutHandle:before,
+.SpPreferences:before,
+.InformSprite.Gear:before,
+.InformSprite.Gears:before {
+  content: "\f013";
+}
+.SpActivity:before,
+.InformSprite.Time:before,
+.InformSprite.Stopwatch:before {
+  content: "\f017";
+}
+.SpDiscussion:before,
+.SpComment:before,
+.InformSprite.Bubble:before,
+.InformSprite.ElipsisBubble:before {
+  content: "\f075";
+}
+.SpDiscussions:before,
+.SpComments:before {
+  content: "\f086";
+}
+.InformSprite.Redflag:before {
+  content: "\f02b";
+}
+.SpAllCategories:before,
+.InformSprite.Flags:before {
+  content: "\f02c";
+}
+.SpEditProfile:before,
+.SpMyDiscussions:before,
+.InformSprite.SingleUser:before {
+  content: "\f007";
+}
+.InformSprite.Group:before {
+  content: "\f0c0";
+}
+.SpMyDrafts:before {
+  content: "\f15b";
+}
+.SpMod:before,
+.InformSprite.Flag:before {
+  content: "\f024";
+}
+.SpDashboard:before,
+.InformSprite.Dashboard:before {
+  content: "\f0e4";
+}
+.SpDelete:before {
+  content: "\f05e";
+}
+.SpEdit:before,
+.SpApplicants:before {
+  content: "\f044";
+}
+.SpSpam:before {
+  content: "\f06d";
+}
+.SpSignIn:before {
+  content: "\f090";
+}
+.SpSignOut:before {
+  content: "\f08b";
+}
+.SpPassword:before,
+.InformSprite.Padlock:before {
+  content: "\f023";
+}
+.SpPicture:before,
+.InformSprite.WallPicture:before,
+.InformSprite.Photos:before,
+.InformSprite.Landscape:before {
+  content: "\f03e";
+}
+.SpThumbnail:before {
+  content: "\f066";
+}
+.InformSprite.Refresh:before,
+.InformSprite.Recycle:before {
+  content: "\f021";
+}
+.InformSprite.Random:before {
+  content: "\f021";
+}
+.InformSprite.Magnify:before {
+  content: "\f002";
+}
+.InformSprite.Location:before,
+.InformSprite.Map:before {
+  content: "\f041";
+}
+.InformSprite.Plus:before {
+  content: "\f0fe";
+}
+.InformSprite.Eye:before {
+  content: "\f06e";
+}
+.InformSprite.Target:before {
+  content: "\f140";
+}
+.InformSprite.Graph:before,
+.InformSprite.Chart:before,
+.InformSprite.Stats:before {
+  content: "\f080";
+}
+.InformSprite.Envelope:before {
+  content: "\f0e0";
+}
+.InformSprite.Present:before {
+  content: "\f06b";
+}
+.InformSprite.Thundercloud:before,
+.InformSprite.Zap:before {
+  content: "\f0e7";
+}
+.InformSprite.Star:before {
+  content: "\f005";
+}
+.InformSprite.Heart:before {
+  content: "\f004";
+}
+.InformSprite.Briefcase:before,
+.InformSprite.Toolcase:before,
+.InformSprite.Suitcase:before {
+  content: "\f0b1";
+}
+.InformSprite.Airplane:before {
+  content: "\f072";
+}
+.InformSprite.FilmRoll:before,
+.InformSprite.FilmStrip:before,
+.InformSprite.FilmStrip2:before {
+  content: "\f008";
+}
+.InformSprite.Cutlery:before {
+  content: "\f0f5";
+}
+.InformSprite.Pinetree:before {
+  content: "\f06c";
+}
+.InformSprite.House:before {
+  content: "\f015";
+}
+.InformSprite.Cloud:before {
+  content: "\f0c2";
+}
+.InformSprite.Download:before {
+  content: "\f0ed";
+}
+.InformSprite.Contrast:before {
+  content: "\f042";
+}
+.InformSprite.MusicNote:before {
+  content: "\f001";
+}
+.InformSprite.Paperclip:before {
+  content: "\f0c6";
+}
+.InformSprite.Pin:before {
+  content: "\f08d";
+}
+.InformSprite.Telephone:before {
+  content: "\f095";
+}
+.InformSprite.ShoppingCart:before {
+  content: "\f07a";
+}
+.InformSprite.Calendar:before {
+  content: "\f073";
+}
+.InformSprite.Camera:before {
+  content: "\f030";
+}
+.InformSprite.Book:before {
+  content: "\f02d";
+}
+.InformSprite.Check:before {
+  content: "\f00c";
+}
+.InformSprite.Headphones:before {
+  content: "\f025";
+}
+.InformSprite.Bullhorn:before {
+  content: "\f0a1";
+}
+a.Bookmark {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+a.Bookmark:before {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #f0ad4e;
+  content: "\f006";
+}
+a.Bookmark:hover,
+a.Bookmark:focus {
+  text-decoration: none;
+}
+a.Bookmark:hover:before,
+a.Bookmark:focus:before {
+  color: #2a6496;
+}
+.OptionsMenu + a.Bookmark {
+  margin-left: 5px;
+}
+a.Bookmarked:before {
+  content: "\f005";
+}
+.FilterMenu .Sprite {
+  margin-right: 6px;
+}
 .fade,
 .Overlay:after {
   opacity: 0;
@@ -3832,4 +4084,5 @@ img.jcrop-preview {
 }
 .SpDropdownHandle {
   position: static;
+  min-width: 0;
 }
