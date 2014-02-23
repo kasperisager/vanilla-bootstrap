@@ -10,31 +10,7 @@ $ThemeInfo['bootstrap'] = array(
   'RequiredApplications' => array('Vanilla' => '2.2.x'),
 
   'Options' => array(
-    'Description' => <<<html
-<p><strong>Credits:</strong></p>
-
-<hr>
-
-<p><a href="http://getbootstrap.com"><strong>Bootstrap</strong></a></p>
-<p>The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
-<p>By <strong><a href="http://twitter.com/mdo">@mdo</a></strong> and <strong><a href="http://twitter.com/fat">@fat</a></strong></p>
-<p>
-<iframe src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp" width="53" height="20"></iframe>
-<iframe src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
-</p>
-
-<hr>
-
-<p><a href="http://bootswatch.com"><strong>Bootswatch</strong></a></p>
-<p>Bootswatch is a collection of free themes for Bootstrap. Check it out at <a href="http://bootswatch.com">bootswatch.com</a>.</p>
-<p>By <strong>Thomas Park</strong> - <a href="https://twitter.com/thomashpark">Twitter</a> | <a href="https://github.com/thomaspark">GitHub</a></p>
-<p>
-<iframe src="http://ghbtns.com/github-btn.html?user=thomaspark&amp;repo=bootswatch&amp;type=fork" width="53" height="20"></iframe>
-<iframe src="http://ghbtns.com/github-btn.html?user=thomaspark&amp;repo=bootswatch&amp;type=watch&amp;count=true" width="110" height="20"></iframe>
-</p>
-html
-    ,
-    'Styles'      => array(
+    'Styles' => array(
       'Default' => array(
         'Basename' => '%s_default',
         'Description' => 'Better, faster and stronger'
