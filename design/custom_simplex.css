@@ -2856,6 +2856,7 @@ a.Bookmarked:before {
 .Item .Meta .MItem.Category a:focus {
   background-color: #2e2f2f;
 }
+.Note.Closed.SignInOrRegister,
 .token-input-token {
   background-color: #d9230f;
 }
@@ -2883,6 +2884,9 @@ a.Bookmarked:before {
   margin-right: 5px;
   vertical-align: top;
   line-height: 20px;
+}
+.Note.Closed.SignInOrRegister a {
+  color: #ffffff;
 }
 .Count {
   display: inline-block;
@@ -3376,6 +3380,34 @@ button.token-input-delete-token {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.MeBox > .PhotoWrap,
+.MeBox .WhoIs,
+.MeBox .Username,
+.MeBox .MeMenu {
+  float: left !important;
+}
+.MeBox > .PhotoWrap {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.MeBox > .PhotoWrap img {
+  width: 32px;
+  height: 32px;
+  vertical-align: top;
+}
+.MeBox .MenuItems,
+.MeBox .FlyoutMenu {
+  color: #333333;
+}
+.MeBox .ToggleFlyout {
+  float: left !important;
+}
+.MeBox .ToggleFlyout em {
+  display: none;
+}
+.MeBox .ToggleFlyout .Arrow {
+  display: none;
+}
 .Item .Title,
 .Item .Title a {
   font-size: 15px;
@@ -3639,34 +3671,6 @@ tr.Item:after {
 .Foot.Closed {
   margin-bottom: 20px;
   margin-left: 64px;
-}
-.MeBox > .PhotoWrap,
-.MeBox .WhoIs,
-.MeBox .Username,
-.MeBox .MeMenu {
-  float: left !important;
-}
-.MeBox > .PhotoWrap {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.MeBox > .PhotoWrap img {
-  width: 32px;
-  height: 32px;
-  vertical-align: top;
-}
-.MeBox .MenuItems,
-.MeBox .FlyoutMenu {
-  color: #333333;
-}
-.MeBox .ToggleFlyout {
-  float: left !important;
-}
-.MeBox .ToggleFlyout em {
-  display: none;
-}
-.MeBox .ToggleFlyout .Arrow {
-  display: none;
 }
 .token-input-token,
 .token-input-input-token {
@@ -3949,6 +3953,10 @@ img.jcrop-preview {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
+.MeBox:before,
+.MeBox:after,
+.MeBox .MeMenu:before,
+.MeBox .MeMenu:after,
 .Item:before,
 .Item:after,
 .Conversation .Item .Meta:before,
@@ -3961,10 +3969,6 @@ img.jcrop-preview {
 .PageControls:after,
 .BeforeCommentHeading:before,
 .BeforeCommentHeading:after,
-.MeBox:before,
-.MeBox:after,
-.MeBox .MeMenu:before,
-.MeBox .MeMenu:after,
 .Empty:before,
 .Empty:after,
 .NoResults:before,
@@ -4001,14 +4005,14 @@ img.jcrop-preview {
 .PanelInfo a:after,
 .panel-body:after,
 .modal-footer:after,
+.MeBox:after,
+.MeBox .MeMenu:after,
 .Item:after,
 .Conversation .Item .Meta:after,
 .Item-Header:after,
 .PagerWrap:after,
 .PageControls:after,
 .BeforeCommentHeading:after,
-.MeBox:after,
-.MeBox .MeMenu:after,
 .Empty:after,
 .NoResults:after,
 .container:after,
