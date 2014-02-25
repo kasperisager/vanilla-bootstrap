@@ -2881,11 +2881,6 @@ a.Bookmarked:before {
   font-weight: 400;
   line-height: 1.42857143;
 }
-.Note.Closed:before {
-  margin-right: 5px;
-  vertical-align: top;
-  line-height: 22px;
-}
 .Note.Closed.SignInOrRegister a {
   color: #ffffff;
 }
