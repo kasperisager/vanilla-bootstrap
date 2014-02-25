@@ -45,6 +45,21 @@
   }
 }
 
+.DataList-Search {
+  .Item {
+    .reset-headings();
+
+    .PhotoWrap {
+      .pull-left();
+      &:extend(.media > .pull-left);
+    }
+  }
+
+  .Media {
+    margin-top: 5px;
+  }
+}
+
 .DataTable {
   &:extend(.table-hover all);
 

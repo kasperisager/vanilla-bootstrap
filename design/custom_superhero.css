@@ -1551,6 +1551,8 @@ fieldset[disabled] .Button.Danger:active {
 .Buttons {
   padding-top: 12px;
 }
+.Media,
+.Media-Body,
 .UserBox,
 .UserBox .Username,
 .UserBox .Email,
@@ -1559,6 +1561,7 @@ fieldset[disabled] .Button.Danger:active {
   overflow: hidden;
   zoom: 1;
 }
+.Media,
 .UserBox,
 .UserBox .UserBox {
   margin-top: 15px;
@@ -1572,7 +1575,8 @@ fieldset[disabled] .Button.Danger:active {
 }
 .UserBox > .pull-left,
 .UserBox .PhotoWrap,
-.Item-Icon {
+.Item-Icon,
+.DataList-Search .Item .PhotoWrap {
   margin-right: 10px;
 }
 .UserBox > .pull-right {
@@ -3518,6 +3522,24 @@ tr.Item:after {
 }
 .DataList.Condensed .Item .Meta {
   float: right !important;
+}
+.DataList-Search .Item h1,
+.DataList-Search .Item h2,
+.DataList-Search .Item h3,
+.DataList-Search .Item h4,
+.DataList-Search .Item h5,
+.DataList-Search .Item h6 {
+  margin: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.42857143;
+}
+.DataList-Search .Item .PhotoWrap {
+  float: left !important;
+}
+.DataList-Search .Media {
+  margin-top: 5px;
 }
 .DataTable > tbody > tr > td {
   vertical-align: middle;
