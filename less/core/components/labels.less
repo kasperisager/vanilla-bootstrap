@@ -38,6 +38,14 @@
     line-height: @line-height-computed;
     &:extend(.glyphicon);
   }
+
+  &.SignInOrRegister {
+    &:extend(.label-primary);
+
+    a {
+      color: @label-color;
+    }
+  }
 }
 
 .HasNew {
