@@ -61,7 +61,19 @@
 }
 
 .DataTable {
+  .reset-headings();
   &:extend(.table-hover all);
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: @font-size-base + 1px;
+    font-weight: 500;
+    line-height: @line-height-computed;
+
+    &,
+    a {
+      color: @text-color;
+    }
+  }
 
   > tbody > tr > td {
     vertical-align: middle;

@@ -3410,6 +3410,7 @@ button.token-input-delete-token {
   font-weight: 500;
   line-height: 20px;
   color: #666666;
+  vertical-align: top;
 }
 .Item .Username,
 .Conversation .Item .Name {
@@ -3570,6 +3571,42 @@ tr.Item:after {
 }
 .DataList-Search .Media {
   margin-top: 5px;
+}
+.DataTable h1,
+.DataTable h2,
+.DataTable h3,
+.DataTable h4,
+.DataTable h5,
+.DataTable h6 {
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42857143;
+}
+.DataTable h1,
+.DataTable h2,
+.DataTable h3,
+.DataTable h4,
+.DataTable h5,
+.DataTable h6 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.DataTable h1,
+.DataTable h2,
+.DataTable h3,
+.DataTable h4,
+.DataTable h5,
+.DataTable h6,
+.DataTable h1 a,
+.DataTable h2 a,
+.DataTable h3 a,
+.DataTable h4 a,
+.DataTable h5 a,
+.DataTable h6 a {
+  color: #666666;
 }
 .DataTable > tbody > tr > td {
   vertical-align: middle;
