@@ -1,6 +1,6 @@
 ;(function ($, window, document, undefined) {
 
-  jQuery(function () {
+  $(function () {
 
     // Programmatically hide buttons that are supposed to be hidden. This
     // ensures that the initial display state is correctly stored and applied
