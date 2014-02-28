@@ -19,8 +19,7 @@
       $('.InProgress', e.currentTarget).spin(spinner);
     });
 
-    var modal    = $()
-      , backdrop = '.Overlay'
+    var backdrop = '.Overlay'
       , dialog   = '.Overlay > .Popup';
 
     $(document)
