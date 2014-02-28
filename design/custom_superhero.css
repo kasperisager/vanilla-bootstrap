@@ -3762,6 +3762,74 @@ tr.Item:after {
 .token-input-dropdown > p {
   margin: 0 -16px;
 }
+.Video,
+.VideoWrap,
+.VideoPlayer,
+.VideoPreview {
+  position: relative;
+  display: block;
+}
+.VideoWrap {
+  margin: 0 0 10.5px;
+}
+.VideoPlayer,
+.Video.Vimeo {
+  overflow: hidden;
+  padding-bottom: 67.5%;
+}
+.VideoPlayer:empty,
+.Video.Vimeo:empty {
+  display: none;
+}
+.VideoPlayer iframe,
+.Video.Vimeo iframe,
+.VideoPlayer object,
+.Video.Vimeo object,
+.VideoPlayer video,
+.Video.Vimeo video,
+.VideoPlayer embed,
+.Video.Vimeo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.VideoPreview {
+  max-width: 480px;
+  cursor: pointer;
+}
+.VideoPreview:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  min-width: 1em;
+  margin-top: -60px;
+  margin-left: -60px;
+  font-family: FontAwesome;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-align: center;
+  content: "\f16a";
+}
+.VideoPreview:hover:after {
+  color: #cd201f;
+}
+.VideoPreview a {
+  display: block;
+}
+.VideoPreview img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 .Section-Profile .ProfileOptions {
   float: right !important;
 }
