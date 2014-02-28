@@ -735,6 +735,9 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
+.Message {
+  word-wrap: break-word;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
