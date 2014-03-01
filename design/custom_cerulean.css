@@ -3854,9 +3854,6 @@ tr.Item:after {
 .Section-Profile dl.About dd:last-child {
   margin-right: 0;
 }
-.ButtonBarMarkupHint {
-  padding-top: 8px;
-}
 /* jquery.Jcrop.css v0.9.12 - MIT License */
 /*
   The outer-most container in a typical Jcrop instance
