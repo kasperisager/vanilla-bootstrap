@@ -2802,14 +2802,14 @@ a.Bookmarked:before {
 .Breadcrumbs .HomeCrumb:before {
   display: none;
 }
-.Pager {
+.NumberedPager {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
   border-radius: 4px;
 }
-.Pager > a,
-.Pager > span {
+.NumberedPager > a,
+.NumberedPager > span {
   position: relative;
   float: left;
   padding: 6px 12px;
@@ -2820,35 +2820,35 @@ a.Bookmarked:before {
   border: 1px solid #e2e2e2;
   margin-left: -1px;
 }
-.Pager > a:first-child,
-.Pager > span:first-child {
+.NumberedPager > a:first-child,
+.NumberedPager > span:first-child {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-.Pager > a:last-child,
-.Pager > span:last-child {
+.NumberedPager > a:last-child,
+.NumberedPager > span:last-child {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
-.Pager > a:hover,
-.Pager > a:focus {
+.NumberedPager > a:hover,
+.NumberedPager > a:focus {
   color: #555555;
   background-color: #eeeeee;
   border-color: #e2e2e2;
 }
-.Pager .Highlight,
-.Pager .Highlight:hover,
-.Pager .Highlight:focus {
+.NumberedPager .Highlight,
+.NumberedPager .Highlight:hover,
+.NumberedPager .Highlight:focus {
   z-index: 2;
   color: #555555;
   background-color: #eeeeee;
   border-color: #e2e2e2;
   cursor: default;
 }
-.Pager > span,
-.Pager > span:hover,
-.Pager > span:focus {
+.NumberedPager > span,
+.NumberedPager > span:hover,
+.NumberedPager > span:focus {
   color: #999999;
   background-color: #eeeeee;
   border-color: #e2e2e2;
@@ -2856,6 +2856,30 @@ a.Bookmarked:before {
 }
 .PagerNub {
   display: none;
+}
+.PrevNextPager {
+  padding-left: 0;
+  margin: 20px 0;
+  list-style: none;
+  text-align: center;
+}
+.PrevNextPager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #eeeeee;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+}
+.PrevNextPager a:hover,
+.PrevNextPager a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.PrevNextPager .Next {
+  float: right;
+}
+.PrevNextPager .Previous {
+  float: left;
 }
 .Tag,
 .Note.Closed,
@@ -3721,9 +3745,19 @@ tr.Item:after {
 .BeforeCommentHeading .Pager,
 .PagerWrap .PagerWrap,
 .PageControls .PagerWrap,
-.BeforeCommentHeading .PagerWrap {
-  float: right !important;
+.BeforeCommentHeading .PagerWrap,
+.PagerWrap .NumeredPager,
+.PageControls .NumeredPager,
+.BeforeCommentHeading .NumeredPager {
   margin: 0;
+}
+.PagerWrap .PagerWrap,
+.PageControls .PagerWrap,
+.BeforeCommentHeading .PagerWrap,
+.PagerWrap .NumeredPager,
+.PageControls .NumeredPager,
+.BeforeCommentHeading .NumeredPager {
+  float: right !important;
 }
 .BeforeCommentHeading {
   display: block;
@@ -4075,6 +4109,8 @@ img.jcrop-preview {
 .navbar-header:after,
 .navbar-collapse:before,
 .navbar-collapse:after,
+.pager:before,
+.pager:after,
 .PanelInfo a:before,
 .PanelInfo a:after,
 .panel-body:before,
@@ -4107,6 +4143,8 @@ img.jcrop-preview {
 .row:after,
 .FilterMenu:before,
 .FilterMenu:after,
+.PrevNextPager:before,
+.PrevNextPager:after,
 .Overlay > .Popup .Buttons:before,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:before,
@@ -4130,6 +4168,7 @@ img.jcrop-preview {
 .navbar:after,
 .navbar-header:after,
 .navbar-collapse:after,
+.pager:after,
 .PanelInfo a:after,
 .panel-body:after,
 .modal-footer:after,
@@ -4146,6 +4185,7 @@ img.jcrop-preview {
 .container:after,
 .row:after,
 .FilterMenu:after,
+.PrevNextPager:after,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
 .MessageList .Item-Body:after,
@@ -4521,8 +4561,8 @@ label {
 .pager > li > a,
 .pagination > li > span,
 .pager > li > span,
-.Pager > a,
-.Pager > span {
+.NumberedPager > a,
+.NumberedPager > span {
   border-width: 0 1px 4px 1px;
   color: #555555;
   font-size: 12px;
@@ -4533,8 +4573,8 @@ label {
 .pager > li > a:hover,
 .pagination > li > span:hover,
 .pager > li > span:hover,
-.Pager > a:hover,
-.Pager > a:focus {
+.NumberedPager > a:hover,
+.NumberedPager > a:focus {
   margin-top: 1px;
   border-bottom-width: 3px;
 }

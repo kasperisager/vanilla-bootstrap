@@ -2802,14 +2802,14 @@ a.Bookmarked:before {
 .Breadcrumbs .HomeCrumb:before {
   display: none;
 }
-.Pager {
+.NumberedPager {
   display: inline-block;
   padding-left: 0;
   margin: 21px 0;
   border-radius: 0;
 }
-.Pager > a,
-.Pager > span {
+.NumberedPager > a,
+.NumberedPager > span {
   position: relative;
   float: left;
   padding: 6px 12px;
@@ -2820,35 +2820,35 @@ a.Bookmarked:before {
   border: 1px solid transparent;
   margin-left: -1px;
 }
-.Pager > a:first-child,
-.Pager > span:first-child {
+.NumberedPager > a:first-child,
+.NumberedPager > span:first-child {
   margin-left: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.Pager > a:last-child,
-.Pager > span:last-child {
+.NumberedPager > a:last-child,
+.NumberedPager > span:last-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
-.Pager > a:hover,
-.Pager > a:focus {
+.NumberedPager > a:hover,
+.NumberedPager > a:focus {
   color: #00526e;
   background-color: #eeeeee;
   border-color: transparent;
 }
-.Pager .Highlight,
-.Pager .Highlight:hover,
-.Pager .Highlight:focus {
+.NumberedPager .Highlight,
+.NumberedPager .Highlight:hover,
+.NumberedPager .Highlight:focus {
   z-index: 2;
   color: #ffffff;
   background-color: #008cba;
   border-color: transparent;
   cursor: default;
 }
-.Pager > span,
-.Pager > span:hover,
-.Pager > span:focus {
+.NumberedPager > span,
+.NumberedPager > span:hover,
+.NumberedPager > span:focus {
   color: #999999;
   background-color: #ffffff;
   border-color: transparent;
@@ -2856,6 +2856,30 @@ a.Bookmarked:before {
 }
 .PagerNub {
   display: none;
+}
+.PrevNextPager {
+  padding-left: 0;
+  margin: 21px 0;
+  list-style: none;
+  text-align: center;
+}
+.PrevNextPager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.PrevNextPager a:hover,
+.PrevNextPager a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.PrevNextPager .Next {
+  float: right;
+}
+.PrevNextPager .Previous {
+  float: left;
 }
 .Tag,
 .Note.Closed,
@@ -3721,9 +3745,19 @@ tr.Item:after {
 .BeforeCommentHeading .Pager,
 .PagerWrap .PagerWrap,
 .PageControls .PagerWrap,
-.BeforeCommentHeading .PagerWrap {
-  float: right !important;
+.BeforeCommentHeading .PagerWrap,
+.PagerWrap .NumeredPager,
+.PageControls .NumeredPager,
+.BeforeCommentHeading .NumeredPager {
   margin: 0;
+}
+.PagerWrap .PagerWrap,
+.PageControls .PagerWrap,
+.BeforeCommentHeading .PagerWrap,
+.PagerWrap .NumeredPager,
+.PageControls .NumeredPager,
+.BeforeCommentHeading .NumeredPager {
+  float: right !important;
 }
 .BeforeCommentHeading {
   display: block;
@@ -4075,6 +4109,8 @@ img.jcrop-preview {
 .navbar-header:after,
 .navbar-collapse:before,
 .navbar-collapse:after,
+.pager:before,
+.pager:after,
 .PanelInfo a:before,
 .PanelInfo a:after,
 .panel-body:before,
@@ -4107,6 +4143,8 @@ img.jcrop-preview {
 .row:after,
 .FilterMenu:before,
 .FilterMenu:after,
+.PrevNextPager:before,
+.PrevNextPager:after,
 .Overlay > .Popup .Buttons:before,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:before,
@@ -4130,6 +4168,7 @@ img.jcrop-preview {
 .navbar:after,
 .navbar-header:after,
 .navbar-collapse:after,
+.pager:after,
 .PanelInfo a:after,
 .panel-body:after,
 .modal-footer:after,
@@ -4146,6 +4185,7 @@ img.jcrop-preview {
 .container:after,
 .row:after,
 .FilterMenu:after,
+.PrevNextPager:after,
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
 .MessageList .Item-Body:after,
@@ -4514,23 +4554,23 @@ label,
   text-transform: uppercase;
 }
 .pagination,
-.Pager {
+.NumberedPager {
   font-size: 12px;
   font-weight: 300;
   color: #999999;
 }
 .pagination > li > a,
 .pagination > li > span,
-.Pager > a,
-.Pager > span {
+.NumberedPager > a,
+.NumberedPager > span {
   margin-left: 4px;
   color: #999999;
 }
 .pagination > .active > a,
 .pagination > .active > span,
-.Pager .Highlight,
-.Pager .Highlight:hover,
-.Pager .Highlight:focus {
+.NumberedPager .Highlight,
+.NumberedPager .Highlight:hover,
+.NumberedPager .Highlight:focus {
   color: #fff;
 }
 .pagination > li > a,
@@ -4539,12 +4579,12 @@ label,
 .pagination > li > span,
 .pagination > li:first-child > span,
 .pagination > li:last-child > span,
-.Pager > a,
-.Pager > span,
-.Pager > a:first-child,
-.Pager > span:first-child,
-.Pager > a:last-child,
-.Pager > span:last-child {
+.NumberedPager > a,
+.NumberedPager > span,
+.NumberedPager > a:first-child,
+.NumberedPager > span:first-child,
+.NumberedPager > a:last-child,
+.NumberedPager > span:last-child {
   border-radius: 3px;
 }
 .pagination-lg > li > a {
@@ -4554,7 +4594,8 @@ label,
 .pagination-sm > li > a {
   padding: 0 5px;
 }
-.pager {
+.pager,
+.PrevNextPager {
   font-size: 12px;
   font-weight: 300;
   color: #999999;
