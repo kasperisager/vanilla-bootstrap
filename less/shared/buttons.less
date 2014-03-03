@@ -16,10 +16,6 @@
   &:extend(.btn);
   &:extend(.btn-default);
 
-  &:focus {
-    .tab-focus();
-  }
-
   &:hover,
   &:focus {
     &:extend(.btn:hover);
@@ -29,6 +25,10 @@
   &:active {
     &:extend(.btn:active);
     &:extend(.btn-default:active);
+  }
+
+  &:focus {
+    &:extend(.btn:focus);
   }
 
   &[disabled],

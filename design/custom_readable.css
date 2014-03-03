@@ -1368,7 +1368,13 @@ form ol {
   -ms-user-select: none;
   user-select: none;
 }
+.Button:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
 .Button:hover,
+.Button:focus,
 .Button:focus,
 .PhotoWrapLarge .ChangePicture:hover,
 .PhotoWrapLarge .ChangePicture:focus {
@@ -1533,11 +1539,6 @@ fieldset[disabled] .Button.Danger:active {
 }
 .page-sidebar .BigButton + .BigButton {
   margin-top: 5px;
-}
-.Button:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
 }
 .Buttons {
   padding-top: 14px;
