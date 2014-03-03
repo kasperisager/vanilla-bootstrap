@@ -48,7 +48,6 @@
     $(document).on('click', 'a.Delete, a.DeleteComment, a.PopConfirm', function (e) {
       $('body').trigger('popupLoading');
       setTimeout(function () { $('body').trigger('popupReveal'); }, 150);
-
     });
   });
 
