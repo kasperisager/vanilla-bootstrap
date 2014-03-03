@@ -12,70 +12,22 @@ $ThemeInfo['bootstrap'] = array(
 
   'Options' => array(
     'Styles' => array(
-      'Default' => array(
-        'Basename' => '%s_default',
-        'Description' => 'Better, faster and stronger'
-      ),
-      'Bootstrap' => array(
-        'Basename' => '%s_bootstrap',
-        'Description' => 'A visually enhanced experience'
-      ),
-      'Amelia' => array(
-        'Basename' => '%s_amelia',
-        'Description' => 'Sweet and cheery'
-      ),
-      'Cerulean' => array(
-        'Basename' => '%s_cerulean',
-        'Description' => 'A calm blue sky'
-      ),
-      'Cosmo' => array(
-        'Basename' => '%s_cosmo',
-        'Description' => 'An ode to Metro'
-      ),
-      'Cyborg' => array(
-        'Basename' => '%s_cyborg',
-        'Description' => 'Jet black and electric blue'
-      ),
-      'Flatly' => array(
-        'Basename' => '%s_flatly',
-        'Description' => 'Flat and modern'
-      ),
-      'Journal' => array(
-        'Basename' => '%s_journal',
-        'Description' => 'Crisp like a new sheet of paper'
-      ),
-      'Lumen' => array(
-        'Basename' => '%s_lumen',
-        'Description' => 'Light and shadow'
-      ),
-      'Readable' => array(
-        'Basename' => '%s_readable',
-        'Description' => 'Optimized for legibility'
-      ),
-      'Simplex' => array(
-        'Basename' => '%s_simplex',
-        'Description' => 'Mini and minimalist'
-      ),
-      'Slate' => array(
-        'Basename' => '%s_slate',
-        'Description' => 'Shades of gunmetal gray'
-      ),
-      'Spacelab' => array(
-        'Basename' => '%s_spacelab',
-        'Description' => 'Silvery and sleek'
-      ),
-      'Superhero' => array(
-        'Basename' => '%s_superhero',
-        'Description' => 'The brave and the blue'
-      ),
-      'United' => array(
-        'Basename' => '%s_united',
-        'Description' => 'Ubuntu orange and unique font'
-      ),
-      'Yeti' => array(
-        'Basename' => '%s_yeti',
-        'Description' => 'A friendly foundation'
-      )
+      'Default'   => '%s_default',
+      'Bootstrap' => '%s_bootstrap',
+      'Amelia'    => '%s_amelia',
+      'Cerulean'  => '%s_cerulean',
+      'Cosmo'     => '%s_cosmo',
+      'Cyborg'    => '%s_cyborg',
+      'Flatly'    => '%s_flatly',
+      'Journal'   => '%s_journal',
+      'Lumen'     => '%s_lumen',
+      'Readable'  => '%s_readable',
+      'Simplex'   => '%s_simplex',
+      'Slate'     => '%s_slate',
+      'Spacelab'  => '%s_spacelab',
+      'Superhero' => '%s_superhero',
+      'United'    => '%s_united',
+      'Yeti'      => '%s_yeti'
     )
   )
 );
