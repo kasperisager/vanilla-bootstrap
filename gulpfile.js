@@ -7,8 +7,10 @@ var gulp = require('gulp')
   , livereload = require('gulp-livereload');
 
 gulp.task('core', function () {
-  gulp.src('less/core/style.less')
-    .pipe(less().on('error', gutil.log))
+  gulp.src('less/style.less')
+    .pipe(less({
+      paths: ['less', 'bower_components']
+    }).on('error', gutil.log))
     .pipe(gulp.dest('design'))
     .pipe(livereload());
 });
@@ -18,7 +20,9 @@ gulp.task('themes', function () {
     .pipe(rename(function (path) {
       path.basename = 'custom_' + path.basename;
     }))
-    .pipe(less().on('error', gutil.log))
+    .pipe(less({
+      paths: ['less', 'bower_components']
+    }).on('error', gutil.log))
     .pipe(gulp.dest('design'));
 });
 
