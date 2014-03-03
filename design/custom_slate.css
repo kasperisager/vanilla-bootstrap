@@ -2786,6 +2786,33 @@ a.Bookmarked:before {
 .navbar-inverse .navbar-link:hover {
   color: #ffffff;
 }
+.Breadcrumbs {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 4px;
+}
+.Breadcrumbs .CrumbLabel {
+  display: inline-block;
+}
+.Breadcrumbs .CrumbLabel:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
+}
+.Breadcrumbs .Last a {
+  color: #7a8288;
+}
+.Breadcrumbs {
+  display: block;
+}
+.Breadcrumbs .Crumb {
+  display: none;
+}
+.Breadcrumbs .HomeCrumb:before {
+  display: none;
+}
 .Pager {
   display: inline-block;
   padding-left: 0;
@@ -4650,7 +4677,8 @@ legend {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
   filter: none;
 }
-.breadcrumb {
+.breadcrumb,
+.Breadcrumbs {
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-linear-gradient(#484e55, #3a3f44 60%, #313539);

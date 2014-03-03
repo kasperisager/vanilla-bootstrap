@@ -2775,6 +2775,33 @@ a.Bookmarked:before {
 .navbar-inverse .navbar-link:hover {
   color: #ffffff;
 }
+.Breadcrumbs {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #222222;
+  border-radius: 4px;
+}
+.Breadcrumbs .CrumbLabel {
+  display: inline-block;
+}
+.Breadcrumbs .CrumbLabel:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #ffffff;
+}
+.Breadcrumbs .Last a {
+  color: #888888;
+}
+.Breadcrumbs {
+  display: block;
+}
+.Breadcrumbs .Crumb {
+  display: none;
+}
+.Breadcrumbs .HomeCrumb:before {
+  display: none;
+}
 .Pager {
   display: inline-block;
   padding-left: 0;

@@ -54,6 +54,7 @@
         <div class="row">
 
           <main class="page-content" role="main">
+            {breadcrumbs}
             {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
               <div class="SearchForm">{searchbox}</div>
             {/if}

@@ -2775,6 +2775,33 @@ a.Bookmarked:before {
 .navbar-inverse .navbar-link:hover {
   color: #333333;
 }
+.Breadcrumbs {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #fafafa;
+  border-radius: 4px;
+}
+.Breadcrumbs .CrumbLabel {
+  display: inline-block;
+}
+.Breadcrumbs .CrumbLabel:before {
+  content: ">\00a0";
+  padding: 0 5px;
+  color: #999999;
+}
+.Breadcrumbs .Last a {
+  color: #999999;
+}
+.Breadcrumbs {
+  display: block;
+}
+.Breadcrumbs .Crumb {
+  display: none;
+}
+.Breadcrumbs .HomeCrumb:before {
+  display: none;
+}
 .Pager {
   display: inline-block;
   padding-left: 0;
@@ -4484,7 +4511,8 @@ label {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.breadcrumb {
+.breadcrumb,
+.Breadcrumbs {
   border-color: #ededed;
   border-style: solid;
   border-width: 0 1px 4px 1px;
