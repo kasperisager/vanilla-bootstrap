@@ -363,19 +363,7 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-html,
-body {
-  height: 100%;
-}
-.page-wrap {
-  min-height: 100%;
-  margin-bottom: -60px;
-}
-.page-wrap > .push {
-  height: 60px;
-}
 .page-footer {
-  height: 60px;
   padding: 20px;
   margin-top: 40px;
   color: #999999;
@@ -3895,6 +3883,20 @@ tr.Item:after {
   height: auto;
   max-width: 100%;
   max-height: 100%;
+}
+.sticky-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+}
+.sticky-footer-body {
+  margin-bottom: 100px;
+}
+.sticky-footer-html {
+  position: relative;
+  min-height: 100%;
 }
 .Section-Profile .ProfileOptions {
   float: right !important;
