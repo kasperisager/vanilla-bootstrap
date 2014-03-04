@@ -18,7 +18,7 @@
     margin-bottom: 0; // Fix nested lists
   }
 
-  > li {
+  .Item {
     &:extend(.list-group-item);
 
     &:hover,
@@ -34,7 +34,7 @@
     }
   }
 
-  &.Condensed > li {
+  &.Condensed .Item {
     .reset-headings();
 
     .Photo img {
@@ -49,10 +49,21 @@
       .pull-right();
     }
   }
+
+  &.Activities .CommentForm {
+    &:extend(.list-group-item);
+
+    &:first-child {
+      &:extend(.list-group-item:first-child);
+    }
+    &:last-child {
+      &:extend(.list-group-item:last-child);
+    }
+  }
 }
 
 .DataList-Search {
-  > li {
+  .Item {
     .reset-headings();
 
     .PhotoWrap {
@@ -161,12 +172,12 @@
   &.Discussion {
     margin-bottom: 0;
 
-    > li {
+    .Item {
       margin-bottom: 0;
     }
   }
 
-  > li {
+  .Item {
     position: relative;
     padding: 0;
     margin-bottom: 20px;
