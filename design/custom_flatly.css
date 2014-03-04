@@ -1559,6 +1559,9 @@ fieldset[disabled] .Button.Danger:active {
 .Buttons {
   padding-top: 18px;
 }
+.ProfileOptions {
+  float: right !important;
+}
 .Media,
 .Media-Body,
 .UserBox,
@@ -3900,9 +3903,6 @@ tr.Item:after {
 .sticky-footer-html {
   position: relative;
   min-height: 100%;
-}
-.Section-Profile .ProfileOptions {
-  float: right !important;
 }
 /* jquery.Jcrop.css v0.9.12 - MIT License */
 /*
