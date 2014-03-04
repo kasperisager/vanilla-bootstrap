@@ -363,6 +363,22 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+dl dt,
+dl dd {
+  display: inline-block;
+}
+dl dt {
+  margin-left: 5px;
+}
+dl dt:first-child {
+  margin-left: 0;
+}
+dl dd {
+  margin-right: 5px;
+}
+dl dd:last-child {
+  margin-right: 0;
+}
 .page-footer {
   padding: 20px;
   margin-top: 40px;
@@ -3886,22 +3902,6 @@ tr.Item:after {
 }
 .Section-Profile .ProfileOptions {
   float: right !important;
-}
-.Section-Profile dl.About dt,
-.Section-Profile dl.About dd {
-  display: inline-block;
-}
-.Section-Profile dl.About dt {
-  margin-left: 5px;
-}
-.Section-Profile dl.About dt:first-child {
-  margin-left: 0;
-}
-.Section-Profile dl.About dd {
-  margin-right: 5px;
-}
-.Section-Profile dl.About dd:last-child {
-  margin-right: 0;
 }
 /* jquery.Jcrop.css v0.9.12 - MIT License */
 /*
