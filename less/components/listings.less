@@ -14,7 +14,11 @@
     display: none;
   }
 
-  .Item {
+  & & {
+    margin-bottom: 0; // Fix nested lists
+  }
+
+  > li {
     &:extend(.list-group-item);
 
     &:hover,
@@ -30,7 +34,7 @@
     }
   }
 
-  &.Condensed .Item {
+  &.Condensed > li {
     .reset-headings();
 
     .Photo img {
@@ -48,7 +52,7 @@
 }
 
 .DataList-Search {
-  .Item {
+  > li {
     .reset-headings();
 
     .PhotoWrap {
@@ -157,12 +161,12 @@
   &.Discussion {
     margin-bottom: 0;
 
-    .Item {
+    > li {
       margin-bottom: 0;
     }
   }
 
-  .Item {
+  > li {
     position: relative;
     padding: 0;
     margin-bottom: 20px;

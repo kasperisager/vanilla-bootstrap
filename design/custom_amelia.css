@@ -1590,7 +1590,7 @@ fieldset[disabled] .Button.Danger:active {
 .UserBox > .pull-left,
 .UserBox .PhotoWrap,
 .Item-Icon,
-.DataList-Search .Item .PhotoWrap,
+.DataList-Search > li .PhotoWrap,
 .BlockColumn .PhotoWrap {
   margin-right: 10px;
 }
@@ -3043,7 +3043,7 @@ a.Bookmarked:before {
 }
 .PanelInfo a,
 .PanelInfo .Heading,
-.DataList .Item {
+.DataList > li {
   position: relative;
   display: block;
   padding: 10px 15px;
@@ -3052,12 +3052,12 @@ a.Bookmarked:before {
   border: 1px solid #0d747c;
 }
 .PanelInfo li:first-child a,
-.DataList .Item:first-child {
+.DataList > li:first-child {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
 .PanelInfo li:last-child a,
-.DataList .Item:last-child {
+.DataList > li:last-child {
   margin-bottom: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -3067,8 +3067,8 @@ a.Bookmarked:before {
 }
 .PanelInfo a:hover,
 .PanelInfo a:focus,
-.DataList .Item:hover,
-.DataList .Item:focus {
+.DataList > li:hover,
+.DataList > li:focus {
   text-decoration: none;
   background-color: #15b5c1;
 }
@@ -3086,7 +3086,7 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.MessageList > li {
   margin-bottom: 20px;
   background-color: #13a0aa;
   border: 1px solid transparent;
@@ -3179,7 +3179,7 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.MessageList > li {
   border-color: #0d747c;
 }
 .MessageList .Item-Header,
@@ -3598,41 +3598,44 @@ tr.Item:after {
 .DataList:empty {
   display: none;
 }
-.DataList.Condensed .Item h1,
-.DataList.Condensed .Item h2,
-.DataList.Condensed .Item h3,
-.DataList.Condensed .Item h4,
-.DataList.Condensed .Item h5,
-.DataList.Condensed .Item h6 {
+.DataList .DataList {
+  margin-bottom: 0;
+}
+.DataList.Condensed > li h1,
+.DataList.Condensed > li h2,
+.DataList.Condensed > li h3,
+.DataList.Condensed > li h4,
+.DataList.Condensed > li h5,
+.DataList.Condensed > li h6 {
   margin: 0;
   font-family: "Cabin", Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.42857143;
 }
-.DataList.Condensed .Item .Photo img {
+.DataList.Condensed > li .Photo img {
   width: 40px;
   height: 40px;
 }
-.DataList.Condensed .Item .Excerpt {
+.DataList.Condensed > li .Excerpt {
   float: left !important;
 }
-.DataList.Condensed .Item .Meta {
+.DataList.Condensed > li .Meta {
   float: right !important;
 }
-.DataList-Search .Item h1,
-.DataList-Search .Item h2,
-.DataList-Search .Item h3,
-.DataList-Search .Item h4,
-.DataList-Search .Item h5,
-.DataList-Search .Item h6 {
+.DataList-Search > li h1,
+.DataList-Search > li h2,
+.DataList-Search > li h3,
+.DataList-Search > li h4,
+.DataList-Search > li h5,
+.DataList-Search > li h6 {
   margin: 0;
   font-family: "Cabin", Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.42857143;
 }
-.DataList-Search .Item .PhotoWrap {
+.DataList-Search > li .PhotoWrap {
   float: left !important;
 }
 .DataList-Search .Media {
@@ -3733,24 +3736,24 @@ tr.Item:after {
 .MessageList.Discussion {
   margin-bottom: 0;
 }
-.MessageList.Discussion .Item {
+.MessageList.Discussion > li {
   margin-bottom: 0;
 }
-.MessageList .Item {
+.MessageList > li {
   position: relative;
   padding: 0;
   margin-bottom: 20px;
   margin-left: 64px;
 }
-.MessageList .Item:hover,
-.MessageList .Item:focus {
+.MessageList > li:hover,
+.MessageList > li:focus {
   background-color: #13a0aa;
 }
-.MessageList .Item .Options {
+.MessageList > li .Options {
   padding: 10px 15px;
   margin-bottom: -10px;
 }
-.MessageList .Item .Author .ProfilePhoto {
+.MessageList > li .Author .ProfilePhoto {
   width: 48px;
   height: 48px;
 }
@@ -4461,7 +4464,7 @@ legend {
 .list-group-item,
 .PanelInfo a,
 .PanelInfo .Heading,
-.DataList .Item {
+.DataList > li {
   background-color: #13a0aa;
 }
 .popover,
