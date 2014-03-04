@@ -1568,7 +1568,9 @@ fieldset[disabled] .Button.Danger:active {
 .UserBox .Username,
 .UserBox .Email,
 .Item.Activity .ItemContent,
-.Item.ActivityComment .ItemContent {
+.Item.ActivityComment .ItemContent,
+.BlockColumn .Meta,
+.BlockColumn .BlockTitle {
   overflow: hidden;
   zoom: 1;
 }
@@ -1581,13 +1583,15 @@ fieldset[disabled] .Button.Danger:active {
   margin-top: 0;
 }
 .UserBox .PhotoWrap,
-.Item-Icon {
+.Item-Icon,
+.BlockColumn .PhotoWrap {
   display: block;
 }
 .UserBox > .pull-left,
 .UserBox .PhotoWrap,
 .Item-Icon,
-.DataList-Search .Item .PhotoWrap {
+.DataList-Search .Item .PhotoWrap,
+.BlockColumn .PhotoWrap {
   margin-right: 10px;
 }
 .UserBox > .pull-right {
@@ -3669,6 +3673,49 @@ tr.Item:after {
 }
 .DataTable > tbody > tr > td {
   vertical-align: middle;
+}
+.DataTable > tbody .BigCount {
+  font-size: 19px;
+}
+.DataTable .BigCount {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .DataTable .BlockColumn {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .DataTable .BigCount {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .DataTable .FirstUser {
+    display: none;
+  }
+}
+.BlockColumn {
+  width: 20%;
+  min-width: 170px;
+}
+.CategoryTable .BlockColumn {
+  width: 30%;
+}
+.BlockColumn .PhotoWrap {
+  float: left !important;
+}
+.BlockColumn .Meta {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.BlockTitle {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .PopList .ItemContent {
   overflow: hidden;
