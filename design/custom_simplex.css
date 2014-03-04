@@ -3663,22 +3663,8 @@ tr.Item:after {
 .MessageList {
   position: relative;
 }
-.MessageList:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 79px;
-  z-index: -1;
-  display: block;
-  width: 2px;
-  background-color: #f5f5f5;
-  content: " ";
-}
 .MessageList.Discussion {
   margin-bottom: 0;
-}
-.MessageList.Discussion:before {
-  display: none;
 }
 .MessageList.Discussion .Item {
   margin-bottom: 0;
@@ -3688,7 +3674,6 @@ tr.Item:after {
   padding: 0;
   margin-bottom: 20px;
   margin-left: 64px;
-  box-shadow: 0 0 0 2px #fcfcfc;
 }
 .MessageList .Item:hover,
 .MessageList .Item:focus {
