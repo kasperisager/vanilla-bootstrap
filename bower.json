@@ -1,6 +1,14 @@
 {
   "name": "vanilla-bootstrap",
   "private": true,
+  "ignore": [
+    "about.php",
+    "views",
+    "design",
+    "js/custom.js",
+    "screenshot.png",
+    "gulpfile.js"
+  ],
   "dependencies": {
     "bootstrap": "3.1.1",
     "bootswatch": "3.1.1",
