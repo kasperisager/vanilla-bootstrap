@@ -3766,17 +3766,17 @@ tr.Item:after {
 .PagerWrap .PagerWrap,
 .PageControls .PagerWrap,
 .BeforeCommentHeading .PagerWrap,
-.PagerWrap .NumeredPager,
-.PageControls .NumeredPager,
-.BeforeCommentHeading .NumeredPager {
+.PagerWrap .NumberedPager,
+.PageControls .NumberedPager,
+.BeforeCommentHeading .NumberedPager {
   margin: 0;
 }
 .PagerWrap .PagerWrap,
 .PageControls .PagerWrap,
 .BeforeCommentHeading .PagerWrap,
-.PagerWrap .NumeredPager,
-.PageControls .NumeredPager,
-.BeforeCommentHeading .NumeredPager {
+.PagerWrap .NumberedPager,
+.PageControls .NumberedPager,
+.BeforeCommentHeading .NumberedPager {
   float: right !important;
 }
 .BeforeCommentHeading {
