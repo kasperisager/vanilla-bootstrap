@@ -3578,6 +3578,9 @@ tr.Item:after {
 .Item .MessageForm .Form-Body {
   padding: 0;
 }
+.Item.Editing .MessageForm ~ * {
+  display: none;
+}
 .MessageForm .PhotoWrap {
   position: absolute;
   top: -1px;
