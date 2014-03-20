@@ -22,10 +22,12 @@
     .on('popupLoading', function (e) {
       $('body').addClass('modal-open');
       $(dialog).addClass('fade');
+      $(backdrop).spin(spinner);
     })
     // Fade in the modal dialog when it's time to reveal it.
     .on('popupReveal', function (e) {
       $(dialog).addClass('in');
+      $(backdrop).spin(false);
     })
     // When it's time to close the modal, first fade out the modal dialog,
     // then fade out the modal backdrop, and lastly remove the entire modal
