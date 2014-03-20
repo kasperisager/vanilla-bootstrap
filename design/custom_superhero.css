@@ -1887,6 +1887,12 @@ a.Bookmark:before {
 .InformSprite.Umbrella:before {
   content: "\f0e9";
 }
+.SpQuote:before {
+  content: "\f10d";
+}
+.SpSignatures:before {
+  content: "\f040";
+}
 a.Bookmark {
   font: 0/0 a;
   color: transparent;
