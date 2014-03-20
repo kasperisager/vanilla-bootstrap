@@ -743,6 +743,12 @@ address {
 .Message {
   word-wrap: break-word;
 }
+.Message > *:first-child {
+  margin-top: 0 !important;
+}
+.Message > *:last-child {
+  margin-bottom: 0 !important;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
