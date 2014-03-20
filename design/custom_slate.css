@@ -1968,6 +1968,7 @@ a.Bookmarked:before {
 }
 .MenuItems,
 .FlyoutMenu,
+.atwho-view ul,
 .token-input-dropdown {
   position: absolute;
   top: 100%;
@@ -1995,6 +1996,7 @@ a.Bookmarked:before {
   background-color: #272b30;
 }
 .MenuItems li > a,
+.atwho-view li,
 .token-input-dropdown li,
 .token-input-dropdown > p {
   display: block;
@@ -2007,6 +2009,7 @@ a.Bookmarked:before {
 }
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
+.atwho-view li:hover,
 .token-input-dropdown li:hover {
   text-decoration: none;
   color: #ffffff;
@@ -2083,6 +2086,16 @@ a.Bookmarked:before {
 }
 .OptionsMenu.Open .SpFlyoutHandle {
   color: #ffffff;
+}
+.atwho-view {
+  position: absolute;
+  display: none;
+}
+.atwho-view ul {
+  display: block;
+}
+.atwho-view ul:empty {
+  display: none;
 }
 .ButtonGroup {
   position: relative;

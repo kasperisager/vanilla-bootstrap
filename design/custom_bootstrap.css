@@ -1956,6 +1956,7 @@ a.Bookmarked:before {
 }
 .MenuItems,
 .FlyoutMenu,
+.atwho-view ul,
 .token-input-dropdown {
   position: absolute;
   top: 100%;
@@ -1983,6 +1984,7 @@ a.Bookmarked:before {
   background-color: #e5e5e5;
 }
 .MenuItems li > a,
+.atwho-view li,
 .token-input-dropdown li,
 .token-input-dropdown > p {
   display: block;
@@ -1995,6 +1997,7 @@ a.Bookmarked:before {
 }
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
+.atwho-view li:hover,
 .token-input-dropdown li:hover {
   text-decoration: none;
   color: #262626;
@@ -2071,6 +2074,16 @@ a.Bookmarked:before {
 }
 .OptionsMenu.Open .SpFlyoutHandle {
   color: #428bca;
+}
+.atwho-view {
+  position: absolute;
+  display: none;
+}
+.atwho-view ul {
+  display: block;
+}
+.atwho-view ul:empty {
+  display: none;
 }
 .ButtonGroup {
   position: relative;
@@ -4524,6 +4537,7 @@ img.jcrop-preview {
 }
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
+.atwho-view li:hover,
 .token-input-dropdown li:hover {
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
   background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);

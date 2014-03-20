@@ -101,3 +101,31 @@
     &:extend(.dropdown-menu-right);
   }
 }
+
+// -----------------------------------------------------------------------------
+
+// ## "At Who" (At.js)
+//
+// No styleguide reference.
+
+.atwho-view {
+  position: absolute;
+  display: none;
+
+  ul {
+    display: block;
+    &:extend(.dropdown-menu);
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  li {
+    &:extend(.dropdown-menu > li > a);
+
+    &:hover {
+      &:extend(.dropdown-menu > li > a:hover);
+    }
+  }
+}
