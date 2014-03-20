@@ -7,7 +7,7 @@
     "gulp-livereload": "1.2.x",
     "gulp-concat": "2.1.x",
     "gulp-uglify": "0.2.x",
-    "gulp-util": "2.2.x",
-    "gulp-rename": "1.2.x"
+    "gulp-rename": "1.2.x",
+    "gulp-plumber": "0.5.x"
   }
 }

@@ -1,5 +1,5 @@
 var gulp = require('gulp')
-  , gutil = require('gulp-util')
+  , plumber = require('gulp-plumber')
   , less = require('gulp-less')
   , concat = require('gulp-concat')
   , uglify = require('gulp-uglify')
@@ -8,21 +8,23 @@ var gulp = require('gulp')
 
 gulp.task('core', function () {
   gulp.src('less/style.less')
+    .pipe(plumber())
     .pipe(less({
       paths: ['less', 'bower_components']
-    }).on('error', gutil.log))
+    }))
     .pipe(gulp.dest('design'))
     .pipe(livereload());
 });
 
 gulp.task('themes', function () {
   gulp.src('less/themes/*.less')
+    .pipe(plumber())
     .pipe(rename(function (path) {
       path.basename = 'custom_' + path.basename;
     }))
     .pipe(less({
       paths: ['less', 'bower_components']
-    }).on('error', gutil.log))
+    }))
     .pipe(gulp.dest('design'));
 });
 
