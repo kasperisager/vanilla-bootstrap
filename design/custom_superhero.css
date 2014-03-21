@@ -2875,7 +2875,8 @@ a.Bookmarked:before {
   border-radius: 0;
 }
 .NumberedPager > a,
-.NumberedPager > span {
+.NumberedPager > span,
+.NumberedPager > div {
   position: relative;
   float: left;
   padding: 8px 16px;
@@ -2887,13 +2888,15 @@ a.Bookmarked:before {
   margin-left: -1px;
 }
 .NumberedPager > a:first-child,
-.NumberedPager > span:first-child {
+.NumberedPager > span:first-child,
+.NumberedPager > div:first-child {
   margin-left: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 .NumberedPager > a:last-child,
-.NumberedPager > span:last-child {
+.NumberedPager > span:last-child,
+.NumberedPager > div:last-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
