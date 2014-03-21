@@ -1893,6 +1893,9 @@ a.Bookmark:before {
 .SpSignatures:before {
   content: "\f040";
 }
+.SpUnansweredQuestions:before {
+  content: "\f128";
+}
 a.Bookmark {
   font: 0/0 a;
   color: transparent;
