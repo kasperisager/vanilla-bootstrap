@@ -1863,6 +1863,7 @@ a.Bookmark:before {
 .InformSprite.Lightbulb:before {
   content: "\f0eb";
 }
+.SpBestOf:before,
 .InformSprite.Trophy:before {
   content: "\f091";
 }
