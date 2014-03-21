@@ -3125,7 +3125,8 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.MessageList .Item,
+.CategoryGroup {
   margin-bottom: 20px;
   background-color: #2e3338;
   border: 1px solid transparent;
@@ -3141,11 +3142,18 @@ a.Bookmarked:before {
   padding: 15px;
 }
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryGroup .H {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+}
+.CategoryGroup .H {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
 }
 .MessageForm .Buttons {
   padding: 10px 15px;
@@ -3155,7 +3163,8 @@ a.Bookmarked:before {
   border-bottom-left-radius: 3px;
 }
 .panel > table,
-.panel > .table-responsive > table {
+.panel > .table-responsive > table,
+.CategoryGroup .DataTable {
   margin-bottom: 0;
 }
 .panel > table:first-child,
@@ -3218,11 +3227,13 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.MessageList .Item,
+.CategoryGroup {
   border-color: rgba(0, 0, 0, 0.6);
 }
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryGroup .H {
   color: #c8c8c8;
   background-color: #3e444c;
   border-color: rgba(0, 0, 0, 0.6);
