@@ -2102,6 +2102,32 @@ a.Bookmarked:before {
   display: inline-block;
   vertical-align: middle;
 }
+.ButtonGroup > .Button {
+  position: relative;
+  float: left;
+}
+.ButtonGroup > .Button:hover,
+.ButtonGroup > .Button:focus,
+.ButtonGroup > .Button:active {
+  z-index: 2;
+}
+.ButtonGroup .Button ~ .Button {
+  margin-left: -1px;
+}
+.ButtonGroup > .Button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ButtonGroup > .Button:first-child {
+  margin-left: 0;
+}
+.ButtonGroup > .Button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ButtonGroup > .Button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
 .btn .SpDropdownHandle {
   margin-left: 0;
 }
