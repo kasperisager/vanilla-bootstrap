@@ -89,6 +89,15 @@
 //
 // No styleguide reference.
 
+.DataTableWrap {
+  &:extend(.panel);
+  &:extend(.panel-default);
+
+  .DataTable {
+    &:extend(.panel > .table);
+  }
+}
+
 .DataTable {
   .reset-headings();
   &:extend(.table-hover all);
@@ -273,8 +282,13 @@
     &:extend(.panel-title);
   }
 
-  .DataTable {
-    &:extend(.panel > .table);
+  .DataTableWrap {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 

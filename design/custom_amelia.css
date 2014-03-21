@@ -3114,6 +3114,7 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
+.DataTableWrap,
 .MessageList .Item,
 .CategoryGroup {
   margin-bottom: 20px;
@@ -3153,7 +3154,7 @@ a.Bookmarked:before {
 }
 .panel > table,
 .panel > .table-responsive > table,
-.CategoryGroup .DataTable {
+.DataTableWrap .DataTable {
   margin-bottom: 0;
 }
 .panel > table:first-child,
@@ -3216,6 +3217,7 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
+.DataTableWrap,
 .MessageList .Item,
 .CategoryGroup {
   border-color: #0d747c;
@@ -3814,6 +3816,14 @@ tr.Item:after {
   .MessageList.Conversation .Meta .Meta {
     float: right;
   }
+}
+.CategoryGroup .DataTableWrap {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .PagerWrap,
 .PageControls,
