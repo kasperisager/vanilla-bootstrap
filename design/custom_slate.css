@@ -1756,6 +1756,7 @@ a.Bookmark:before {
 .InformSprite.Stats:before {
   content: "\f080";
 }
+.SpMessage:before,
 .InformSprite.Envelope:before {
   content: "\f0e0";
 }
