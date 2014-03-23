@@ -743,6 +743,12 @@ address {
 .Message {
   word-wrap: break-word;
 }
+.Message > *:first-child {
+  margin-top: 0 !important;
+}
+.Message > *:last-child {
+  margin-bottom: 0 !important;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1739,6 +1745,7 @@ a.Bookmark:before {
 .InformSprite.Stats:before {
   content: "\f080";
 }
+.SpMessage:before,
 .InformSprite.Envelope:before {
   content: "\f0e0";
 }
@@ -1857,6 +1864,7 @@ a.Bookmark:before {
 .InformSprite.Lightbulb:before {
   content: "\f0eb";
 }
+.SpBestOf:before,
 .InformSprite.Trophy:before {
   content: "\f091";
 }
@@ -1880,6 +1888,15 @@ a.Bookmark:before {
 }
 .InformSprite.Umbrella:before {
   content: "\f0e9";
+}
+.SpQuote:before {
+  content: "\f10d";
+}
+.SpSignatures:before {
+  content: "\f040";
+}
+.SpUnansweredQuestions:before {
+  content: "\f128";
 }
 a.Bookmark {
   font: 0/0 a;
@@ -1911,8 +1928,7 @@ a.Bookmarked:before {
 .FilterMenu .Sprite {
   margin-right: 6px;
 }
-.fade,
-.Overlay:after {
+.fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
@@ -1945,6 +1961,7 @@ a.Bookmarked:before {
 }
 .MenuItems,
 .FlyoutMenu,
+.atwho-view ul,
 .token-input-dropdown {
   position: absolute;
   top: 100%;
@@ -1972,6 +1989,7 @@ a.Bookmarked:before {
   background-color: #e5e5e5;
 }
 .MenuItems li > a,
+.atwho-view li,
 .token-input-dropdown li,
 .token-input-dropdown > p {
   display: block;
@@ -1984,6 +2002,7 @@ a.Bookmarked:before {
 }
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
+.atwho-view li:hover,
 .token-input-dropdown li:hover {
   text-decoration: none;
   color: #ffffff;
@@ -2061,10 +2080,46 @@ a.Bookmarked:before {
 .OptionsMenu.Open .SpFlyoutHandle {
   color: #007fff;
 }
+.atwho-view {
+  position: absolute;
+  display: none;
+}
+.atwho-view ul {
+  display: block;
+}
+.atwho-view ul:empty {
+  display: none;
+}
 .ButtonGroup {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+}
+.ButtonGroup > .Button {
+  position: relative;
+  float: left;
+}
+.ButtonGroup > .Button:hover,
+.ButtonGroup > .Button:focus,
+.ButtonGroup > .Button:active {
+  z-index: 2;
+}
+.ButtonGroup .Button ~ .Button {
+  margin-left: -1px;
+}
+.ButtonGroup > .Button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ButtonGroup > .Button:first-child {
+  margin-left: 0;
+}
+.ButtonGroup > .Button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ButtonGroup > .Button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .btn .SpDropdownHandle {
   margin-left: 0;
@@ -2821,7 +2876,8 @@ a.Bookmarked:before {
   border-radius: 0;
 }
 .NumberedPager > a,
-.NumberedPager > span {
+.NumberedPager > span,
+.NumberedPager > div {
   position: relative;
   float: left;
   padding: 10px 18px;
@@ -2833,13 +2889,15 @@ a.Bookmarked:before {
   margin-left: -1px;
 }
 .NumberedPager > a:first-child,
-.NumberedPager > span:first-child {
+.NumberedPager > span:first-child,
+.NumberedPager > div:first-child {
   margin-left: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 .NumberedPager > a:last-child,
-.NumberedPager > span:last-child {
+.NumberedPager > span:last-child,
+.NumberedPager > div:last-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3089,7 +3147,9 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.DataTableWrap,
+.MessageList .Item,
+.CategoryGroup {
   margin-bottom: 21px;
   background-color: #ffffff;
   border: 1px solid transparent;
@@ -3105,11 +3165,18 @@ a.Bookmarked:before {
   padding: 15px;
 }
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryGroup .H {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: -1;
   border-top-left-radius: -1;
+}
+.CategoryGroup .H {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  color: inherit;
 }
 .MessageForm .Buttons {
   padding: 10px 15px;
@@ -3119,7 +3186,8 @@ a.Bookmarked:before {
   border-bottom-left-radius: -1;
 }
 .panel > table,
-.panel > .table-responsive > table {
+.panel > .table-responsive > table,
+.DataTableWrap .DataTable {
   margin-bottom: 0;
 }
 .panel > table:first-child,
@@ -3182,11 +3250,14 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.DataTableWrap,
+.MessageList .Item,
+.CategoryGroup {
   border-color: #dddddd;
 }
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryGroup .H {
   color: #333333;
   background-color: #f5f5f5;
   border-color: #dddddd;
@@ -3287,7 +3358,7 @@ button.token-input-delete-token {
   background-clip: padding-box;
   outline: none;
 }
-.Overlay:after {
+.Overlay .backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -3296,11 +3367,11 @@ button.token-input-delete-token {
   z-index: 1040;
   background-color: #000000;
 }
-.Overlay:after {
+.Overlay .backdrop {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-.modal-open .Overlay:after {
+.Overlay .backdrop.in {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -3345,10 +3416,6 @@ button.token-input-delete-token {
 }
 .Overlay {
   display: block;
-}
-.Overlay:after {
-  display: block;
-  content: " ";
 }
 .Overlay > .Popup {
   top: 0 !important;
@@ -3569,6 +3636,9 @@ tr.Item:after {
 .Item .MessageForm .Form-Body {
   padding: 0;
 }
+.Item.Editing .MessageForm ~ * {
+  display: none;
+}
 .MessageForm .PhotoWrap {
   position: absolute;
   top: -1px;
@@ -3775,6 +3845,14 @@ tr.Item:after {
   .MessageList.Conversation .Meta .Meta {
     float: right;
   }
+}
+.CategoryGroup .DataTableWrap {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .PagerWrap,
 .PageControls,
@@ -4453,6 +4531,7 @@ table tr.danger {
 .dropdown-menu > li > a:focus,
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
+.atwho-view li:hover,
 .token-input-dropdown li:hover {
   background-image: none;
 }

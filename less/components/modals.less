@@ -20,14 +20,11 @@
   display: block;
   &:extend(.modal);
 
-  &:after {
-    display: block;
-    content: " ";
-    &:extend(.fade);
+  .backdrop {
     &:extend(.modal-backdrop);
     &:extend(.modal-backdrop.fade);
 
-    .modal-open & {
+    &.in {
       &:extend(.modal-backdrop.in);
     }
   }

@@ -165,6 +165,11 @@ tr.Item {
     }
   }
 
+  // Hide everything following the message form when editing comments
+  .Item.Editing & ~ * {
+    display: none;
+  }
+
   .PhotoWrap {
     position: absolute;
     top: -1px;
