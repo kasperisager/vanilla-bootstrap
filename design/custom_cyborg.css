@@ -1928,8 +1928,7 @@ a.Bookmarked:before {
 .FilterMenu .Sprite {
   margin-right: 6px;
 }
-.fade,
-.Overlay:after {
+.fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
@@ -3359,7 +3358,7 @@ button.token-input-delete-token {
   background-clip: padding-box;
   outline: none;
 }
-.Overlay:after {
+.Overlay .backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -3368,11 +3367,11 @@ button.token-input-delete-token {
   z-index: 1040;
   background-color: #000000;
 }
-.Overlay:after {
+.Overlay .backdrop {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-.modal-open .Overlay:after {
+.Overlay .backdrop.in {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -3417,10 +3416,6 @@ button.token-input-delete-token {
 }
 .Overlay {
   display: block;
-}
-.Overlay:after {
-  display: block;
-  content: " ";
 }
 .Overlay > .Popup {
   top: 0 !important;

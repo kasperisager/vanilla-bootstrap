@@ -14,43 +14,113 @@
     });
 
     var spinner = {
-      lines  : 11
-    , radius : 5
-    , length : 5
-    , width  : 2
+          lines  : 11
+        , radius : 5
+        , length : 5
+        , width  : 2
+        }
+      , overlay = '.Overlay'
+      , dialog  = '> .Popup';
+
+    /**
+     * Show the modal backdrop, but hide the actual modal dialog while it's
+     * loading.
+     *
+     * @this {overlay}
+     */
+    var preparePopup = function () {
+      var $overlay  = $(this)
+        , $backdrop = $('<div class="backdrop fade">');
+
+      // Lock body scrolling
+      $('body').addClass('modal-open');
+
+      // Prepare dialog animation
+      $(dialog, $overlay).addClass('fade');
+
+      // Attach a backdrop to the overlay if one doesn't already exist
+      if (!$overlay.data('backdrop')) {
+        $overlay.data('backdrop', $backdrop);
+
+        // Append the modal backdrop to overlay
+        $overlay.append($backdrop);
+      }
+
+      // Fake async addition of class
+      setTimeout(function () {
+        // Fade in backdrop and add spinner
+        $backdrop.addClass('in').spin(spinner);
+      }, 0);
     };
 
-    var backdrop = '.Overlay'
-      , dialog   = '.Overlay > .Popup';
+    /**
+     * Fade in the modal dialog when it's time to reveal it.
+     *
+     * @this {overlay}
+     */
+    var revealPopup = function () {
+      var $overlay  = $(this)
+        , $backdrop = $overlay.data('backdrop');
+
+      // Fade in modal dialog
+      $(dialog, $overlay).addClass('in');
+
+      if ($backdrop.length) {
+        // Remove spinner from modal backdrop
+        $backdrop.spin(false);
+      }
+    };
+
+    /**
+     * When it's time to close the modal, first fade out the modal dialog,
+     * then fade out the modal backdrop, and lastly remove the entire modal
+     * from the DOM.
+     *
+     * @this {overlay}
+     */
+    var closePopup = function () {
+      var $overlay  = $(this)
+        , $backdrop = $overlay.data('backdrop');
+
+      // Fade out the modal dialog
+      $(dialog, $overlay).removeClass('in');
+
+      setTimeout(function () {
+        if ($backdrop.length) {
+          // Fade out the backdrop
+          $backdrop.removeClass('in');
+        }
+
+        // Re-enable body scrolling
+        $('body').removeClass('modal-open');
+      }, 150);
+
+      setTimeout(function () {
+        // Remove overlay from the DOM
+        $(overlay).remove();
+      }, 300);
+    };
 
     $(document)
-      // Show the modal backdrop, but hide the actual modal dialog while it's
-      // loading.
-      .on('popupLoading', function (e) {
-        $('body').addClass('modal-open');
-        $(dialog).addClass('fade');
-        $(backdrop).spin(spinner);
+      .on('popupLoading', function () {
+        $(overlay).each(preparePopup);
       })
-      // Fade in the modal dialog when it's time to reveal it.
-      .on('popupReveal', function (e) {
-        $(dialog).addClass('in');
-        $(backdrop).spin(false);
+      .on('popupReveal', function () {
+        $(overlay).each(revealPopup);
       })
-      // When it's time to close the modal, first fade out the modal dialog,
-      // then fade out the modal backdrop, and lastly remove the entire modal
-      // from the DOM.
       .on('popupClose', function (e) {
-        $(dialog).removeClass('in');
-        setTimeout(function () { $('body').removeClass('modal-open'); }, 150);
-        setTimeout(function () { $(backdrop).remove(); }, 300);
+        $(overlay).each(closePopup);
       });
 
     // When only a confirmation modal is shown, the "popupLoading" and
     // "popupReveal" events are never triggered. Manually trigger them to make
     // sure that the modal is actually shown.
     $(document).on('click', 'a.Delete, a.DeleteComment, a.PopConfirm', function (e) {
-      $('body').trigger('popupLoading');
-      setTimeout(function () { $('body').trigger('popupReveal'); }, 150);
+      $(document).trigger('popupLoading');
+
+      setTimeout(function () {
+        $(document).trigger('popupReveal');
+      }, 150);
     });
 
   });
