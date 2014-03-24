@@ -3007,7 +3007,8 @@ a.Bookmarked:before {
 .Note.Closed.SignInOrRegister a {
   color: #ffffff;
 }
-.Count {
+.Count,
+.Alert {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
