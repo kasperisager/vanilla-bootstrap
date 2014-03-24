@@ -212,7 +212,7 @@
   .Item {
     position: relative;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: @line-height-computed;
     margin-left: 64px;
     &:extend(.panel);
     &:extend(.panel-default);
@@ -319,7 +319,7 @@
 .PagerWrap,
 .PageControls,
 .BeforeCommentHeading {
-  margin: 20px 0;
+  margin: @line-height-computed 0;
   &:extend(.clearfix all);
 
   &:empty {
@@ -347,6 +347,6 @@
 }
 
 .Foot.Closed {
-  margin-bottom: 20px;
+  margin-bottom: @line-height-computed;
   margin-left: 64px;
 }

@@ -391,7 +391,7 @@ dl dd:last-child {
   margin-bottom: 0;
 }
 .PageDescription {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 .Empty,
 .NoResults {
@@ -3827,7 +3827,7 @@ tr.Item:after {
 .MessageList .Item {
   position: relative;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 64px;
 }
 .MessageList .Item:hover,
@@ -3869,7 +3869,7 @@ tr.Item:after {
 .PagerWrap,
 .PageControls,
 .BeforeCommentHeading {
-  margin: 20px 0;
+  margin: 21px 0;
 }
 .PagerWrap:empty,
 .PageControls:empty,
@@ -3902,7 +3902,7 @@ tr.Item:after {
   display: none;
 }
 .Foot.Closed {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 64px;
 }
 .token-input-token,
