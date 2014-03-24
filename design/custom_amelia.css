@@ -3008,7 +3008,8 @@ a.Bookmarked:before {
 .Note.Closed.SignInOrRegister a {
   color: #ffffff;
 }
-.Count {
+.Count,
+.Alert {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
@@ -3149,6 +3150,7 @@ a.Bookmarked:before {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   margin-bottom: 20px;
   background-color: #13a0aa;
@@ -3166,24 +3168,42 @@ a.Bookmarked:before {
 }
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta,
+.CategoryBox .H,
 .CategoryGroup .H {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
+.CategoryBox .H,
 .CategoryGroup .H {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
   color: inherit;
 }
-.MessageForm .Buttons {
+.MessageForm .Buttons,
+.CategoryBox .MorePager {
   padding: 10px 15px;
   background-color: #18cbd8;
   border-top: 1px solid #0d747c;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+.CategoryBox .DataList {
+  margin-bottom: 0;
+}
+.CategoryBox .DataList .Item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.CategoryBox .DataList .Item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.CategoryBox .DataList .Item:first-child {
+  border-top-width: 0;
 }
 .panel > table,
 .panel > .table-responsive > table,
@@ -3252,11 +3272,13 @@ a.Bookmarked:before {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   border-color: #0d747c;
 }
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta,
+.CategoryBox .H,
 .CategoryGroup .H {
   color: #ffffff;
   background-color: #18cbd8;
@@ -3664,15 +3686,8 @@ tr.Item:after {
     display: block;
   }
 }
-.DataList {
-  margin: 20px 0;
-  list-style: none;
-}
 .DataList:empty {
   display: none;
-}
-.DataList .DataList {
-  margin-bottom: 0;
 }
 .DataList.Condensed .Item h1,
 .DataList.Condensed .Item h2,

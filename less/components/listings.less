@@ -12,16 +12,10 @@
 // No styleguide reference.
 
 .DataList {
-  margin: 20px 0;
-  list-style: none;
   &:extend(.list-group);
 
   &:empty {
     display: none;
-  }
-
-  & & {
-    margin-bottom: 0; // Fix nested lists
   }
 
   .Item {
@@ -218,7 +212,7 @@
   .Item {
     position: relative;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: @line-height-computed;
     margin-left: 64px;
     &:extend(.panel);
     &:extend(.panel-default);
@@ -268,10 +262,11 @@
 
 // -----------------------------------------------------------------------------
 
-// ## Category Groups
+// ## Category Boxes and Groups
 //
 // No styleguide reference.
 
+.CategoryBox,
 .CategoryGroup {
   &:extend(.panel);
   &:extend(.panel-default);
@@ -281,7 +276,9 @@
     &:extend(.panel-default > .panel-heading);
     &:extend(.panel-title);
   }
+}
 
+.CategoryGroup {
   .DataTableWrap {
     padding: 0;
     margin: 0;
@@ -289,6 +286,27 @@
     border: 0;
     border-radius: 0;
     box-shadow: none;
+  }
+}
+
+.CategoryBox {
+  .DataList {
+    &:extend(.panel > .list-group);
+
+    .Item {
+      &:extend(.panel > .list-group .list-group-item);
+
+      &:first-child {
+        &:extend(.panel-heading + .list-group .list-group-item:first-child);
+      }
+      &:last-child {
+        &:extend(.panel > .list-group:last-child .list-group-item:last-child);
+      }
+    }
+  }
+
+  .MorePager {
+    &:extend(.panel-footer);
   }
 }
 
@@ -301,7 +319,7 @@
 .PagerWrap,
 .PageControls,
 .BeforeCommentHeading {
-  margin: 20px 0;
+  margin: @line-height-computed 0;
   &:extend(.clearfix all);
 
   &:empty {
@@ -329,6 +347,6 @@
 }
 
 .Foot.Closed {
-  margin-bottom: 20px;
+  margin-bottom: @line-height-computed;
   margin-left: 64px;
 }

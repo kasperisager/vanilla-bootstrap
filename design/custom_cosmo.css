@@ -391,7 +391,7 @@ dl dd:last-child {
   margin-bottom: 0;
 }
 .PageDescription {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 .Empty,
 .NoResults {
@@ -3008,7 +3008,8 @@ a.Bookmarked:before {
 .Note.Closed.SignInOrRegister a {
   color: #ffffff;
 }
-.Count {
+.Count,
+.Alert {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
@@ -3149,6 +3150,7 @@ a.Bookmarked:before {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   margin-bottom: 21px;
   background-color: #ffffff;
@@ -3166,24 +3168,42 @@ a.Bookmarked:before {
 }
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta,
+.CategoryBox .H,
 .CategoryGroup .H {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: -1;
   border-top-left-radius: -1;
 }
+.CategoryBox .H,
 .CategoryGroup .H {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 17px;
   color: inherit;
 }
-.MessageForm .Buttons {
+.MessageForm .Buttons,
+.CategoryBox .MorePager {
   padding: 10px 15px;
   background-color: #f5f5f5;
   border-top: 1px solid #dddddd;
   border-bottom-right-radius: -1;
   border-bottom-left-radius: -1;
+}
+.CategoryBox .DataList {
+  margin-bottom: 0;
+}
+.CategoryBox .DataList .Item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.CategoryBox .DataList .Item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: -1;
+  border-bottom-left-radius: -1;
+}
+.CategoryBox .DataList .Item:first-child {
+  border-top-width: 0;
 }
 .panel > table,
 .panel > .table-responsive > table,
@@ -3252,11 +3272,13 @@ a.Bookmarked:before {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   border-color: #dddddd;
 }
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta,
+.CategoryBox .H,
 .CategoryGroup .H {
   color: #333333;
   background-color: #f5f5f5;
@@ -3664,15 +3686,8 @@ tr.Item:after {
     display: block;
   }
 }
-.DataList {
-  margin: 20px 0;
-  list-style: none;
-}
 .DataList:empty {
   display: none;
-}
-.DataList .DataList {
-  margin-bottom: 0;
 }
 .DataList.Condensed .Item h1,
 .DataList.Condensed .Item h2,
@@ -3815,7 +3830,7 @@ tr.Item:after {
 .MessageList .Item {
   position: relative;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 64px;
 }
 .MessageList .Item:hover,
@@ -3857,7 +3872,7 @@ tr.Item:after {
 .PagerWrap,
 .PageControls,
 .BeforeCommentHeading {
-  margin: 20px 0;
+  margin: 21px 0;
 }
 .PagerWrap:empty,
 .PageControls:empty,
@@ -3890,7 +3905,7 @@ tr.Item:after {
   display: none;
 }
 .Foot.Closed {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 64px;
 }
 .token-input-token,
