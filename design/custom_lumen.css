@@ -3150,6 +3150,7 @@ a.Bookmarked:before {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   margin-bottom: 20px;
   background-color: #ffffff;
@@ -3167,24 +3168,42 @@ a.Bookmarked:before {
 }
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta,
+.CategoryBox .H,
 .CategoryGroup .H {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
+.CategoryBox .H,
 .CategoryGroup .H {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
   color: inherit;
 }
-.MessageForm .Buttons {
+.MessageForm .Buttons,
+.CategoryBox .MorePager {
   padding: 10px 15px;
   background-color: #f5f5f5;
   border-top: 1px solid transparent;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+.CategoryBox .DataList {
+  margin-bottom: 0;
+}
+.CategoryBox .DataList .Item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.CategoryBox .DataList .Item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.CategoryBox .DataList .Item:first-child {
+  border-top-width: 0;
 }
 .panel > table,
 .panel > .table-responsive > table,
@@ -3253,11 +3272,13 @@ a.Bookmarked:before {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   border-color: transparent;
 }
 .MessageList .Item-Header,
 .MessageList.Conversation .Meta,
+.CategoryBox .H,
 .CategoryGroup .H {
   color: #333333;
   background-color: #f5f5f5;
@@ -3665,15 +3686,8 @@ tr.Item:after {
     display: block;
   }
 }
-.DataList {
-  margin: 20px 0;
-  list-style: none;
-}
 .DataList:empty {
   display: none;
-}
-.DataList .DataList {
-  margin-bottom: 0;
 }
 .DataList.Condensed .Item h1,
 .DataList.Condensed .Item h2,
@@ -4767,6 +4781,7 @@ label {
 .MessageForm,
 .DataTableWrap,
 .MessageList .Item,
+.CategoryBox,
 .CategoryGroup {
   border: 1px solid #e7e7e7;
   -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
