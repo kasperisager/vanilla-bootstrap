@@ -19,9 +19,9 @@ $ git clone kasperisager/vanilla-bootstrap bootstrap
 
 ![Default](design/screenshot_default.png) | ![Bootstrap](design/screenshot_bootstrap.png) | ![Cerulean](design/screenshot_cerulean.png) | ![Cosmo](design/screenshot_cosmo.png)
 ---|---|---|---
-![Cyborg](design/screenshot_cyborg.png) | ![Flatly](design/screenshot_flatly.png) | ![Journal](design/screenshot_journal.png) | ![Lumen](design/screenshot_lumen.png)
-![Readable](design/screenshot_readable.png) | ![Simplex](design/screenshot_simplex.png) | ![Slate](design/screenshot_slate.png) | ![Spacelab](design/screenshot_spacelab.png)
-![Superhero](design/screenshot_superhero.png) | ![United](design/screenshot_united.png) | ![Yeti](design/screenshot_yeti.png)
+![Cyborg](design/screenshot_cyborg.png) | ![Darkly](design/screenshot_darkly.png) | ![Flatly](design/screenshot_flatly.png) | ![Journal](design/screenshot_journal.png)
+![Lumen](design/screenshot_lumen.png) | ![Readable](design/screenshot_readable.png) | ![Simplex](design/screenshot_simplex.png) | ![Slate](design/screenshot_slate.png)
+![Spacelab](design/screenshot_spacelab.png) | ![Superhero](design/screenshot_superhero.png) | ![United](design/screenshot_united.png) | ![Yeti](design/screenshot_yeti.png)
 
 ## Compiling assets
 
