@@ -18,6 +18,17 @@
     display: none;
   }
 
+  .Foot {
+    &:extend(.list-group-item);
+
+    &:first-child {
+      &:extend(.list-group-item:first-child);
+    }
+    &:last-child {
+      &:extend(.list-group-item:last-child);
+    }
+  }
+
   .Item {
     &:extend(.list-group-item);
 

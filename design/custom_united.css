@@ -3122,6 +3122,7 @@ a.Bookmarked:before {
 }
 .PanelInfo a,
 .PanelInfo .Heading,
+.DataList .Foot,
 .DataList .Item,
 .DataList.Activities .CommentForm {
   position: relative;
@@ -3132,12 +3133,14 @@ a.Bookmarked:before {
   border: 1px solid #dddddd;
 }
 .PanelInfo li:first-child a,
+.DataList .Foot:first-child,
 .DataList .Item:first-child,
 .DataList.Activities .CommentForm:first-child {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
 .PanelInfo li:last-child a,
+.DataList .Foot:last-child,
 .DataList .Item:last-child,
 .DataList.Activities .CommentForm:last-child {
   margin-bottom: 0;
