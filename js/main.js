@@ -8,7 +8,7 @@
     // if the button is later shown.
     $('.Button.Hidden').removeClass('Hidden').hide();
 
-    // Attach spinners to the .InProgress element in flyouts using Spin.js
+    // Attach spinner to the .InProgress element in flyouts
     $(document).on('click', '.ToggleFlyout', function (e) {
       $('.InProgress', e.currentTarget).spin({
           lines  : 11
@@ -18,9 +18,21 @@
         });
     });
 
+    // Attach spinner to the .TinyProgress element when editing comment
     $(document).on('click', '.EditComment', function (e) {
       $('.TinyProgress', $(e.currentTarget).closest('.Item'))
         .empty()
+        .spin({
+          lines  : 9
+        , radius : 3
+        , length : 3
+        , width  : 2
+        });
+    });
+
+    // Attach spinner to the .MorePager when loading more content
+    $(document).on('click', '.MorePager a', function (e) {
+      $(e.currentTarget).parent()
         .spin({
           lines  : 9
         , radius : 3
