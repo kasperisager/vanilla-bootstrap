@@ -1097,7 +1097,6 @@ input[type="date"] {
   line-height: 38px;
 }
 .form-group,
-.FormWrapper,
 form ul:not(.List) li,
 form .P {
   margin-bottom: 15px;
