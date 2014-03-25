@@ -3133,6 +3133,7 @@ a.Bookmarked:before {
   border: 1px solid #dddddd;
 }
 .PanelInfo li:first-child a,
+.DataList .Foot:first-child,
 .DataList .Item:first-child,
 .DataList.Activities .CommentForm:first-child {
   border-top-right-radius: 4px;
