@@ -3736,6 +3736,9 @@ tr.Item:after {
     display: block;
   }
 }
+.DataList {
+  list-style: none;
+}
 .DataList:empty {
   display: none;
 }
