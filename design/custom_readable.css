@@ -616,7 +616,10 @@ a.bg-warning:hover {
 a.bg-danger:hover {
   background-color: #e4b9b9;
 }
-.page-header {
+.page-header,
+h1.H,
+.HomepageTitle,
+.PageTitle {
   padding-bottom: 10px;
   margin: 44px 0 22px;
   border-bottom: 1px solid #eeeeee;
@@ -748,6 +751,10 @@ address {
 }
 .Message > *:last-child {
   margin-bottom: 0 !important;
+}
+h1.H,
+.HomepageTitle {
+  padding-bottom: 21px;
 }
 .container {
   margin-right: auto;

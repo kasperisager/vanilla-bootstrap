@@ -26,3 +26,14 @@
     margin-bottom: 0 !important;
   }
 }
+
+h1.H,
+.HomepageTitle,
+.PageTitle {
+  &:extend(.page-header);
+}
+
+h1.H,
+.HomepageTitle {
+  padding-bottom: (((@line-height-computed / 2) - 1) + (@line-height-computed / 2));
+}

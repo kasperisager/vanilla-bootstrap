@@ -616,7 +616,10 @@ a.bg-warning:hover {
 a.bg-danger:hover {
   background-color: #c9302c;
 }
-.page-header {
+.page-header,
+h1.H,
+.HomepageTitle,
+.PageTitle {
   padding-bottom: 9.5px;
   margin: 42px 0 21px;
   border-bottom: 1px solid #ebebeb;
@@ -748,6 +751,10 @@ address {
 }
 .Message > *:last-child {
   margin-bottom: 0 !important;
+}
+h1.H,
+.HomepageTitle {
+  padding-bottom: 20px;
 }
 .container {
   margin-right: auto;
@@ -4514,7 +4521,10 @@ body {
 .text-info:hover {
   color: #5bc0de;
 }
-.page-header {
+.page-header,
+h1.H,
+.HomepageTitle,
+.PageTitle {
   border-bottom-color: #4e5d6c;
 }
 .dropdown-menu,
