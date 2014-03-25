@@ -3817,12 +3817,7 @@ tr.Item:after {
 }
 .MessageList {
   position: relative;
-}
-.MessageList.Discussion {
-  margin-bottom: 0;
-}
-.MessageList.Discussion .Item {
-  margin-bottom: 0;
+  margin-bottom: 21px;
 }
 .MessageList .Item {
   position: relative;
