@@ -4497,6 +4497,13 @@ img.jcrop-preview {
   position: static;
   min-width: 0;
 }
+.TinyProgress {
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  vertical-align: top;
+  line-height: 21px;
+}
 .navbar {
   -webkit-box-shadow: none;
   box-shadow: none;

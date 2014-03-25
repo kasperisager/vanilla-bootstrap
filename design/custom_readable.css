@@ -4500,6 +4500,13 @@ img.jcrop-preview {
   position: static;
   min-width: 0;
 }
+.TinyProgress {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  vertical-align: top;
+  line-height: 22px;
+}
 .navbar {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

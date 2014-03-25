@@ -4500,3 +4500,10 @@ img.jcrop-preview {
   position: static;
   min-width: 0;
 }
+.TinyProgress {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  vertical-align: top;
+  line-height: 20px;
+}
