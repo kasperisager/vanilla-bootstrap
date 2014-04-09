@@ -100,6 +100,7 @@ figure {
 }
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -150,6 +151,8 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -195,6 +198,7 @@ th {
     text-shadow: none !important;
     color: #000 !important;
     background: transparent !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
   a,
@@ -1046,7 +1050,7 @@ select,
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus,
@@ -1998,6 +2002,7 @@ a.Bookmarked:before {
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .MenuItems li > hr {
@@ -2080,6 +2085,7 @@ a.Bookmarked:before {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .ToggleFlyout {
@@ -2385,6 +2391,7 @@ a.Bookmarked:before {
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
@@ -2395,6 +2402,7 @@ a.Bookmarked:before {
   .navbar-collapse {
     width: auto;
     border-top: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-collapse.collapse {
@@ -2528,6 +2536,7 @@ a.Bookmarked:before {
     margin-top: 0;
     background-color: transparent;
     border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-nav .open .dropdown-menu > li > a,
@@ -3404,8 +3413,6 @@ button.token-input-delete-token {
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .Overlay > .Popup.in {
@@ -3426,6 +3433,7 @@ button.token-input-delete-token {
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: none;
 }
@@ -3494,8 +3502,6 @@ button.token-input-delete-token {
   z-index: 1050;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity .15s linear;
-  -moz-transition: -moz-transform 0.3s ease-out, opacity .15s linear;
-  -o-transition: -o-transform 0.3s ease-out, opacity .15s linear;
   transition: transform 0.3s ease-out, opacity .15s linear;
 }
 .Overlay > .Popup.in {
@@ -3525,6 +3531,7 @@ button.token-input-delete-token {
   padding: 1px;
   text-align: left;
   background-color: #ffffff;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -3914,6 +3921,7 @@ tr.Item:after {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .PagerWrap,
@@ -4555,6 +4563,7 @@ img.jcrop-preview {
 }
 .Button {
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
   background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -4574,6 +4583,7 @@ img.jcrop-preview {
 }
 .Button.Primary {
   background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#2d6ca2));
   background-image: linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff2d6ca2', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -4591,6 +4601,7 @@ img.jcrop-preview {
 }
 .PhotoWrapLarge .ChangePicture {
   background-image: -webkit-linear-gradient(top, #5bc0de 0%, #2aabd2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5bc0de), to(#2aabd2));
   background-image: linear-gradient(to bottom, #5bc0de 0%, #2aabd2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -4608,6 +4619,7 @@ img.jcrop-preview {
 }
 .Button.Danger {
   background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
   background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -4632,6 +4644,7 @@ img.jcrop-preview {
 .atwho-view li:hover,
 .token-input-dropdown li:hover {
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e8e8e8));
   background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
@@ -4640,6 +4653,7 @@ img.jcrop-preview {
 .token-input-dropdown .token-input-selected-dropdown-item,
 .token-input-dropdown .token-input-selected-dropdown-item:hover {
   background-image: -webkit-linear-gradient(top, #428bca 0%, #357ebd 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#357ebd));
   background-image: linear-gradient(to bottom, #428bca 0%, #357ebd 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
@@ -4647,6 +4661,7 @@ img.jcrop-preview {
 }
 .navbar-default {
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8f8f8));
   background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
@@ -4671,6 +4686,7 @@ img.jcrop-preview {
 .navbar-default .MeBox .Open .FlyoutButton:focus,
 .navbar-default .navbar-nav > li > .Selected {
   background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#f3f3f3));
   background-image: linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff3f3f3', GradientType=0);
@@ -4687,6 +4703,7 @@ img.jcrop-preview {
 }
 .navbar-inverse {
   background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222222));
   background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
@@ -4702,6 +4719,7 @@ img.jcrop-preview {
 .navbar-inverse .MeBox .Open .FlyoutButton:focus,
 .navbar-inverse .navbar-nav > li > .Selected {
   background-image: -webkit-linear-gradient(top, #222222 0%, #282828 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#222222), to(#282828));
   background-image: linear-gradient(to bottom, #222222 0%, #282828 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff282828', GradientType=0);
@@ -4724,6 +4742,7 @@ img.jcrop-preview {
 }
 .InfoMessage {
   background-image: -webkit-linear-gradient(top, #dff0d8 0%, #c8e5bc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dff0d8), to(#c8e5bc));
   background-image: linear-gradient(to bottom, #dff0d8 0%, #c8e5bc 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffc8e5bc', GradientType=0);
@@ -4731,6 +4750,7 @@ img.jcrop-preview {
 }
 .CasualMessage {
   background-image: -webkit-linear-gradient(top, #d9edf7 0%, #b9def0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9edf7), to(#b9def0));
   background-image: linear-gradient(to bottom, #d9edf7 0%, #b9def0 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
@@ -4738,6 +4758,7 @@ img.jcrop-preview {
 }
 .AlertMessage {
   background-image: -webkit-linear-gradient(top, #fcf8e3 0%, #f8efc0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcf8e3), to(#f8efc0));
   background-image: linear-gradient(to bottom, #fcf8e3 0%, #f8efc0 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fff8efc0', GradientType=0);
@@ -4746,6 +4767,7 @@ img.jcrop-preview {
 .WarningMessage,
 .Errors {
   background-image: -webkit-linear-gradient(top, #f2dede 0%, #e7c3c3 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2dede), to(#e7c3c3));
   background-image: linear-gradient(to bottom, #f2dede 0%, #e7c3c3 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffe7c3c3', GradientType=0);
@@ -4772,12 +4794,14 @@ img.jcrop-preview {
 .CategoryBox .H,
 .CategoryGroup .H {
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e8e8e8));
   background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
 }
 .SearchForm {
   background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#f5f5f5));
   background-image: linear-gradient(to bottom, #e8e8e8 0%, #f5f5f5 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);

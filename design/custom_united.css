@@ -101,6 +101,7 @@ figure {
 }
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -151,6 +152,8 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -196,6 +199,7 @@ th {
     text-shadow: none !important;
     color: #000 !important;
     background: transparent !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
   a,
@@ -1047,7 +1051,7 @@ select,
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus,
@@ -1999,6 +2003,7 @@ a.Bookmarked:before {
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .MenuItems li > hr {
@@ -2081,6 +2086,7 @@ a.Bookmarked:before {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .ToggleFlyout {
@@ -2386,6 +2392,7 @@ a.Bookmarked:before {
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
@@ -2396,6 +2403,7 @@ a.Bookmarked:before {
   .navbar-collapse {
     width: auto;
     border-top: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-collapse.collapse {
@@ -2525,6 +2533,7 @@ a.Bookmarked:before {
     margin-top: 0;
     background-color: transparent;
     border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-nav .open .dropdown-menu > li > a,
@@ -3377,8 +3386,6 @@ button.token-input-delete-token {
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .Overlay > .Popup.in {
@@ -3399,6 +3406,7 @@ button.token-input-delete-token {
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: none;
 }
@@ -3467,8 +3475,6 @@ button.token-input-delete-token {
   z-index: 1050;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity .15s linear;
-  -moz-transition: -moz-transform 0.3s ease-out, opacity .15s linear;
-  -o-transition: -o-transform 0.3s ease-out, opacity .15s linear;
   transition: transform 0.3s ease-out, opacity .15s linear;
 }
 .Overlay > .Popup.in {
@@ -3498,6 +3504,7 @@ button.token-input-delete-token {
   padding: 1px;
   text-align: left;
   background-color: #ffffff;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -3887,6 +3894,7 @@ tr.Item:after {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .PagerWrap,
