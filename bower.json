@@ -1,6 +1,7 @@
 {
   "name": "vanilla-bootstrap",
   "private": true,
+  "main": "less/style.less",
   "ignore": [
     "about.php",
     "views",

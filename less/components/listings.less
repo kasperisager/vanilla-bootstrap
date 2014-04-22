@@ -12,10 +12,22 @@
 // No styleguide reference.
 
 .DataList {
+  list-style: none;
   &:extend(.list-group);
 
   &:empty {
     display: none;
+  }
+
+  .Foot {
+    &:extend(.list-group-item);
+
+    &:first-child {
+      &:extend(.list-group-item:first-child);
+    }
+    &:last-child {
+      &:extend(.list-group-item:last-child);
+    }
   }
 
   .Item {
@@ -93,6 +105,7 @@
 }
 
 .DataTable {
+  table-layout: fixed;
   .reset-headings();
   &:extend(.table-hover all);
 
@@ -118,6 +131,7 @@
   }
 
   .BigCount {
+    width: 10%;
     text-align: center;
   }
 
@@ -131,18 +145,25 @@
     .BigCount {
       display: none;
     }
+
+    .BlockColumn {
+      width: 35%;
+    }
   }
 
   @media (max-width: @screen-md-max) {
     .FirstUser {
       display: none;
     }
+
+    .BlockColumn {
+      width: 30%;
+    }
   }
 }
 
 .BlockColumn {
   width: 20%;
-  min-width: 170px;
 
   .CategoryTable & {
     width: 30%;
@@ -200,14 +221,7 @@
 
 .MessageList {
   position: relative;
-
-  &.Discussion {
-    margin-bottom: 0;
-
-    .Item {
-      margin-bottom: 0;
-    }
-  }
+  margin-bottom: @line-height-computed;
 
   .Item {
     position: relative;

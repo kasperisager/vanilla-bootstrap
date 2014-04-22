@@ -1,3 +1,9 @@
+//= require ../../bower_components/bootstrap/js/transition.js
+//= require ../../bower_components/bootstrap/js/collapse.js
+
+//= require ../../bower_components/spin.js/spin.js
+//= require ../../bower_components/spin.js/jquery.spin.js
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
@@ -8,18 +14,40 @@
     // if the button is later shown.
     $('.Button.Hidden').removeClass('Hidden').hide();
 
-    // Attach spinners to the .InProgress element in flyouts using Spin.js
+    // Attach spinner to the .InProgress element in flyouts
     $(document).on('click', '.ToggleFlyout', function (e) {
-      $('.InProgress', e.currentTarget).spin(spinner);
-    });
-
-    var spinner = {
+      $('.InProgress', e.currentTarget).spin({
           lines  : 11
         , radius : 5
         , length : 5
         , width  : 2
-        }
-      , overlay = '.Overlay'
+        });
+    });
+
+    // Attach spinner to the .TinyProgress element when editing comment
+    $(document).on('click', '.EditComment', function (e) {
+      $('.TinyProgress', $(e.currentTarget).closest('.Item'))
+        .empty()
+        .spin({
+          lines  : 9
+        , radius : 3
+        , length : 3
+        , width  : 2
+        });
+    });
+
+    // Attach spinner to the .MorePager when loading more content
+    $(document).on('click', '.MorePager a', function (e) {
+      $(e.currentTarget).parent()
+        .spin({
+          lines  : 9
+        , radius : 3
+        , length : 3
+        , width  : 2
+        });
+    });
+
+    var overlay = '.Overlay'
       , dialog  = '> .Popup';
 
     /**
@@ -49,7 +77,12 @@
       // Fake async addition of class
       setTimeout(function () {
         // Fade in backdrop and add spinner
-        $backdrop.addClass('in').spin(spinner);
+        $backdrop.addClass('in').spin({
+          lines  : 11
+        , radius : 10
+        , length : 10
+        , width  : 4
+        });
       }, 0);
     };
 

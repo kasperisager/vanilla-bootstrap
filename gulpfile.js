@@ -1,62 +1,63 @@
-var gulp = require('gulp')
-  , plumber = require('gulp-plumber')
-  , less = require('gulp-less')
-  , concat = require('gulp-concat')
-  , uglify = require('gulp-uglify')
-  , rename = require('gulp-rename')
-  , livereload = require('gulp-livereload');
+/* laxcomma: true */
+'use strict';
 
-gulp.task('core', function () {
-  gulp.src('less/style.less')
-    .pipe(plumber())
-    .pipe(less({
+var gulp = require('gulp')
+  , $    = require('gulp-load-plugins')()
+
+gulp.task('styles', function () {
+  var main   = $.filter('style.css')
+    , themes = $.filter('!style.css');
+
+  return gulp.src([
+    'less/style.less'
+  , 'less/themes/*.less'
+  ])
+    .pipe($.plumber())
+    .pipe($.less({
       paths: ['less', 'bower_components']
     }))
-    .pipe(gulp.dest('design'))
-    .pipe(livereload());
-});
+    .pipe($.autoprefixer())
 
-gulp.task('themes', function () {
-  gulp.src('less/themes/*.less')
-    .pipe(plumber())
-    .pipe(rename(function (path) {
+    .pipe(main)
+    .pipe($.csslint('design/.csslintrc'))
+    .pipe($.csslint.reporter('default'))
+    .pipe(main.restore())
+
+    .pipe(themes)
+    .pipe($.rename(function (path) {
       path.basename = 'custom_' + path.basename;
     }))
-    .pipe(less({
-      paths: ['less', 'bower_components']
-    }))
-    .pipe(gulp.dest('design'));
-});
+    .pipe(themes.restore())
 
-gulp.task('default', ['core', 'themes', 'scripts']);
-
-gulp.task('watch', function () {
-  gulp.watch('less/**/*.less', ['core', 'themes']);
-  gulp.watch('js/main.js', ['scripts']);
+    .pipe(gulp.dest('design'))
+    .pipe($.size({showFiles: true}));
 });
 
 gulp.task('scripts', function () {
-  gulp.src([
-    'bower_components/bootstrap/js/transition.js',
-    // 'bower_components/bootstrap/js/alert.js',
-    // 'bower_components/bootstrap/js/button.js',
-    // 'bower_components/bootstrap/js/carousel.js',
-    'bower_components/bootstrap/js/collapse.js',
-    // 'bower_components/bootstrap/js/dropdown.js',
-    // 'bower_components/bootstrap/js/modal.js',
-    // 'bower_components/bootstrap/js/tooltip.js',
-    // 'bower_components/bootstrap/js/popover.js',
-    // 'bower_components/bootstrap/js/scrollspy.js',
-    // 'bower_components/bootstrap/js/tab.js',
-    // 'bower_components/bootstrap/js/affix.js',
-
-    'bower_components/spin.js/spin.js',
-    'bower_components/spin.js/jquery.spin.js',
-
-    'js/main.js'
-  ])
-    .pipe(uglify())
-    .pipe(concat('custom.js'))
+  return gulp.src('js/src/main.js')
+    .pipe($.plumber())
+    .pipe($.jshint('js/.jshintrc'))
+    .pipe($.jshint.reporter('default'))
+    .pipe($.include())
+    .pipe($.concat('custom.js'))
+    .pipe($.uglify())
     .pipe(gulp.dest('js'))
-    .pipe(livereload());
+    .pipe($.size({showFiles: true}));
+});
+
+gulp.task('default', ['styles', 'scripts']);
+
+gulp.task('watch',  function () {
+  var server = $.livereload();
+
+  gulp.watch([
+    'design/*.css'
+  , 'js/*.js'
+  , 'views/**/*.tpl'
+  ], function (file) {
+    return server.changed(file.path);
+  });
+
+  gulp.watch('less/**/*.less', ['styles']);
+  gulp.watch('js/src/**/*.js', ['scripts']);
 });

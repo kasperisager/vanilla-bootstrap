@@ -14,6 +14,18 @@
 
 .Gloss {
   &:extend(.text-muted);
+
+  h1 &,
+  h2 &,
+  h3 & {
+    &:extend(h1 small);
+  }
+
+  h4 &,
+  h5 &,
+  h6 & {
+    &:extend(h4 small);
+  }
 }
 
 .Message {
@@ -25,4 +37,15 @@
   > *:last-child {
     margin-bottom: 0 !important;
   }
+}
+
+h1.H,
+.HomepageTitle,
+.PageTitle {
+  &:extend(.page-header);
+}
+
+h1.H,
+.HomepageTitle {
+  padding-bottom: (((@line-height-computed / 2) - 1) + (@line-height-computed / 2));
 }

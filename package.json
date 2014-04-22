@@ -2,12 +2,19 @@
   "name": "vanilla-bootstrap",
   "private": true,
   "devDependencies": {
-    "gulp": "3.5.x",
-    "gulp-less": "1.2.x",
-    "gulp-livereload": "1.2.x",
-    "gulp-concat": "2.1.x",
-    "gulp-uglify": "0.2.x",
-    "gulp-rename": "1.2.x",
-    "gulp-plumber": "0.5.x"
+    "gulp": "*",
+    "gulp-less": "*",
+    "gulp-livereload": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*",
+    "gulp-plumber": "*",
+    "gulp-load-plugins": "*",
+    "gulp-include": "*",
+    "gulp-filter": "*",
+    "gulp-size": "*",
+    "gulp-csslint": "*",
+    "gulp-jshint": "*",
+    "gulp-autoprefixer": "*"
   }
 }

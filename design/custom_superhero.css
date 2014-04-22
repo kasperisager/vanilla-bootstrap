@@ -101,6 +101,7 @@ figure {
 }
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -151,6 +152,8 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -196,6 +199,7 @@ th {
     text-shadow: none !important;
     color: #000 !important;
     background: transparent !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
   a,
@@ -437,7 +441,13 @@ h6 .small,
 .h3 .small,
 .h4 .small,
 .h5 .small,
-.h6 .small {
+.h6 .small,
+h1 .Gloss,
+h2 .Gloss,
+h3 .Gloss,
+h4 .Gloss,
+h5 .Gloss,
+h6 .Gloss {
   font-weight: normal;
   line-height: 1;
   color: #ebebeb;
@@ -462,7 +472,10 @@ h1 .small,
 h2 .small,
 .h2 .small,
 h3 .small,
-.h3 .small {
+.h3 .small,
+h1 .Gloss,
+h2 .Gloss,
+h3 .Gloss {
   font-size: 65%;
 }
 h4,
@@ -485,7 +498,10 @@ h4 .small,
 h5 .small,
 .h5 .small,
 h6 .small,
-.h6 .small {
+.h6 .small,
+h4 .Gloss,
+h5 .Gloss,
+h6 .Gloss {
   font-size: 75%;
 }
 h1,
@@ -616,7 +632,10 @@ a.bg-warning:hover {
 a.bg-danger:hover {
   background-color: #c9302c;
 }
-.page-header {
+.page-header,
+h1.H,
+.HomepageTitle,
+.PageTitle {
   padding-bottom: 9.5px;
   margin: 42px 0 21px;
   border-bottom: 1px solid #ebebeb;
@@ -748,6 +767,10 @@ address {
 }
 .Message > *:last-child {
   margin-bottom: 0 !important;
+}
+h1.H,
+.HomepageTitle {
+  padding-bottom: 20px;
 }
 .container {
   margin-right: auto;
@@ -948,7 +971,7 @@ table > tfoot > tr.danger > th {
     white-space: nowrap;
   }
 }
-.Preferences table.PreferenceGroup {
+.PreferenceGroup {
   width: 100%;
 }
 fieldset {
@@ -1028,7 +1051,7 @@ select,
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus,
@@ -1979,6 +2002,7 @@ a.Bookmarked:before {
   border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .MenuItems li > hr {
@@ -2061,6 +2085,7 @@ a.Bookmarked:before {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .ToggleFlyout {
@@ -2366,6 +2391,7 @@ a.Bookmarked:before {
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
@@ -2376,6 +2402,7 @@ a.Bookmarked:before {
   .navbar-collapse {
     width: auto;
     border-top: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-collapse.collapse {
@@ -2505,6 +2532,7 @@ a.Bookmarked:before {
     margin-top: 0;
     background-color: transparent;
     border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-nav .open .dropdown-menu > li > a,
@@ -3101,6 +3129,7 @@ a.Bookmarked:before {
 }
 .PanelInfo a,
 .PanelInfo .Heading,
+.DataList .Foot,
 .DataList .Item,
 .DataList.Activities .CommentForm {
   position: relative;
@@ -3111,12 +3140,14 @@ a.Bookmarked:before {
   border: 1px solid transparent;
 }
 .PanelInfo li:first-child a,
+.DataList .Foot:first-child,
 .DataList .Item:first-child,
 .DataList.Activities .CommentForm:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 .PanelInfo li:last-child a,
+.DataList .Foot:last-child,
 .DataList .Item:last-child,
 .DataList.Activities .CommentForm:last-child {
   margin-bottom: 0;
@@ -3354,8 +3385,6 @@ button.token-input-delete-token {
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .Overlay > .Popup.in {
@@ -3375,6 +3404,7 @@ button.token-input-delete-token {
   border-radius: 0;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: none;
 }
@@ -3443,8 +3473,6 @@ button.token-input-delete-token {
   z-index: 1050;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity .15s linear;
-  -moz-transition: -moz-transform 0.3s ease-out, opacity .15s linear;
-  -o-transition: -o-transform 0.3s ease-out, opacity .15s linear;
   transition: transform 0.3s ease-out, opacity .15s linear;
 }
 .Overlay > .Popup.in {
@@ -3474,6 +3502,7 @@ button.token-input-delete-token {
   padding: 1px;
   text-align: left;
   background-color: #4e5d6c;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid transparent;
   border-radius: 0;
@@ -3683,6 +3712,9 @@ tr.Item:after {
     display: block;
   }
 }
+.DataList {
+  list-style: none;
+}
 .DataList:empty {
   display: none;
 }
@@ -3725,6 +3757,9 @@ tr.Item:after {
 }
 .DataList-Search .Media {
   margin-top: 5px;
+}
+.DataTable {
+  table-layout: fixed;
 }
 .DataTable h1,
 .DataTable h2,
@@ -3769,6 +3804,7 @@ tr.Item:after {
   font-size: 19px;
 }
 .DataTable .BigCount {
+  width: 10%;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -3780,15 +3816,20 @@ tr.Item:after {
   .DataTable .BigCount {
     display: none;
   }
+  .DataTable .BlockColumn {
+    width: 35%;
+  }
 }
 @media (max-width: 1199px) {
   .DataTable .FirstUser {
     display: none;
   }
+  .DataTable .BlockColumn {
+    width: 30%;
+  }
 }
 .BlockColumn {
   width: 20%;
-  min-width: 170px;
 }
 .CategoryTable .BlockColumn {
   width: 30%;
@@ -3817,12 +3858,7 @@ tr.Item:after {
 }
 .MessageList {
   position: relative;
-}
-.MessageList.Discussion {
-  margin-bottom: 0;
-}
-.MessageList.Discussion .Item {
-  margin-bottom: 0;
+  margin-bottom: 21px;
 }
 .MessageList .Item {
   position: relative;
@@ -3864,6 +3900,7 @@ tr.Item:after {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .PagerWrap,
@@ -4477,6 +4514,13 @@ img.jcrop-preview {
   position: static;
   min-width: 0;
 }
+.TinyProgress {
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  vertical-align: top;
+  line-height: 21px;
+}
 .navbar {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -4519,7 +4563,10 @@ body {
 .text-info:hover {
   color: #5bc0de;
 }
-.page-header {
+.page-header,
+h1.H,
+.HomepageTitle,
+.PageTitle {
   border-bottom-color: #4e5d6c;
 }
 .dropdown-menu,
