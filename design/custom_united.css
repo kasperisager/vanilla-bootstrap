@@ -4524,3 +4524,11 @@ img.jcrop-preview {
   vertical-align: top;
   line-height: 20px;
 }
+.navbar-default .badge {
+  background-color: #fff;
+  color: #dd4814;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #772953;
+}

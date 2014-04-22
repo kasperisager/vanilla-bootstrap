@@ -4547,13 +4547,16 @@ img.jcrop-preview {
 .text-info:hover {
   color: #9933cc;
 }
-.table tr.success,
-.table tr.warning,
-.table tr.danger,
-table tr.success,
-table tr.warning,
-table tr.danger {
+table,
+.table,
+table {
   color: #fff;
+}
+table a,
+.table a,
+table a {
+  color: #fff;
+  text-decoration: underline;
 }
 .table-responsive > .table,
 .table-responsive > table {
@@ -4607,6 +4610,25 @@ legend {
 .DismissMessage a {
   color: #ffffff;
   text-decoration: underline;
+}
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+}
+.alert .close:hover,
+.alert .close:focus,
+.alert a.Close:hover,
+.alert a.Close:focus,
+.alert a.Delete:not(.Popup):hover,
+.alert a.Delete:not(.Popup):focus,
+.alert .token-input-delete-token:hover,
+.alert .token-input-delete-token:focus {
+  color: #fff;
+  opacity: 1;
 }
 .jumbotron h1,
 .jumbotron h2,

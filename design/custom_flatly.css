@@ -638,7 +638,7 @@ h1.H,
 .PageTitle {
   padding-bottom: 9.5px;
   margin: 42px 0 21px;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid transparent;
 }
 ul,
 ol {
@@ -989,7 +989,7 @@ legend {
   line-height: inherit;
   color: #2c3e50;
   border: 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid transparent;
 }
 label {
   display: inline-block;
@@ -1059,10 +1059,10 @@ select,
 .TextBox:focus,
 select:focus,
 .token-input-focused {
-  border-color: #1abc9c;
+  border-color: #2c3e50;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(26, 188, 156, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(26, 188, 156, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #acb6c0;
@@ -2679,7 +2679,7 @@ a.Bookmarked:before {
 }
 .navbar-default {
   background-color: #2c3e50;
-  border-color: #202d3b;
+  border-color: transparent;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
@@ -2736,7 +2736,7 @@ a.Bookmarked:before {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #202d3b;
+  border-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -2774,7 +2774,7 @@ a.Bookmarked:before {
 }
 .navbar-inverse {
   background-color: #18bc9c;
-  border-color: #128f76;
+  border-color: transparent;
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;
@@ -2838,10 +2838,10 @@ a.Bookmarked:before {
 }
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #128f76;
+    border-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #128f76;
+    background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
     color: #ffffff;
@@ -3048,12 +3048,12 @@ a.Bookmarked:before {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #95a5a6;
+  background-color: #2c3e50;
   border-radius: 10px;
 }
 .FilterMenu .Active > a .Count,
 .PanelInfo .Active a .Count {
-  color: #18bc9c;
+  color: #2c3e50;
   background-color: #ffffff;
 }
 .PhotoWrapLarge {
@@ -3338,7 +3338,7 @@ a.Delete:not(.Popup),
   font-weight: bold;
   line-height: 1;
   color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
+  text-shadow: none;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
@@ -4524,6 +4524,20 @@ img.jcrop-preview {
   vertical-align: top;
   line-height: 21px;
 }
+.navbar {
+  border-width: 0;
+}
+.navbar-default .badge {
+  background-color: #fff;
+  color: #2c3e50;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #18bc9c;
+}
+.navbar-brand {
+  padding: 18.5px 15px 20.5px;
+}
 .btn:active,
 .Button:active,
 .PhotoWrapLarge .ChangePicture:active {
@@ -4554,19 +4568,50 @@ img.jcrop-preview {
 .text-info:hover {
   color: #3498db;
 }
-.table tr.success,
-.table tr.warning,
-.table tr.danger,
-table tr.success,
-table tr.warning,
-table tr.danger {
+table a,
+.table a,
+table a {
+  text-decoration: underline;
+}
+table .success,
+.table .success,
+table .warning,
+.table .warning,
+table .danger,
+.table .danger,
+table .info,
+.table .info,
+table .success,
+table .warning,
+table .danger,
+table .info {
   color: #fff;
 }
+table .success a,
+.table .success a,
+table .warning a,
+.table .warning a,
+table .danger a,
+.table .danger a,
+table .info a,
+.table .info a,
+table .success a,
+table .warning a,
+table .danger a,
+table .info a {
+  color: #fff;
+}
+table > thead > tr > th,
 .table > thead > tr > th,
+table > tbody > tr > th,
 .table > tbody > tr > th,
+table > tfoot > tr > th,
 .table > tfoot > tr > th,
+table > thead > tr > td,
 .table > thead > tr > td,
+table > tbody > tr > td,
 .table > tbody > tr > td,
+table > tfoot > tr > td,
 .table > tfoot > tr > td,
 table > thead > tr > th,
 table > tbody > tr > th,
@@ -4576,11 +4621,17 @@ table > tbody > tr > td,
 table > tfoot > tr > td {
   border: none;
 }
+table-bordered > thead > tr > th,
 .table-bordered > thead > tr > th,
+table-bordered > tbody > tr > th,
 .table-bordered > tbody > tr > th,
+table-bordered > tfoot > tr > th,
 .table-bordered > tfoot > tr > th,
+table-bordered > thead > tr > td,
 .table-bordered > thead > tr > td,
+table-bordered > tbody > tr > td,
 .table-bordered > tbody > tr > td,
+table-bordered > tfoot > tr > td,
 .table-bordered > tfoot > tr > td,
 table-bordered > thead > tr > th,
 table-bordered > tbody > tr > th,
@@ -4591,48 +4642,17 @@ table-bordered > tfoot > tr > td {
   border: 1px solid #ecf0f1;
 }
 .form-control,
-textarea.form-control,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input,
+input,
 .InputBox,
 .TextBox,
 select,
-.TextBox,
 .token-input-list {
   border-width: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .form-control:focus,
-textarea.form-control:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus,
+input:focus,
 .InputBox:focus,
 .TextBox:focus,
 select:focus,
@@ -4685,10 +4705,33 @@ select:focus,
   color: #fff;
   text-decoration: underline;
 }
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+}
+.alert .close:hover,
+.alert .close:focus,
+.alert a.Close:hover,
+.alert a.Close:focus,
+.alert a.Delete:not(.Popup):hover,
+.alert a.Delete:not(.Popup):focus,
+.alert .token-input-delete-token:hover,
+.alert .token-input-delete-token:focus {
+  color: #fff;
+  opacity: 1;
+}
 .progress {
   height: 10px;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.progress .progress-bar {
+  font-size: 10px;
+  line-height: 10px;
 }
 .well,
 .SearchForm {

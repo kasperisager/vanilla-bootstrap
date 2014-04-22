@@ -2682,7 +2682,7 @@ a.Bookmarked:before {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #999999;
+  color: #333333;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -2939,9 +2939,9 @@ a.Bookmarked:before {
 .NumberedPager .Highlight:hover,
 .NumberedPager .Highlight:focus {
   z-index: 2;
-  color: #555555;
-  background-color: #eeeeee;
-  border-color: #e2e2e2;
+  color: #ffffff;
+  background-color: #158cba;
+  border-color: #127ba3;
   cursor: default;
 }
 .NumberedPager > span,
@@ -4531,6 +4531,7 @@ img.jcrop-preview {
 .Button,
 .NavButton,
 .PhotoWrapLarge .ChangePicture {
+  padding: 8px 12px 7px;
   border-width: 0 1px 4px 1px;
   font-size: 12px;
   font-weight: bold;
@@ -4551,6 +4552,19 @@ img.jcrop-preview {
   border-bottom-width: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 14px 16px 13px;
+  line-height: 15px;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 4px 10px;
+}
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: 1px 5px;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -4612,15 +4626,37 @@ img.jcrop-preview {
 .text-info:hover {
   color: #75caeb;
 }
-table tr.success,
-.table tr.success,
-table tr.warning,
-.table tr.warning,
-table tr.danger,
-.table tr.danger,
-table tr.success,
-table tr.warning,
-table tr.danger {
+table a,
+.table a,
+table a {
+  text-decoration: underline;
+}
+table .success,
+.table .success,
+table .warning,
+.table .warning,
+table .danger,
+.table .danger,
+table .info,
+.table .info,
+table .success,
+table .warning,
+table .danger,
+table .info {
+  color: #fff;
+}
+table .success a,
+.table .success a,
+table .warning a,
+.table .warning a,
+table .danger a,
+.table .danger a,
+table .info a,
+.table .info a,
+table .success a,
+table .warning a,
+table .danger a,
+table .info a {
   color: #fff;
 }
 table > thead > tr > th,
@@ -4743,6 +4779,8 @@ label {
 .NumberedPager > a,
 .NumberedPager > span,
 .NumberedPager > div {
+  position: relative;
+  top: 0;
   border-width: 0 1px 4px 1px;
   color: #555555;
   font-size: 12px;
@@ -4755,29 +4793,44 @@ label {
 .pager > li > span:hover,
 .NumberedPager > a:hover,
 .NumberedPager > a:focus {
-  margin-top: 1px;
+  top: 1px;
   border-bottom-width: 3px;
 }
 .pagination > li > a:active,
 .pager > li > a:active,
 .pagination > li > span:active,
 .pager > li > span:active {
-  margin-top: 2px;
+  top: 2px;
   border-bottom-width: 2px;
 }
 .pagination > .disabled > a:hover,
 .pager > .disabled > a:hover,
 .pagination > .disabled > span:hover,
 .pager > .disabled > span:hover {
-  margin-top: 0;
+  top: 0;
   border-width: 0 1px 4px 1px;
 }
 .pagination > .disabled > a:active,
 .pager > .disabled > a:active,
 .pagination > .disabled > span:active,
 .pager > .disabled > span:active {
-  margin-top: 0;
+  top: 0;
   border-width: 0 1px 4px 1px;
+}
+.pager > li > a,
+.pager > li > span,
+.pager > .disabled > a,
+.pager > .disabled > span,
+.pager > li > a:hover,
+.pager > li > span:hover,
+.pager > .disabled > a:hover,
+.pager > .disabled > span:hover,
+.pager > li > a:active,
+.pager > li > span:active,
+.pager > .disabled > a:active,
+.pager > .disabled > span:active {
+  border-left-width: 2px;
+  border-right-width: 2px;
 }
 .alert,
 .DismissMessage,
@@ -4790,6 +4843,25 @@ label {
   font-weight: normal;
   color: #fff;
   text-decoration: underline;
+}
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+}
+.alert .close:hover,
+.alert .close:focus,
+.alert a.Close:hover,
+.alert a.Close:focus,
+.alert a.Delete:not(.Popup):hover,
+.alert a.Delete:not(.Popup):focus,
+.alert .token-input-delete-token:hover,
+.alert .token-input-delete-token:focus {
+  color: #fff;
+  opacity: 1;
 }
 .label,
 .Tag,
@@ -4828,6 +4900,5 @@ label {
 .CategoryBox,
 .CategoryGroup {
   border: 1px solid #e7e7e7;
-  -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 4px 1px;
 }

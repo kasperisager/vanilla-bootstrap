@@ -4527,6 +4527,14 @@ img.jcrop-preview {
   border: none;
   font-size: 12px;
 }
+.navbar-default .badge {
+  background-color: #fff;
+  color: #4e5d6c;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #df691a;
+}
 .btn,
 .Button,
 .NavButton,
@@ -4599,6 +4607,12 @@ table,
 table {
   font-size: 12px;
 }
+table a,
+.table a,
+table a {
+  color: #fff;
+  text-decoration: underline;
+}
 table > thead > tr > th,
 .table > thead > tr > th,
 table > tbody > tr > th,
@@ -4670,6 +4684,25 @@ select:focus,
 }
 .pager a {
   color: #ebebeb;
+}
+.close,
+.DismissMessage .Dismiss,
+a.Close,
+a.Delete:not(.Popup),
+.token-input-delete-token {
+  opacity: 0.4;
+}
+.close:hover,
+.close:focus,
+.DismissMessage .Dismiss:hover,
+.DismissMessage .Dismiss:focus,
+a.Close:hover,
+a.Close:focus,
+a.Delete:not(.Popup):hover,
+a.Delete:not(.Popup):focus,
+.token-input-delete-token:hover,
+.token-input-delete-token:focus {
+  opacity: 1;
 }
 .label,
 .Tag,

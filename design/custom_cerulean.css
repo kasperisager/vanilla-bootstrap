@@ -3047,7 +3047,7 @@ a.Bookmarked:before {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
+  background-color: #2fa4e7;
   border-radius: 10px;
 }
 .FilterMenu .Active > a .Count,
@@ -4535,9 +4535,20 @@ img.jcrop-preview {
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
+.navbar-default .badge {
+  background-color: #fff;
+  color: #2fa4e7;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #033c73;
+}
 .navbar .navbar-nav > li > a,
 .navbar-brand {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar .dropdown-header {
+  color: #fff;
 }
 .navbar-inverse {
   background-image: -webkit-linear-gradient(#04519b, #044687 60%, #033769);

@@ -312,7 +312,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #debb27;
+  color: #e8d069;
   text-decoration: underline;
 }
 a:focus {
@@ -1940,7 +1940,7 @@ a.Bookmark:focus {
 }
 a.Bookmark:hover:before,
 a.Bookmark:focus:before {
-  color: #debb27;
+  color: #e8d069;
 }
 .OptionsMenu + a.Bookmark {
   margin-left: 5px;
@@ -2931,7 +2931,7 @@ a.Bookmarked:before {
 }
 .NumberedPager > a:hover,
 .NumberedPager > a:focus {
-  color: #debb27;
+  color: #e8d069;
   background-color: #15b5c1;
   border-color: transparent;
 }
@@ -3137,7 +3137,7 @@ a.Bookmarked:before {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: transparent;
+  background-color: #13a0aa;
   border: 1px solid #0d747c;
 }
 .PanelInfo li:first-child a,
@@ -3337,7 +3337,7 @@ a.Delete:not(.Popup),
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
+  color: #ffffff;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
@@ -3350,7 +3350,7 @@ a.Delete:not(.Popup):hover,
 a.Delete:not(.Popup):focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -3621,7 +3621,7 @@ button.token-input-delete-token {
 .DataTable .Conversation .Item .MItem,
 .DataTable .Item .Meta a,
 .DataTable .Conversation .Item .MItem a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #89cfd4;
 }
 .MenuItems .Item .Meta,
 .MenuItems .Conversation .Item .MItem,
@@ -3666,7 +3666,7 @@ tr.Item:after {
 }
 .Item.Activity:hover,
 .Item.ActivityComment:hover {
-  background-color: transparent;
+  background-color: #13a0aa;
 }
 .PageTitle .Options {
   float: right !important;
@@ -4527,6 +4527,10 @@ img.jcrop-preview {
 .navbar-brand {
   font-family: 'Lobster', cursive;
 }
+.navbar-default .badge {
+  background-color: #fff;
+  color: #ad1d28;
+}
 .btn .caret,
 .btn .SpDropdownHandle {
   border-top-color: #fff;
@@ -4563,6 +4567,12 @@ img.jcrop-preview {
 .table-responsive > .table,
 .table-responsive > table {
   background-color: transparent;
+}
+table a,
+.table a,
+table a {
+  color: #fff;
+  text-decoration: underline;
 }
 .has-warning .help-block,
 .has-warning .control-label {
@@ -4601,13 +4611,24 @@ legend {
 .pager a:hover {
   color: #fff;
 }
-.list-group-item,
-.PanelInfo a,
-.PanelInfo .Heading,
-.DataList .Foot,
-.DataList .Item,
-.DataList.Activities .CommentForm {
-  background-color: #13a0aa;
+.close,
+.DismissMessage .Dismiss,
+a.Close,
+a.Delete:not(.Popup),
+.token-input-delete-token {
+  opacity: 0.4;
+}
+.close:hover,
+.close:focus,
+.DismissMessage .Dismiss:hover,
+.DismissMessage .Dismiss:focus,
+a.Close:hover,
+a.Close:focus,
+a.Delete:not(.Popup):hover,
+a.Delete:not(.Popup):focus,
+.token-input-delete-token:hover,
+.token-input-delete-token:focus {
+  opacity: 1;
 }
 .popover,
 .InformMessage {

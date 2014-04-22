@@ -101,6 +101,7 @@ figure {
 }
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -151,6 +152,8 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -196,6 +199,7 @@ th {
     text-shadow: none !important;
     color: #000 !important;
     background: transparent !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
   a,
@@ -391,7 +395,7 @@ dl dd:last-child {
   margin-bottom: 0;
 }
 .PageDescription {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 .Empty,
 .NoResults {
@@ -437,7 +441,13 @@ h6 .small,
 .h3 .small,
 .h4 .small,
 .h5 .small,
-.h6 .small {
+.h6 .small,
+h1 .Gloss,
+h2 .Gloss,
+h3 .Gloss,
+h4 .Gloss,
+h5 .Gloss,
+h6 .Gloss {
   font-weight: normal;
   line-height: 1;
   color: #999999;
@@ -462,7 +472,10 @@ h1 .small,
 h2 .small,
 .h2 .small,
 h3 .small,
-.h3 .small {
+.h3 .small,
+h1 .Gloss,
+h2 .Gloss,
+h3 .Gloss {
   font-size: 65%;
 }
 h4,
@@ -485,7 +498,10 @@ h4 .small,
 h5 .small,
 .h5 .small,
 h6 .small,
-.h6 .small {
+.h6 .small,
+h4 .Gloss,
+h5 .Gloss,
+h6 .Gloss {
   font-size: 75%;
 }
 h1,
@@ -616,7 +632,10 @@ a.bg-warning:hover {
 a.bg-danger:hover {
   background-color: #d62c1a;
 }
-.page-header {
+.page-header,
+h1.H,
+.HomepageTitle,
+.PageTitle {
   padding-bottom: 9.5px;
   margin: 42px 0 21px;
   border-bottom: 1px solid transparent;
@@ -742,6 +761,16 @@ address {
 }
 .Message {
   word-wrap: break-word;
+}
+.Message > *:first-child {
+  margin-top: 0 !important;
+}
+.Message > *:last-child {
+  margin-bottom: 0 !important;
+}
+h1.H,
+.HomepageTitle {
+  padding-bottom: 20px;
 }
 .container {
   margin-right: auto;
@@ -942,7 +971,7 @@ table > tfoot > tr.danger > th {
     white-space: nowrap;
   }
 }
-.Preferences table.PreferenceGroup {
+.PreferenceGroup {
   width: 100%;
 }
 fieldset {
@@ -1022,7 +1051,7 @@ select,
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus,
@@ -1739,6 +1768,7 @@ a.Bookmark:before {
 .InformSprite.Stats:before {
   content: "\f080";
 }
+.SpMessage:before,
 .InformSprite.Envelope:before {
   content: "\f0e0";
 }
@@ -1857,6 +1887,7 @@ a.Bookmark:before {
 .InformSprite.Lightbulb:before {
   content: "\f0eb";
 }
+.SpBestOf:before,
 .InformSprite.Trophy:before {
   content: "\f091";
 }
@@ -1880,6 +1911,15 @@ a.Bookmark:before {
 }
 .InformSprite.Umbrella:before {
   content: "\f0e9";
+}
+.SpQuote:before {
+  content: "\f10d";
+}
+.SpSignatures:before {
+  content: "\f040";
+}
+.SpUnansweredQuestions:before {
+  content: "\f128";
 }
 a.Bookmark {
   font: 0/0 a;
@@ -1911,8 +1951,7 @@ a.Bookmarked:before {
 .FilterMenu .Sprite {
   margin-right: 6px;
 }
-.fade,
-.Overlay:after {
+.fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
@@ -1945,6 +1984,7 @@ a.Bookmarked:before {
 }
 .MenuItems,
 .FlyoutMenu,
+.atwho-view ul,
 .token-input-dropdown {
   position: absolute;
   top: 100%;
@@ -1963,6 +2003,7 @@ a.Bookmarked:before {
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .MenuItems li > hr {
@@ -1972,6 +2013,7 @@ a.Bookmarked:before {
   background-color: #e5e5e5;
 }
 .MenuItems li > a,
+.atwho-view li,
 .token-input-dropdown li,
 .token-input-dropdown > p {
   display: block;
@@ -1984,6 +2026,7 @@ a.Bookmarked:before {
 }
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
+.atwho-view li:hover,
 .token-input-dropdown li:hover {
   text-decoration: none;
   color: #ffffff;
@@ -2043,6 +2086,7 @@ a.Bookmarked:before {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .ToggleFlyout {
@@ -2061,10 +2105,46 @@ a.Bookmarked:before {
 .OptionsMenu.Open .SpFlyoutHandle {
   color: #0ce3ac;
 }
+.atwho-view {
+  position: absolute;
+  display: none;
+}
+.atwho-view ul {
+  display: block;
+}
+.atwho-view ul:empty {
+  display: none;
+}
 .ButtonGroup {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+}
+.ButtonGroup > .Button {
+  position: relative;
+  float: left;
+}
+.ButtonGroup > .Button:hover,
+.ButtonGroup > .Button:focus,
+.ButtonGroup > .Button:active {
+  z-index: 2;
+}
+.ButtonGroup .Button ~ .Button {
+  margin-left: -1px;
+}
+.ButtonGroup > .Button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ButtonGroup > .Button:first-child {
+  margin-left: 0;
+}
+.ButtonGroup > .Button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ButtonGroup > .Button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .btn .SpDropdownHandle {
   margin-left: 0;
@@ -2312,6 +2392,7 @@ a.Bookmarked:before {
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
@@ -2322,6 +2403,7 @@ a.Bookmarked:before {
   .navbar-collapse {
     width: auto;
     border-top: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-collapse.collapse {
@@ -2451,6 +2533,7 @@ a.Bookmarked:before {
     margin-top: 0;
     background-color: transparent;
     border: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-nav .open .dropdown-menu > li > a,
@@ -2821,7 +2904,8 @@ a.Bookmarked:before {
   border-radius: 4px;
 }
 .NumberedPager > a,
-.NumberedPager > span {
+.NumberedPager > span,
+.NumberedPager > div {
   position: relative;
   float: left;
   padding: 10px 15px;
@@ -2833,13 +2917,15 @@ a.Bookmarked:before {
   margin-left: -1px;
 }
 .NumberedPager > a:first-child,
-.NumberedPager > span:first-child {
+.NumberedPager > span:first-child,
+.NumberedPager > div:first-child {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
 .NumberedPager > a:last-child,
-.NumberedPager > span:last-child {
+.NumberedPager > span:last-child,
+.NumberedPager > div:last-child {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -2950,7 +3036,8 @@ a.Bookmarked:before {
 .Note.Closed.SignInOrRegister a {
   color: #ffffff;
 }
-.Count {
+.Count,
+.Alert {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
@@ -3043,6 +3130,7 @@ a.Bookmarked:before {
 }
 .PanelInfo a,
 .PanelInfo .Heading,
+.DataList .Foot,
 .DataList .Item,
 .DataList.Activities .CommentForm {
   position: relative;
@@ -3053,12 +3141,14 @@ a.Bookmarked:before {
   border: 1px solid #464545;
 }
 .PanelInfo li:first-child a,
+.DataList .Foot:first-child,
 .DataList .Item:first-child,
 .DataList.Activities .CommentForm:first-child {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
 .PanelInfo li:last-child a,
+.DataList .Foot:last-child,
 .DataList .Item:last-child,
 .DataList.Activities .CommentForm:last-child {
   margin-bottom: 0;
@@ -3089,7 +3179,10 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.DataTableWrap,
+.MessageList .Item,
+.CategoryBox,
+.CategoryGroup {
   margin-bottom: 21px;
   background-color: #303030;
   border: 1px solid transparent;
@@ -3105,21 +3198,47 @@ a.Bookmarked:before {
   padding: 15px;
 }
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryBox .H,
+.CategoryGroup .H {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
-.MessageForm .Buttons {
+.CategoryBox .H,
+.CategoryGroup .H {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  color: inherit;
+}
+.MessageForm .Buttons,
+.CategoryBox .MorePager {
   padding: 10px 15px;
   background-color: #464545;
   border-top: 1px solid #464545;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
+.CategoryBox .DataList {
+  margin-bottom: 0;
+}
+.CategoryBox .DataList .Item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.CategoryBox .DataList .Item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.CategoryBox .DataList .Item:first-child {
+  border-top-width: 0;
+}
 .panel > table,
-.panel > .table-responsive > table {
+.panel > .table-responsive > table,
+.DataTableWrap .DataTable {
   margin-bottom: 0;
 }
 .panel > table:first-child,
@@ -3182,11 +3301,16 @@ a.Bookmarked:before {
 .Empty,
 .NoResults,
 .MessageForm,
-.MessageList .Item {
+.DataTableWrap,
+.MessageList .Item,
+.CategoryBox,
+.CategoryGroup {
   border-color: #464545;
 }
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryBox .H,
+.CategoryGroup .H {
   color: #ffffff;
   background-color: #303030;
   border-color: #464545;
@@ -3262,8 +3386,6 @@ button.token-input-delete-token {
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .Overlay > .Popup.in {
@@ -3284,10 +3406,11 @@ button.token-input-delete-token {
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: none;
 }
-.Overlay:after {
+.Overlay .backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -3296,11 +3419,11 @@ button.token-input-delete-token {
   z-index: 1040;
   background-color: #000000;
 }
-.Overlay:after {
+.Overlay .backdrop {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-.modal-open .Overlay:after {
+.Overlay .backdrop.in {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
@@ -3346,18 +3469,12 @@ button.token-input-delete-token {
 .Overlay {
   display: block;
 }
-.Overlay:after {
-  display: block;
-  content: " ";
-}
 .Overlay > .Popup {
   top: 0 !important;
   left: 0 !important;
   z-index: 1050;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s ease-out, opacity .15s linear;
-  -moz-transition: -moz-transform 0.3s ease-out, opacity .15s linear;
-  -o-transition: -o-transform 0.3s ease-out, opacity .15s linear;
   transition: transform 0.3s ease-out, opacity .15s linear;
 }
 .Overlay > .Popup.in {
@@ -3387,6 +3504,7 @@ button.token-input-delete-token {
   padding: 1px;
   text-align: left;
   background-color: #303030;
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -3569,6 +3687,9 @@ tr.Item:after {
 .Item .MessageForm .Form-Body {
   padding: 0;
 }
+.Item.Editing .MessageForm ~ * {
+  display: none;
+}
 .MessageForm .PhotoWrap {
   position: absolute;
   top: -1px;
@@ -3595,14 +3716,10 @@ tr.Item:after {
   }
 }
 .DataList {
-  margin: 20px 0;
   list-style: none;
 }
 .DataList:empty {
   display: none;
-}
-.DataList .DataList {
-  margin-bottom: 0;
 }
 .DataList.Condensed .Item h1,
 .DataList.Condensed .Item h2,
@@ -3643,6 +3760,9 @@ tr.Item:after {
 }
 .DataList-Search .Media {
   margin-top: 5px;
+}
+.DataTable {
+  table-layout: fixed;
 }
 .DataTable h1,
 .DataTable h2,
@@ -3687,6 +3807,7 @@ tr.Item:after {
   font-size: 19px;
 }
 .DataTable .BigCount {
+  width: 10%;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -3698,15 +3819,20 @@ tr.Item:after {
   .DataTable .BigCount {
     display: none;
   }
+  .DataTable .BlockColumn {
+    width: 35%;
+  }
 }
 @media (max-width: 1199px) {
   .DataTable .FirstUser {
     display: none;
   }
+  .DataTable .BlockColumn {
+    width: 30%;
+  }
 }
 .BlockColumn {
   width: 20%;
-  min-width: 170px;
 }
 .CategoryTable .BlockColumn {
   width: 30%;
@@ -3735,17 +3861,12 @@ tr.Item:after {
 }
 .MessageList {
   position: relative;
-}
-.MessageList.Discussion {
-  margin-bottom: 0;
-}
-.MessageList.Discussion .Item {
-  margin-bottom: 0;
+  margin-bottom: 21px;
 }
 .MessageList .Item {
   position: relative;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 64px;
 }
 .MessageList .Item:hover,
@@ -3776,10 +3897,19 @@ tr.Item:after {
     float: right;
   }
 }
+.CategoryGroup .DataTableWrap {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .PagerWrap,
 .PageControls,
 .BeforeCommentHeading {
-  margin: 20px 0;
+  margin: 21px 0;
 }
 .PagerWrap:empty,
 .PageControls:empty,
@@ -3812,7 +3942,7 @@ tr.Item:after {
   display: none;
 }
 .Foot.Closed {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 64px;
 }
 .token-input-token,
@@ -4387,8 +4517,23 @@ img.jcrop-preview {
   position: static;
   min-width: 0;
 }
+.TinyProgress {
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  vertical-align: top;
+  line-height: 21px;
+}
 .navbar {
   border-width: 0;
+}
+.navbar-default .badge {
+  background-color: #fff;
+  color: #375a7f;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #00bc8c;
 }
 .navbar-brand {
   padding: 18.5px 15px 20.5px;
@@ -4582,6 +4727,10 @@ select:focus,
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.progress .progress-bar {
+  font-size: 10px;
+  line-height: 10px;
+}
 .well,
 .SearchForm {
   -webkit-box-shadow: none;
@@ -4598,7 +4747,9 @@ select:focus,
 }
 .panel-default > .panel-heading,
 .MessageList .Item-Header,
-.MessageList.Conversation .Meta {
+.MessageList.Conversation .Meta,
+.CategoryBox .H,
+.CategoryGroup .H {
   background-color: #464545;
 }
 .modal,
