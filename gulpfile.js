@@ -4,9 +4,9 @@
 var gulp = require('gulp')
   , $    = require('gulp-load-plugins')()
 
-
 gulp.task('styles', function () {
-  var themes = $.filter('!style.css');
+  var main   = $.filter('style.css')
+    , themes = $.filter('!style.css');
 
   return gulp.src([
     'less/style.less'
@@ -17,15 +17,20 @@ gulp.task('styles', function () {
       paths: ['less', 'bower_components']
     }))
     .pipe($.autoprefixer())
+
+    .pipe(main)
     .pipe($.csslint('design/.csslintrc'))
     .pipe($.csslint.reporter('default'))
+    .pipe(main.restore())
+
     .pipe(themes)
     .pipe($.rename(function (path) {
       path.basename = 'custom_' + path.basename;
     }))
     .pipe(themes.restore())
+
     .pipe(gulp.dest('design'))
-    .pipe($.size());
+    .pipe($.size({showFiles: true}));
 });
 
 gulp.task('scripts', function () {
@@ -37,7 +42,7 @@ gulp.task('scripts', function () {
     .pipe($.concat('custom.js'))
     .pipe($.uglify())
     .pipe(gulp.dest('js'))
-    .pipe($.size());
+    .pipe($.size({showFiles: true}));
 });
 
 gulp.task('default', ['styles', 'scripts']);
