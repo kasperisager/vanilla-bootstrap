@@ -105,6 +105,7 @@
 }
 
 .DataTable {
+  table-layout: fixed;
   .reset-headings();
   &:extend(.table-hover all);
 
@@ -130,6 +131,7 @@
   }
 
   .BigCount {
+    width: 10%;
     text-align: center;
   }
 
@@ -143,18 +145,25 @@
     .BigCount {
       display: none;
     }
+
+    .BlockColumn {
+      width: 35%;
+    }
   }
 
   @media (max-width: @screen-md-max) {
     .FirstUser {
       display: none;
     }
+
+    .BlockColumn {
+      width: 30%;
+    }
   }
 }
 
 .BlockColumn {
   width: 20%;
-  min-width: 170px;
 
   .CategoryTable & {
     width: 30%;

@@ -970,7 +970,7 @@ table > tfoot > tr.danger > th {
     white-space: nowrap;
   }
 }
-.Preferences table.PreferenceGroup {
+.PreferenceGroup {
   width: 100%;
 }
 fieldset {
@@ -3788,6 +3788,9 @@ tr.Item:after {
 .DataList-Search .Media {
   margin-top: 5px;
 }
+.DataTable {
+  table-layout: fixed;
+}
 .DataTable h1,
 .DataTable h2,
 .DataTable h3,
@@ -3831,6 +3834,7 @@ tr.Item:after {
   font-size: 18px;
 }
 .DataTable .BigCount {
+  width: 10%;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -3842,15 +3846,20 @@ tr.Item:after {
   .DataTable .BigCount {
     display: none;
   }
+  .DataTable .BlockColumn {
+    width: 35%;
+  }
 }
 @media (max-width: 1199px) {
   .DataTable .FirstUser {
     display: none;
   }
+  .DataTable .BlockColumn {
+    width: 30%;
+  }
 }
 .BlockColumn {
   width: 20%;
-  min-width: 170px;
 }
 .CategoryTable .BlockColumn {
   width: 30%;
