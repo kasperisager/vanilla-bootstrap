@@ -72,6 +72,11 @@
       &:extend(.list-group-item:last-child);
     }
   }
+
+  .FormWrapper + &,
+  .ActivityFormWrap + & {
+    margin-top: @line-height-computed;
+  }
 }
 
 .DataList-Search {

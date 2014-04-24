@@ -3740,6 +3740,10 @@ tr.Item:after {
 .DataList.Condensed .Item .Meta {
   float: right !important;
 }
+.FormWrapper + .DataList,
+.ActivityFormWrap + .DataList {
+  margin-top: 21px;
+}
 .DataList-Search .Item h1,
 .DataList-Search .Item h2,
 .DataList-Search .Item h3,
