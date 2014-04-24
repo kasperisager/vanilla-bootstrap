@@ -3048,7 +3048,7 @@ a.Bookmarked:before {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
+  background-color: #eb6864;
   border-radius: 10px;
 }
 .FilterMenu .Active > a .Count,
@@ -4529,6 +4529,14 @@ img.jcrop-preview {
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-weight: 700;
 }
+.navbar-default .badge {
+  background-color: #000;
+  color: #fff;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #eb6864;
+}
 .navbar-brand {
   font-size: 18px;
   font-weight: 700;
@@ -4557,6 +4565,13 @@ img.jcrop-preview {
 .has-success .form-control,
 .has-success .form-control:focus {
   border-color: #22b24c;
+}
+.badge,
+.Count,
+.Alert {
+  padding-bottom: 4px;
+  vertical-align: 3px;
+  font-size: 10px;
 }
 .jumbotron h1,
 .jumbotron h2,

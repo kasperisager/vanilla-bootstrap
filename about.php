@@ -19,6 +19,7 @@ $ThemeInfo['bootstrap'] = array(
       'Cerulean'  => '%s_cerulean',
       'Cosmo'     => '%s_cosmo',
       'Cyborg'    => '%s_cyborg',
+      'Darkly'    => '%s_darkly',
       'Flatly'    => '%s_flatly',
       'Journal'   => '%s_journal',
       'Lumen'     => '%s_lumen',

@@ -3148,7 +3148,7 @@ a.Bookmarked:before {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: transparent;
+  background-color: #32383e;
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
 .PanelInfo li:first-child a,
@@ -3632,7 +3632,7 @@ button.token-input-delete-token {
 .DataTable .Conversation .Item .MItem,
 .DataTable .Item .Meta a,
 .DataTable .Conversation .Item .MItem a {
-  color: rgba(200, 200, 200, 0.5);
+  color: #7d8083;
 }
 .MenuItems .Item .Meta,
 .MenuItems .Conversation .Item .MItem,
@@ -3677,7 +3677,7 @@ tr.Item:after {
 }
 .Item.Activity:hover,
 .Item.ActivityComment:hover {
-  background-color: transparent;
+  background-color: #32383e;
 }
 .PageTitle .Options {
   float: right !important;
@@ -4555,6 +4555,9 @@ img.jcrop-preview {
   -webkit-filter: none;
   filter: none;
 }
+.navbar-inverse .badge {
+  background-color: #5d6368;
+}
 .navbar-nav > li > a {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -4756,12 +4759,18 @@ h6 {
 .text-info:hover {
   color: #5bc0de;
 }
-.table tr.success,
-.table tr.warning,
-.table tr.danger,
-table tr.success,
-table tr.warning,
-table tr.danger {
+.table a,
+table a {
+  text-decoration: underline;
+}
+.table .success,
+.table .warning,
+.table .danger,
+.table .info,
+table .success,
+table .warning,
+table .danger,
+table .info {
   color: #fff;
 }
 .table-bordered tbody tr.success td,
@@ -4968,16 +4977,15 @@ legend {
   color: #fff;
   text-decoration: underline;
 }
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #000000;
+  text-decoration: none;
+}
 .jumbotron {
   border: 1px solid rgba(0, 0, 0, 0.6);
-}
-.list-group-item,
-.PanelInfo a,
-.PanelInfo .Heading,
-.DataList .Foot,
-.DataList .Item,
-.DataList.Activities .CommentForm {
-  background-color: #32383e;
 }
 .panel-primary .panel-heading,
 .panel-success .panel-heading,

@@ -2773,7 +2773,7 @@ a.Bookmarked:before {
   color: #4582ec;
 }
 .navbar-inverse {
-  background-color: transparent;
+  background-color: #ffffff;
   border-color: transparent;
 }
 .navbar-inverse .navbar-brand {
@@ -2817,18 +2817,18 @@ a.Bookmarked:before {
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #333333;
+  border-color: #dddddd;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #333333;
+  background-color: #dddddd;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
+  background-color: #cccccc;
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #ededed;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
@@ -4594,6 +4594,25 @@ legend {
   color: #ffffff;
   text-decoration: underline;
 }
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+}
+.alert .close:hover,
+.alert .close:focus,
+.alert a.Close:hover,
+.alert a.Close:focus,
+.alert a.Delete:not(.Popup):hover,
+.alert a.Delete:not(.Popup):focus,
+.alert .token-input-delete-token:hover,
+.alert .token-input-delete-token:focus {
+  color: #fff;
+  opacity: 1;
+}
 .label,
 .Tag,
 .Note.Closed,
@@ -4610,6 +4629,8 @@ legend {
 .badge,
 .Count,
 .Alert {
+  padding: 1px 7px 5px;
+  vertical-align: 2px;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }

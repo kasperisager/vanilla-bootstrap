@@ -3048,7 +3048,7 @@ a.Bookmarked:before {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
+  background-color: #007fff;
   border-radius: 10px;
 }
 .FilterMenu .Active > a .Count,
@@ -4524,6 +4524,10 @@ img.jcrop-preview {
   vertical-align: top;
   line-height: 21px;
 }
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #007fff;
+}
 .btn,
 .Button,
 .NavButton,
@@ -4550,12 +4554,37 @@ img.jcrop-preview {
 .text-info:hover {
   color: #9954bb;
 }
-.table tr.success,
-.table tr.warning,
-.table tr.danger,
-table tr.success,
-table tr.warning,
-table tr.danger {
+table a,
+.table a,
+table a {
+  text-decoration: underline;
+}
+table .success,
+.table .success,
+table .warning,
+.table .warning,
+table .danger,
+.table .danger,
+table .info,
+.table .info,
+table .success,
+table .warning,
+table .danger,
+table .info {
+  color: #fff;
+}
+table .success a,
+.table .success a,
+table .warning a,
+.table .warning a,
+table .danger a,
+.table .danger a,
+table .info a,
+.table .info a,
+table .success a,
+table .warning a,
+table .danger a,
+table .info a {
   color: #fff;
 }
 .has-warning .help-block,
@@ -4604,6 +4633,25 @@ table tr.danger {
   text-decoration: underline;
   color: #fff;
 }
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+}
+.alert .close:hover,
+.alert .close:focus,
+.alert a.Close:hover,
+.alert a.Close:focus,
+.alert a.Delete:not(.Popup):hover,
+.alert a.Delete:not(.Popup):focus,
+.alert .token-input-delete-token:hover,
+.alert .token-input-delete-token:focus {
+  color: #fff;
+  opacity: 1;
+}
 .label,
 .Tag,
 .Note.Closed,
@@ -4612,17 +4660,14 @@ table tr.danger {
 .token-input-token {
   border-radius: 0;
 }
-.close,
-.DismissMessage .Dismiss,
-a.Close,
-a.Delete:not(.Popup),
-.token-input-delete-token {
-  opacity: 1;
-}
 .progress {
   height: 8px;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.progress .progress-bar {
+  font-size: 8px;
+  line-height: 8px;
 }
 .panel-heading,
 .panel-footer {

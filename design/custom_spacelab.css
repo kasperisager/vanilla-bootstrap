@@ -3048,7 +3048,7 @@ a.Bookmarked:before {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
+  background-color: #3399f3;
   border-radius: 10px;
 }
 .FilterMenu .Active > a .Count,
@@ -4545,6 +4545,13 @@ img.jcrop-preview {
   filter: none;
   border: 1px solid #345578;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #446e9b;
+}
+.navbar .badge {
+  text-shadow: none;
 }
 .navbar-nav > li > a,
 .navbar-nav > li > a:hover {

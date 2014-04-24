@@ -4537,6 +4537,10 @@ img.jcrop-preview {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.navbar .btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 .navbar .dropdown-menu {
   border: none;
 }
@@ -4687,7 +4691,6 @@ input,
 select,
 .token-input-list {
   padding: 7px;
-  font-size: 12px;
 }
 label,
 .control-label,
@@ -4699,7 +4702,6 @@ label,
   font-size: 12px;
   font-weight: normal;
 }
-.form-group .btn,
 .input-group-addon,
 .input-group-btn .btn {
   padding: 8px 14px;
@@ -4788,6 +4790,25 @@ label,
   font-size: 12px;
   font-weight: 300;
 }
+.close,
+.DismissMessage .Dismiss,
+a.Close,
+a.Delete:not(.Popup),
+.token-input-delete-token {
+  opacity: 0.4;
+}
+.close:hover,
+.close:focus,
+.DismissMessage .Dismiss:hover,
+.DismissMessage .Dismiss:focus,
+a.Close:hover,
+a.Close:focus,
+a.Delete:not(.Popup):hover,
+a.Delete:not(.Popup):focus,
+.token-input-delete-token:hover,
+.token-input-delete-token:focus {
+  opacity: 1;
+}
 .alert,
 .DismissMessage,
 .Errors {
@@ -4800,6 +4821,23 @@ label,
   font-weight: normal;
   color: #fff;
   text-decoration: underline;
+}
+.alert .close,
+.alert a.Close,
+.alert a.Delete:not(.Popup),
+.alert .token-input-delete-token {
+  color: #fff;
+  text-decoration: none;
+}
+.alert .close:hover,
+.alert .close:focus,
+.alert a.Close:hover,
+.alert a.Close:focus,
+.alert a.Delete:not(.Popup):hover,
+.alert a.Delete:not(.Popup):focus,
+.alert .token-input-delete-token:hover,
+.alert .token-input-delete-token:focus {
+  color: #fff;
 }
 .label,
 .Tag,
