@@ -9,7 +9,7 @@ $ThemeInfo['bootstrap'] = array(
   'AuthorEmail' => 'kasperisager@gmail.com',
   'AuthorUrl'   => 'https://github.com/kasperisager',
   'License'     => 'MIT',
-  'RequiredApplications' => array('Vanilla' => '2.2.x'),
+  'RequiredApplications' => array('Vanilla' => '2.1.x'),
 
   'Options' => array(
     'Styles' => array(
