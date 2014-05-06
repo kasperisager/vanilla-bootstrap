@@ -40,7 +40,7 @@
             {if $User.SignedIn}
               {module name="MeModule" CssClass="hidden-xs"}
             {else}
-              <li>{link path="register" text="Register" target="current"}</li>
+              <li>{link path="entry/register" text="Register" target="current"}</li>
               <li>{link path="signin" text="Sign In" target="current"}</li>
             {/if}
           </ul>
