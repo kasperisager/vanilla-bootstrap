@@ -36,14 +36,23 @@
             {discussions_link}
             {activity_link}
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            {if $User.SignedIn}
-              {module name="MeModule" CssClass="hidden-xs"}
-            {else}
+          {if $User.SignedIn}
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+              {module name="MeModule"}
+            </ul>
+            <ul class="nav navbar-nav navbar-right visible-xs">
+              {profile_link}
+              {inbox_link}
+              {bookmarks_link}
+              {dashboard_link}
+              {signinout_link}
+            </ul>
+          {else}
+            <ul class="nav navbar-nav navbar-right">
               <li>{link path="entry/register" text="Register" target="current"}</li>
               <li>{link path="signin" text="Sign In" target="current"}</li>
-            {/if}
-          </ul>
+            </ul>
+          {/if}
         </div><!--/.nav-collapse -->
       </div>
     </nav>
