@@ -8,7 +8,7 @@ Bootstrap for Vanilla has been rewritten from scratch on top of [Bootstrap 3](ht
 
 To get started using Bootstrap for Vanilla, either:
 
-* [__Download the latest release__](https://github.com/kasperisager/vanilla-bootstrap/releases)
+* [__Download the latest release__](https://github.com/kasperisager/vanilla-bootstrap/releases/latest)
 * Clone the repository directly into your Vanilla `themes` directory:
 
 ```sh
