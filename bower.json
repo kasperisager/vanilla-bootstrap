@@ -13,8 +13,8 @@
   "dependencies": {
     "bootstrap": "3.1.1",
     "bootswatch": "3.1.x",
-    "font-awesome": "4.0.3",
+    "font-awesome": "4.1.0",
     "jcrop": "0.9.12",
-    "spin.js": "1.3.3"
+    "spin.js": "2.0.1"
   }
 }
