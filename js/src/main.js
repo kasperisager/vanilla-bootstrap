@@ -145,10 +145,17 @@
         $(overlay).each(closePopup);
       });
 
+    var confirmPopupEls = [
+      'a.Delete'
+    , 'a.DeleteComment'
+    , 'a.PopConfirm'
+    , 'a.ClearConversation'
+    ];
+
     // When only a confirmation modal is shown, the "popupLoading" and
     // "popupReveal" events are never triggered. Manually trigger them to make
     // sure that the modal is actually shown.
-    $(document).on('click', 'a.Delete, a.DeleteComment, a.PopConfirm', function (e) {
+    $(document).on('click', confirmPopupEls.join(), function (e) {
       $(document).trigger('popupLoading');
 
       setTimeout(function () {
