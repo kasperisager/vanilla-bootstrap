@@ -1035,6 +1035,7 @@ output {
 .form-control,
 .InputBox,
 .TextBox,
+.MultiComplete,
 select,
 .token-input-list {
   display: block;
@@ -1056,6 +1057,7 @@ select,
 .form-control:focus,
 .InputBox:focus,
 .TextBox:focus,
+.MultiComplete:focus,
 select:focus,
 .token-input-focused {
   border-color: #66afe9;
@@ -1078,19 +1080,23 @@ select:focus,
 fieldset[disabled] .form-control,
 .InputBox[disabled],
 .TextBox[disabled],
+.MultiComplete[disabled],
 select[disabled],
 .InputBox[readonly],
 .TextBox[readonly],
+.MultiComplete[readonly],
 select[readonly],
 fieldset[disabled] .InputBox,
 fieldset[disabled] .TextBox,
+fieldset[disabled] .MultiComplete,
 fieldset[disabled] select {
   cursor: not-allowed;
   background-color: #dddddd;
   opacity: 1;
 }
 textarea.form-control,
-.TextBox {
+.TextBox,
+.MultiComplete {
   height: auto;
 }
 input[type="search"] {
@@ -1360,21 +1366,25 @@ select[multiple].input-lg {
 }
 .InputBox::-moz-placeholder,
 .TextBox::-moz-placeholder,
+.MultiComplete::-moz-placeholder,
 select::-moz-placeholder {
   color: #dddddd;
   opacity: 1;
 }
 .InputBox:-ms-input-placeholder,
 .TextBox:-ms-input-placeholder,
+.MultiComplete:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #dddddd;
 }
 .InputBox::-webkit-input-placeholder,
 .TextBox::-webkit-input-placeholder,
+.MultiComplete::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #dddddd;
 }
-.TextBox {
+.TextBox,
+.MultiComplete {
   height: 100px;
   min-height: 100px;
 }
