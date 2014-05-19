@@ -77,7 +77,7 @@
 
     <footer class="page-footer sticky-footer">
       <div class="container">
-        <p class="pull-left">{t c="Copyright"} {$smarty.now|date_format:"%Y"} &copy; <a href="{link path="home"}">{logo}</a></p>
+        <p class="pull-left">{t c="Copyright"} &copy; {$smarty.now|date_format:"%Y"} <a href="{link path="home"}">{logo}</a></p>
         <p class="pull-right hidden-xs">{t c="Built with"} <i class="InformSprite Heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>
           <!-- A lot of time was put into this project - a "Follow" and a "Star" would be most appreciated! -->
           <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&type=follow"
