@@ -3547,6 +3547,10 @@ button.token-input-delete-token {
   height: 40px;
   border-radius: 3px;
 }
+.ProfilePhotoSmall {
+  width: 20px;
+  height: 20px;
+}
 .ProfilePhotoLarge {
   width: 100%;
 }
