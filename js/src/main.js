@@ -4,14 +4,28 @@
 //= require ../../bower_components/spin.js/spin.js
 //= require ../../bower_components/spin.js/jquery.spin.js
 
+;(function ($, window, document, undefined) {
+
+  window.icheck = {
+    autoInit: false
+  , autoAjax: false
+  };
+
+})(jQuery, window, document);
+
 //= require ../../bower_components/jquery-icheck/icheck.js
 
 ;(function ($, window, document, undefined) {
   'use strict';
 
-  $(function () {
+  $(document).on('ready ajaxSuccess', function () {
 
-    $('input').icheck();
+    // Initialize or re-initialize iCheck
+    $('input:not(.icheck-input)').icheck();
+
+  });
+
+  $(function () {
 
     // Programmatically hide buttons that are supposed to be hidden. This
     // ensures that the initial display state is correctly stored and applied
