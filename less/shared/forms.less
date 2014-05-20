@@ -62,7 +62,65 @@ form .P {
   cursor: pointer;
   &:extend(.radio);
 }
-.RadioLabel input[type="radio"],
-.CheckBoxLabel input[type="checkbox"] {
-  &:extend(.radio input[type="radio"]);
+
+.RadioLabel {
+  input[type="radio"] {
+    &:extend(.radio input[type="radio"]);
+  }
+}
+
+.CheckBoxLabel {
+  input[type="checkbox"] {
+    &:extend(.radio input[type="radio"]);
+  }
+}
+
+.icheck-label {
+  padding-left: 0;
+}
+
+.iradio,
+.icheckbox {
+  display: inline-block;
+  min-width: 1em;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+
+  &:before {
+    color: @text-muted;
+  }
+
+  &:hover,
+  &.checked,
+  .icheck-label:hover & {
+    &:before {
+      color: @link-color;
+    }
+  }
+}
+
+.iradio {
+  &:before {
+    content: @fa-var-circle-o;
+  }
+
+  &.checked:before {
+    content: @fa-var-check-circle;
+  }
+}
+
+.icheckbox {
+  &:before {
+    content: @fa-var-square;
+  }
+
+  &.checked:before {
+    content: @fa-var-check-square;
+  }
 }

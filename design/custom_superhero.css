@@ -1402,6 +1402,46 @@ form ol {
   font-weight: normal;
   cursor: pointer;
 }
+.icheck-label {
+  padding-left: 0;
+}
+.iradio,
+.icheckbox {
+  display: inline-block;
+  min-width: 1em;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+.iradio:before,
+.icheckbox:before {
+  color: #4e5d6c;
+}
+.iradio:hover:before,
+.icheckbox:hover:before,
+.iradio.checked:before,
+.icheckbox.checked:before,
+.icheck-label:hover .iradio:before,
+.icheck-label:hover .icheckbox:before {
+  color: #df691a;
+}
+.iradio:before {
+  content: "\f10c";
+}
+.iradio.checked:before {
+  content: "\f058";
+}
+.icheckbox:before {
+  content: "\f0c8";
+}
+.icheckbox.checked:before {
+  content: "\f14a";
+}
 .Button,
 .NavButton,
 .PhotoWrapLarge .ChangePicture {

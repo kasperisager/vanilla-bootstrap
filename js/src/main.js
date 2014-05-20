@@ -4,10 +4,14 @@
 //= require ../../bower_components/spin.js/spin.js
 //= require ../../bower_components/spin.js/jquery.spin.js
 
+//= require ../../bower_components/jquery-icheck/icheck.js
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
   $(function () {
+
+    $('input').icheck();
 
     // Programmatically hide buttons that are supposed to be hidden. This
     // ensures that the initial display state is correctly stored and applied
