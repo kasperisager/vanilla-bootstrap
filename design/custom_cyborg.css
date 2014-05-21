@@ -2004,6 +2004,9 @@ fieldset[disabled] .Button.Danger:active {
 .FilterMenu .Sprite {
   margin-right: 6px;
 }
+.TinyProgress {
+  position: relative;
+}
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
