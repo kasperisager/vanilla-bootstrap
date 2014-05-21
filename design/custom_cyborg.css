@@ -3904,10 +3904,12 @@ button.token-input-delete-token {
 .FlyoutMenu .Conversation .Item .MItem a {
   color: #919191;
 }
-.Item .Meta .MItem {
+.Item .Meta .MItem,
+.Item .AuthorInfo .MItem {
   padding-right: 10px;
 }
-.Item .Meta .MItem:last-child {
+.Item .Meta .MItem:last-child,
+.Item .AuthorInfo .MItem:last-child {
   padding-right: 0;
 }
 .Conversation .Item .Author {

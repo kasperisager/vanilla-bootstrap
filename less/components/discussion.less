@@ -56,14 +56,19 @@
     }
   }
 
-  .Meta {
+  .Meta,
+  .AuthorInfo {
     .MItem {
       padding-right: @padding-small-horizontal;
 
       &:last-child {
         padding-right: 0;
       }
+    }
+  }
 
+  .Meta {
+    .MItem {
       &.Category a {
         &:extend(.label);
         &:extend(.label-default);
