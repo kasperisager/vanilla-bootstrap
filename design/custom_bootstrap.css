@@ -1428,11 +1428,13 @@ form ol {
 .iradio.checked:before,
 .icheckbox.checked:before,
 .icheck-label:hover .iradio:before,
-.icheck-label:hover .icheckbox:before {
+.icheck-label:hover .icheckbox:before,
+.icheck-label:focus .iradio:before,
+.icheck-label:focus .icheckbox:before {
   color: #428bca;
 }
 .iradio:before {
-  content: "\f10c";
+  content: "\f111";
 }
 .iradio.checked:before {
   content: "\f058";

@@ -1435,7 +1435,7 @@ form ol {
   color: #eb6864;
 }
 .iradio:before {
-  content: "\f10c";
+  content: "\f111";
 }
 .iradio.checked:before {
   content: "\f058";
