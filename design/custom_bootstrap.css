@@ -1447,6 +1447,7 @@ form ol {
 }
 .Button,
 .NavButton,
+.SocialIcon,
 .PhotoWrapLarge .ChangePicture {
   display: inline-block;
   margin-bottom: 0;
@@ -1466,7 +1467,8 @@ form ol {
   -ms-user-select: none;
   user-select: none;
 }
-.Button:focus {
+.Button:focus,
+.SocialIcon:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -1474,12 +1476,16 @@ form ol {
 .Button:hover,
 .Button:focus,
 .Button:focus,
+.SocialIcon:hover,
+.SocialIcon:focus,
+.SocialIcon:focus,
 .PhotoWrapLarge .ChangePicture:hover,
 .PhotoWrapLarge .ChangePicture:focus {
   color: #333333;
   text-decoration: none;
 }
 .Button:active,
+.SocialIcon:active,
 .PhotoWrapLarge .ChangePicture:active {
   outline: 0;
   background-image: none;
@@ -1493,7 +1499,15 @@ fieldset[disabled] .Button:hover,
 .Button[disabled]:focus,
 fieldset[disabled] .Button:focus,
 .Button[disabled]:active,
-fieldset[disabled] .Button:active {
+fieldset[disabled] .Button:active,
+.SocialIcon[disabled],
+fieldset[disabled] .SocialIcon,
+.SocialIcon[disabled]:hover,
+fieldset[disabled] .SocialIcon:hover,
+.SocialIcon[disabled]:focus,
+fieldset[disabled] .SocialIcon:focus,
+.SocialIcon[disabled]:active,
+fieldset[disabled] .SocialIcon:active {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -1638,11 +1652,204 @@ fieldset[disabled] .Button.Danger:active {
 .page-sidebar .BigButton + .BigButton {
   margin-top: 5px;
 }
+.SocialIcon.HasText {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.SocialIcon.HasText .Icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.SocialIcon:not(.HasText) {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 34px;
+  width: 34px;
+  padding: 0;
+}
+.SocialIcon:not(.HasText) .Icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.SocialIcon:not(.HasText) .Icon {
+  border: none;
+  text-align: center;
+  width: 100%!important;
+}
 .Buttons {
   padding-top: 10px;
 }
 .ProfileOptions {
   float: right !important;
+}
+.SocialIcon .Icon {
+  display: inline-block;
+  min-width: 1em;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+.SocialIcon-Facebook {
+  color: #ffffff;
+  background-color: #3b5998;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-Facebook:hover,
+.SocialIcon-Facebook:focus,
+.SocialIcon-Facebook:active,
+.SocialIcon-Facebook.active,
+.open .dropdown-toggle.SocialIcon-Facebook {
+  color: #ffffff;
+  background-color: #30487b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-Facebook:active,
+.SocialIcon-Facebook.active,
+.open .dropdown-toggle.SocialIcon-Facebook {
+  background-image: none;
+}
+.SocialIcon-Facebook .badge {
+  color: #3b5998;
+  background-color: #ffffff;
+}
+.SocialIcon-Facebook .Icon:before {
+  content: "\f09a";
+}
+.SocialIcon-Twitter {
+  color: #ffffff;
+  background-color: #55acee;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-Twitter:hover,
+.SocialIcon-Twitter:focus,
+.SocialIcon-Twitter:active,
+.SocialIcon-Twitter.active,
+.open .dropdown-toggle.SocialIcon-Twitter {
+  color: #ffffff;
+  background-color: #309aea;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-Twitter:active,
+.SocialIcon-Twitter.active,
+.open .dropdown-toggle.SocialIcon-Twitter {
+  background-image: none;
+}
+.SocialIcon-Twitter .badge {
+  color: #55acee;
+  background-color: #ffffff;
+}
+.SocialIcon-Twitter .Icon:before {
+  content: "\f099";
+}
+.SocialIcon-Google {
+  color: #ffffff;
+  background-color: #dd4b39;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-Google:hover,
+.SocialIcon-Google:focus,
+.SocialIcon-Google:active,
+.SocialIcon-Google.active,
+.open .dropdown-toggle.SocialIcon-Google {
+  color: #ffffff;
+  background-color: #ca3523;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-Google:active,
+.SocialIcon-Google.active,
+.open .dropdown-toggle.SocialIcon-Google {
+  background-image: none;
+}
+.SocialIcon-Google .badge {
+  color: #dd4b39;
+  background-color: #ffffff;
+}
+.SocialIcon-Google .Icon:before {
+  content: "\f0d5";
+}
+.SocialIcon-LinkedIn {
+  color: #ffffff;
+  background-color: #007bb6;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-LinkedIn:hover,
+.SocialIcon-LinkedIn:focus,
+.SocialIcon-LinkedIn:active,
+.SocialIcon-LinkedIn.active,
+.open .dropdown-toggle.SocialIcon-LinkedIn {
+  color: #ffffff;
+  background-color: #005f8d;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-LinkedIn:active,
+.SocialIcon-LinkedIn.active,
+.open .dropdown-toggle.SocialIcon-LinkedIn {
+  background-image: none;
+}
+.SocialIcon-LinkedIn .badge {
+  color: #007bb6;
+  background-color: #ffffff;
+}
+.SocialIcon-LinkedIn .Icon:before {
+  content: "\f0e1";
+}
+.SocialIcon-OpenID {
+  color: #ffffff;
+  background-color: #f7921f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-OpenID:hover,
+.SocialIcon-OpenID:focus,
+.SocialIcon-OpenID:active,
+.SocialIcon-OpenID.active,
+.open .dropdown-toggle.SocialIcon-OpenID {
+  color: #ffffff;
+  background-color: #e57e08;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.SocialIcon-OpenID:active,
+.SocialIcon-OpenID.active,
+.open .dropdown-toggle.SocialIcon-OpenID {
+  background-image: none;
+}
+.SocialIcon-OpenID .badge {
+  color: #f7921f;
+  background-color: #ffffff;
+}
+.SocialIcon-OpenID .Icon:before {
+  content: "\f19b";
+}
+.Methods .Method .SocialIcon {
+  display: block;
+  width: 100%;
+}
+.Methods .Method + .Method {
+  margin-top: 5px;
 }
 .Media,
 .Media-Body,
@@ -4641,6 +4848,7 @@ img.jcrop-preview {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .Button:active,
+.SocialIcon:active,
 .PhotoWrapLarge .ChangePicture:active {
   background-image: none;
 }

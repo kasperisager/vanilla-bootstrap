@@ -8,6 +8,7 @@
 // Library
 // -----------------------------------------------------------------------------
 @import (reference) "@{bootstrap}/buttons";
+@import (reference) "@{bootstrap-social}/bootstrap-social";
 
 // Extensions
 // -----------------------------------------------------------------------------
@@ -112,4 +113,113 @@
 
 .ProfileOptions {
   .pull-right(); // Right-align profile buttons
+}
+
+// Social buttons
+
+.SocialIcon {
+  &:extend(.btn);
+
+  &:hover,
+  &:focus {
+    &:extend(.btn:hover);
+  }
+
+  &:active {
+    &:extend(.btn:active);
+  }
+
+  &:focus {
+    &:extend(.btn:focus);
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      &:extend(.btn.disabled);
+    }
+  }
+
+  .Icon {
+    display: inline-block;
+    min-width: 1em;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+  }
+}
+
+.SocialIcon.HasText {
+  &:extend(.btn-social);
+
+  .Icon {
+    &:extend(.btn-social :first-child);
+  }
+}
+
+.SocialIcon:not(.HasText) {
+  &:extend(.btn-social-icon);
+
+  .Icon {
+    &:extend(.btn-social-icon :first-child);
+  }
+}
+
+.SocialIcon-Facebook {
+  .btn-social(#3b5998);
+
+  .Icon:before {
+    content: @fa-var-facebook;
+  }
+}
+
+.SocialIcon-Twitter {
+  .btn-social(#55acee);
+
+  .Icon:before {
+    content: @fa-var-twitter;
+  }
+}
+
+.SocialIcon-Google {
+  .btn-social(#dd4b39);
+
+  .Icon:before {
+    content: @fa-var-google-plus;
+  }
+}
+
+.SocialIcon-LinkedIn {
+  .btn-social(#007bb6);
+
+  .Icon:before {
+    content: @fa-var-linkedin;
+  }
+}
+
+.SocialIcon-OpenID {
+  .btn-social(#f7921f);
+
+  .Icon:before {
+    content: @fa-var-openid;
+  }
+}
+
+.Methods {
+  .Method {
+    .SocialIcon {
+      display: block;
+      width: 100%;
+    }
+
+    + .Method {
+      margin-top: 5px;
+    }
+  }
 }
