@@ -3703,6 +3703,9 @@ button.token-input-delete-token {
 .Item .Options {
   float: right !important;
 }
+.Item .OptionsMenu + .AdminCheck {
+  padding-left: 5px;
+}
 tr.Item:before,
 tr.Item:after {
   display: none;
@@ -3724,6 +3727,9 @@ tr.Item:after {
 }
 .PageTitle .Options {
   float: right !important;
+}
+.PageTitle .OptionsMenu + .AdminCheck {
+  padding-left: 5px;
 }
 .MessageForm {
   position: relative;
