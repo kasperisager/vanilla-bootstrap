@@ -3317,6 +3317,10 @@ fieldset[disabled] .Button.Danger:active {
   background-color: #d9230f;
   border-radius: 10px;
 }
+.Count:empty,
+.Alert:empty {
+  display: none;
+}
 .FilterMenu .Active > a .Count,
 .PanelInfo .Active a .Count {
   color: #d9230f;

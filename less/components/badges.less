@@ -15,4 +15,8 @@
 .Count,
 .Alert {
   &:extend(.badge);
+
+  &:empty {
+    &:extend(.badge:empty);
+  }
 }
