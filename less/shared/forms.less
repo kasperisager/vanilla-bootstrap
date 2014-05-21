@@ -32,10 +32,15 @@ select {
   }
 }
 
-.TextBox,
-.MultiComplete {
+.TextBox {
   height: 100px;
   min-height: 100px;
+  &:extend(textarea.form-control);
+}
+
+.MultiComplete {
+  height: 50px;
+  min-height: 50px;
   &:extend(textarea.form-control);
 }
 
