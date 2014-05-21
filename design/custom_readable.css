@@ -4364,7 +4364,7 @@ tr.Item:after {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 62px;
+  min-height: 62px;
   margin-top: 40px;
 }
 .sticky-footer-body {
