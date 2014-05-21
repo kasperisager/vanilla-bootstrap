@@ -1741,6 +1741,9 @@ a.Bookmark:before {
 .InformSprite.Flags:before {
   content: "\f02c";
 }
+.SpConnection:before {
+  content: "\f1e0";
+}
 .SpEditProfile:before,
 .SpMyDiscussions:before,
 .InformSprite.SingleUser:before {
