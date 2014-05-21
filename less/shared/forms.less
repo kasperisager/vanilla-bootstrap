@@ -97,8 +97,10 @@ form .P {
   }
 
   &:hover,
+  &:focus,
   &.checked,
-  .icheck-label:hover & {
+  .icheck-label:hover &,
+  .icheck-label:focus & {
     &:before {
       color: @link-color;
     }

@@ -1423,6 +1423,8 @@ form ol {
 }
 .iradio:hover:before,
 .icheckbox:hover:before,
+.iradio:focus:before,
+.icheckbox:focus:before,
 .iradio.checked:before,
 .icheckbox.checked:before,
 .icheck-label:hover .iradio:before,

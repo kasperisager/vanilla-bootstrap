@@ -1424,10 +1424,14 @@ form ol {
 }
 .iradio:hover:before,
 .icheckbox:hover:before,
+.iradio:focus:before,
+.icheckbox:focus:before,
 .iradio.checked:before,
 .icheckbox.checked:before,
 .icheck-label:hover .iradio:before,
-.icheck-label:hover .icheckbox:before {
+.icheck-label:hover .icheckbox:before,
+.icheck-label:focus .iradio:before,
+.icheck-label:focus .icheckbox:before {
   color: #0ce3ac;
 }
 .iradio:before {
