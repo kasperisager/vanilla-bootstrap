@@ -31,7 +31,6 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            {home_link}
             {categories_link}
             {discussions_link}
             {activity_link}
