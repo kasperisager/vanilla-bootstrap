@@ -1993,7 +1993,7 @@ fieldset[disabled] .Button.Danger:active {
 }
 .Bookmark:hover:before,
 .Bookmark:focus:before {
-  color: #e22620;
+  color: #eb6864;
 }
 .OptionsMenu + .Bookmark {
   margin-left: 5px;
