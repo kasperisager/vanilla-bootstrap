@@ -1961,6 +1961,7 @@ fieldset[disabled] .Button.Danger:active {
 .InformSprite.SingleUser:before {
   content: "\f007";
 }
+.SpGroups:before,
 .InformSprite.Group:before {
   content: "\f0c0";
 }
@@ -1975,8 +1976,11 @@ fieldset[disabled] .Button.Danger:active {
 .InformSprite.Dashboard:before {
   content: "\f0e4";
 }
-.SpDelete:before {
+.SpBan:before {
   content: "\f05e";
+}
+.SpDelete:before {
+  content: "\f014";
 }
 .SpEdit:before,
 .SpApplicants:before {
@@ -2185,6 +2189,9 @@ fieldset[disabled] .Button.Danger:active {
 .SpUnansweredQuestions:before {
   content: "\f128";
 }
+.SpWarn:before {
+  content: "\f071";
+}
 .Bookmark {
   font: 0/0 a;
   color: transparent;
@@ -2214,9 +2221,6 @@ fieldset[disabled] .Button.Danger:active {
 }
 .FilterMenu .Sprite {
   margin-right: 6px;
-}
-.TinyProgress {
-  position: relative;
 }
 .fade {
   opacity: 0;
@@ -3358,7 +3362,7 @@ fieldset[disabled] .Button.Danger:active {
 }
 .DismissMessage .Dismiss,
 .alert-dismissable a.Close,
-.alert-dismissable a.Delete:not(.Popup),
+.alert-dismissable a.Delete,
 .InformMessage .Close,
 .alert-dismissable .token-input-delete-token {
   position: relative;
@@ -3602,7 +3606,7 @@ fieldset[disabled] .Button.Danger:active {
 }
 .DismissMessage .Dismiss,
 a.Close,
-a.Delete:not(.Popup),
+a.Delete,
 .token-input-delete-token {
   float: right;
   font-size: 24px;
@@ -3617,8 +3621,8 @@ a.Delete:not(.Popup),
 .DismissMessage .Dismiss:focus,
 a.Close:hover,
 a.Close:focus,
-a.Delete:not(.Popup):hover,
-a.Delete:not(.Popup):focus,
+a.Delete:hover,
+a.Delete:focus,
 .token-input-delete-token:hover,
 .token-input-delete-token:focus {
   color: #000000;
@@ -3628,7 +3632,7 @@ a.Delete:not(.Popup):focus,
   filter: alpha(opacity=50);
 }
 buttona.Close,
-buttona.Delete:not(.Popup),
+buttona.Delete,
 button.token-input-delete-token {
   padding: 0;
   cursor: pointer;
@@ -3704,7 +3708,7 @@ button.token-input-delete-token {
   min-height: 16.42857143px;
 }
 .modal-header a.Close,
-.modal-header a.Delete:not(.Popup),
+.modal-header a.Delete,
 .modal-header .token-input-delete-token {
   margin-top: -2px;
 }
@@ -4805,6 +4809,7 @@ img.jcrop-preview {
   min-width: 0;
 }
 .TinyProgress {
+  position: relative;
   display: inline-block;
   height: 22px;
   width: 22px;
@@ -4884,7 +4889,7 @@ legend {
 }
 .alert .close,
 .alert a.Close,
-.alert a.Delete:not(.Popup),
+.alert a.Delete,
 .alert .token-input-delete-token {
   color: #fff;
   text-decoration: none;
@@ -4894,8 +4899,8 @@ legend {
 .alert .close:focus,
 .alert a.Close:hover,
 .alert a.Close:focus,
-.alert a.Delete:not(.Popup):hover,
-.alert a.Delete:not(.Popup):focus,
+.alert a.Delete:hover,
+.alert a.Delete:focus,
 .alert .token-input-delete-token:hover,
 .alert .token-input-delete-token:focus {
   color: #fff;

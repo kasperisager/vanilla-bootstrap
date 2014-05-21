@@ -96,6 +96,7 @@
   &:before { content: @fa-var-user; }
 }
 
+.SpGroups,
 .InformSprite.Group {
   &:before { content: @fa-var-users; }
 }
@@ -114,8 +115,12 @@
   &:before { content: @fa-var-tachometer; }
 }
 
-.SpDelete {
+.SpBan {
   &:before { content: @fa-var-ban; }
+}
+
+.SpDelete {
+  &:before { content: @fa-var-trash-o; }
 }
 
 .SpEdit,
@@ -387,6 +392,10 @@
   &:before { content: @fa-var-question; }
 }
 
+.SpWarn {
+  &:before { content: @fa-var-warning; }
+}
+
 // .InformSprite.Infinity
 // .InformSprite.Squiggle
 // .InformSprite.Skull
@@ -467,10 +476,4 @@
 
 .FilterMenu .Sprite {
   margin-right: 6px;
-}
-
-// Progress spinners
-
-.TinyProgress {
-  position: relative;
 }
