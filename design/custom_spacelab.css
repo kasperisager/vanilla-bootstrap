@@ -3398,6 +3398,65 @@ fieldset[disabled] .Button.Danger:active {
 .Errors ul li {
   margin-bottom: 0 !important;
 }
+.PasswordStrength {
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.PasswordStrength .StrengthText {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #446e9b;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+.PasswordStrength.Score-4 .StrengthText,
+.PasswordStrength.Score-5 .StrengthText {
+  background-color: #3cb521;
+}
+.PasswordStrength.Score-2 .StrengthText,
+.PasswordStrength.Score-3 .StrengthText {
+  background-color: #d47500;
+}
+.PasswordStrength.Score-0 .StrengthText,
+.PasswordStrength.Score-1 .StrengthText {
+  background-color: #cd0200;
+}
+.PasswordStrength {
+  width: 100% !important;
+}
+.InputBox + .PasswordStrength {
+  margin-top: 5px;
+}
+.PasswordStrength.Score-0 .StrengthText {
+  width: 20%;
+}
+.PasswordStrength.Score-1 .StrengthText {
+  width: 36%;
+}
+.PasswordStrength.Score-2 .StrengthText {
+  width: 52%;
+}
+.PasswordStrength.Score-3 .StrengthText {
+  width: 68%;
+}
+.PasswordStrength.Score-4 .StrengthText {
+  width: 84%;
+}
+.PasswordStrength.Score-5 .StrengthText {
+  width: 100%;
+}
 .PanelInfo,
 .DataList {
   margin-bottom: 20px;
