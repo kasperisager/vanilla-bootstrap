@@ -1689,7 +1689,7 @@ fieldset[disabled] .Button.Danger:active {
 .Sprite16,
 .SpFlyoutHandle,
 .InformSprite,
-a.Bookmark:before {
+.Bookmark:before {
   display: inline-block;
   min-width: 1em;
   font-family: FontAwesome;
@@ -1974,31 +1974,31 @@ a.Bookmark:before {
 .SpUnansweredQuestions:before {
   content: "\f128";
 }
-a.Bookmark {
+.Bookmark {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
 }
-a.Bookmark:before {
+.Bookmark:before {
   font-size: 14px;
   line-height: 1.42857143;
   color: #ff8800;
   content: "\f006";
 }
-a.Bookmark:hover,
-a.Bookmark:focus {
+.Bookmark:hover,
+.Bookmark:focus {
   text-decoration: none;
 }
-a.Bookmark:hover:before,
-a.Bookmark:focus:before {
+.Bookmark:hover:before,
+.Bookmark:focus:before {
   color: #2a9fd6;
 }
-.OptionsMenu + a.Bookmark {
+.OptionsMenu + .Bookmark {
   margin-left: 5px;
 }
-a.Bookmarked:before {
+.Bookmarked:before {
   content: "\f005";
 }
 .FilterMenu .Sprite {
