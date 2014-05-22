@@ -594,7 +594,8 @@ a.text-info:hover {
 a.text-warning:hover {
   color: #66512c;
 }
-.text-danger {
+.text-danger,
+.Incorrect {
   color: #a94442;
 }
 a.text-danger:hover {

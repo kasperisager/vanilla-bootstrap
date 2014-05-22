@@ -595,7 +595,8 @@ a.text-info:hover {
 a.text-warning:hover {
   color: #e6e6e6;
 }
-.text-danger {
+.text-danger,
+.Incorrect {
   color: #ffffff;
 }
 a.text-danger:hover {
@@ -4917,7 +4918,8 @@ img.jcrop-preview {
   color: #93e08b;
 }
 .text-danger,
-.text-danger:hover {
+.text-danger:hover,
+.Incorrect {
   color: #eda776;
 }
 .text-warning,
