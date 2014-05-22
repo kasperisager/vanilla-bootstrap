@@ -1388,8 +1388,8 @@ select::-webkit-input-placeholder {
   min-height: 100px;
 }
 .MultiComplete {
-  height: 50px;
-  min-height: 50px;
+  height: 38px;
+  min-height: 38px;
 }
 form label {
   display: block;
@@ -2255,11 +2255,11 @@ fieldset[disabled] .Button.Danger:active {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
-.ac_results,
 .MenuItems,
 .FlyoutMenu,
 .atwho-view ul,
-.token-input-dropdown {
+.token-input-dropdown,
+.ac_results {
   position: absolute;
   top: 100%;
   left: 0;
@@ -2286,11 +2286,12 @@ fieldset[disabled] .Button.Danger:active {
   overflow: hidden;
   background-color: #e5e5e5;
 }
-.ac_results li,
 .MenuItems li > a,
 .atwho-view li,
 .token-input-dropdown li,
-.token-input-dropdown > p {
+.ac_results li,
+.token-input-dropdown > p,
+.ac_results > p {
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -2299,18 +2300,19 @@ fieldset[disabled] .Button.Danger:active {
   color: #333333;
   white-space: nowrap;
 }
-.ac_results li:hover,
-.ac_results li:focus,
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
 .atwho-view li:hover,
-.token-input-dropdown li:hover {
+.token-input-dropdown li:hover,
+.ac_results li:hover {
   text-decoration: none;
   color: #ffffff;
   background-color: #2fa4e7;
 }
 .token-input-dropdown .token-input-selected-dropdown-item,
-.token-input-dropdown .token-input-selected-dropdown-item:hover {
+.ac_results .token-input-selected-dropdown-item,
+.token-input-dropdown .token-input-selected-dropdown-item:hover,
+.ac_results .token-input-selected-dropdown-item:hover {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
@@ -2330,15 +2332,6 @@ fieldset[disabled] .Button.Danger:active {
   border-top: 0;
   border-bottom: 4px solid;
   content: "";
-}
-.ac_results ul {
-  padding: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.ac_results li:hover,
-.ac_results li:focus {
-  cursor: pointer;
 }
 .MenuItems ul {
   padding: 0;
@@ -4352,22 +4345,26 @@ tr.Item:after {
   margin-left: 6px;
   font-size: 16px;
 }
-.token-input-dropdown {
+.token-input-dropdown,
+.ac_results {
   padding-right: 12px;
   padding-left: 12px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-.token-input-dropdown ul {
+.token-input-dropdown ul,
+.ac_results ul {
   padding: 0;
   margin: 0 -12px;
   list-style: none;
 }
-.token-input-dropdown li {
+.token-input-dropdown li,
+.ac_results li {
   cursor: pointer;
 }
-.token-input-dropdown > p {
+.token-input-dropdown > p,
+.ac_results > p {
   margin: 0 -12px;
 }
 .Video,
