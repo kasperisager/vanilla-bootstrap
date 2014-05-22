@@ -567,7 +567,8 @@ cite {
 .Conversation .Item .MItem,
 .Item .Meta a,
 .Conversation .Item .MItem a,
-.Item .AuthorInfo {
+.Item .AuthorInfo,
+.ActionBlock {
   color: #999999;
 }
 .text-primary {
@@ -1460,7 +1461,8 @@ form ol {
 .Button,
 .NavButton,
 .SocialIcon,
-.PhotoWrapLarge .ChangePicture {
+.PhotoWrapLarge .ChangePicture,
+.ActionBlock .React {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -1492,13 +1494,16 @@ form ol {
 .SocialIcon:focus,
 .SocialIcon:focus,
 .PhotoWrapLarge .ChangePicture:hover,
-.PhotoWrapLarge .ChangePicture:focus {
+.PhotoWrapLarge .ChangePicture:focus,
+.ActionBlock .React:hover,
+.ActionBlock .React:focus {
   color: #333333;
   text-decoration: none;
 }
 .Button:active,
 .SocialIcon:active,
-.PhotoWrapLarge .ChangePicture:active {
+.PhotoWrapLarge .ChangePicture:active,
+.ActionBlock .React:active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -1527,19 +1532,24 @@ fieldset[disabled] .SocialIcon:active {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.Button {
+.Button,
+.ActionBlock .React {
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
 }
 .Button:hover,
 .Button:focus,
-.Button:active {
+.Button:active,
+.ActionBlock .React:hover,
+.ActionBlock .React:focus,
+.ActionBlock .React:active {
   color: #333333;
   background-color: #ebebeb;
   border-color: #adadad;
 }
-.Button:active {
+.Button:active,
+.ActionBlock .React:active {
   background-image: none;
 }
 .Button[disabled],
@@ -1648,7 +1658,8 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.5;
   border-radius: 3px;
 }
-.btn-group-xs > .btn {
+.btn-group-xs > .btn,
+.ActionBlock .React {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4037,6 +4048,9 @@ button.token-input-delete-token {
 .Item .OptionsMenu + .AdminCheck {
   padding-left: 5px;
 }
+.Item .ActionBlock {
+  margin-top: 10px;
+}
 tr.Item:before,
 tr.Item:after {
   display: none;
@@ -4061,6 +4075,12 @@ tr.Item:after {
 }
 .PageTitle .OptionsMenu + .AdminCheck {
   padding-left: 5px;
+}
+.ActionBlock {
+  font-style: italic;
+}
+.ActionBlock a {
+  font-style: normal;
 }
 .MessageForm {
   position: relative;
@@ -5004,7 +5024,8 @@ img.jcrop-preview {
 .Button,
 .Button.Primary,
 .Button.Danger,
-.PhotoWrapLarge .ChangePicture {
+.PhotoWrapLarge .ChangePicture,
+.ActionBlock .React {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -5012,16 +5033,19 @@ img.jcrop-preview {
 .Button:active,
 .Button.Primary:active,
 .Button.Danger:active,
-.PhotoWrapLarge .ChangePicture:active {
+.PhotoWrapLarge .ChangePicture:active,
+.ActionBlock .React:active {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .Button:active,
 .SocialIcon:active,
-.PhotoWrapLarge .ChangePicture:active {
+.PhotoWrapLarge .ChangePicture:active,
+.ActionBlock .React:active {
   background-image: none;
 }
-.Button {
+.Button,
+.ActionBlock .React {
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e0e0e0));
   background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
@@ -5033,11 +5057,14 @@ img.jcrop-preview {
   border-color: #ccc;
 }
 .Button:hover,
-.Button:focus {
+.Button:focus,
+.ActionBlock .React:hover,
+.ActionBlock .React:focus {
   background-color: #e0e0e0;
   background-position: 0 -15px;
 }
-.Button:active {
+.Button:active,
+.ActionBlock .React:active {
   background-color: #e0e0e0;
   border-color: #dbdbdb;
 }

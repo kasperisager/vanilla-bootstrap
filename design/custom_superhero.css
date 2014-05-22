@@ -568,7 +568,8 @@ cite {
 .Conversation .Item .MItem,
 .Item .Meta a,
 .Conversation .Item .MItem a,
-.Item .AuthorInfo {
+.Item .AuthorInfo,
+.ActionBlock {
   color: #4e5d6c;
 }
 .text-primary {
@@ -1461,7 +1462,8 @@ form ol {
 .Button,
 .NavButton,
 .SocialIcon,
-.PhotoWrapLarge .ChangePicture {
+.PhotoWrapLarge .ChangePicture,
+.ActionBlock .React {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -1493,13 +1495,16 @@ form ol {
 .SocialIcon:focus,
 .SocialIcon:focus,
 .PhotoWrapLarge .ChangePicture:hover,
-.PhotoWrapLarge .ChangePicture:focus {
+.PhotoWrapLarge .ChangePicture:focus,
+.ActionBlock .React:hover,
+.ActionBlock .React:focus {
   color: #ffffff;
   text-decoration: none;
 }
 .Button:active,
 .SocialIcon:active,
-.PhotoWrapLarge .ChangePicture:active {
+.PhotoWrapLarge .ChangePicture:active,
+.ActionBlock .React:active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -1528,19 +1533,24 @@ fieldset[disabled] .SocialIcon:active {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.Button {
+.Button,
+.ActionBlock .React {
   color: #ffffff;
   background-color: #4e5d6c;
   border-color: transparent;
 }
 .Button:hover,
 .Button:focus,
-.Button:active {
+.Button:active,
+.ActionBlock .React:hover,
+.ActionBlock .React:focus,
+.ActionBlock .React:active {
   color: #ffffff;
   background-color: #3d4954;
   border-color: rgba(0, 0, 0, 0);
 }
-.Button:active {
+.Button:active,
+.ActionBlock .React:active {
   background-image: none;
 }
 .Button[disabled],
@@ -1649,7 +1659,8 @@ fieldset[disabled] .Button.Danger:active {
   line-height: 1.5;
   border-radius: 0;
 }
-.btn-group-xs > .btn {
+.btn-group-xs > .btn,
+.ActionBlock .React {
   padding: 1px 5px;
   font-size: 13px;
   line-height: 1.5;
@@ -4007,6 +4018,9 @@ button.token-input-delete-token {
 .Item .OptionsMenu + .AdminCheck {
   padding-left: 5px;
 }
+.Item .ActionBlock {
+  margin-top: 10.5px;
+}
 tr.Item:before,
 tr.Item:after {
   display: none;
@@ -4031,6 +4045,12 @@ tr.Item:after {
 }
 .PageTitle .OptionsMenu + .AdminCheck {
   padding-left: 5px;
+}
+.ActionBlock {
+  font-style: italic;
+}
+.ActionBlock a {
+  font-style: normal;
 }
 .MessageForm {
   position: relative;
@@ -4989,7 +5009,8 @@ img.jcrop-preview {
 .Button,
 .NavButton,
 .SocialIcon,
-.PhotoWrapLarge .ChangePicture {
+.PhotoWrapLarge .ChangePicture,
+.ActionBlock .React {
   font-weight: 300;
 }
 .btn-default:hover {

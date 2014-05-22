@@ -104,6 +104,10 @@
       padding-left: @padding-small-vertical;
     }
   }
+
+  .ActionBlock {
+    margin-top: (@line-height-computed / 2);
+  }
 }
 
 tr.Item {
@@ -154,6 +158,35 @@ tr.Item {
   .OptionsMenu {
     + .AdminCheck {
       padding-left: @padding-small-vertical;
+    }
+  }
+}
+
+// Item Action Blocks
+// -----------------------------------------------------------------------------
+
+.ActionBlock {
+  font-style: italic;
+  &:extend(.text-muted);
+
+  a {
+    font-style: normal;
+  }
+
+  .React {
+    &:extend(.btn);
+    &:extend(.btn-default);
+    &:extend(.btn-xs);
+
+    &:hover,
+    &:focus {
+      &:extend(.btn:hover);
+      &:extend(.btn-default:hover);
+    }
+
+    &:active {
+      &:extend(.btn:active);
+      &:extend(.btn-default:active);
     }
   }
 }
