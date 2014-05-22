@@ -1384,10 +1384,13 @@ select:-ms-input-placeholder {
 select::-webkit-input-placeholder {
   color: #999999;
 }
-.TextBox,
-.MultiComplete {
+.TextBox {
   height: 100px;
   min-height: 100px;
+}
+.MultiComplete {
+  height: 50px;
+  min-height: 50px;
 }
 form label {
   display: block;
@@ -2253,6 +2256,7 @@ fieldset[disabled] .Button.Danger:active {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
+.ac_results,
 .MenuItems,
 .FlyoutMenu,
 .atwho-view ul,
@@ -2283,6 +2287,7 @@ fieldset[disabled] .Button.Danger:active {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
 }
+.ac_results li,
 .MenuItems li > a,
 .atwho-view li,
 .token-input-dropdown li,
@@ -2295,6 +2300,8 @@ fieldset[disabled] .Button.Danger:active {
   color: #555555;
   white-space: nowrap;
 }
+.ac_results li:hover,
+.ac_results li:focus,
 .MenuItems li > a:hover,
 .MenuItems li > a:focus,
 .atwho-view li:hover,
@@ -2324,6 +2331,15 @@ fieldset[disabled] .Button.Danger:active {
   border-top: 0;
   border-bottom: 4px solid;
   content: "";
+}
+.ac_results ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.ac_results li:hover,
+.ac_results li:focus {
+  cursor: pointer;
 }
 .MenuItems ul {
   padding: 0;

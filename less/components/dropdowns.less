@@ -12,6 +12,28 @@
 // Extensions
 // -----------------------------------------------------------------------------
 
+.ac_results {
+  &:extend(.dropdown-menu);
+
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  li {
+    &:extend(.dropdown-menu > li > a);
+
+    &:hover,
+    &:focus {
+      &:extend(.dropdown-menu > li > a:hover);
+      cursor: pointer;
+    }
+  }
+
+}
+
+
 .MenuItems {
   &:extend(.dropdown-menu);
 
