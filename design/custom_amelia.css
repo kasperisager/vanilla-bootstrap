@@ -794,7 +794,9 @@ h1.H,
     width: 1170px;
   }
 }
-.row {
+.row,
+.MultipleEntryMethods,
+.MultipleEntryMethods {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -992,7 +994,8 @@ legend {
   border: 0;
   border-bottom: 1px solid #0d747c;
 }
-label {
+label,
+.MultipleEntryMethods .Methods b {
   display: inline-block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -1354,7 +1357,11 @@ select[multiple].input-lg {
   margin-left: -15px;
   margin-right: -15px;
 }
-.form-horizontal .form-control-static {
+.form-horizontal .form-control-static,
+.SingleEntryMethod + .Buttons .CheckBoxLabel,
+.MultipleEntryMethods + .Buttons .CheckBoxLabel,
+.SingleEntryMethod + .Buttons .CreateAccount,
+.MultipleEntryMethods + .Buttons .CreateAccount {
   padding-top: 9px;
 }
 @media (min-width: 768px) {
@@ -1393,7 +1400,8 @@ select::-webkit-input-placeholder {
   height: 38px;
   min-height: 38px;
 }
-form label {
+form label,
+.MultipleEntryMethods .Methods b {
   display: block;
 }
 form ul,
@@ -4451,6 +4459,71 @@ tr.Item:after {
   position: relative;
   min-height: 100%;
 }
+.Section-Entry .page-content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .Section-Entry .page-content {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .Section-Entry .page-content {
+    margin-left: 16.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .Section-Entry .page-content {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .Section-Entry .page-content {
+    margin-left: 25%;
+  }
+}
+.MultipleEntryMethods .MainForm,
+.MultipleEntryMethods .Methods {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .MultipleEntryMethods .MainForm,
+  .MultipleEntryMethods .Methods {
+    float: left;
+    width: 50%;
+  }
+}
+.SingleEntryMethod + .Buttons,
+.MultipleEntryMethods + .Buttons {
+  text-align: left !important;
+}
+.SingleEntryMethod + .Buttons .Button,
+.MultipleEntryMethods + .Buttons .Button {
+  float: right;
+}
+.SingleEntryMethod + .Buttons .CheckBoxLabel,
+.MultipleEntryMethods + .Buttons .CheckBoxLabel {
+  float: right;
+  padding-right: 12px;
+}
+.SingleEntryMethod + .Buttons .CreateAccount,
+.MultipleEntryMethods + .Buttons .CreateAccount {
+  float: left;
+}
+.SingleEntryMethod + .Buttons .CheckBoxLabel,
+.MultipleEntryMethods + .Buttons .CheckBoxLabel,
+.SingleEntryMethod + .Buttons .CreateAccount,
+.MultipleEntryMethods + .Buttons .CreateAccount {
+  margin: 0;
+}
 /* jquery.Jcrop.css v0.9.12 - MIT License */
 /*
   The outer-most container in a typical Jcrop instance
@@ -4668,6 +4741,10 @@ img.jcrop-preview {
 .PageControls:after,
 .BeforeCommentHeading:before,
 .BeforeCommentHeading:after,
+.SingleEntryMethod + .Buttons:before,
+.SingleEntryMethod + .Buttons:after,
+.MultipleEntryMethods + .Buttons:before,
+.MultipleEntryMethods + .Buttons:after,
 .Empty:before,
 .Empty:after,
 .NoResults:before,
@@ -4687,7 +4764,11 @@ img.jcrop-preview {
 .MessageList .Item-Body:before,
 .MessageList .Item-Body:after,
 .MessageList.Conversation .Message:before,
-.MessageList.Conversation .Message:after {
+.MessageList.Conversation .Message:after,
+.MultipleEntryMethods:before,
+.MultipleEntryMethods:after,
+.MultipleEntryMethods:before,
+.MultipleEntryMethods:after {
   content: " ";
   display: table;
 }
@@ -4715,6 +4796,8 @@ img.jcrop-preview {
 .PagerWrap:after,
 .PageControls:after,
 .BeforeCommentHeading:after,
+.SingleEntryMethod + .Buttons:after,
+.MultipleEntryMethods + .Buttons:after,
 .Empty:after,
 .NoResults:after,
 .container:after,
@@ -4724,7 +4807,9 @@ img.jcrop-preview {
 .Overlay > .Popup .Buttons:after,
 .MessageForm .Form-Body:after,
 .MessageList .Item-Body:after,
-.MessageList.Conversation .Message:after {
+.MessageList.Conversation .Message:after,
+.MultipleEntryMethods:after,
+.MultipleEntryMethods:after {
   clear: both;
 }
 .center-block {
