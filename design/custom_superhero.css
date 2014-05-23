@@ -3955,6 +3955,9 @@ button.token-input-delete-token {
 .MeBox .ToggleFlyout .Arrow {
   display: none;
 }
+.Item .Title {
+  margin: 0;
+}
 .Item .Title,
 .Item .Title a {
   font-size: 16px;
