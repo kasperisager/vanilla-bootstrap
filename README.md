@@ -1,4 +1,4 @@
-![](screenshot.png)
+[![Bootstrap for Vanilla](screenshot.png)](https://github.com/kasperisager/vanilla-bootstrap)
 
 [![Release](http://img.shields.io/github/release/kasperisager/vanilla-bootstrap.svg?style=flat)](https://github.com/kasperisager/vanilla-bootstrap/releases) [![Depencency Status](http://img.shields.io/gemnasium/kasperisager/vanilla-bootstrap.svg?style=flat)](https://gemnasium.com/kasperisager/vanilla-bootstrap)
 
@@ -8,8 +8,8 @@ Bootstrap for Vanilla has been rewritten from scratch on top of [Bootstrap 3](ht
 
 To get started using Bootstrap for Vanilla, either:
 
-* [__Download the latest release__](https://github.com/kasperisager/vanilla-bootstrap/releases/latest)
-* Clone the repository directly into your Vanilla `themes` directory:
+- [__Download the latest release__](https://github.com/kasperisager/vanilla-bootstrap/releases/latest)
+- Clone the repository directly into your Vanilla `themes` directory:
 
 ```sh
 $ git clone kasperisager/vanilla-bootstrap bootstrap
