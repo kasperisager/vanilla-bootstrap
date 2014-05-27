@@ -327,6 +327,7 @@ img {
   vertical-align: middle;
 }
 .img-responsive,
+.Message img,
 .thumbnail > img,
 .thumbnail a > img,
 .PhotoWrapLarge > img {
