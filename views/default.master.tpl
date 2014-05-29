@@ -62,7 +62,7 @@
         <main class="page-content" role="main">
           {breadcrumbs}
           {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
-            <div class="SearchForm">{searchbox}</div>
+            <div class="search-form">{searchbox}</div>
           {/if}
           {asset name="Content"}
         </main>

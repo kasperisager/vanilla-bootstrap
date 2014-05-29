@@ -3,18 +3,17 @@
   "private": true,
   "devDependencies": {
     "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-csso": "*",
+    "gulp-filter": "*",
     "gulp-less": "*",
     "gulp-livereload": "*",
-    "gulp-concat": "*",
-    "gulp-uglify": "*",
-    "gulp-rename": "*",
-    "gulp-plumber": "*",
     "gulp-load-plugins": "*",
-    "gulp-include": "*",
-    "gulp-filter": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
     "gulp-size": "*",
-    "gulp-csslint": "*",
-    "gulp-jshint": "*",
-    "gulp-autoprefixer": "*"
+    "gulp-uglify": "*",
+    "wiredep": "*"
   }
 }

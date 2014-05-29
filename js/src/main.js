@@ -1,22 +1,10 @@
-//= require ../../bower_components/bootstrap/js/transition.js
-//= require ../../bower_components/bootstrap/js/collapse.js
-
-//= require ../../bower_components/spin.js/spin.js
-//= require ../../bower_components/spin.js/jquery.spin.js
-
 ;(function ($, window, document, undefined) {
+  'use strict';
 
   window.icheck = {
     autoInit: false
   , autoAjax: false
   };
-
-})(jQuery, window, document);
-
-//= require ../../bower_components/jquery-icheck/icheck.js
-
-;(function ($, window, document, undefined) {
-  'use strict';
 
   $(document).on('ready ajaxSuccess', function () {
 

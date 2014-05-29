@@ -1,23 +1,54 @@
 {
   "name": "vanilla-bootstrap",
   "private": true,
-  "main": "less/style.less",
+  "main": [
+    "less/vanilla-bootstrap.less",
+    "js/src/main.js"
+  ],
   "ignore": [
     "about.php",
+    "screenshot.png",
+    "package.json",
+    "gulpfile.js",
     "views",
     "design",
     "js/custom.js",
-    "screenshot.png",
-    "gulpfile.js",
-    "package.json"
+    "less/style.less",
+    "less/custom.less",
+    "less/themes"
   ],
   "dependencies": {
     "bootstrap": "3.1.1",
     "bootstrap-social": "4.4.0",
     "bootswatch": "3.1.x",
     "font-awesome": "4.1.0",
-    "jcrop": "0.9.12",
     "spin.js": "2.0.1",
     "jquery-icheck": "2.x-beta"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "less/bootstrap.less"
+      ]
+    },
+    "bootstrap-social": {
+      "main": "bootstrap-social.less"
+    },
+    "font-awesome": {
+      "main": "less/font-awesome.less"
+    },
+    "jquery": {
+      "main": []
+    },
+    "jquery-icheck": {
+      "main": "icheck.js"
+    },
+    "spin.js": {
+      "main": [
+        "spin.js",
+        "jquery.spin.js"
+      ]
+    }
   }
 }
