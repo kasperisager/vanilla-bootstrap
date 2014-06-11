@@ -33,7 +33,7 @@ $ brew install node
 
 > __Notice__: It is important that you install Node in a way that does not require you to `sudo`.
 
-Once you have Node.js up and running, you will need to install the local dependencies using [npm](npmjs.org):
+Once you have Node.js up and running, you will need to install the local dependencies using [npm](http://npmjs.org):
 
 ```sh
 $ npm install
