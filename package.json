@@ -2,6 +2,7 @@
   "name": "vanilla-bootstrap",
   "private": true,
   "devDependencies": {
+    "bower": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
@@ -15,5 +16,13 @@
     "gulp-size": "*",
     "gulp-uglify": "*",
     "wiredep": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "install": "bower install",
+    "build": "gulp",
+    "watch": "gulp watch"
   }
 }
