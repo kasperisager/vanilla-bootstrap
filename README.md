@@ -47,10 +47,6 @@ Compiles all theme assets using Gulp. LESS stylesheets will be compiled to [`des
 #### Watch - `npm run watch`
 Watches the assets for changes and runs the appropriate Gulp tasks. Also starts a Livereload server that will push the changes to your Vanilla installation automatically.
 
-## Customizations
-
-Bootstrap for Vanilla supports tools such as [Bootstrap Magic](http://pikock.github.io/bootstrap-magic/app) out-of-the-box. All custom variables go in [`less/variables.less`](less/variables.less) and will override all those set by both Bootstrap itself as well as any extensions made by Bootstrap for Vanilla. For more in-depth customizations, [`less/custom.less`](less/custom.less) has been made available.
-
 ## [Issue tracking](https://github.com/kasperisager/vanilla-bootstrap/issues)
 
 If you come across any bugs or if you have a feature request, please file an issue using the GitHub Issue tracker. Bootstrap for Vanilla won't be supported through http://vanillaforums.org so please stick to using GitHub for inquiries about bugs and feature requests. Thanks!
