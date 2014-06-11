@@ -25,13 +25,27 @@ $ git clone kasperisager/vanilla-bootstrap bootstrap
 
 ## Compiling assets
 
-Bootstrap for Vanilla was scaffolded using [Ninja](https://github.com/kasperisager/vanilla-ninja). For instructions on how to install the development dependencies and front-end components, please refer to the [Ninja documentation](https://github.com/kasperisager/vanilla-ninja#getting-started). Once you've got everything set up, use the following tasks to re-compile the theme assets:
+The following instructions assume that you have already installed Node.js on your computer. If this is not the case, please download and install the latest stable release from the official [Node.js download page](http://nodejs.org/download/). If you are using [Homebrew](http://brew.sh/), you can also install Node.js via the command line:
 
-#### Build - `gulp`
-Runs the default Gulp task which will compile all theme assets. LESS stylesheets will be compiled to [`design/style.css`](design/style.css) and Javascripts will be concatenated and output to [`js/custom.js`](js/custom.js).
+```sh
+$ brew install node
+```
 
-#### Watch - `gulp watch`
-Starts an instance of [tiny-lr](https://github.com/mklabs/tiny-lr) (a tiny LiveReload server) that watches the compiled assets for changes and pushes these to your Vanilla installation automatically whenever they change.
+> __Notice__: It is important that you install Node in a way that does not require you to `sudo`.
+
+Once you have Node.js up and running, you will need to install the local dependencies using [npm](npmjs.org):
+
+```sh
+$ npm install
+```
+
+### Tasks
+
+#### Build - `npm run build`
+Compiles all theme assets using Gulp. LESS stylesheets will be compiled to [`design/style.css`](design/style.css) and Javascripts will be concatenated and output to [`js/custom.js`](js/custom.js).
+
+#### Watch - `npm run watch`
+Watches the assets for changes and runs the appropriate Gulp tasks. Also starts a Livereload server that will push the changes to your Vanilla installation automatically.
 
 ## Customizations
 
