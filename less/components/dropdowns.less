@@ -102,10 +102,13 @@
 .atwho-view {
   position: absolute;
   display: none;
+  overflow: hidden;
+  &:extend(.dropdown-menu);
 
   ul {
     display: block;
-    &:extend(.dropdown-menu);
+    padding: 0;
+    margin: 0;
 
     &:empty {
       display: none;
@@ -118,5 +121,9 @@
     &:hover {
       &:extend(.dropdown-menu > li > a:hover);
     }
+  }
+
+  .cur {
+    &:extend(.dropdown-menu > .active > a);
   }
 }
