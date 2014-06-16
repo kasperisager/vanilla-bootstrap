@@ -124,6 +124,9 @@
   }
 
   .cur {
-    &:extend(.dropdown-menu > .active > a);
+    &,
+    &:hover {
+      &:extend(.dropdown-menu > .active > a);
+    }
   }
 }
