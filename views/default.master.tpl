@@ -79,6 +79,8 @@
         <div class="clearfix">
           <p class="pull-left">{t c="Copyright"} &copy; {$smarty.now|date_format:"%Y"} <a href="{link path="home"}">{logo}</a></p>
           <p class="pull-right hidden-xs">{t c="Built with"} <i class="InformSprite Heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>
+            <script type="text/javascript">$(document).ready(function(){$(".popoverqr").popover({placement:"left",title:"QR Code Generator",html:"true",content:'<img class="qrcode-img" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='+document.URL+'&choe=UTF-8"/>'})})</script>
+            <a href="#" class="btn btn-danger btn-sm popoverqr">Generate QR Code</a>
             <!-- A lot of time was put into this project - a "Follow" and a "Star" would be most appreciated! -->
             <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="145" height="20" style="vertical-align:top;margin-left:20px;"></iframe>
             <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&repo=vanilla-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20" style="vertical-align:top;"></iframe>
