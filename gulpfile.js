@@ -2,24 +2,25 @@
 'use strict';
 
 var gulp = require('gulp')
-  , $    = require('gulp-load-plugins')()
+  , $ = require('gulp-load-plugins')()
 
 gulp.task('styles', function () {
-  var themes = $.filter('!{style,custom}.less');
+  var themes = $.filter('themes/*.css');
 
   return gulp.src([
     'less/style.less'
   , 'less/themes/*.less'
-  ])
+  ], {base: 'less'})
     .pipe($.plumber())
-    .pipe(themes)
-    .pipe($.rename(function (path) {
-      path.basename = 'custom_' + path.basename;
-    }))
-    .pipe(themes.restore())
     .pipe($.less())
     .pipe($.autoprefixer())
     .pipe($.csso())
+    .pipe(themes)
+    .pipe($.rename({
+      dirname: '/'
+    , prefix: 'custom_'
+    }))
+    .pipe(themes.restore())
     .pipe(gulp.dest('design'))
     .pipe($.size({showFiles: true}));
 });
