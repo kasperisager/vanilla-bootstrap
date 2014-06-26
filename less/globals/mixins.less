@@ -13,29 +13,3 @@
   }
 }
 
-// Flexible Video Embeds
-//
-// .flex-video() lets browsers automatically scale video objects in your
-// webpages. If you're embedding a video from YouTube, Vimeo, or another site
-// that uses iframe, embed or object elements, you can use the .flex-video()
-// mixin to create an intrinsic ratio that will properly scale your video on
-// any device.
-//
-// Taken from Foundation 5 by ZURB
-.flex-video() {
-  overflow: hidden;
-  padding-bottom: 67.5%;
-
-  &:empty {
-    display: none;
-  }
-
-  iframe, object, video, embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    vertical-align: top;
-  }
-}

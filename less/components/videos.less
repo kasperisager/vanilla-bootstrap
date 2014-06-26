@@ -17,7 +17,12 @@
 
 .VideoPlayer,
 .Video.Vimeo {
-  .flex-video();
+  &:extend(.embed-responsive all);
+  &:extend(.embed-responsive.embed-responsive-16by9);
+
+  &:empty {
+    display: none;
+  }
 }
 
 .VideoPreview {
