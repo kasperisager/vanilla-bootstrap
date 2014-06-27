@@ -154,6 +154,7 @@
     var confirmPopupEls = [
       'a.Delete'
     , 'a.DeleteComment'
+    , 'a.DeleteFile'
     , 'a.PopConfirm'
     , 'a.ClearConversation'
     ];
