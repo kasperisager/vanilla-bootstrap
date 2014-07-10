@@ -157,6 +157,7 @@
     , 'a.DeleteFile'
     , 'a.PopConfirm'
     , 'a.ClearConversation'
+    , 'ul#DP_Remove a'  
     ];
 
     // When only a confirmation modal is shown, the "popupLoading" and
