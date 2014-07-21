@@ -48,8 +48,7 @@
             </ul>
           {else}
             <ul class="nav navbar-nav navbar-right">
-              <li>{link path="entry/register" text="Register" target="current"}</li>
-              <li>{link path="signin" text="Sign In" target="current"}</li>
+              {signin_link}
             </ul>
           {/if}
         </div><!--/.nav-collapse -->
