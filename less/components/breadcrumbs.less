@@ -11,7 +11,8 @@
     display: none;
   }
 
-  .CrumbLabel {
+  .CrumbLabel,
+  .Crumb + span {
     &:extend(.breadcrumb > li);
     &:extend(.breadcrumb > li + li all);
   }
