@@ -907,7 +907,7 @@
 
 // Tables =====================================================================
 
-.DataList .CategoryHeading.Item.Depth1 {
+.DataList.CategoryList .CategoryHeading.Item.Depth1 {
   background: @purple;
   color: white;
 
@@ -922,12 +922,8 @@
   }
 }
 
-.DataList .Item {
+.DataList.CategoryList .Item, .DataList.ChildCategoryList .Item.Category {
   background-color: @gray-lighter;
-
-  &.ItemDiscussion {
-    background-color: white;
-  }
 }
 
 // Forms ======================================================================
