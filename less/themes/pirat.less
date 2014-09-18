@@ -893,9 +893,42 @@
 
 // Buttons ====================================================================
 
+.Button.Primary.NewDiscussion {
+  background: @orange;
+  color: @gray-dark;
+
+  border: none;
+  box-shadow: unset;
+  font-weight: bold;
+  text-shadow: unset;
+}
+
 // Typography =================================================================
 
 // Tables =====================================================================
+
+.DataList .CategoryHeading.Item.Depth1 {
+  background: @purple;
+  color: white;
+
+  font-weight: bold;
+
+  .OptionsMenu .SpFlyoutHandle {
+    color: white;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+}
+
+.DataList .Item {
+  background-color: @gray-lighter;
+
+  &.ItemDiscussion {
+    background-color: white;
+  }
+}
 
 // Forms ======================================================================
 
