@@ -54,6 +54,9 @@
 // Navbar =====================================================================
 
 .navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
 
   &-default {
 
@@ -139,3 +142,7 @@
 
 // Containers =================================================================
 
+section.container {
+  // Account for the fixed Navbar
+  padding-top: @navbar-height + @navbar-padding-vertical;
+}
