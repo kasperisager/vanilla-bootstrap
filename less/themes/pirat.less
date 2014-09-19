@@ -17,7 +17,10 @@
 @purple: #512483;
 @orange: #f28903;
 
-@brand-primary:         @purple;
+@brand-primary: @purple;
+@footer-color:  #E2E2E2;
+@footer-link-color:  #CCC;
+@footer-bg:     #2F3033;
 
 
 //== Typography
@@ -145,4 +148,57 @@
 section.container {
   // Account for the fixed Navbar
   padding-top: @navbar-height + @navbar-padding-vertical;
+}
+
+footer.page-footer {
+  color: @footer-color;
+  background-color: @footer-bg;
+
+  aside {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 33.333%;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: @headings-font-weight;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    ul {
+      margin-left: 1em;
+    }
+  }
+
+  a {
+    color: @footer-color;
+    font-size: 13px;
+
+    &:hover {
+      color: @orange;
+      text-decoration: none;
+    }
+  }
+
+  #searchform {
+    input {
+      box-sizing: border-box;
+      padding: 3px;
+
+      color: #666;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+    }
+
+    label, #searchsubmit {
+      display: none;
+    }
+  }
 }
