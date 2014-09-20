@@ -51,13 +51,13 @@
 
         <main class="page-content" role="main">
           {breadcrumbs}
-          {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
-            <div class="well search-form">{searchbox}</div>
-          {/if}
           {asset name="Content"}
         </main>
 
         <aside class="page-sidebar" role="complementary">
+          {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
+            <div class="well search-form">{searchbox}</div>
+          {/if}
           {asset name="Panel"}
         </aside>
 
