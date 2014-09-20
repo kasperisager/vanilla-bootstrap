@@ -55,9 +55,7 @@
         </main>
 
         <aside class="page-sidebar" role="complementary">
-          {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
-            <div class="well search-form">{searchbox}</div>
-          {/if}
+          <div class="well search-form">{searchbox}</div>
           {asset name="Panel"}
         </aside>
 
