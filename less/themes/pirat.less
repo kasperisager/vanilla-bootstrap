@@ -30,6 +30,7 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400");
 @font-family-sans-serif:  "Open Sans", Helvetica,Arial, "Lucida Grande", sans-serif;
 @headings-font-weight:    700;
+@font-size-base: 16px;
 
 //== Navbar
 //
@@ -62,15 +63,23 @@
   right: 0;
 
   &-default {
-
     .badge {
       background-color: #fff;
       color: @navbar-default-bg;
     }
+
+    .navbar-toggle {
+      border: none;
+
+      .icon-bar {
+        background-color: @purple;
+        height: 4px;
+        width: 26px;
+      }
+    }
   }
 
   &-inverse {
-
     .badge {
       background-color: #fff;
       color: @navbar-inverse-bg;
