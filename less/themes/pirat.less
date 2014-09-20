@@ -104,6 +104,14 @@
   }
 }
 
+@media (max-width: @screen-md-min) {
+  // Hide username in navbar to make sure the navbar's height doesn't change when
+  // browser width is less than @screen-md-min
+  .navbar-default .MeBox .Username {
+    display: none;
+  }
+}
+
 // Buttons ====================================================================
 
 .Button.Primary {
