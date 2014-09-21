@@ -55,7 +55,8 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
             $AltCss = $Alt ? ' Alt' : '';
             $Alt = !$Alt;
             $CatList .= '<li id="Category_'.$CategoryID.'" class="'.$CssClass.'">
-               <div class="ItemContent Category">'
+               <div class="row ItemContent Category">
+                 <div class="col-md-6">'
                   .GetOptions($Category, $this)
                   .CategoryPhoto($Category)
                   .'<div class="TitleWrap">'
@@ -63,23 +64,27 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
                   .'</div>
                   <div class="CategoryDescription">'
                   .$Category->Description
-                  .'</div>
-                  <div class="Meta">';
-                     if ($Category->LastTitle != '') {
-                        $CatList .= '<span class="MItem LastDiscussionTitle">'.sprintf(
-                              T('Most recent: %1$s by %2$s'),
-                              Anchor(Gdn_Format::Text(SliceString($Category->LastTitle, 40)), $Category->LastUrl),
-                              UserAnchor($LastComment)
-                           ).'</span>'
-                           .'<span class="MItem LastCommentDate">'.Gdn_Format::Date($Category->LastDateInserted).'</span>';
-                     }
-                     // If this category is one level above the max display depth, and it
-                     // has children, add a replacement string for them.
-                     if ($MaxDisplayDepth > 0 && $Category->Depth == $MaxDisplayDepth - 1 && $Category->TreeRight - $Category->TreeLeft > 1)
-                        $CatList .= '{ChildCategories}';
+                  .'</div>';
 
+                  // If this category is one level above the max display depth, and it
+                  // has children, add a replacement string for them.
+                  if ($MaxDisplayDepth > 0 && $Category->Depth == $MaxDisplayDepth - 1 && $Category->TreeRight - $Category->TreeLeft > 1)
+                     $CatList .= '{ChildCategories}';
+                  $CatList .= '
+                 </div>
+                 <div class="col-md-6 text-right">
+                   <div class="Meta">';
+                     if ($Category->LastTitle != '') {
+                        $CatList .= '<div class="MItem LastDiscussionTitle">'.Anchor(Gdn_Format::Text(SliceString($Category->LastTitle, 40)), $Category->LastUrl).'</div>'
+                           .'<div class="MItem LastCommentDate">'.
+                              UserAnchor($LastComment) . 
+                              ' • ' .
+                              Gdn_Format::Date($Category->LastDateInserted).'</div>';
+                     }
                   $CatList .= '</div>
+                 </div>
                </div>
+
             </li>';
          }
       }
