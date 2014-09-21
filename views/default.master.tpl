@@ -74,7 +74,9 @@
         </main>
 
         <aside class="page-sidebar" role="complementary">
-          <div class="well search-form">{searchbox}</div>
+          {if $User.SignedIn}
+            <div class="well search-form">{searchbox}</div>
+          {/if}
           {asset name="Panel"}
         </aside>
 
