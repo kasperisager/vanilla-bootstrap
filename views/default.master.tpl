@@ -39,7 +39,11 @@
             </ul>
           {else}
             <ul class="nav navbar-nav navbar-right">
-              {signin_link}
+              <li>
+                <a href="{link path="/entry/PirateWeb"}" rel="nofollow" class="PopupWindow"
+                   popupHref="{link path="/entry/PirateWeb"}&display=popup"
+                   popupHeight="600" popupWidth=\"800\">Logga in</a>
+              </li>
             </ul>
           {/if}
         </div><!--/.nav-collapse -->
