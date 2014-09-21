@@ -115,14 +115,31 @@
 // Buttons ====================================================================
 
 .Button.Primary {
-  background: @orange;
-  color: @gray-dark;
+  background-color:#fff;
+  background-image:
+    -webkit-gradient(linear, left top, right top, from(#fff), to(#dfdfdf));
+  background-image:
+    -webkit-linear-gradient(#fff, #dfdfdf);
+  background-image:
+    -moz-linear-gradient(#fff, #dfdfdf);
+  background-image:
+    -o-linear-gradient(#fff, #dfdfdf);
+  background-image:
+    linear-gradient(#fff, #dfdfdf);
 
-  border: none;
-  box-shadow: unset;
+  border-color: #d2d2d2 #c3c3c3 #9f9f9f;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+
+  color: #646464;
+
   font-weight: bold;
-  text-shadow: unset;
-  white-space: normal;
+
+  &:hover {
+    border-color: #d2d2d2 #c3c3c3 #9f9f9f;
+    color: @purple;
+  }
 }
 
 // Typography =================================================================
@@ -159,6 +176,14 @@
 .MessageList {
   .Item {
     margin-left: 0;
+  }
+}
+
+.Message {
+  color: #444;
+
+  a {
+    text-decoration: underline;
   }
 }
 
