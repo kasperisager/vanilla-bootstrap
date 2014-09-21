@@ -55,6 +55,21 @@
 
         <main class="page-content" role="main">
           {breadcrumbs}
+          {if !$User.SignedIn}
+              <h2>Hej!</h2>
+              <p>
+                  För att läsa i Piratpartiets medelemsforum krävs ett medlemskap i partiet.
+                  Om du har det, logga in med PirateWeb här till höger.
+              </p>
+              <p>
+                  Om du inte är medlem men intresserad av att bli det kan du gå med gratis på
+                  <a href="http://blipirat.nu">blipirat.nu</a>.
+              </p>
+              <p>
+                  För att läsa om vår politik, se vår
+                  <a href="http://www.piratpartiet.se/politik/">hemsida</a>.
+              </p>
+          {/if}
           {asset name="Content"}
         </main>
 
