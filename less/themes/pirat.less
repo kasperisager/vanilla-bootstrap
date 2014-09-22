@@ -144,6 +144,12 @@
 
 // Typography =================================================================
 
+.CategoryFilter {
+  .CurrentFilter {
+    font-weight: bold;
+  }
+}
+
 // Tables =====================================================================
 
 .DataList.CategoryList .CategoryHeading.Item.Depth1 {
@@ -199,9 +205,24 @@
   }
 }
 
+.DataList.ChildCategoryList {
+  .Item .CategoryName .Title {
+    font-weight: bold;
+  }
+  .CategoryDescription {
+    font-size: @font-size-small;
+  }
+}
+
 .DataList.Discussions li:nth-child(even) {
   background-color: @gray-lighter;
 }
+
+
+.DataList .Item .Meta, .DataList .Conversation .Item .MItem, .DataList .Item .Meta a, .DataList .Conversation .Item .MItem a, .DataTable .Item .Meta, .DataTable .Conversation .Item .MItem, .DataTable .Item .Meta a, .DataTable .Conversation .Item .MItem a {
+  color: #555;
+}
+
 
 .MessageList {
   .Item {
