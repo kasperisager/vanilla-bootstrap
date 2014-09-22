@@ -22,6 +22,21 @@ $this->EventArguments['NumRows'] = count($this->Data('Categories'));
 
 echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeadings' : '').'">';
    $Alt = FALSE;
+
+   // A way to make "Latest post" include posts from child categories.
+   // No, this solution is not pretty. Sorry.
+   $lastPosts = array();
+   foreach ($this->Data('Categories') as $CategoryRow) {
+      $Category = (object)$CategoryRow;
+      if(!empty($Category->LastTitle)) {
+         $lastPosts[$Category->CategoryID]['LastTitle'] = $Category->LastTitle;
+         $lastPosts[$Category->CategoryID]['LastDateInserted'] = $Category->LastDateInserted;
+         $lastPosts[$Category->CategoryID]['LastUrl'] = $Category->LastUrl;
+         $lastPosts[$Category->CategoryID]['LastUserID'] = $Category->LastUserID;
+         $lastPosts[$Category->CategoryID]['LastName'] = $Category->LastName;
+      }
+   }
+
    foreach ($this->Data('Categories') as $CategoryRow) {
       $Category = (object)$CategoryRow;
 
@@ -54,6 +69,7 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
             $LastComment = UserBuilder($Category, 'Last');
             $AltCss = $Alt ? ' Alt' : '';
             $Alt = !$Alt;
+  
             $CatList .= '<li id="Category_'.$CategoryID.'" class="'.$CssClass.'">
                <div class="row ItemContent Category">
                  <div class="col-md-6">'
@@ -74,12 +90,31 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
                  </div>
                  <div class="col-md-6 text-right">
                    <div class="Meta">';
-                     if ($Category->LastTitle != '') {
-                        $CatList .= '<div class="MItem LastDiscussionTitle">'.Anchor(Gdn_Format::Text(SliceString($Category->LastTitle, 40)), $Category->LastUrl).'</div>'
-                           .'<div class="MItem LastCommentDate">'.
-                              UserAnchor($LastComment) . 
-                              ' • ' .
-                              Gdn_Format::Date($Category->LastDateInserted).'</div>';
+                     $lastPostsInner = array();
+
+                     if ($Category->LastTitle != '')
+                        $lastPostsInner[] = $lastPosts[$Category->CategoryID];
+
+                     if (count($Category->ChildIDs) > 0) {
+                        foreach ($Category->ChildIDs as $SubcatRow) {
+                           if (isset($lastPosts[$SubcatRow]))
+                              $lastPostsInner[] = $lastPosts[$SubcatRow];
+                        }
+                        foreach ($lastPostsInner as $key => $row) {
+                           $postDates[$key] = $row['LastDateInserted'];
+                        }
+                     }
+
+                     if (count($lastPostsInner) > 1)
+                        array_multisort($postDates, SORT_DESC, $lastPostsInner);
+
+                     if (count($lastPostsInner) > 0) {
+                        $CatList .= '<div class="MItem LastDiscussionTitle">'.Anchor(Gdn_Format::Text(SliceString($lastPostsInner[0]['LastTitle'], 40)), $lastPostsInner[0]['LastUrl']).'</div>'
+                           .'<div class="MItem LastCommentDate">'
+                              .Anchor($lastPostsInner[0]['LastName'], 'profile/'.$lastPostsInner[0]['LastUserID'].'/'.$lastPostsInner[0]['LastName'])
+                              .' • '
+                              .Gdn_Format::Date($lastPostsInner[0]['LastDateInserted']).'</div>';
+
                      }
                   $CatList .= '</div>
                  </div>
