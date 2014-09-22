@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {asset name="Head"}
+    <!-- Based on vanilla-bootstrap by https://github.com/kasperisager/ -->
   </head>
   <body id="{$BodyID}" class="{$BodyClass}">
 
