@@ -250,6 +250,19 @@
   margin-left: 0;
 }
 
+.MobileSearch {
+  display: none;
+}
+
+@media (max-width: @screen-sm-min) {
+  .MobileSearch {
+    display: block;
+  }
+  .DesktopSearch {
+    display: none;
+  }
+}
+
 // Navs =======================================================================
 
 // Indicators =================================================================

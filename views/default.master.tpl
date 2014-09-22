@@ -56,6 +56,9 @@
 
         <main class="page-content" role="main">
           {breadcrumbs}
+          {if $User.SignedIn}
+            <div class="well search-form MobileSearch">{searchbox}</div>
+          {/if}
           {if !$User.SignedIn}
               <h2>Hej!</h2>
               <p>
@@ -76,7 +79,7 @@
 
         <aside class="page-sidebar" role="complementary">
           {if $User.SignedIn}
-            <div class="well search-form">{searchbox}</div>
+            <div class="well search-form DesktopSearch">{searchbox}</div>
           {/if}
           {asset name="Panel"}
         </aside>
