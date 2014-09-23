@@ -139,54 +139,65 @@ function WriteDiscussion($Discussion, &$Sender, &$Session) {
    <div class="ItemContent Discussion">
       <div class="Title">
       <?php
-         echo AdminCheck($Discussion, array('', ' ')).
-            Anchor($DiscussionName, $DiscussionUrl);
+         echo AdminCheck($Discussion, array('', ' '));
+         WriteTags($Discussion);
+         echo Anchor($DiscussionName, $DiscussionUrl);
+
          $Sender->FireEvent('AfterDiscussionTitle');
 
-         WriteTags($Discussion);
          echo NewComments($Discussion);
       ?>
       </div>
       <div class="Meta Meta-Discussion">
-         <span class="MItem MCount ViewCount"><?php
-            printf(PluralTranslate($Discussion->CountViews,
-               '%s view html', '%s views html', '%s view', '%s views'),
-               BigPlural($Discussion->CountViews, '%s view'));
-         ?></span>
-         <span class="MItem MCount CommentCount"><?php
-            printf(PluralTranslate($Discussion->CountComments,
-               '%s comment html', '%s comments html', '%s comment', '%s comments'),
-               BigPlural($Discussion->CountComments, '%s comment'));
-         ?></span>
-         <span class="MItem MCount DiscussionScore Hidden"><?php
-         $Score = $Discussion->Score;
-         if ($Score == '') $Score = 0;
-         printf(Plural($Score,
-            '%s point', '%s points',
-            BigPlural($Score, '%s point')));
-         ?></span>
-         <?php
-            $Sender->FireEvent('AfterCountMeta');
+         <div class="row">
+            <div class="col-lg-4">
+               <span class="MItem LastCommentBy"><?php echo UserAnchor($First);?></span>
+            </div>
+            <div class="col-lg-3">
+               <span class="MItem MCount ViewCount"><?php
+                  printf(PluralTranslate($Discussion->CountViews,
+                     '%s view html', '%s views html', '%s view', '%s views'),
+                     BigPlural($Discussion->CountViews, '%s view'));
+               ?></span>
+               <span class="MItem MCount CommentCount"><?php
+                  printf(PluralTranslate($Discussion->CountComments,
+                     '%s comment html', '%s comments html', '%s comment', '%s comments'),
+                     BigPlural($Discussion->CountComments, '%s comment'));
+               ?></span>
+               <span class="MItem MCount DiscussionScore Hidden"><?php
+               $Score = $Discussion->Score;
+               if ($Score == '') $Score = 0;
+               printf(Plural($Score,
+                  '%s point', '%s points',
+                  BigPlural($Score, '%s point')));
+               ?></span>
+            </div>
+            <div class="col-lg-5 LastPost">
+               <?php
+                  $Sender->FireEvent('AfterCountMeta');
 
-            if ($Discussion->LastCommentID != '') {
-               echo ' <span class="MItem LastCommentBy">'.sprintf(T('Most recent by %1$s'), UserAnchor($Last)).'</span> ';
-               echo ' <span class="MItem LastCommentDate">'.Gdn_Format::Date($Discussion->LastDate, 'html').'</span>';
-            } else {
-               echo ' <span class="MItem LastCommentBy">'.sprintf(T('Started by %1$s'), UserAnchor($First)).'</span> ';
-               echo ' <span class="MItem LastCommentDate">'.Gdn_Format::Date($Discussion->FirstDate, 'html');
+                  if ($Discussion->LastCommentID != '') {
+                     echo ' <span class="MItem LastCommentBy">'.sprintf(T('Senaste: %1$s'), UserAnchor($Last)).'</span> ';
+                     echo ' <span class="MItem LastCommentDate">'.substr($Discussion->LastDate, 0, -3).'</span>';
+                     //echo ' <span class="MItem LastCommentDate">'.Gdn_Format::Date($Discussion->LastDate, 'html').'</span>';
+                  } else {
+                     echo ' <span class="MItem LastCommentBy">'.sprintf(T('Senaste: %1$s'), UserAnchor($First)).'</span> ';
+                     echo ' <span class="MItem LastCommentDate">'.substr($Discussion->FirstDate, 0, -3);
 
-               if ($Source = GetValue('Source', $Discussion)) {
-                  echo ' '.sprintf(T('via %s'), T($Source.' Source', $Source));
-               }
+                     if ($Source = GetValue('Source', $Discussion)) {
+                        echo ' '.sprintf(T('via %s'), T($Source.' Source', $Source));
+                     }
 
-               echo '</span> ';
-            }
+                     echo '</span> ';
+                  }
 
-            if (C('Vanilla.Categories.Use') && $Category)
-               echo Wrap(Anchor(htmlspecialchars($Discussion->Category), CategoryUrl($Discussion->CategoryUrlCode)), 'span', array('class' => 'MItem Category '.$Category['CssClass']));
+                  if (C('Vanilla.Categories.Use') && $Category)
+                     echo Wrap(Anchor(htmlspecialchars($Discussion->Category), CategoryUrl($Discussion->CategoryUrlCode)), 'span', array('class' => 'MItem Category '.$Category['CssClass']));
 
-            $Sender->FireEvent('DiscussionMeta');
-         ?>
+                  $Sender->FireEvent('DiscussionMeta');
+               ?>
+            </div>
+         </div>
       </div>
    </div>
    <?php $Sender->FireEvent('AfterDiscussionContent'); ?>

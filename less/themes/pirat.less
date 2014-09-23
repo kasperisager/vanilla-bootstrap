@@ -140,6 +140,13 @@
     border-color: #d2d2d2 #c3c3c3 #9f9f9f;
     color: @purple;
   }
+
+  &:active {
+    background-color:@orange;
+    //border-color: #aaaaaa #bbbbbb #bbbbbb;
+    //box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+    color: white;
+  }
 }
 
 // Typography =================================================================
@@ -254,6 +261,25 @@
 
   a {
     text-decoration: underline;
+  }
+}
+
+// Don't show category name after each post on the actual category page
+.Vanilla.Categories .DataList .Item .MItem.Category {
+  display: none;
+}
+
+.DataList.Discussions .LastPost {
+  text-align: right;
+}
+
+@media (max-width: @screen-lg-min) {
+  .DataList.Discussions .Number {
+    min-width: 0;
+  }
+  
+  .DataList.Discussions .LastPost {
+    text-align: left;
   }
 }
 
