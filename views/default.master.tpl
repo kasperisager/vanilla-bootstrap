@@ -32,7 +32,7 @@
             </li>
             -->
             <li>
-              <a href="#">Kontakt</a>
+              <a href="{link path="/kontakt"}">Kontakt</a>
             </li>
           </ul>
           {if $User.SignedIn}
