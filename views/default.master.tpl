@@ -77,7 +77,7 @@
           {asset name="Content"}
         </main>
 
-        <aside class="page-sidebar" role="complementary">
+        <aside class="page-sidebar {if !$User.SignedIn}SignedOut{/if}" role="complementary">
           {if $User.SignedIn}
             <div class="well search-form DesktopSearch">{searchbox}</div>
           {/if}
