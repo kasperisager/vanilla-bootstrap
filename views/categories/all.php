@@ -113,7 +113,7 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
                            .'<div class="MItem LastCommentDate">'
                               .Anchor($lastPostsInner[0]['LastName'], 'profile/'.$lastPostsInner[0]['LastUserID'].'/'.$lastPostsInner[0]['LastName'])
                               .' • '
-                              .Gdn_Format::Date($lastPostsInner[0]['LastDateInserted']).'</div>';
+                              .substr($lastPostsInner[0]['LastDateInserted'], 0, -3).'</div>';
 
                      }
                   $CatList .= '</div>
