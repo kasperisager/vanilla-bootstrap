@@ -73,7 +73,6 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
             $CatList .= '<li id="Category_'.$CategoryID.'" class="'.$CssClass.'">
                <div class="row ItemContent Category">
                  <div class="col-md-6">'
-                  .GetOptions($Category, $this)
                   .CategoryPhoto($Category)
                   .'<div class="TitleWrap">'
                      .Anchor(Gdn_Format::Text($Category->Name), CategoryUrl($Category), 'Title')
@@ -89,6 +88,7 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
                   $CatList .= '
                  </div>
                  <div class="col-md-6 text-right">
+                 '.GetOptions($Category, $this).'
                    <div class="Meta">';
                      $lastPostsInner = array();
 
