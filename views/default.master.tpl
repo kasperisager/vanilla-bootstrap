@@ -66,7 +66,7 @@
                   Om du har det, logga in med PirateWeb här till höger.
               </p>
               <p>
-                  Om du inte är medlem men intresserad av att bli det kan du gå med gratis på
+                  Om du inte är medlem men intresserad av att bli det kan du gå med utan kostnad på
                   <a href="http://blipirat.nu">blipirat.nu</a>.
               </p>
               <p>
