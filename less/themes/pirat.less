@@ -244,11 +244,9 @@
   background-color: @gray-lighter;
 }
 
-
 .DataList .Item .Meta, .DataList .Conversation .Item .MItem, .DataList .Item .Meta a, .DataList .Conversation .Item .MItem a, .DataTable .Item .Meta, .DataTable .Conversation .Item .MItem, .DataTable .Item .Meta a, .DataTable .Conversation .Item .MItem a {
   color: #555;
 }
-
 
 .MessageList {
   .Item {
@@ -269,15 +267,30 @@
   display: none;
 }
 
+.DataList.Discussions .MItem.LastCommentBy a {
+  font-weight: 600;
+}
+
 .DataList.Discussions .LastPost {
   text-align: right;
+}
+
+.DataList.Discussions .Item .Tag.Category {
+  float: right;
+  margin-right: 0.3em;
+  padding: 0em 0.5em 0em;
+  a {
+    color: white;
+    font-size: 10.5px;
+    font-weight: 700;
+  }
 }
 
 @media (max-width: @screen-lg-min) {
   .DataList.Discussions .Number {
     min-width: 0;
   }
-  
+
   .DataList.Discussions .LastPost {
     text-align: left;
   }

@@ -143,6 +143,9 @@ function WriteDiscussion($Discussion, &$Sender, &$Session) {
          WriteTags($Discussion);
          echo Anchor($DiscussionName, $DiscussionUrl);
 
+         if (C('Vanilla.Categories.Use') && $Category)
+            echo Wrap(Anchor(htmlspecialchars($Discussion->Category), CategoryUrl($Discussion->CategoryUrlCode)), 'span', array('class' => 'Tag MItem Category '.$Category['CssClass']));
+
          $Sender->FireEvent('AfterDiscussionTitle');
 
          echo NewComments($Discussion);
@@ -177,11 +180,11 @@ function WriteDiscussion($Discussion, &$Sender, &$Session) {
                   $Sender->FireEvent('AfterCountMeta');
 
                   if ($Discussion->LastCommentID != '') {
-                     echo ' <span class="MItem LastCommentBy">'.sprintf(T('Senaste: %1$s'), UserAnchor($Last)).'</span> ';
+                     echo ' <span class="MItem LastCommentBy">'.sprintf(T('Latest: %1$s'), UserAnchor($Last)).'</span> ';
                      echo ' <span class="MItem LastCommentDate">'.substr($Discussion->LastDate, 0, -3).'</span>';
                      //echo ' <span class="MItem LastCommentDate">'.Gdn_Format::Date($Discussion->LastDate, 'html').'</span>';
                   } else {
-                     echo ' <span class="MItem LastCommentBy">'.sprintf(T('Senaste: %1$s'), UserAnchor($First)).'</span> ';
+                     echo ' <span class="MItem LastCommentBy">'.sprintf(T('Latest: %1$s'), UserAnchor($First)).'</span> ';
                      echo ' <span class="MItem LastCommentDate">'.substr($Discussion->FirstDate, 0, -3);
 
                      if ($Source = GetValue('Source', $Discussion)) {
@@ -190,9 +193,6 @@ function WriteDiscussion($Discussion, &$Sender, &$Session) {
 
                      echo '</span> ';
                   }
-
-                  if (C('Vanilla.Categories.Use') && $Category)
-                     echo Wrap(Anchor(htmlspecialchars($Discussion->Category), CategoryUrl($Discussion->CategoryUrlCode)), 'span', array('class' => 'MItem Category '.$Category['CssClass']));
 
                   $Sender->FireEvent('DiscussionMeta');
                ?>
