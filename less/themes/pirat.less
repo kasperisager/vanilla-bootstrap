@@ -145,7 +145,21 @@
     background-color:@orange;
     //border-color: #aaaaaa #bbbbbb #bbbbbb;
     //box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(0, 0, 0, 0.15) inset;
-    color: white;
+    color: @purple;
+  }
+
+  &.disabled {
+    background-image:
+      -webkit-gradient(linear, left top, right top, from(#dfdfdf), to(#dfdfdf));
+    background-image:
+      -webkit-linear-gradient(#dfdfdf, #dfdfdf);
+    background-image:
+      -moz-linear-gradient(#dfdfdf, #dfdfdf);
+    background-image:
+      -o-linear-gradient(#e9e9e9, #dfdfdf);
+    background-image:
+      linear-gradient(#e9e9e9, #fff);
+    color: @gray-light;
   }
 }
 
