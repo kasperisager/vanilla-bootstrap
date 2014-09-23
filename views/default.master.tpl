@@ -23,9 +23,17 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            {categories_link}
-            {discussions_link}
-            {activity_link}
+            <li>
+              <a href="http://www.piratpartiet.se" target="_blank">Hemsidan</a>
+            </li>
+            <!-- Soon, my friend
+            <li>
+              <a href="#">Medlemssidan</a>
+            </li>
+            -->
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
           </ul>
           {if $User.SignedIn}
             <ul class="nav navbar-nav navbar-right hidden-xs">
