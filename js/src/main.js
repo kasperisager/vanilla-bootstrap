@@ -89,12 +89,14 @@
       // Fake async addition of class
       setTimeout(function () {
         // Fade in backdrop and add spinner
-        $backdrop.addClass('in').spin({
+        $backdrop.addClass('in');
+        /* Why is there a spinner here?
+        .spin({
           lines  : 11
         , radius : 10
         , length : 10
         , width  : 4
-        });
+        });*/
       }, 0);
     };
 
