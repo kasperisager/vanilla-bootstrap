@@ -211,11 +211,15 @@ blockquote {
   }
 }
 
-.category-fa-icon {
+.category-fa-icon-outer {
   float: left;
-  font-size: 48px;
   margin-right: 10px;
+  text-align: center;
   width: 52px;
+}
+
+.category-fa-icon {
+  font-size: 48px;
 }
 
 .pp-purple    .category-fa-icon { color: @purple; }
@@ -419,6 +423,10 @@ blockquote {
     background-color: @orange;
     border-color: @orange;
     color: white;
+  }
+
+  ul.TagCloud {
+    padding-left: 0;
   }
 }
 

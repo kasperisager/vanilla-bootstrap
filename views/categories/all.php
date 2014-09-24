@@ -82,7 +82,9 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
             $CatList .= '<li id="Category_'.$CategoryID.'" class="'.$CssClass.'">
                <div class="row ItemContent Category">
                  <div class="col-md-7">
-                 <i class="fa '.$faIcon.' category-fa-icon"></i>
+                 <div class="category-fa-icon-outer">
+                    <i class="fa '.$faIcon.' category-fa-icon"></i>
+                 </div>
                  '
                   .CategoryPhoto($Category)
                   .'<div class="TitleWrap">'
