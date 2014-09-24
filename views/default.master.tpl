@@ -70,7 +70,7 @@
           {if !$User.SignedIn}
               <h2>Hej!</h2>
               <p>
-                  För att läsa i Piratpartiets medelemsforum krävs ett medlemskap i partiet.
+                  För att läsa i Piratpartiets medlemsforum krävs ett medlemskap i partiet.
                   Om du har det, logga in med PirateWeb här till höger.
               </p>
               <p>

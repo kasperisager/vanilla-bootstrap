@@ -69,10 +69,21 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
             $LastComment = UserBuilder($Category, 'Last');
             $AltCss = $Alt ? ' Alt' : '';
             $Alt = !$Alt;
-  
+
+            // Check if a FontAwesome icon has been set in the category's css class field
+            // (yes yes ugly)
+            if (!empty($Category->CssClass))
+               preg_match('/\bfa-(fa-[\w-]+)\b/', $Category->CssClass, $categoryFaIcon);
+            if (isset($categoryFaIcon[1]))
+               $faIcon = $categoryFaIcon[1];
+            else
+               $faIcon = "fa-align-justify";
+
             $CatList .= '<li id="Category_'.$CategoryID.'" class="'.$CssClass.'">
                <div class="row ItemContent Category">
-                 <div class="col-md-6">'
+                 <div class="col-md-7">
+                 <i class="fa '.$faIcon.' category-fa-icon"></i>
+                 '
                   .CategoryPhoto($Category)
                   .'<div class="TitleWrap">'
                      .Anchor(Gdn_Format::Text($Category->Name), CategoryUrl($Category), 'Title')
@@ -87,7 +98,7 @@ echo '<ul class="DataList CategoryList'.($DoHeadings ? ' CategoryListWithHeading
                      $CatList .= '{ChildCategories}';
                   $CatList .= '
                  </div>
-                 <div class="col-md-6 text-right">
+                 <div class="col-md-5 text-right">
                  '.GetOptions($Category, $this).'
                    <div class="Meta">';
                      $lastPostsInner = array();
