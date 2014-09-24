@@ -96,6 +96,17 @@
     </section>
 
     <footer class="page-footer sticky-footer">
+      <div class="container">
+        <aside class="widget widget_nav_menu">
+          <h3 class="widget-title">Forumlänkar</h3>
+          <div>
+            <ul class="menu">
+              <li class="menu-item"><a href="{link path="/discussion/21/nagra-forumtips"}">Forumtips</a></li>
+              <li class="menu-item"><a href="{link path="/discussion/13/regler-och-forumteamet"}">Regler</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
       {asset name="Foot"}
     </footer>
 
