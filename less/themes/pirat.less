@@ -341,12 +341,27 @@ blockquote {
   display: none;
 }
 
+.Section-Discussion, .Section-PostDiscussion {
+  .DiscussionForm .TextBox, .CommentForm .TextBox {
+    height: 200px;
+    min-height: 200px;
+  }
+}
+
 @media (max-width: @screen-sm-min) {
   .MobileSearch {
     display: block;
   }
   .DesktopSearch {
     display: none;
+  }
+}
+
+// Activities==================================================================
+
+.DataList.Activities .Activity {
+  .Title a {
+    font-weight: 600;
   }
 }
 
