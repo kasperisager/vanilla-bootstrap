@@ -550,3 +550,26 @@ footer.page-footer {
     }
   }
 }
+
+// Static Pages ===============================================================
+
+// Remove the breadcrumbs and sidebar on all static pages
+body.BasicPages.Page {
+  .page-content {
+    width: 100%;
+
+    .Breadcrumbs {
+      display: none;
+    }
+  }
+
+  .page-sidebar {
+    display: none;
+  }
+
+  // Color the active link
+  &.Page-kontakt .Link-kontakt {
+    color: @navbar-default-link-active-color;
+    background-color: @navbar-default-link-active-bg;
+  }
+}
