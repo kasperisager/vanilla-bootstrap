@@ -352,6 +352,22 @@ blockquote {
   }
 }
 
+@media (max-width: @screen-sm-min) {
+  // Move Thread written of and counts (views and posts) to same row to allow
+  // for more whitespace and fix "Fat finger syndrome"
+  .ItemContent.Discussion .Meta.Meta-Discussion {
+    margin-top: 1em;
+
+    div:first-child {
+      float: left;
+    }
+
+    div:nth-child(2) {
+      position: inherit;
+    }
+  }
+}
+
 @media (max-width: @screen-xs-min) {
   // Shrink FontAwesome category icons for smallest screens to fit on the Name row
   .category-fa-icon-outer {
