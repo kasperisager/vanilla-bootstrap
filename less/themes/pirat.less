@@ -567,7 +567,7 @@ footer.page-footer {
 
 // Static Pages ===============================================================
 
-// Remove the breadcrumbs and sidebar on all static pages
+// Remove the breadcrumbs, guest message and sidebar on all static pages
 body.BasicPages.Page {
   .page-content {
     width: 100%;
@@ -577,7 +577,7 @@ body.BasicPages.Page {
     }
   }
 
-  .page-sidebar {
+  .GuestMessage, .page-sidebar {
     display: none;
   }
 

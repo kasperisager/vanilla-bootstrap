@@ -68,19 +68,21 @@
             <div class="well search-form MobileSearch">{searchbox}</div>
           {/if}
           {if !$User.SignedIn}
-              <h2>Hej!</h2>
-              <p>
-                  För att läsa i Piratpartiets medlemsforum krävs ett medlemskap i partiet.
-                  Om du har det, logga in med PirateWeb här till höger.
-              </p>
-              <p>
-                  Om du inte är medlem men intresserad av att bli det kan du gå med utan kostnad på
-                  <a href="http://blipirat.nu">blipirat.nu</a>.
-              </p>
-              <p>
-                  För att läsa om vår politik, se vår
-                  <a href="http://www.piratpartiet.se/politik/">hemsida</a>.
-              </p>
+              <div class="GuestMessage">
+                  <h2>Hej!</h2>
+                  <p>
+                      För att läsa i Piratpartiets medlemsforum krävs ett medlemskap i partiet.
+                      Om du har det, logga in med PirateWeb här till höger.
+                  </p>
+                  <p>
+                      Om du inte är medlem men intresserad av att bli det kan du gå med utan kostnad på
+                      <a href="http://blipirat.nu">blipirat.nu</a>.
+                  </p>
+                  <p>
+                      För att läsa om vår politik, se vår
+                      <a href="http://www.piratpartiet.se/politik/">hemsida</a>.
+                  </p>
+              </div>
           {/if}
           {asset name="Content"}
         </main>
