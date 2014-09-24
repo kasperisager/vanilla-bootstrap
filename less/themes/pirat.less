@@ -246,6 +246,7 @@ blockquote {
 
 .DataList.CategoryList .CategoryDescription {
   font-size: @font-size-small;
+  margin-left: 62px;
 }
 
 .DataList.CategoryList .Item.Depth2 .Meta {
@@ -343,6 +344,16 @@ blockquote {
     color: white;
     font-size: 10.5px;
     font-weight: 700;
+  }
+}
+
+@media (max-width: @screen-xs-min) {
+  // Hide FontAwesome category icons for smallest screens
+  .category-fa-icon-outer {
+    display: none;
+  }
+  .DataList.CategoryList .CategoryDescription {
+    margin-left: 0;
   }
 }
 
