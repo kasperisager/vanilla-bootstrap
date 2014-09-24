@@ -181,11 +181,11 @@ function WriteDiscussion($Discussion, &$Sender, &$Session) {
 
                   if ($Discussion->LastCommentID != '') {
                      echo ' <span class="MItem LastCommentBy">'.sprintf(T('Latest: %1$s'), UserAnchor($Last)).'</span> ';
-                     echo '• <span class="MItem LastCommentDate">'.substr($Discussion->LastDate, 0, -3).'</span>';
+                     echo '• <span class="MItem LastCommentDate">'.Gdn_Format::DateFull($Discussion->LastDate, 'html').'</span>';
                      //echo ' <span class="MItem LastCommentDate">'.Gdn_Format::Date($Discussion->LastDate, 'html').'</span>';
                   } else {
                      echo ' <span class="MItem LastCommentBy">'.sprintf(T('Latest: %1$s'), UserAnchor($First)).'</span> ';
-                     echo '• <span class="MItem LastCommentDate">'.substr($Discussion->FirstDate, 0, -3);
+                     echo '• <span class="MItem LastCommentDate">'.Gdn_Format::DateFull($Discussion->FirstDate, 'html');
 
                      if ($Source = GetValue('Source', $Discussion)) {
                         echo ' '.sprintf(T('via %s'), T($Source.' Source', $Source));
