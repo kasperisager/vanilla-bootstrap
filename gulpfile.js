@@ -8,7 +8,8 @@ gulp.task('styles', function () {
   var themes = $.filter('themes/*.css');
 
   return gulp.src([
-    'less/style.less'
+    // Our theme imports style.less anyway, so let's not use it twice
+    // 'less/style.less'
   , 'less/themes/*.less'
   ], {base: 'less'})
     .pipe($.plumber())
@@ -16,11 +17,8 @@ gulp.task('styles', function () {
     .pipe($.autoprefixer())
     .pipe($.csso())
     .pipe(themes)
-    .pipe($.rename({
-      dirname: '/'
-    , prefix: 'custom_'
-    }))
     .pipe(themes.restore())
+    .pipe($.concat('style.css'))
     .pipe(gulp.dest('design'))
     .pipe($.size({showFiles: true}));
 });

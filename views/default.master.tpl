@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {asset name="Head"}
+    <!-- Based on vanilla-bootstrap by https://github.com/kasperisager/ -->
   </head>
   <body id="{$BodyID}" class="{$BodyClass} sticky-footer-body">
 
@@ -22,9 +23,17 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            {categories_link}
-            {discussions_link}
-            {activity_link}
+            <li>
+              <a href="http://www.piratpartiet.se" target="_blank">Hemsidan</a>
+            </li>
+            <!-- Soon, my friend
+            <li>
+              <a href="#">Medlemssidan</a>
+            </li>
+            -->
+            <li>
+              <a href="{link path="/kontakt"}" class="Link-kontakt">Kontakt</a>
+            </li>
           </ul>
           {if $User.SignedIn}
             <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -39,7 +48,11 @@
             </ul>
           {else}
             <ul class="nav navbar-nav navbar-right">
-              {signin_link}
+              <li>
+                <a href="{pw_link}" rel="nofollow" class="PopupWindow"
+                   popupHref="{pw_link}&display=popup"
+                   popupHeight="600" popupWidth="800">Logga in</a>
+              </li>
             </ul>
           {/if}
         </div><!--/.nav-collapse -->
@@ -51,13 +64,33 @@
 
         <main class="page-content" role="main">
           {breadcrumbs}
-          {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
-            <div class="well search-form">{searchbox}</div>
+          {if $User.SignedIn}
+            <div class="well search-form MobileSearch">{searchbox}</div>
+          {/if}
+          {if !$User.SignedIn}
+              <div class="GuestMessage">
+                  <h2>Hej!</h2>
+                  <p>
+                      För att läsa i Piratpartiets medlemsforum krävs ett medlemskap i partiet.
+                      Om du har det, logga in med PirateWeb här till höger.
+                  </p>
+                  <p>
+                      Om du inte är medlem men intresserad av att bli det kan du gå med utan kostnad på
+                      <a href="http://blipirat.nu">blipirat.nu</a>.
+                  </p>
+                  <p>
+                      För att läsa om vår politik, se vår
+                      <a href="http://www.piratpartiet.se/politik/">hemsida</a>.
+                  </p>
+              </div>
           {/if}
           {asset name="Content"}
         </main>
 
-        <aside class="page-sidebar" role="complementary">
+        <aside class="page-sidebar {if !$User.SignedIn}SignedOut{/if}" role="complementary">
+          {if $User.SignedIn}
+            <div class="well search-form DesktopSearch">{searchbox}</div>
+          {/if}
           {asset name="Panel"}
         </aside>
 
@@ -66,16 +99,17 @@
 
     <footer class="page-footer sticky-footer">
       <div class="container">
-        <div class="clearfix">
-          <p class="pull-left">{t c="Copyright"} &copy; {$smarty.now|date_format:"%Y"} <a href="{link path="home"}">{logo}</a></p>
-          <p class="pull-right hidden-xs">{t c="Built with"} <i class="InformSprite Heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>
-            <!-- A lot of time was put into this project - a "Follow" and a "Star" would be most appreciated! -->
-            <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="145" height="20" style="vertical-align:top;margin-left:20px;"></iframe>
-            <iframe src="http://ghbtns.com/github-btn.html?user=kasperisager&repo=vanilla-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20" style="vertical-align:top;"></iframe>
-          </p>
-        </div>
-        {asset name="Foot"}
+        <aside class="widget widget_nav_menu">
+          <h3 class="widget-title">Forumlänkar</h3>
+          <div>
+            <ul class="menu">
+              <li class="menu-item"><a href="{link path="/discussion/21/nagra-forumtips"}">Forumtips</a></li>
+              <li class="menu-item"><a href="{link path="/discussion/13/regler-och-forumteamet"}">Regler</a></li>
+            </ul>
+          </div>
+        </aside>
       </div>
+      {asset name="Foot"}
     </footer>
 
     {event name="AfterBody"}

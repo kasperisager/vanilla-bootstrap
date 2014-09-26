@@ -30,6 +30,12 @@
         });
     });
 
+    // Close the cog menu when user clicks outside of it
+    $(document).on('click', function () {
+      $('.Flyout').hide();
+      $('.ToggleFlyout.OptionsMenu.Open').removeClass('Open');
+    });
+
     // Attach spinner to the .TinyProgress element when editing comment
     $(document).on('click', '.EditComment', function (e) {
       $('.TinyProgress', $(e.currentTarget).closest('.Item'))
@@ -83,12 +89,14 @@
       // Fake async addition of class
       setTimeout(function () {
         // Fade in backdrop and add spinner
-        $backdrop.addClass('in').spin({
+        $backdrop.addClass('in');
+        /* Why is there a spinner here?
+        .spin({
           lines  : 11
         , radius : 10
         , length : 10
         , width  : 4
-        });
+        });*/
       }, 0);
     };
 
@@ -157,7 +165,7 @@
     , 'a.DeleteFile'
     , 'a.PopConfirm'
     , 'a.ClearConversation'
-    , 'ul#DP_Remove a'  
+    , 'ul#DP_Remove a'
     ];
 
     // When only a confirmation modal is shown, the "popupLoading" and

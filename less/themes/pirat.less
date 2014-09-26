@@ -1,0 +1,605 @@
+// No styleguide reference.
+
+@import "../style";
+
+// We are based on the united style
+@import "../../bower_components/bootswatch/united/variables";
+@import "../../bower_components/bootswatch/united/bootswatch";
+
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@purple: #512483;
+@orange: #f28903;
+
+@limegreen: #95b420;
+@pink: #d82e8a;
+@yellow: #eabd00;
+@red: #cf242c;
+@blue: #00a6d0;
+@darkblue: #005c9f;
+@turquoise: #00a09b;
+
+@brand-primary: @purple;
+@footer-color:  #E2E2E2;
+@footer-link-color:  #CCC;
+@footer-bg:     #2F3033;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic,300,600");
+@font-family-sans-serif: "Open Sans", Helvetica,Arial, "Lucida Grande", sans-serif;
+@headings-font-weight:    700;
+@font-size-base: 16px;
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+@navbar-height:                    60px;
+
+@navbar-default-color:             #444;
+@navbar-default-bg:                white;
+@navbar-default-border:            @purple;
+
+// Navbar links
+@navbar-default-link-color:                #444;
+@navbar-default-link-hover-color:          #444;
+@navbar-default-link-hover-bg:             @orange;
+@navbar-default-link-active-color:         #fff;
+@navbar-default-link-active-bg:            @purple;
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Overrides
+// --------------------------------------------------
+
+// Navbar =====================================================================
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  &-default {
+    .badge {
+      background-color: #fff;
+      color: @navbar-default-bg;
+    }
+
+    .navbar-toggle {
+      border: none;
+
+      .icon-bar {
+        background-color: @purple;
+        height: 4px;
+        width: 26px;
+      }
+    }
+  }
+
+  &-inverse {
+    .badge {
+      background-color: #fff;
+      color: @navbar-inverse-bg;
+    }
+  }
+
+  &-brand {
+    padding-top: 5px;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  .nav li a {
+    font-weight: 700;
+
+    -webkit-transition: background 0.4s ease;
+    -moz-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
+    transition: background 0.4s ease;
+  }
+}
+
+@media (max-width: @screen-md-min) {
+  // Hide username in navbar to make sure the navbar's height doesn't change when
+  // browser width is less than @screen-md-min
+  .navbar-default .MeBox .Username {
+    display: none;
+  }
+}
+
+// Buttons ====================================================================
+
+.Button.Primary {
+  background-color:#fff;
+  background-image:
+    -webkit-gradient(linear, left top, right top, from(#fff), to(#dfdfdf));
+  background-image:
+    -webkit-linear-gradient(#fff, #dfdfdf);
+  background-image:
+    -moz-linear-gradient(#fff, #dfdfdf);
+  background-image:
+    -o-linear-gradient(#fff, #dfdfdf);
+  background-image:
+    linear-gradient(#fff, #dfdfdf);
+
+  border-color: #d2d2d2 #c3c3c3 #9f9f9f;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+
+  color: #646464;
+
+  font-weight: bold;
+
+  &:hover {
+    border-color: #d2d2d2 #c3c3c3 #9f9f9f;
+    color: @purple;
+  }
+
+  &:active {
+    background-color:@orange;
+    //border-color: #aaaaaa #bbbbbb #bbbbbb;
+    //box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+    color: @purple;
+  }
+
+  &.disabled {
+    background-image:
+      -webkit-gradient(linear, left top, right top, from(#dfdfdf), to(#dfdfdf));
+    background-image:
+      -webkit-linear-gradient(#dfdfdf, #dfdfdf);
+    background-image:
+      -moz-linear-gradient(#dfdfdf, #dfdfdf);
+    background-image:
+      -o-linear-gradient(#e9e9e9, #dfdfdf);
+    background-image:
+      linear-gradient(#e9e9e9, #fff);
+    color: @gray-light;
+  }
+}
+
+// Typography =================================================================
+
+.CategoryFilter {
+  .CurrentFilter {
+    font-weight: bold;
+  }
+}
+
+blockquote {
+  font-size: @font-size-base
+}
+
+@media (max-width: @screen-sm-min) {
+  h1 {
+    word-wrap: break-word;
+    font-size: 3.2rem;
+  }
+}
+
+// Tables =====================================================================
+
+.DataList.CategoryList .CategoryHeading.Item.Depth1 {
+  background: @purple;
+  color: white;
+
+  font-weight: 600;
+
+  .OptionsMenu .SpFlyoutHandle {
+    color: white;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+
+  .OptionsMenu.Open .SpFlyoutHandle {
+    color: @orange;
+  }
+}
+
+.category-fa-icon-outer {
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  text-align: center;
+  width: 52px;
+}
+
+.category-fa-icon {
+  font-size: 35px;
+}
+
+.fa-puzzle-piece {
+  margin-top: 5px;
+}
+
+.pp-purple    .category-fa-icon { color: @purple; }
+.pp-orange    .category-fa-icon { color: @orange; }
+.pp-limegreen .category-fa-icon { color: @limegreen; }
+.pp-pink      .category-fa-icon { color: @pink; }
+.pp-yellow    .category-fa-icon { color: @yellow; }
+.pp-red       .category-fa-icon { color: @red; }
+.pp-blue      .category-fa-icon { color: @blue; }
+.pp-darkblue  .category-fa-icon { color: @darkblue; }
+.pp-turquoise .category-fa-icon { color: @turquoise; }
+
+.DataList.CategoryList .Item.Depth2 .Title {
+  font-weight: 600;
+}
+
+.DataList.CategoryList .Item, .DataList.ChildCategoryList .Item.Category {
+  background-color: @gray-lighter;
+}
+
+.DataList.CategoryList .ChildCategories {
+  font-size: @font-size-small;
+}
+
+.DataList.CategoryList .CategoryDescription {
+  font-size: @font-size-small;
+  margin-left: 62px;
+}
+
+.DataList.CategoryList .Item.Depth2 .Meta {
+  margin-right: 30px;
+}
+
+.DataList.CategoryList .Item .Meta .LastDiscussionTitle {
+  padding-right: 0;
+
+  a {
+    color: @gray-dark;
+    font-weight: bold;
+  }
+}
+
+.DataList.CategoryList .Item .Meta .LastCommentDate {
+  color: @gray;
+  padding-right: 0;
+
+  a {
+    color: @gray;
+  }
+}
+
+.DataList.ChildCategoryList {
+  .Item .CategoryName .Title {
+    font-weight: bold;
+  }
+  .CategoryDescription {
+    font-size: @font-size-small;
+  }
+}
+
+.DataList.Discussions {
+  .Item .Title, .Item .Title a {
+    font-weight: 600;
+  }
+
+  .Number {
+    display: inline-block;
+    min-width: 2.5rem;
+    text-align: right;
+  }
+
+  .HasNew .Number {
+    min-width: 0;
+  }
+}
+
+.DataList.Discussions li:nth-child(even) {
+  background-color: @gray-lighter;
+}
+
+.DataList .Item .Meta, .DataList .Conversation .Item .MItem, .DataList .Item .Meta a, .DataList .Conversation .Item .MItem a, .DataTable .Item .Meta, .DataTable .Conversation .Item .MItem, .DataTable .Item .Meta a, .DataTable .Conversation .Item .MItem a {
+  color: #555;
+}
+
+.MessageList {
+  .Item {
+    margin-left: 0;
+  }
+}
+
+.Message {
+  color: #444;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+// Don't show category name after each post on the actual category page
+.Vanilla.Categories .DataList .Item .MItem.Category {
+  display: none;
+}
+
+.DataList.Discussions .LastPost {
+  text-align: right;
+}
+
+.DataList.Discussions .LastPost .LastCommentBy {
+  padding-right: 0;
+}
+
+.DataList.Discussions .Item .Tag-Announcement, .DataList.Discussions .Item .HasNew {
+  padding: 0 0.3em 0.2em;
+  vertical-align: middle;
+}
+
+.DataList.Discussions .Item .Tag.Category {
+  float: right;
+  margin-right: 0.3em;
+  padding: 0em 0.5em 0em;
+  a {
+    color: white;
+    font-size: 10.5px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: @screen-sm-min) {
+  // Move Thread written of and counts (views and posts) to same row to allow
+  // for more whitespace and fix "Fat finger syndrome"
+  .ItemContent.Discussion .Meta.Meta-Discussion {
+    margin-top: 1em;
+
+    div:first-child {
+      float: left;
+    }
+
+    div:nth-child(2) {
+      position: inherit;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-min) {
+  // Shrink FontAwesome category icons for smallest screens to fit on the Name row
+  .category-fa-icon-outer {
+    margin-right: 5px;
+    margin-top: 0;
+    width: 20px;
+  }
+  .category-fa-icon {
+    font-size: 18px;
+  }
+  .DataList.CategoryList .CategoryDescription {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: @screen-lg-min) {
+  .DataList.Discussions .Number {
+    min-width: 0;
+  }
+
+  .DataList.Discussions .LastPost {
+    text-align: left;
+  }
+}
+
+// Forms ======================================================================
+
+.DiscussionForm textarea {
+  margin-bottom: 10px;
+}
+
+.MessageForm {
+  margin-left: 0;
+}
+
+.MobileSearch {
+  display: none;
+}
+
+.Section-Discussion, .Section-PostDiscussion {
+  .DiscussionForm .TextBox, .CommentForm .TextBox {
+    height: 200px;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: @screen-sm-min) {
+  .MobileSearch {
+    display: block;
+  }
+  .DesktopSearch {
+    display: none;
+  }
+}
+
+// Activities==================================================================
+
+.DataList.Activities .Activity {
+  .Title a {
+    font-weight: 600;
+  }
+}
+
+// User profile page
+.Profile .User .About {
+  dl dt, dl dd {
+    display: block;
+  }
+
+  dl dt:first-child {
+    margin-left: 5px;
+  }
+}
+
+// Sidebar ====================================================================
+
+.page-sidebar {
+  .FilterMenu .Active > a {
+    background-color: @orange;
+    color: white;
+  }
+
+  .PanelInfo .Heading {
+    background-color: @purple;
+    border-color: @purple;
+    color: white;
+  }
+
+  .PanelInfo .Active > a {
+    background-color: @orange;
+    border-color: @orange;
+    color: white;
+  }
+
+  ul.TagCloud {
+    padding-left: 0;
+  }
+}
+
+// Navs =======================================================================
+
+.MeBox .MenuItems, .MeBox .FlyoutMenu {
+  font-size: 14px;
+}
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+section.container {
+  // Account for the fixed Navbar
+  padding-top: @navbar-height + @navbar-padding-vertical;
+}
+
+.page-sidebar.SignedOut .Tags {
+  display: none;
+}
+
+.sticky-footer-body {
+  margin-bottom: 150px;
+}
+
+footer.page-footer {
+  color: @footer-color;
+  background-color: @footer-bg;
+
+  aside {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 33.333%;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: @headings-font-weight;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    ul {
+      margin-left: 1em;
+    }
+  }
+
+  a {
+    color: @footer-color;
+    font-size: 13px;
+
+    &:hover {
+      color: @orange;
+      text-decoration: none;
+    }
+  }
+
+  #searchform {
+    input {
+      box-sizing: border-box;
+      padding: 3px;
+
+      color: #666;
+      border: 1px solid #CCC;
+      border-radius: 3px;
+    }
+
+    label, #searchsubmit {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-min) {
+  footer.page-footer aside {
+    display: block;
+    float: none;
+    margin-bottom: 25px;
+  }
+}
+
+// Popup ======================================================================
+
+.PopupPage {
+  margin: 2rem;
+
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  .MeBox, .ExistingUsername {
+    display: none;
+  }
+}
+
+// Preview post popup
+.Overlay {
+  max-height: 100%;
+
+  #Popup {
+    max-height: 95%;
+    overflow-y: auto;
+
+    .Content {
+      min-height: 3em;
+    }
+  }
+}
+
+// Static Pages ===============================================================
+
+// Remove the breadcrumbs, guest message and sidebar on all static pages
+body.BasicPages.Page {
+  .page-content {
+    width: 100%;
+
+    .Breadcrumbs {
+      display: none;
+    }
+  }
+
+  .GuestMessage, .page-sidebar {
+    display: none;
+  }
+
+  // Color the active link
+  &.Page-kontakt .Link-kontakt {
+    color: @navbar-default-link-active-color;
+    background-color: @navbar-default-link-active-bg;
+  }
+}

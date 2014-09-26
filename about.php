@@ -1,7 +1,7 @@
 <?php
 
 $ThemeInfo['bootstrap'] = array(
-  'Name'        => 'Bootstrap',
+  'Name'        => 'Bootstrap-pirat',
   'Description' => "Bootstrap for Vanilla has been rewritten from scratch on top of <a href='http://getbootstrap.com'>Bootstrap 3</a> in this second installation of the most popular theme for Vanilla Forums. Kickstart your community with a fresh and solid theme that is ready to be customized to your heart's desires.",
   'Version'     => '2.3.2',
   'Url'         => 'https://github.com/kasperisager/vanilla-bootstrap',
@@ -13,25 +13,7 @@ $ThemeInfo['bootstrap'] = array(
 
   'Options' => array(
     'Styles' => array(
-      'Default'   => '%s_default',
-      'Bootstrap' => '%s_bootstrap',
-      'Amelia'    => '%s_amelia',
-      'Cerulean'  => '%s_cerulean',
-      'Cosmo'     => '%s_cosmo',
-      'Cyborg'    => '%s_cyborg',
-      'Darkly'    => '%s_darkly',
-      'Flatly'    => '%s_flatly',
-      'Journal'   => '%s_journal',
-      'Lumen'     => '%s_lumen',
-      'Paper'     => '%s_paper',
-      'Readable'  => '%s_readable',
-      'Sandstone' => '%s_sandstone',
-      'Simplex'   => '%s_simplex',
-      'Slate'     => '%s_slate',
-      'Spacelab'  => '%s_spacelab',
-      'Superhero' => '%s_superhero',
-      'United'    => '%s_united',
-      'Yeti'      => '%s_yeti'
+        'Pirat' => '%s_pirat'
     )
   )
 );
