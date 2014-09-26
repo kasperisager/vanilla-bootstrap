@@ -49,8 +49,8 @@
           {else}
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="{link path="/entry/PirateWeb"}" rel="nofollow" class="PopupWindow"
-                   popupHref="{link path="/entry/PirateWeb"}?Target=%2F&display=popup"
+                <a href="{pw_link}" rel="nofollow" class="PopupWindow"
+                   popupHref="{pw_link}&display=popup"
                    popupHeight="600" popupWidth="800">Logga in</a>
               </li>
             </ul>
