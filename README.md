@@ -24,7 +24,7 @@ $ git clone kasperisager/vanilla-bootstrap bootstrap
 ![Simplex](design/screenshot_simplex.png) | ![Slate](design/screenshot_slate.png) | ![Spacelab](design/screenshot_spacelab.png) | ![Superhero](design/screenshot_superhero.png)
 ![United](design/screenshot_united.png) | ![Yeti](design/screenshot_yeti.png)
 
-## Compiling assets
+## Development
 
 The following instructions assume that you have already installed Node.js on your computer. If this is not the case, please download and install the latest stable release from the official [Node.js download page](http://nodejs.org/download/). If you are using [Homebrew](http://brew.sh/), you can also install Node.js via the command line:
 
