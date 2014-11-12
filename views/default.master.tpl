@@ -6,10 +6,8 @@
     {asset name="Head"}
   </head>
   <body id="{$BodyID}" class="{$BodyClass} sticky-footer-body">
-
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
-
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">{t c="Toggle navigation"}</span>
@@ -42,13 +40,12 @@
               {signin_link}
             </ul>
           {/if}
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 
     <section class="container">
       <div class="row">
-
         <main class="page-content" role="main">
           {breadcrumbs}
           {if InSection(array("CategoryList", "CategoryDiscussionList", "DiscussionList"))}
@@ -60,7 +57,6 @@
         <aside class="page-sidebar" role="complementary">
           {asset name="Panel"}
         </aside>
-
       </div>
     </section>
 
@@ -79,6 +75,5 @@
     </footer>
 
     {event name="AfterBody"}
-
   </body>
 </html>
