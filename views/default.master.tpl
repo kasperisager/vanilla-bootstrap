@@ -23,6 +23,7 @@
             {categories_link}
             {discussions_link}
             {activity_link}
+            {custom_menu}
           </ul>
           {if $User.SignedIn}
             <ul class="nav navbar-nav navbar-right hidden-xs">
