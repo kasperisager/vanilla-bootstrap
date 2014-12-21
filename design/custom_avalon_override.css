@@ -1,0 +1,20 @@
+/* Navbar */
+.navbar.navbar-inverse {
+    margin-bottom: 20px;
+}
+.navbar .navbar-brand {
+    background: url("site-logo.png") no-repeat -35px top;
+}
+.navbar-inverse .navbar-nav .MeBox a {
+    color: #93a8a8;
+}
+.navbar-inverse .navbar-nav .MeBox a:hover {
+    color: #cbd6d6;
+    background-color: #3d4c4c;
+}
+.search-form {
+    display: none;
+}
+h1.H, .HomepageTitle {
+    margin-top: 0;
+}

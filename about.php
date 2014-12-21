@@ -16,6 +16,7 @@ $ThemeInfo['bootstrap'] = array(
       'Default'   => '%s_default',
       'Bootstrap' => '%s_bootstrap',
       'Amelia'    => '%s_amelia',
+      'Avalon'    => '%s_avalon',
       'Cerulean'  => '%s_cerulean',
       'Cosmo'     => '%s_cosmo',
       'Cyborg'    => '%s_cyborg',

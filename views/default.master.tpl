@@ -6,7 +6,7 @@
     {asset name="Head"}
   </head>
   <body id="{$BodyID}" class="{$BodyClass} sticky-footer-body">
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-static-top clearfix" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -61,7 +61,7 @@
       </div>
     </section>
 
-    <footer class="page-footer sticky-footer">
+    <div class="page-footer">
       <div class="container">
         <div class="clearfix">
           <p class="pull-left">{t c="Copyright"} &copy; {$smarty.now|date_format:"%Y"} <a href="{link path="home"}">{logo}</a></p>
@@ -73,7 +73,7 @@
         </div>
         {asset name="Foot"}
       </div>
-    </footer>
+    </div>
 
     {event name="AfterBody"}
   </body>
