@@ -20,10 +20,16 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            {categories_link}
-            {discussions_link}
-            {activity_link}
-            {custom_menu}
+            <li class="active dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Forums <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                {categories_link}
+                {discussions_link}
+                {activity_link}
+                {custom_menu}
+                </ul>
+            </li>
+            <li><a href="http://personnel.29th.org">Personnel</a></li>
           </ul>
           {if $User.SignedIn}
             <ul class="nav navbar-nav navbar-right hidden-xs">
