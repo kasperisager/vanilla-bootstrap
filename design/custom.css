@@ -32,3 +32,6 @@
  *
  * Happy theming!
  */
+#Form_User_Register .Gender {
+    display: none;
+}
