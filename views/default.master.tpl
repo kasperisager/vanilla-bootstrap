@@ -30,6 +30,7 @@
                 </ul>
             </li>
             <li><a href="http://personnel.29th.org">Personnel</a></li>
+            <li><a href="http://29th.org/wiki">Wiki</a></li>
           </ul>
           {if $User.SignedIn}
             <ul class="nav navbar-nav navbar-right hidden-xs">
