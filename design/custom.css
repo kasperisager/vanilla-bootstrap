@@ -35,3 +35,9 @@
 #Form_User_Register .Gender {
     display: none;
 }
+.Message div[style="text-align: center;"] img {
+    margin: 0 auto;
+}
+.Message img {
+    display: inline-block;
+}
