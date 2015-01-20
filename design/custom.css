@@ -41,3 +41,10 @@
 .Message img {
     display: inline-block;
 }
+.Overlay {
+    overflow-y: auto;
+    z-index: 9999;
+}
+.Overlay .Preview {
+    margin-bottom: 100px;
+}
