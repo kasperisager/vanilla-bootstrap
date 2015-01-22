@@ -15,11 +15,6 @@
 
   $(function () {
 
-    // Programmatically hide buttons that are supposed to be hidden. This
-    // ensures that the initial display state is correctly stored and applied
-    // if the button is later shown.
-    $('.Button.Hidden').removeClass('Hidden').hide();
-
     // Attach spinner to the .InProgress element in flyouts
     $(document).on('click', '.ToggleFlyout', function (e) {
       $('.InProgress', e.currentTarget).spin({
