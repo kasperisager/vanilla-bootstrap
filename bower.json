@@ -26,6 +26,9 @@
     "jquery-icheck": "2.x"
   },
   "overrides": {
+    "bootstrap": {
+      "main": "less/bootstrap.less"
+    },
     "bootstrap-social": {
       "main": "bootstrap-social.less"
     },
