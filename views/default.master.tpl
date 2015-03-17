@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sticky-footer-html">
+<html lang="{$CurrentLocale.Lang}" class="sticky-footer-html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
