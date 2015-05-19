@@ -32,3 +32,6 @@
  *
  * Happy theming!
  */
+ul.TagCloud {
+  padding: initial;
+}
