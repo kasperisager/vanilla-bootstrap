@@ -5,7 +5,9 @@ var gulp = require('gulp')
   , $ = require('gulp-load-plugins')()
 
 gulp.task('styles', function () {
-  var themes = $.filter('themes/*.css');
+  var themes = $.filter('themes/*.css', {
+    restore: true
+  });
 
   return gulp.src([
     'less/style.less'
@@ -20,7 +22,7 @@ gulp.task('styles', function () {
       dirname: '/'
     , prefix: 'custom_'
     }))
-    .pipe(themes.restore())
+    .pipe(themes.restore)
     .pipe(gulp.dest('design'))
     .pipe($.size({showFiles: true}));
 });
