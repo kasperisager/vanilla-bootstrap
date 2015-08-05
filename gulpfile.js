@@ -54,14 +54,14 @@ gulp.task('wiredep', function () {
 gulp.task('default', ['styles', 'scripts']);
 
 gulp.task('watch',  function () {
-  var server = $.livereload();
+  $.livereload.listen();
 
   gulp.watch([
     'design/*.css'
   , 'js/*.js'
   , 'views/**/*.tpl'
   ], function (file) {
-    return server.changed(file.path);
+    return $.livereload.changed(file.path);
   });
 
   gulp.watch('less/**/*.less', ['styles']);
