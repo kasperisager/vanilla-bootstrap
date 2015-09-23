@@ -17,6 +17,8 @@ $ git clone kasperisager/vanilla-bootstrap bootstrap
 
 ## Included themes
 
+Vanilla Bootstrap comes bundled with all the amazing [Bootswatch](https://bootswatch.com) themes by [Thomas Park](http://thomaspark.co/):
+
 <img title="Default" src="design/screenshot_default.png" width="32%"> <img title="Bootstrap" src="design/screenshot_bootstrap.png" width="32%"> <img title="Cerulean" src="design/screenshot_cerulean.png" width="32%">
 
 <img title="Cosmo" src="design/screenshot_cosmo.png" width="32%"> <img title="Cyborg" src="design/screenshot_cyborg.png" width="32%"> <img title="Darkly" src="design/screenshot_darkly.png" width="32%">
