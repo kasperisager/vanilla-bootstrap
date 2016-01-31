@@ -1,0 +1,23 @@
+{
+  "babel": {
+    "compact": true,
+    "presets": [
+      "es2015"
+    ]
+  },
+  "cssnano": {
+    "discardComments": {
+      "removeAll": true
+    }
+  },
+  "rollup": {
+    "format": "iife",
+    "sourceMap": true
+  },
+  "sourcemaps": {
+    "loadMaps": true
+  },
+  "uglify": {
+    "preserveComments": false
+  }
+}

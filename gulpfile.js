@@ -1,73 +1,71 @@
-/* laxcomma: true */
-'use strict';
+const gulp = require('gulp');
+const $ = require('gulp-load-plugins')();
+const del = require('del');
+const c = require('./config.json');
 
-var gulp = require('gulp')
-  , $ = require('gulp-load-plugins')()
+const src = gulp.src;
+const dest = gulp.dest;
 
-gulp.task('styles', function () {
-  var themes = $.filter('themes/*.css', {
-    restore: true
-  });
-
-  return gulp.src([
-    'less/style.less'
-  , 'less/themes/*.less'
-  ], {base: 'less'})
-    .pipe($.plumber())
-    .pipe($.less())
-    .pipe($.autoprefixer())
-    .pipe($.csso())
-    .pipe(themes)
-    .pipe($.rename({
-      dirname: '/'
-    , prefix: 'custom_'
-    }))
-    .pipe(themes.restore)
-    .pipe(gulp.dest('design'))
-    .pipe($.size({showFiles: true}));
+const harness = () => $.plumber({
+  errorHandler: $.notify.onError('<%= error.message %>')
 });
 
-gulp.task('scripts', function () {
-  var dependencies = require('wiredep')()
-    , source = $.filter('js/src/**/*.js');
+const size = title => $.size({title, showFiles: true});
 
-  return gulp.src((dependencies.js || []).concat([
-    'js/src/main.js',
-    'bower_components/bootstrap/js/transition.js',
-    'bower_components/bootstrap/js/collapse.js'
-  ]))
-    .pipe($.plumber())
+gulp.task('design', ['design:lint', 'design:clean'], () => src('design/src/*.scss')
+  .pipe(harness())
+  .pipe($.cached('design'))
+  .pipe($.sourcemaps.init(c.sourcemaps))
+    .pipe($.sass(c.sass))
+    .pipe($.autoprefixer(c.autoprefixer))
+    .pipe($.cssnano(c.cssnano))
+    .pipe($.concat('style.css'))
+  .pipe($.sourcemaps.write('.'))
+  .pipe(dest('design'))
+  .pipe($.if('*.css', $.livereload()))
+  .pipe(size('design'))
+);
+
+gulp.task('design:lint', () => src('design/src/**/*.scss')
+  .pipe(harness())
+  .pipe($.cached('design:lint'))
+  .pipe($.scssLint())
+);
+
+gulp.task('design:clean', () => del(['design/*.css*']));
+
+gulp.task('js', ['js:lint', 'js:clean'], () => src('js/src/*.js')
+  .pipe(harness())
+  .pipe($.cached('js'))
+  .pipe($.rollup(c.rollup))
+  .pipe($.sourcemaps.init(c.sourcemaps))
+    .pipe($.babel(c.babel))
+    .pipe($.uglify(c.uglify))
     .pipe($.concat('custom.js'))
-    .pipe($.uglify())
-    .pipe(gulp.dest('js'))
-    .pipe($.size({showFiles: true}));
-});
+  .pipe($.sourcemaps.write('.'))
+  .pipe(dest('js'))
+  .pipe($.if('*.js', $.livereload()))
+  .pipe(size('js'))
+);
 
-gulp.task('wiredep', function () {
-  var wiredep = require('wiredep').stream;
+gulp.task('js:lint', () => src('js/src/**/*.js')
+  .pipe(harness())
+  .pipe($.cached('js:lint'))
+  .pipe($.xo())
+);
 
-  return gulp.src('less/**/*.less')
-    .pipe(wiredep())
-    .pipe(gulp.dest('less'));
-});
+gulp.task('js:clean', () => del(['js/*.js*']));
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('build', [
+  'design',
+  'js'
+]);
 
-gulp.task('watch',  function () {
+gulp.task('watch', ['build'], () => {
   $.livereload.listen();
 
-  gulp.watch([
-    'design/*.css'
-  , 'js/*.js'
-  , 'views/**/*.tpl'
-  ], function (file) {
-    return $.livereload.changed(file.path);
-  });
-
-  gulp.watch('less/**/*.less', ['styles']);
-  gulp.watch('js/src/**/*.js', ['scripts']);
-  gulp.watch('bower.json', ['wiredep']);
+  gulp.watch('design/src/**/*.scss', ['design']);
+  gulp.watch('js/src/**/*.js', ['js']);
 });
 
-// Expose Gulp to external tools
-module.exports = gulp;
+gulp.task('default', ['build']);
