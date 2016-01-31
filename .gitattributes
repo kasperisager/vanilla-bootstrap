@@ -4,3 +4,4 @@
 *.json export-ignore
 design/src export-ignore
 js/src export-ignore
+gulpfile.js export-ignore
