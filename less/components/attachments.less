@@ -1,0 +1,89 @@
+// ## Item attachments
+//
+// Markup:
+// <div class="item-attachment">
+//     <div class="alert alert-info">
+//         <a href="#" class="close" aria-hidden="true">&times;</a>
+//         <div class="media">
+//             <div class="pull-left">
+//                 <div class="media-object">
+//                     <i class="icon icon-flag"></i>
+//                 </div>
+//             </div>
+//             <div class="media-body">
+//                 <h4 class="media-heading">Attachment title</a> ·
+//                     <small>Some meta information: March 2</small>
+//                 </h4>
+//                 <p>Here's some notes on the attachment.</p>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// No styleguide reference.
+
+.item-attachment {
+  margin-top: @line-height-computed;
+
+  .alert {
+    margin-bottom: 0;
+
+    + .alert {
+      margin-top: @line-height-computed;
+    }
+  }
+
+  .media-object {
+    .icon {
+      display: block;
+      min-width: 32px;
+      font-size: 32px;
+      text-align: center;
+      line-height: 1;
+    }
+  }
+
+  .alert-success {
+    a,
+    a:hover {
+      color: darken(@alert-success-text, 10%);
+    }
+
+    hr {
+      border-top-color: darken(@alert-success-border, 5%);
+    }
+  }
+
+  .alert-info {
+    a,
+    a:hover {
+      color: darken(@alert-info-text, 10%);
+    }
+
+    hr {
+      border-top-color: darken(@alert-info-border, 5%);
+    }
+  }
+
+  .alert-warning {
+    a,
+    a:hover {
+      color: darken(@alert-warning-text, 10%);
+    }
+
+    hr {
+      border-top-color: darken(@alert-warning-border, 5%);
+    }
+  }
+
+  .alert-danger {
+    a,
+    a:hover {
+      color: darken(@alert-danger-text, 10%);
+    }
+
+    hr {
+      border-top-color: darken(@alert-danger-border, 5%);
+    }
+  }
+}
