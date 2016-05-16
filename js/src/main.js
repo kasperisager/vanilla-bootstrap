@@ -168,21 +168,23 @@
 
   });
 
-  /**
-   * Override the popup.close method to ensure that the modal isn't immdiately
-   * removed from the DOM upon closing the dialog. This version of the method
-   * instead lets it be up to listeners to actually close the modal, just like
-   * it's the reponsibility of listeners to show the modal.
-   *
-   * @param  {Object} settings
-   * @param  {Object} response
-   * @return {bool}
-   */
-  $.popup.close = function (settings, response) {
-    $(document).unbind('keydown.popup');
-    $('#' + settings.popupId).trigger('popupClose');
+  if ($.popup) {
+    /**
+     * Override the popup.close method to ensure that the modal isn't immdiately
+     * removed from the DOM upon closing the dialog. This version of the method
+     * instead lets it be up to listeners to actually close the modal, just like
+     * it's the reponsibility of listeners to show the modal.
+     *
+     * @param  {Object} settings
+     * @param  {Object} response
+     * @return {bool}
+     */
+    $.popup.close = function (settings, response) {
+      $(document).unbind('keydown.popup');
+      $('#' + settings.popupId).trigger('popupClose');
 
-    return false;
-  };
+      return false;
+    };
+  }
 
 })(jQuery, window, document);
