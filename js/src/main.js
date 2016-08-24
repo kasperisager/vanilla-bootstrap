@@ -97,7 +97,7 @@
     // Fade in modal dialog
     $(dialog, $overlay).addClass('in');
 
-    if ($backdrop.length) {
+    if (!!$backdrop) {
       // Remove spinner from modal backdrop
       $backdrop.spin(false);
     }
@@ -118,7 +118,7 @@
     $(dialog, $overlay).removeClass('in');
 
     setTimeout(function () {
-      if ($backdrop.length) {
+      if (!!$backdrop) {
         // Fade out the backdrop
         $backdrop.removeClass('in');
       }
